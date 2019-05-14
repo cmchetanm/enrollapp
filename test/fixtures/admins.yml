@@ -1,0 +1,10 @@
+DEFAULTS: &DEFAULTS
+  email: $LABEL<%= "@example.com" %>
+  confirmed_at: <%= Time.current %>
+  encrypted_password: <%= Admin.new.send(:password_digest, 'MyC0mPl3xPassw0rd!') %>
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

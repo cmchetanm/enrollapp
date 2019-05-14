@@ -19,12 +19,22 @@ gem 'sass-rails'
 gem 'strip_attributes'
 
 # Zurb Foundation
-# gem 'autoprefixer-rails'
-# gem 'foundation-rails'
+gem 'autoprefixer-rails'
+gem 'foundation-rails'
+
+# Rails authentication mechanism
+gem 'devise'
+gem 'devise_token_auth'
+
+# Password Strength Enforcement
+gem 'strong_password'
 
 # Zurb Foundation for emails
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
+
+# Font Awesome Icons
+gem 'font-awesome-rails'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '>= 4.0.0.rc.3'
@@ -46,6 +56,9 @@ gem 'dalli'
 
 # Provides hamlit generators for Rails. Hamlit = optimized HAML
 gem 'haml-rails'
+
+# React Support
+gem 'react-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
@@ -75,7 +88,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'webdrivers'
   # Used for controller testing
   gem 'rails-controller-testing'
 end

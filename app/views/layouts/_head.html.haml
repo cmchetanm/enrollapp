@@ -6,11 +6,13 @@
 %meta{content: 'width=device-width, initial-scale=1.0', name: 'viewport'}
 
 %title= content_for?(:title) ? yield(:title) : raise(t('no_title'))
--# %title= content_for?(:description) ? yield(:description) : raise(t('no_description'))
+%meta{content: yield(:title), property: 'og:title'}
+
+%meta{content: content_for?(:description) ? yield(:description) : raise(t('no_description')), name: 'description'}
+%meta{content: yield(:description), property: 'og:description'}
 
 %meta{content: request.original_url, property: 'og:url'}
-%meta{content: yield(:title), property: 'og:title'}
-%meta{content: yield(:description), property: 'og:description'}
+
 %meta{content: content_for?(:og_type) ? yield(:og_type) : 'website', property: 'og:type'}
 %meta{content: content_for?(:og_image) ? yield(:og_image) : image_url('logo.png'), property: 'og:image'}
 
@@ -19,4 +21,4 @@
 = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
 
 = stylesheet_pack_tag 'application'
-= javascript_pack_tag 'application', defer: true
+= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true

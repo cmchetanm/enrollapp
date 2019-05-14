@@ -1,0 +1,8 @@
+@import 'settings';
+
+@include breakpoint(small only) {
+  .toast-notification {
+    // sass-lint:disable no-important
+    width: 100% !important;
+  }
+}

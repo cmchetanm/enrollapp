@@ -22,6 +22,10 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  config.action_controller.asset_host = "https://#{Rails.application.credentials[Rails.env.to_sym][:host]}"
+  config.action_mailer.asset_host = "https://#{Rails.application.credentials[Rails.env.to_sym][:host]}"
+
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
 
@@ -29,6 +33,8 @@ Rails.application.configure do
   config.action_controller.allow_forgery_protection = false
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.default_url_options = { host: Rails.application.credentials[Rails.env.to_sym][:host] }
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the

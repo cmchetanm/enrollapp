@@ -34,12 +34,12 @@ else
         ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --fix --ext '.js' app/. || { valid=false; }
 fi
 
-#echo 'Linting JSX using ESLint...'
-#if [[ "$1" == "--no-fix" ]]; then
-#        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --ext '.jsx' app/. || { valid=false; }
-#else
-#        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --fix --ext '.jsx' app/. || { valid=false; }
-#fi
+echo 'Linting JSX using ESLint...'
+if [[ "$1" == "--no-fix" ]]; then
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --ext '.jsx' app/. || { valid=false; }
+else
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --fix --ext '.jsx' app/. || { valid=false; }
+fi
 
 echo 'Linting HAML using HAML Lint...'
 haml-lint -c ${HAMLLINT_CONFIG} app/views/ || { valid=false; }

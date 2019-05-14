@@ -1,0 +1,9 @@
+= react_component 'ToastNotifications'
+
+- unless notice.nil?
+  %noscript.text-center= success_callout notice
+  = react_component 'FloatCallout', type: 'success', text: notice
+
+- unless alert.nil?
+  %noscript.text-center= alert_callout alert
+  = react_component 'FloatCallout', type: 'error', text: alert

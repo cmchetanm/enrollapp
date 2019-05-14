@@ -39,7 +39,7 @@ module Enroll
     Haml::Template.options[:remove_whitespace] = true
 
     # Camelize props
-    # config.react.camelize_props = true # default false
+    config.react.camelize_props = true # default false
 
     Jbuilder.key_format camelize: :lower
 
