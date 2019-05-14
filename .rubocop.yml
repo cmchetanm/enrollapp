@@ -1,0 +1,82 @@
+require: rubocop-performance
+
+AllCops:
+  Exclude:
+    - .git/**/*
+    - bin/*
+    - db/schema.rb
+    - node_modules/**/*
+    - vendor/**/**
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*
+    - lib/tasks/*
+
+Metrics/BlockLength:
+  Exclude:
+    - config/environments/*
+    - config/initializers/devise.rb
+    - config/routes.rb
+    - db/migrate/*
+    - lib/tasks/*
+
+Metrics/LineLength:
+  Exclude:
+    - config/initializers/devise.rb
+    - db/migrate/*
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*
+    - lib/tasks/*
+  Max: 12
+
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/CreateTableWithTimestamps:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/NotNullColumn:
+  Enabled: false
+
+Rails/ReversibleMigration:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/OutputSafety:
+  Exclude:
+    - config/initializers/client_side_validations.rb
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments: [development, test, staging, production]
+
+Security/YAMLLoad:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/MixinUsage:
+  Exclude:
+    - bin/setup
+    - bin/update

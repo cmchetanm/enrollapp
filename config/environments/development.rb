@@ -28,10 +28,27 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
+  config.action_controller.asset_host = "http://#{Rails.application.credentials[Rails.env.to_sym][:host]}:3000"
+  config.action_mailer.asset_host = "http://#{Rails.application.credentials[Rails.env.to_sym][:host]}:3000"
+
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  # Use a real queuing backend for Active Job (and separate queues per environment).
+  config.active_job.queue_adapter = :resque
+  config.active_job.queue_name_prefix = 'enroll_dev'
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.default_url_options = {
+    host: Rails.application.credentials[Rails.env.to_sym][:host], port: 3000
+  }
+
+  # Tell Action Mailer not to deliver emails to the real world.
+  # The :test delivery method accumulates sent emails in the
+  # ActionMailer::Base.deliveries array.
+  config.action_mailer.delivery_method = :letter_opener
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -51,7 +68,7 @@ Rails.application.configure do
   config.assets.quiet = true
 
   # Raises error for missing translations.
-  # config.action_view.raise_on_missing_translations = true
+  config.action_view.raise_on_missing_translations = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.

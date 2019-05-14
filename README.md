@@ -5,20 +5,39 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+### Environment Setup
 
-* System dependencies
+```bash
+bin/setup
+```
 
-* Configuration
+### Environment Update
 
-* Database creation
+```bash
+bin/update
+```
 
-* Database initialization
+### Running In Development
 
-* How to run the test suite
+```bash
+foreman start -f Procfile.dev -p 3000
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Running Test Suite
 
-* Deployment instructions
+```bash
+bin/rails test:system test
+```
 
-* ...
+### Code Linting
+
+```bash
+bin/lint
+```
+
+### Deployment to Staging
+
+```bash
+git push heroku master
+```
+

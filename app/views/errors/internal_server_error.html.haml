@@ -1,0 +1,5 @@
+- content_for :title, 'Internal Server Error (500)'
+- content_for :description, "Um, something went wrong, but rest assured that we're working on it."
+
+%h1= yield :title
+%p= yield :description
