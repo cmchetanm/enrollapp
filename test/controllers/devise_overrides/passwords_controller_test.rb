@@ -4,6 +4,8 @@ module DeviseOverrides
   class PasswordsControllerTest < ActionDispatch::IntegrationTest
     test 'should get new' do
       Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
         get url_for([:new, scope[0], :password])
         assert_response :success
       end
@@ -11,6 +13,8 @@ module DeviseOverrides
 
     test 'should create password reset token' do
       Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
         resource_class = scope[0].to_s.classify.constantize
         resource = resource_class.all.sample
         post url_for([scope[0], :password]), params: {"#{scope[0]}": {email: resource.email}}
@@ -21,6 +25,8 @@ module DeviseOverrides
 
     test 'should get edit' do
       Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
         get url_for([:edit, scope[0], :password, reset_password_token: 'token'])
         assert_response :success
       end
@@ -28,6 +34,8 @@ module DeviseOverrides
 
     test 'should update password' do
       Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
         resource_class = scope[0].to_s.classify.constantize
         resource = resource_class.all.sample
         patch url_for([scope[0], :password]), params: {"#{scope[0]}": {

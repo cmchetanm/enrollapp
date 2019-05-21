@@ -1,3 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action authenticate_admin!
+  skip_before_action :verify_authenticity_token, if: :api_controller?
+
+  private
+
+  def api_controller?
+    request.path.start_with? '/api'
+  end
 end

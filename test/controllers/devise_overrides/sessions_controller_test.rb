@@ -4,6 +4,8 @@ module DeviseOverrides
   class SessionsControllerTest < ActionDispatch::IntegrationTest
     test 'should get new' do
       Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
         get url_for([:new, scope[0], :session])
         assert_response :success
       end
@@ -11,6 +13,8 @@ module DeviseOverrides
 
     test 'should create session' do
       Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
         resource = scope[0].to_s.classify.constantize.all.sample
         post url_for([scope[0], :session]), params: {"#{scope[0]}": {
           email: resource.email, password: 'MyC0mPl3xPassw0rd!'
@@ -21,6 +25,8 @@ module DeviseOverrides
 
     test 'should destroy session' do
       Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
         resource = scope[0].to_s.classify.constantize.all.sample
         sign_in resource
         delete url_for([:destroy, scope[0], :session])
