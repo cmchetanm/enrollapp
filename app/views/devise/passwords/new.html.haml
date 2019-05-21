@@ -1,15 +1,14 @@
-- content_for :title, 'Forgot your password?'
+- content_for :title, 'Forgot Your Password?'
 - content_for :description, 'Use this form to request a password reset email.'
 
 %h2= yield :title
 
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
   = render 'devise/shared/error_messages', resource: resource
-  .field
-    = f.label :email
-    %br
-    = f.email_field :email, autofocus: true, autocomplete: 'email'
+  = f.label :email
+  = f.email_field :email, autofocus: true, autocomplete: 'email'
+
   .actions
-    = f.submit 'Send me reset password instructions'
+    = f.submit 'Send me reset password instructions', class: 'button'
 
 = render 'devise/shared/links'

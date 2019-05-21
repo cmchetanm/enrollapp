@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+  get '/dashboard', to: 'pages#dashboard'
+
   devise_for :admins
 
   scope :api, defaults: {format: :json} do
