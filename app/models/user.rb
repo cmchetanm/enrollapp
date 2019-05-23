@@ -4,4 +4,17 @@ class User < ApplicationRecord
 
   devise :confirmable, :database_authenticatable, :lockable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  validates :first_name, :last_name, presence: true
+  validates :phone_number, presence: true, format:
+      { with: /\A\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\z/,
+        allow_blank: true, message: 'must have 10 digits' }
+
+  before_validation :prettify
+
+  private
+
+  def prettify
+    self.phone_number = phone_number.to_s.gsub(/\D/, '')
+  end
 end
