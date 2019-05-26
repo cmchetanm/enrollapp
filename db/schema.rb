@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_211433) do
+ActiveRecord::Schema.define(version: 2019_05_23_154725) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -31,6 +31,21 @@ ActiveRecord::Schema.define(version: 2019_05_14_211433) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_admins_on_unlock_token", unique: true
+  end
+
+  create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "owner_type", null: false
+    t.bigint "owner_id", null: false
+    t.string "creator_type"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "fk_rails_798926876b"
+    t.index ["creator_type", "creator_id"], name: "index_topics_on_creator_type_and_creator_id"
+    t.index ["name"], name: "index_topics_on_name"
+    t.index ["owner_id"], name: "fk_rails_df8172482f"
+    t.index ["owner_type", "owner_id"], name: "index_topics_on_owner_type_and_owner_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -62,4 +77,6 @@ ActiveRecord::Schema.define(version: 2019_05_14_211433) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "topics", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
+  add_foreign_key "topics", "users", column: "owner_id", on_update: :cascade, on_delete: :cascade
 end

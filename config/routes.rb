@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
 
   devise_for :admins
+  resources :topics
 
-  scope :api, defaults: {format: :json} do
+  scope :api, module: :api, defaults: {format: :json} do
     mount_devise_token_auth_for 'User', at: 'auth'
+    resources :topics, except: %i[new edit]
   end
 
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized

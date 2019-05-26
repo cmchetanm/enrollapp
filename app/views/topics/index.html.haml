@@ -1,0 +1,24 @@
+- content_for :title, 'Study Topics'
+- content_for :description, 'Study Topics'
+
+%h1 Listing topics
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @topics.each do |topic|
+      %tr
+        %td= topic.name
+        %td= link_to 'Show', topic
+        %td= link_to 'Edit', edit_topic_path(topic)
+        %td= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Topic', new_topic_path
