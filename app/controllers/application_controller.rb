@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_admin!, unless: :api_controller?
   before_action :authenticate_user!, if: :api_controller?, unless: :devise_controller?
 
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found unless Rails.env.development?
+
   def authenticated_user
     current_admin || current_user
   end
@@ -18,5 +20,9 @@ class ApplicationController < ActionController::Base
 
   def api_controller?
     request.path.start_with? '/api'
+  end
+
+  def record_not_found
+    redirect_to not_found_url
   end
 end
