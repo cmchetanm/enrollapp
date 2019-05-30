@@ -1,0 +1,7 @@
+- content_for :title, 'New Nurses'
+
+%h1= yield :title
+
+= render 'form', nurse: @nurse
+
+= link_to 'Back', nurses_path

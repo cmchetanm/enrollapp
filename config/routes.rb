@@ -5,10 +5,12 @@ Rails.application.routes.draw do
 
   devise_for :admins
   resources :topics
+  resources :nurses
 
   namespace :api, defaults: {format: :json} do
     mount_devise_token_auth_for 'User', at: 'auth'
     resources :topics, except: %i[new edit]
+    resources :nurses, except: %i[new edit]
   end
 
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized

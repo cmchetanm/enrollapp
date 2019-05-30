@@ -3,7 +3,7 @@ module Api
     before_action :set_topic, only: %i[show update destroy]
 
     def index
-      @topics = Topic.all.where(owner: current_api_user)
+      @topics = Topic.all.where(owner: current_api_user).order(:name)
     end
 
     def show

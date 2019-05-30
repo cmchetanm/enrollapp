@@ -1,0 +1,23 @@
+= form_for nurse, remote: true, authenticity_token: true do |f|
+  - if nurse.errors.any?
+    .error-explanation
+      %h2 #{pluralize(nurse.errors.count, 'error')} prohibited this nurse from being saved:
+      %ul
+        - nurse.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :full_name
+    = f.text_field :full_name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :phone_number
+    = f.text_field :phone_number
+  .field
+    = f.label :owner
+    = f.hidden_field :owner_type, value: User.model_name.name
+    = f.collection_select :owner_id, User.names, :id, :full_name, include_blank: true
+  .actions
+    = f.submit
