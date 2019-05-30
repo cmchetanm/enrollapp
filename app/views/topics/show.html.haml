@@ -1,8 +1,11 @@
-%p#notice= notice
+- content_for :title, @topic.name
 
 %p
   %b Name:
   = @topic.name
+%p
+  %b Owner:
+  = @topic.owner.full_name
 
 = link_to 'Edit', edit_topic_path(@topic)
 \|

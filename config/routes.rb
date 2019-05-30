@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :topics
 
-  scope :api, module: :api, defaults: {format: :json} do
+  namespace :api, defaults: {format: :json} do
     mount_devise_token_auth_for 'User', at: 'auth'
     resources :topics, except: %i[new edit]
   end

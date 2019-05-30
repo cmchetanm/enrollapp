@@ -1,0 +1,14 @@
+DEFAULTS: &DEFAULTS
+  uid: $LABEL
+  first_name: $LABEL
+  last_name: $LABEL
+  email: $LABEL<%= "@example.com" %>
+  phone_number: 1234567890
+  confirmed_at: <%= Time.current %>
+  encrypted_password: <%= User.new.send(:password_digest, 'MyC0mPl3xPassw0rd!') %>
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

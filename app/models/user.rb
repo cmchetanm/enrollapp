@@ -12,6 +12,14 @@ class User < ApplicationRecord
 
   before_validation :prettify
 
+  def self.names
+    all.order(:first_name, :last_name).select(:id, :first_name, :last_name)
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   private
 
   def prettify

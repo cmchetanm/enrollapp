@@ -57,6 +57,9 @@ gem 'dalli'
 # Provides hamlit generators for Rails. Hamlit = optimized HAML
 gem 'haml-rails'
 
+# Client Side Form Validations
+gem 'client_side_validations', git: 'https://github.com/DavyJonesLocker/client_side_validations.git'
+
 # React Support
 gem 'react-rails'
 

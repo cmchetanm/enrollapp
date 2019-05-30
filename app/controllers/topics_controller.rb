@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: %i[show edit update destroy]
 
   def index
-    @topics = Topic.all
+    @topics = Topic.all.order(:name)
   end
 
   def show
@@ -26,7 +26,7 @@ class TopicsController < ApplicationController
   end
 
   def update
-    if @topic.update(topic_params)
+    if @topic.update!(topic_params)
       redirect_to @topic, notice: 'Topic was successfully updated.'
     else
       render :edit

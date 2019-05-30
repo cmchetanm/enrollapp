@@ -8,7 +8,7 @@
 %title= content_for?(:title) ? yield(:title) : raise(t('no_title'))
 %meta{content: yield(:title), property: 'og:title'}
 
-%meta{content: content_for?(:description) ? yield(:description) : raise(t('no_description')), name: 'description'}
+%meta{content: yield(:description), name: 'description'}
 %meta{content: yield(:description), property: 'og:description'}
 
 %meta{content: request.original_url, property: 'og:url'}

@@ -3,14 +3,14 @@ module Api
     before_action :set_topic, only: %i[show update destroy]
 
     def index
-      @topics = Topic.all.where(owner: current_user)
+      @topics = Topic.all.where(owner: current_api_user)
     end
 
     def show
     end
 
     def create
-      @topic = Topic.new(topic_params.merge(creator: current_user, owner: current_user))
+      @topic = Topic.new(topic_params.merge(creator: current_api_user, owner: current_api_user))
 
       if @topic.save
         render :show, status: :created, location: @topic
@@ -38,7 +38,7 @@ module Api
     private
 
     def set_topic
-      @topic = Topic.find_by!(id: params[:id], owner: current_user)
+      @topic = Topic.find_by!(id: params[:id], owner: current_api_user)
     end
 
     def topic_params

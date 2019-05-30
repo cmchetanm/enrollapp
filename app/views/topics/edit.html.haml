@@ -1,6 +1,8 @@
-%h1 Editing topic
+- content_for :title, 'Editing Topic'
 
-= render 'form'
+%h1= yield :title
+
+= render 'form', topic: @topic
 
 = link_to 'Show', @topic
 \|

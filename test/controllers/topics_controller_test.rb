@@ -2,7 +2,9 @@ require 'test_helper'
 
 class TopicsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    sign_in admins(:one)
     @topic = topics(:one)
+    @user = users(:one)
   end
 
   test 'should get index' do
@@ -17,7 +19,7 @@ class TopicsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create topic' do
     assert_difference('Topic.count') do
-      post topics_url, params: { topic: { name: @topic.name } }
+      post topics_url, params: { topic: { name: @topic.name, owner_id: @user.id, owner_type: 'User' } }
     end
 
     assert_redirected_to topic_url(Topic.last)

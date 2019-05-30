@@ -1,7 +1,10 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+DEFAULTS: &DEFAULTS
+  name: $LABEL
+  owner: $LABEL (User)
+  creator: $LABEL (User)
 
 one:
-  name: MyString
+  <<: *DEFAULTS
 
 two:
-  name: MyString
+  <<: *DEFAULTS

@@ -23,8 +23,6 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = "https://#{Rails.application.credentials[Rails.env.to_sym][:host]}"
-  config.action_mailer.asset_host = "https://#{Rails.application.credentials[Rails.env.to_sym][:host]}"
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
@@ -45,5 +43,5 @@ Rails.application.configure do
   config.active_support.deprecation = :stderr
 
   # Raises error for missing translations.
-  # config.action_view.raise_on_missing_translations = true
+  config.action_view.raise_on_missing_translations = true
 end
