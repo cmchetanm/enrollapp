@@ -84,6 +84,7 @@ group :development do
   gem 'haml-lint'
   gem 'rubocop'
   gem 'rubocop-performance'
+  gem 'rubocop-rails'
 end
 
 group :test do

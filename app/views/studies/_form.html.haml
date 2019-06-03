@@ -1,0 +1,62 @@
+= form_for study, remote: true, authenticity_token: true do |f|
+  - if study.errors.any?
+    .error-explanation
+      %h2 #{pluralize(study.errors.count, 'error')} prohibited this study from being saved:
+      %ul
+        - study.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :topic
+    = f.collection_select :topic_id, Topic.names, :id, :name, include_blank: true
+  .field
+    = f.label :nurse
+    = f.collection_select :nurse_id, Nurse.names, :id, :full_name, include_blank: true
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :protocol
+    = f.text_field :protocol
+  .field
+    = f.label :agent
+    = f.text_field :agent
+  .field
+    = f.label :mechanism
+    = f.text_field :mechanism
+  .field
+    = f.label :side_effects
+    = f.text_field :side_effects
+  .field
+    = f.label :administration
+    = f.text_field :administration
+  .field
+    = f.label :randomization
+    = f.text_field :randomization
+  .field
+    = f.label :duration
+    = f.text_field :duration
+  .field
+    = f.label :assessment_frequency
+    = f.text_field :assessment_frequency
+  .field
+    = f.label :interventions
+    = f.text_field :interventions
+  .field
+    = f.label :contact
+    = f.text_field :contact
+  .field
+    = f.label :honorarium
+    = f.text_field :honorarium
+  .field
+    = f.label :comments
+    = f.text_field :comments
+  .field
+    = f.label :published
+    = f.check_box :published
+  .field
+    = f.label :owner
+    = f.hidden_field :owner_type, value: User.model_name.name
+    = f.collection_select :owner_id, User.names, :id, :full_name, include_blank: true
+  .actions
+    = f.submit

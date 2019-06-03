@@ -1,0 +1,57 @@
+- content_for :title, @study.name
+
+%p
+  %b Topic:
+  = @study.topic.name
+%p
+  %b Nurse:
+  = @study.nurse.try(:full_name)
+%p
+  %b Name:
+  = @study.name
+%p
+  %b Protocol:
+  = @study.protocol
+%p
+  %b Agent:
+  = @study.agent
+%p
+  %b Mechanism:
+  = @study.mechanism
+%p
+  %b Side effects:
+  = @study.side_effects
+%p
+  %b Administration:
+  = @study.administration
+%p
+  %b Randomization:
+  = @study.randomization
+%p
+  %b Duration:
+  = @study.duration
+%p
+  %b Assessment frequency:
+  = @study.assessment_frequency
+%p
+  %b Interventions:
+  = @study.interventions
+%p
+  %b Contact:
+  = @study.contact
+%p
+  %b Honorarium:
+  = @study.honorarium
+%p
+  %b Comments:
+  = @study.comments
+%p
+  %b Published:
+  = @study.published
+%p
+  %b Owner:
+  = @study.owner.full_name
+
+= link_to 'Edit', edit_study_path(@study)
+\|
+= link_to 'Back', studies_path

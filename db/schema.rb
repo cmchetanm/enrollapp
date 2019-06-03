@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_043921) do
+ActiveRecord::Schema.define(version: 2019_05_31_162338) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -48,6 +48,36 @@ ActiveRecord::Schema.define(version: 2019_05_30_043921) do
     t.index ["full_name"], name: "index_nurses_on_full_name"
     t.index ["owner_id"], name: "fk_rails_3ef4990686"
     t.index ["owner_type", "owner_id"], name: "index_nurses_on_owner_type_and_owner_id"
+  end
+
+  create_table "studies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "topic_id", null: false
+    t.bigint "nurse_id"
+    t.string "name", null: false
+    t.string "protocol"
+    t.string "agent"
+    t.string "mechanism"
+    t.string "side_effects"
+    t.string "administration"
+    t.string "randomization"
+    t.string "duration"
+    t.string "assessment_frequency"
+    t.string "interventions"
+    t.string "contact"
+    t.string "honorarium"
+    t.text "comments"
+    t.boolean "published", default: false
+    t.string "owner_type", null: false
+    t.bigint "owner_id", null: false
+    t.string "creator_type"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_type", "creator_id"], name: "index_studies_on_creator_type_and_creator_id"
+    t.index ["name"], name: "index_studies_on_name"
+    t.index ["nurse_id"], name: "index_studies_on_nurse_id"
+    t.index ["owner_type", "owner_id"], name: "index_studies_on_owner_type_and_owner_id"
+    t.index ["topic_id"], name: "index_studies_on_topic_id"
   end
 
   create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -96,6 +126,8 @@ ActiveRecord::Schema.define(version: 2019_05_30_043921) do
 
   add_foreign_key "nurses", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
   add_foreign_key "nurses", "users", column: "owner_id", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "studies", "nurses", on_update: :cascade, on_delete: :nullify
+  add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade
   add_foreign_key "topics", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
   add_foreign_key "topics", "users", column: "owner_id", on_update: :cascade, on_delete: :cascade
 end

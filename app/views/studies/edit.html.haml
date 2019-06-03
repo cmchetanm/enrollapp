@@ -1,0 +1,9 @@
+- content_for :title, 'Editing Study'
+
+%h1= yield :title
+
+= render 'form', study: @study
+
+= link_to 'Show', @study
+\|
+= link_to 'Back', studies_path

@@ -7,10 +7,9 @@ class CreateTopics < ActiveRecord::Migration[6.0]
 
       t.timestamps
 
-      t.foreign_key :users, column: :owner_id, on_update: :cascade, on_delete: :cascade
-      t.foreign_key :users, column: :creator_id, on_update: :cascade, on_delete: :nullify
-
       t.index :name
+      t.index %i[owner_type owner_id]
+      t.index %i[creator_type creator_id]
     end
   end
 end

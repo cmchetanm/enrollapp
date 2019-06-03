@@ -20,8 +20,7 @@ module Api
         post api_nurses_url, params: {
           full_name: @nurse.full_name, email: @nurse.email, phone_number: @nurse.phone_number,
           owner_id: @user.id, owner_type: 'User'
-        },
-                             headers: @auth_tokens
+        }, headers: @auth_tokens
       end
       assert_response :success
     end
@@ -34,8 +33,7 @@ module Api
     test 'should update nurse' do
       patch api_nurse_url(@nurse), params: {
         full_name: @nurse.full_name, email: @nurse.email, phone_number: @nurse.phone_number
-      },
-                                   headers: @auth_tokens
+      }, headers: @auth_tokens
       assert_response :success
     end
 

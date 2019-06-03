@@ -1,0 +1,25 @@
+DEFAULTS: &DEFAULTS
+  topic: $LABEL
+  nurse: $LABEL
+  name: $LABEL
+  protocol: $LABEL
+  agent: $LABEL
+  mechanism: $LABEL
+  side_effects: $LABEL
+  administration: $LABEL
+  randomization: $LABEL
+  duration: $LABEL
+  assessment_frequency: $LABEL
+  interventions: $LABEL
+  contact: $LABEL
+  honorarium: $LABEL
+  comments: $LABEL
+  published: false
+  owner: $LABEL (User)
+  creator: $LABEL (User)
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS
