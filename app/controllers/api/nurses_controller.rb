@@ -15,7 +15,7 @@ module Api
       if @nurse.save
         render :show, status: :created, location: @nurse
       else
-        render json: @nurse.errors, status: :unprocessable_entity
+        render json: {errors: @nurse.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
@@ -23,15 +23,15 @@ module Api
       if @nurse.update(nurse_params)
         render :show, status: :ok, location: @nurse
       else
-        render json: @nurse.errors, status: :unprocessable_entity
+        render json: {errors: @nurse.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
     def destroy
       if @nurse.destroy
-        head :no_content
+        render :show, status: :ok, location: @nurse
       else
-        render json: @nurse.errors, status: :unprocessable_entity
+        render json: {errors: @nurse.errors.full_messages}, status: :unprocessable_entity
       end
     end
 

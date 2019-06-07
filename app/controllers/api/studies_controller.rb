@@ -4,7 +4,7 @@ module Api
     before_action :set_study, only: %i[show update destroy]
 
     def index
-      @studies = Study.all.where(topic: @topic, owner: current_api_user).order(:name)
+      @studies = Study.eager_load(:topic).where(topic: @topic, owner: current_api_user).order(:name)
     end
 
     def show
@@ -16,7 +16,7 @@ module Api
       if @study.save
         render :show, status: :created, location: @study
       else
-        render json: @study.errors, status: :unprocessable_entity
+        render json: {errors: @study.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
@@ -24,15 +24,15 @@ module Api
       if @study.update(study_params)
         render :show, status: :ok, location: @study
       else
-        render json: @study.errors, status: :unprocessable_entity
+        render json: {errors: @study.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
     def destroy
       if @study.destroy
-        head :no_content
+        render :show, status: :ok, location: @study
       else
-        render json: @study.errors, status: :unprocessable_entity
+        render json: {errors: @study.errors.full_messages}, status: :unprocessable_entity
       end
     end
 

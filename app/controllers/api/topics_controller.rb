@@ -15,7 +15,7 @@ module Api
       if @topic.save
         render :show, status: :created, location: @topic
       else
-        render json: @topic.errors, status: :unprocessable_entity
+        render json: {errors: @topic.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
@@ -23,15 +23,15 @@ module Api
       if @topic.update(topic_params)
         render :show, status: :ok, location: @topic
       else
-        render json: @topic.errors, status: :unprocessable_entity
+        render json: {errors: @topic.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
     def destroy
       if @topic.destroy
-        head :no_content
+        render :show, status: :ok, location: @topic
       else
-        render json: @topic.errors, status: :unprocessable_entity
+        render json: {errors: @topic.errors.full_messages}, status: :unprocessable_entity
       end
     end
 

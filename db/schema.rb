@@ -43,10 +43,8 @@ ActiveRecord::Schema.define(version: 2019_05_31_162338) do
     t.bigint "creator_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_id"], name: "fk_rails_73f545c719"
     t.index ["creator_type", "creator_id"], name: "index_nurses_on_creator_type_and_creator_id"
     t.index ["full_name"], name: "index_nurses_on_full_name"
-    t.index ["owner_id"], name: "fk_rails_3ef4990686"
     t.index ["owner_type", "owner_id"], name: "index_nurses_on_owner_type_and_owner_id"
   end
 
@@ -88,10 +86,8 @@ ActiveRecord::Schema.define(version: 2019_05_31_162338) do
     t.bigint "creator_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_id"], name: "fk_rails_798926876b"
     t.index ["creator_type", "creator_id"], name: "index_topics_on_creator_type_and_creator_id"
     t.index ["name"], name: "index_topics_on_name"
-    t.index ["owner_id"], name: "fk_rails_df8172482f"
     t.index ["owner_type", "owner_id"], name: "index_topics_on_owner_type_and_owner_id"
   end
 
@@ -124,10 +120,6 @@ ActiveRecord::Schema.define(version: 2019_05_31_162338) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
-  add_foreign_key "nurses", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
-  add_foreign_key "nurses", "users", column: "owner_id", on_update: :cascade, on_delete: :cascade
   add_foreign_key "studies", "nurses", on_update: :cascade, on_delete: :nullify
   add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "topics", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
-  add_foreign_key "topics", "users", column: "owner_id", on_update: :cascade, on_delete: :cascade
 end
