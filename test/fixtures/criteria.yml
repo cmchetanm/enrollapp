@@ -1,0 +1,12 @@
+DEFAULTS: &DEFAULTS
+  study: $LABEL
+  kind: <%= [CriterionType::EXCLUSION, CriterionType::INCLUSION].sample %>
+  text: $LABEL
+  owner: $LABEL (User)
+  creator: $LABEL (User)
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

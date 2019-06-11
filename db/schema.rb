@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_31_162338) do
+ActiveRecord::Schema.define(version: 2019_06_07_144004) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -31,6 +31,21 @@ ActiveRecord::Schema.define(version: 2019_05_31_162338) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_admins_on_unlock_token", unique: true
+  end
+
+  create_table "criteria", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "study_id", null: false
+    t.string "kind", null: false
+    t.string "text", null: false
+    t.string "owner_type", null: false
+    t.bigint "owner_id", null: false
+    t.string "creator_type"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_type", "creator_id"], name: "index_criteria_on_creator_type_and_creator_id"
+    t.index ["owner_type", "owner_id"], name: "index_criteria_on_owner_type_and_owner_id"
+    t.index ["study_id"], name: "index_criteria_on_study_id"
   end
 
   create_table "nurses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -120,6 +135,7 @@ ActiveRecord::Schema.define(version: 2019_05_31_162338) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "criteria", "studies", on_update: :cascade, on_delete: :cascade
   add_foreign_key "studies", "nurses", on_update: :cascade, on_delete: :nullify
   add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade
 end

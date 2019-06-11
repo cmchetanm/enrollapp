@@ -35,6 +35,9 @@ module Enroll
     # Use custom exception handlers
     config.exceptions_app = routes
 
+    # Include lib folder into autoload paths
+    config.autoload_paths << Rails.root.join('lib')
+
     # Compress HAML output
     Haml::Template.options[:remove_whitespace] = true
 

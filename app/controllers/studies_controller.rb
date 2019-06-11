@@ -18,7 +18,7 @@ class StudiesController < ApplicationController
   def create
     @study = Study.new(study_params.merge(creator: current_admin))
 
-    if @study.save!
+    if @study.save
       redirect_to @study, notice: 'Study was successfully created.'
     else
       render :new
