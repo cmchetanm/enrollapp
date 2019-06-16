@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   resources :topics
 
   namespace :api, defaults: {format: :json} do
-    mount_devise_token_auth_for 'User', at: 'auth'
+    mount_devise_token_auth_for 'User', at: 'auth', controllers: {
+      registrations: 'api/devise_token_auth_overrides/registrations',
+      sessions: 'api/devise_token_auth_overrides/sessions'
+    }
     resources :nurses, except: %i[new edit]
     resources :topics, except: %i[new edit], shallow: true do
       resources :studies, except: %i[new edit]

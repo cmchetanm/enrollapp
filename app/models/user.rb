@@ -2,6 +2,10 @@ class User < ApplicationRecord
   include HasStrongPassword
   include DeviseTokenAuth::Concerns::User
 
+  has_many :nurses, as: :owner, dependent: :destroy
+  has_many :studies, as: :owner, dependent: :destroy
+  has_many :topics, as: :owner, dependent: :destroy
+
   devise :confirmable, :database_authenticatable, :lockable, :registerable,
          :recoverable, :rememberable, :validatable
 
