@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :topics, except: %i[new edit]
     resources :studies, except: %i[new edit]
     resources :members, except: %i[new edit show]
+    put '/auth/fcm_token', to: 'users#fcm_token'
   end
 
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized

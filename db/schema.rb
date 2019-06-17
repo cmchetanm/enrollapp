@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_16_035911) do
+ActiveRecord::Schema.define(version: 2019_06_17_030218) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -142,6 +142,7 @@ ActiveRecord::Schema.define(version: 2019_06_16_035911) do
     t.string "unlock_token"
     t.datetime "locked_at"
     t.text "tokens"
+    t.json "fcm_tokens", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
