@@ -1,10 +1,10 @@
 module Api
   class StudiesController < ApplicationController
-    before_action :set_topic, only: %i[index create]
+    before_action :set_topic, only: :create
     before_action :set_study, only: %i[show update destroy]
 
     def index
-      @studies = Study.eager_load(:topic).where(topic: @topic, owner: current_api_user).order(:name)
+      @studies = StudyAuthenticator.new(current_api_user).find_all(params[:topic_id])
     end
 
     def show
@@ -42,11 +42,11 @@ module Api
     private
 
     def set_topic
-      @topic = Topic.find_by!(id: params[:topic_id], owner: current_api_user)
+      @topic = TopicAuthenticator.new(current_api_user).find_one(params[:topic_id])
     end
 
     def set_study
-      @study = Study.find_by!(id: params[:id], owner: current_api_user)
+      @study = StudyAuthenticator.new(current_api_user).find_one(params[:id])
     end
 
     def study_params

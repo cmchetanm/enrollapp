@@ -1,12 +1,13 @@
 module Api
   class TopicsController < ApplicationController
-    before_action :set_topic, only: %i[show update destroy]
+    before_action :set_topic, only: %i[update destroy]
 
     def index
-      @topics = Topic.all.where(owner: current_api_user).order(:name)
+      @topics = TopicAuthenticator.new(current_api_user).find_all
     end
 
     def show
+      @topic = TopicAuthenticator.new(current_api_user).find_one(params[:id])
     end
 
     def create

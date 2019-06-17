@@ -2,8 +2,11 @@ class Study < ApplicationRecord
   belongs_to :topic, optional: true
   belongs_to :nurse, optional: true
   has_many :criteria, dependent: :destroy
+  has_many :members, -> { order(:full_name) }, inverse_of: :study, dependent: :destroy
   belongs_to :creator, polymorphic: true, optional: true
   belongs_to :owner, polymorphic: true
+
+  scope :published, -> { where(published: true) }
 
   validates :name, presence: true
   validate :validate_associations
@@ -15,6 +18,10 @@ class Study < ApplicationRecord
   def set_criteria(params, creator, owner)
     set_inclusion_criteria(params[:inclusion_criteria] || [], creator, owner)
     set_exclusion_criteria(params[:exclusion_criteria] || [], creator, owner)
+  end
+
+  def role(user)
+    owner_id == user.id ? nil : members.find { |member| member.user_id == user.id }.role
   end
 
   private

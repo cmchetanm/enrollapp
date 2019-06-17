@@ -12,20 +12,20 @@ module Api
     end
 
     test 'should get index' do
-      get api_topic_studies_url(@topic), headers: @auth_tokens
+      get api_studies_url, params: { topic_id: @topic.id }, headers: @auth_tokens
       assert_response :success
     end
 
     test 'should create study' do
       assert_difference('Criterion.count', 2) do
         assert_difference('Study.count') do
-          post api_topic_studies_url(@topic), params: {
+          post api_studies_url, params: {
             administration: @study.administration, agent: @study.agent,
             assessment_frequency: @study.assessment_frequency, comments: @study.comments,
             contact: @study.contact, duration: @study.duration, honorarium: @study.honorarium,
             interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
             nurse_id: @study.nurse_id, protocol: @study.protocol, randomization: @study.randomization,
-            side_effects: @study.side_effects,
+            side_effects: @study.side_effects, topic_id: @topic.id,
             inclusion_criteria: [{text: 'test'}.to_json], exclusion_criteria: [{text: 'test'}.to_json]
           }, headers: @auth_tokens
         end

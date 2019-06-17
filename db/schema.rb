@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_07_144004) do
+ActiveRecord::Schema.define(version: 2019_06_16_035911) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -46,6 +46,22 @@ ActiveRecord::Schema.define(version: 2019_06_07_144004) do
     t.index ["creator_type", "creator_id"], name: "index_criteria_on_creator_type_and_creator_id"
     t.index ["owner_type", "owner_id"], name: "index_criteria_on_owner_type_and_owner_id"
     t.index ["study_id"], name: "index_criteria_on_study_id"
+  end
+
+  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "study_id", null: false
+    t.bigint "user_id"
+    t.string "full_name", null: false
+    t.string "email", null: false
+    t.string "phone_number", null: false
+    t.string "role", null: false
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_members_on_creator_id"
+    t.index ["study_id", "email"], name: "index_members_on_study_id_and_email"
+    t.index ["study_id"], name: "index_members_on_study_id"
+    t.index ["user_id"], name: "index_members_on_user_id"
   end
 
   create_table "nurses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -136,6 +152,9 @@ ActiveRecord::Schema.define(version: 2019_06_07_144004) do
   end
 
   add_foreign_key "criteria", "studies", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "members", "studies", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "members", "users", name: "fk_rails_member_creator", on_update: :cascade, on_delete: :nullify
+  add_foreign_key "members", "users", on_update: :cascade, on_delete: :cascade
   add_foreign_key "studies", "nurses", on_update: :cascade, on_delete: :nullify
   add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade
 end

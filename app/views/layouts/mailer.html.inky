@@ -17,7 +17,8 @@
                   %row
                     %columns{large: 3}
                     %columns.small-offset-3{small: 6, large: 6}
-                      = image_tag image_url("/email/logo.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: APP[:company_name]
+                      %center
+                        = image_tag image_url("/email/logo.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: APP[:company_name]
                     %columns{large: 3}
 
             %container.main-content
@@ -29,6 +30,13 @@
                     %spacer{size: 16}
 
               %container.footer
+                %row
+                  %columns{large: 3}
+                    %center
+                      = image_tag image_url("/email/app-store-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'App Store Badge'
+                  %columns{large: 3}
+                    %center
+                      = image_tag image_url("/email/google-play-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'Google Play Badge'
                 %spacer{size: 16}
                 %row
                   %columns{small: 12, large: 3}

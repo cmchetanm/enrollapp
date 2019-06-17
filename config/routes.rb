@@ -14,9 +14,9 @@ Rails.application.routes.draw do
       sessions: 'api/devise_token_auth_overrides/sessions'
     }
     resources :nurses, except: %i[new edit]
-    resources :topics, except: %i[new edit], shallow: true do
-      resources :studies, except: %i[new edit]
-    end
+    resources :topics, except: %i[new edit]
+    resources :studies, except: %i[new edit]
+    resources :members, except: %i[new edit show]
   end
 
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized

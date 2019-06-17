@@ -1,0 +1,18 @@
+DEFAULTS: &DEFAULTS
+  study: $LABEL
+  user: $LABEL
+  full_name: $LABEL
+  email: $LABEL<%= "@example.com" %>
+  phone_number: 1234567890
+  role: <%= [MemberRole::NURSE,
+    MemberRole::PRINCIPAL_INVESTIGATOR,
+    MemberRole::SUB_INVESTIGATOR,
+    MemberRole::COMMUNITY_COLLEAGUE,
+    MemberRole::SPONSOR].sample %>
+  creator: $LABEL
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS
