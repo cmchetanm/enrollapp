@@ -13,7 +13,7 @@ class CreateMembers < ActiveRecord::Migration[6.0]
 
       t.foreign_key :studies, on_update: :cascade, on_delete: :cascade
       t.foreign_key :users, on_update: :cascade, on_delete: :cascade
-      t.foreign_key :users, column_name: :creator_id, on_update: :cascade, on_delete: :nullify, name: 'fk_rails_member_creator'
+      t.foreign_key :users, column: :creator_id, on_update: :cascade, on_delete: :nullify
 
       t.index %i[study_id email]
     end

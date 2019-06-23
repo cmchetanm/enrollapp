@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_030218) do
+ActiveRecord::Schema.define(version: 2019_06_22_030415) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 2019_06_17_030218) do
     t.index ["unlock_token"], name: "index_admins_on_unlock_token", unique: true
   end
 
+  create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "study_id", null: false
+    t.bigint "member_id", null: false
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_appointments_on_creator_id"
+    t.index ["member_id"], name: "index_appointments_on_member_id"
+    t.index ["study_id", "member_id", "creator_id"], name: "fk_rails_appointment_uniqueness", unique: true
+    t.index ["study_id"], name: "index_appointments_on_study_id"
+  end
+
   create_table "criteria", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "study_id", null: false
     t.string "kind", null: false
@@ -49,7 +61,6 @@ ActiveRecord::Schema.define(version: 2019_06_17_030218) do
   end
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "study_id", null: false
     t.bigint "user_id"
     t.string "full_name", null: false
     t.string "email", null: false
@@ -59,29 +70,13 @@ ActiveRecord::Schema.define(version: 2019_06_17_030218) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["creator_id"], name: "index_members_on_creator_id"
-    t.index ["study_id", "email"], name: "index_members_on_study_id_and_email"
-    t.index ["study_id"], name: "index_members_on_study_id"
+    t.index ["email", "role", "creator_id"], name: "index_members_on_email_and_role_and_creator_id", unique: true
+    t.index ["email"], name: "index_members_on_study_id_and_email"
     t.index ["user_id"], name: "index_members_on_user_id"
-  end
-
-  create_table "nurses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "full_name", null: false
-    t.string "email", null: false
-    t.string "phone_number", null: false
-    t.string "owner_type", null: false
-    t.bigint "owner_id", null: false
-    t.string "creator_type"
-    t.bigint "creator_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_type", "creator_id"], name: "index_nurses_on_creator_type_and_creator_id"
-    t.index ["full_name"], name: "index_nurses_on_full_name"
-    t.index ["owner_type", "owner_id"], name: "index_nurses_on_owner_type_and_owner_id"
   end
 
   create_table "studies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "topic_id", null: false
-    t.bigint "nurse_id"
     t.string "name", null: false
     t.string "protocol"
     t.string "agent"
@@ -104,7 +99,6 @@ ActiveRecord::Schema.define(version: 2019_06_17_030218) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["creator_type", "creator_id"], name: "index_studies_on_creator_type_and_creator_id"
     t.index ["name"], name: "index_studies_on_name"
-    t.index ["nurse_id"], name: "index_studies_on_nurse_id"
     t.index ["owner_type", "owner_id"], name: "index_studies_on_owner_type_and_owner_id"
     t.index ["topic_id"], name: "index_studies_on_topic_id"
   end
@@ -152,10 +146,11 @@ ActiveRecord::Schema.define(version: 2019_06_17_030218) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "appointments", "members", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "appointments", "studies", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "appointments", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
   add_foreign_key "criteria", "studies", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "members", "studies", on_update: :cascade, on_delete: :cascade
   add_foreign_key "members", "users", name: "fk_rails_member_creator", on_update: :cascade, on_delete: :nullify
   add_foreign_key "members", "users", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "studies", "nurses", on_update: :cascade, on_delete: :nullify
   add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade
 end

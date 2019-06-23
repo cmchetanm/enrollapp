@@ -1,0 +1,10 @@
+DEFAULTS: &DEFAULTS
+  study: $LABEL
+  member: $LABEL
+  creator: $LABEL
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

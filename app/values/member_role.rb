@@ -1,7 +1,8 @@
-class MemberRole
-  NURSE = 'NURSE'.freeze
-  PRINCIPAL_INVESTIGATOR = 'PI'.freeze
-  SUB_INVESTIGATOR = 'SUB'.freeze
-  COMMUNITY_COLLEAGUE = 'COLLEAGUE'.freeze
-  SPONSOR = 'SPONSOR'.freeze
+class MemberRole < Constant
+  NURSE = 'Study Nurse'.freeze
+  PI = 'Principal Investigator'.freeze
+  SUB = 'Sub-Investigator'.freeze
+  COLLEAGUE = 'Community Colleague'.freeze
+  SPONSOR = 'Sponsor'.freeze
+  OTHER = 'Other'.freeze
 end

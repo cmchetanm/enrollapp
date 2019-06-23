@@ -10,9 +10,6 @@
     = f.label :topic
     = f.collection_select :topic_id, Topic.names, :id, :name, include_blank: true
   .field
-    = f.label :nurse
-    = f.collection_select :nurse_id, Nurse.names, :id, :full_name, include_blank: true
-  .field
     = f.label :name
     = f.text_field :name
   .field

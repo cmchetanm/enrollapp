@@ -29,7 +29,6 @@
     - @studies.each do |study|
       %tr
         %td= study.topic.name
-        %td= study.nurse.try(:full_name)
         %td= study.name
         %td= study.protocol
         %td= study.agent

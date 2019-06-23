@@ -23,7 +23,7 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
         administration: @study.administration, agent: @study.agent,
         assessment_frequency: @study.assessment_frequency, comments: @study.comments, contact: @study.contact,
         duration: @study.duration, honorarium: @study.honorarium, interventions: @study.interventions,
-        mechanism: @study.mechanism, name: @study.name, nurse_id: @study.nurse_id, protocol: @study.protocol,
+        mechanism: @study.mechanism, name: @study.name, protocol: @study.protocol,
         published: @study.published, randomization: @study.randomization, side_effects: @study.side_effects,
         topic_id: @study.topic_id, owner_id: @user.id, owner_type: 'User'
       } }
@@ -46,7 +46,7 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
     patch study_url(@study), params: { study: {
       administration: @study.administration, agent: @study.agent, assessment_frequency: @study.assessment_frequency,
       comments: @study.comments, contact: @study.contact, duration: @study.duration, honorarium: @study.honorarium,
-      interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name, nurse_id: @study.nurse_id,
+      interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
       protocol: @study.protocol, published: @study.published, randomization: @study.randomization,
       side_effects: @study.side_effects, topic_id: @study.topic_id
     } }

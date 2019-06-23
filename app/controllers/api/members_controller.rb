@@ -1,12 +1,15 @@
 module Api
   class MembersController < ApplicationController
-    before_action :set_member, except: :create
+    before_action :set_member, except: %i[index create]
+
+    def index
+      @members = Member.where(creator: current_api_user).order(:full_name)
+    end
 
     def create
       @member = Member.new(member_params.merge(creator: current_api_user))
 
       if @member.save
-        StudyTeamManager.share(@member)
         render :show, status: :created
       else
         render json: {errors: @member.errors.full_messages}, status: :unprocessable_entity

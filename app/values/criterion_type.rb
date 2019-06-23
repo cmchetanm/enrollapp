@@ -1,4 +1,4 @@
-class CriterionType
-  INCLUSION = 'INCL'.freeze
-  EXCLUSION = 'EXCL'.freeze
+class CriterionType < Constant
+  INCL = 'INCL'.freeze
+  EXCL = 'EXCL'.freeze
 end

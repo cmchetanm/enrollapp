@@ -24,7 +24,7 @@ module Api
             assessment_frequency: @study.assessment_frequency, comments: @study.comments,
             contact: @study.contact, duration: @study.duration, honorarium: @study.honorarium,
             interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
-            nurse_id: @study.nurse_id, protocol: @study.protocol, randomization: @study.randomization,
+            protocol: @study.protocol, randomization: @study.randomization,
             side_effects: @study.side_effects, topic_id: @topic.id,
             inclusion_criteria: [{text: 'test'}.to_json], exclusion_criteria: [{text: 'test'}.to_json]
           }, headers: @auth_tokens
@@ -45,7 +45,7 @@ module Api
           assessment_frequency: @study.assessment_frequency, comments: @study.comments,
           contact: @study.contact, duration: @study.duration, honorarium: @study.honorarium,
           interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
-          nurse_id: @study.nurse_id, protocol: @study.protocol, randomization: @study.randomization,
+          protocol: @study.protocol, randomization: @study.randomization,
           side_effects: @study.side_effects, topic_id: @study.topic_id,
           inclusion_criteria: [{text: 'test'}.to_json], exclusion_criteria: [{text: 'test'}.to_json]
         }, headers: @auth_tokens

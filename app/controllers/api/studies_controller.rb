@@ -24,7 +24,7 @@ module Api
     def update
       @study.set_criteria(study_params, current_api_user, current_api_user)
 
-      if @study.update(study_params)
+      if @study.update!(study_params)
         render :show, status: :ok, location: @study
       else
         render json: {errors: @study.errors.full_messages}, status: :unprocessable_entity
@@ -50,7 +50,7 @@ module Api
     end
 
     def study_params
-      params.permit(:topic_id, :nurse_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration,
+      params.permit(:topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration,
                     :randomization, :duration, :assessment_frequency, :interventions, :contact, :honorarium, :comments,
                     inclusion_criteria: [], exclusion_criteria: [])
     end

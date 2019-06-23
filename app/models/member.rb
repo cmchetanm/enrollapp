@@ -1,5 +1,4 @@
 class Member < ApplicationRecord
-  belongs_to :study
   belongs_to :user, optional: true
   belongs_to :creator, class_name: 'User'
 
@@ -8,13 +7,9 @@ class Member < ApplicationRecord
   validates :phone_number, presence: true, format:
       { with: /\A\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\z/,
         allow_blank: true, message: 'must have 10 digits' }
-  validates :role, presence: true, inclusion: {in: [
-    MemberRole::NURSE,
-    MemberRole::PRINCIPAL_INVESTIGATOR,
-    MemberRole::SUB_INVESTIGATOR,
-    MemberRole::COMMUNITY_COLLEAGUE,
-    MemberRole::SPONSOR
-  ], allow_blank: true}
+  validates :role, presence: true
+
+  validates :email, uniqueness: { scope: %i[role creator_id], case_sensitive: true }
 
   before_validation :prettify, :link_user
 

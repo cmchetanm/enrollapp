@@ -25,7 +25,6 @@ class StudiesTest < ApplicationSystemTestCase
     fill_in 'Interventions', with: @study.interventions
     fill_in 'Mechanism', with: @study.mechanism
     fill_in 'Name', with: @study.name
-    select @study.nurse.full_name, from: 'study_nurse_id'
     fill_in 'Protocol', with: @study.protocol
     check 'Published'
     fill_in 'Randomization', with: @study.randomization
@@ -52,7 +51,6 @@ class StudiesTest < ApplicationSystemTestCase
     fill_in 'Interventions', with: @study.interventions
     fill_in 'Mechanism', with: @study.mechanism
     fill_in 'Name', with: @study.name
-    select @study.nurse.full_name, from: 'study_nurse_id'
     fill_in 'Protocol', with: @study.protocol
     check 'Published' if @study.published
     fill_in 'Randomization', with: @study.randomization

@@ -2,7 +2,6 @@ class User < ApplicationRecord
   include HasStrongPassword
   include DeviseTokenAuth::Concerns::User
 
-  has_many :nurses, as: :owner, dependent: :destroy
   has_many :members, dependent: :destroy
   has_many :studies, as: :owner, dependent: :destroy
   has_many :topics, as: :owner, dependent: :destroy
@@ -16,7 +15,8 @@ class User < ApplicationRecord
         allow_blank: true, message: 'must have 10 digits' }
 
   before_validation :prettify
-  after_commit :link_studies
+  before_create :initialize_fcm_tokens
+  before_update :link_studies, if: :confirmed_at_changed?
 
   def self.names
     all.order(:first_name, :last_name).select(:id, :first_name, :last_name)
@@ -34,6 +34,10 @@ class User < ApplicationRecord
 
   def prettify
     self.phone_number = phone_number.to_s.gsub(/\D/, '')
+  end
+
+  def initialize_fcm_tokens
+    self.fcm_tokens = {}
   end
 
   def link_studies

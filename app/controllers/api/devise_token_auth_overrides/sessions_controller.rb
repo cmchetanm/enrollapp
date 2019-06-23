@@ -2,7 +2,7 @@ module Api
   module DeviseTokenAuthOverrides
     class SessionsController < DeviseTokenAuth::SessionsController
       def destroy
-        @resource.fcm_tokens.delete(@client_id)
+        @resource&.fcm_tokens&.delete(@client_id)
         super
       end
 

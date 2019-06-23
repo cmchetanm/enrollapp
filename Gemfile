@@ -58,7 +58,7 @@ gem 'dalli'
 gem 'haml-rails'
 
 # Client Side Form Validations
-gem 'client_side_validations', git: 'https://github.com/DavyJonesLocker/client_side_validations.git'
+gem 'client_side_validations'
 
 # React Support
 gem 'react-rails'

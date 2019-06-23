@@ -11,11 +11,16 @@ module Api
       @member = members(:one)
     end
 
+    test 'should get index' do
+      get api_members_url, headers: @auth_tokens
+      assert_response :success
+    end
+
     test 'should create member' do
       assert_difference('Member.count') do
         post api_members_url, params: {
           full_name: @member.full_name, email: @member.email, phone_number: @member.phone_number,
-          role: MemberRole::PRINCIPAL_INVESTIGATOR, study_id: @study.id
+          role: MemberRole::PI
         }, headers: @auth_tokens
       end
       assert_response :success
@@ -24,7 +29,7 @@ module Api
     test 'should update member' do
       patch api_member_url(@member), params: {
         full_name: @member.full_name, email: @member.email, phone_number: @member.phone_number,
-        role: MemberRole::SUB_INVESTIGATOR, study_id: @study.id
+        role: MemberRole::SUB
       }, headers: @auth_tokens
       assert_response :success
     end

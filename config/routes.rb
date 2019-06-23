@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'pages#dashboard'
 
   devise_for :admins
-  resources :nurses
   resources :studies
   resources :topics
 
@@ -13,10 +12,10 @@ Rails.application.routes.draw do
       registrations: 'api/devise_token_auth_overrides/registrations',
       sessions: 'api/devise_token_auth_overrides/sessions'
     }
-    resources :nurses, except: %i[new edit]
     resources :topics, except: %i[new edit]
     resources :studies, except: %i[new edit]
     resources :members, except: %i[new edit show]
+    resource :appointments, only: %i[update destroy]
     put '/auth/fcm_token', to: 'users#fcm_token'
   end
 

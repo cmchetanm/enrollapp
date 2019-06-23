@@ -1,0 +1,15 @@
+%p #{@appointment.creator.full_name} has given you access to the following study:
+
+%spacer{size: 16}
+
+%h3= @appointment.study.name
+
+%spacer{size: 16}
+
+%p Login to Enroll or create an account using the email address #{mail_to @appointment.member.email, @appointment.member.email} to review the study.
+
+%spacer{size: 16}
+
+%p If you are not the intended recipient of this message, you can safely disregard this email.
+
+%spacer{size: 32}

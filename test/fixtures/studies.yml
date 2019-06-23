@@ -1,6 +1,5 @@
 DEFAULTS: &DEFAULTS
   topic: $LABEL
-  nurse: $LABEL
   name: $LABEL
   protocol: $LABEL
   agent: $LABEL

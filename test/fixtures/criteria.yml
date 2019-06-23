@@ -1,6 +1,6 @@
 DEFAULTS: &DEFAULTS
   study: $LABEL
-  kind: <%= [CriterionType::EXCLUSION, CriterionType::INCLUSION].sample %>
+  kind: <%= CriterionType.constants.sample %>
   text: $LABEL
   owner: $LABEL (User)
   creator: $LABEL (User)

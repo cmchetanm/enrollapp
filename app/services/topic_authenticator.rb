@@ -4,8 +4,11 @@ class TopicAuthenticator
   end
 
   def find_all
+    members = Member.where(user: @user)
+    appointments = Appointment.select(:study_id).where(member: members)
+    studies = Study.published.where(id: appointments)
     mine = Topic.where(owner: @user)
-    shared = Topic.where(studies: Study.where(id: Member.select(:study_id).where(user: @user)))
+    shared = Topic.where(studies: studies)
     mine.or(shared).includes(:studies).order(:name)
   end
 
