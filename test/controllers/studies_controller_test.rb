@@ -21,11 +21,12 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Study.count') do
       post studies_url, params: { study: {
         administration: @study.administration, agent: @study.agent,
-        assessment_frequency: @study.assessment_frequency, comments: @study.comments, contact: @study.contact,
-        duration: @study.duration, honorarium: @study.honorarium, interventions: @study.interventions,
-        mechanism: @study.mechanism, name: @study.name, protocol: @study.protocol,
-        published: @study.published, randomization: @study.randomization, side_effects: @study.side_effects,
-        topic_id: @study.topic_id, owner_id: @user.id, owner_type: 'User'
+        assessment_frequency: @study.assessment_frequency, comments: @study.comments,
+        sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
+        budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
+        interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
+        protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
+        side_effects: @study.side_effects, topic_id: @study.topic_id, owner_id: @user.id, owner_type: 'User'
       } }
     end
 
@@ -44,10 +45,12 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update study' do
     patch study_url(@study), params: { study: {
-      administration: @study.administration, agent: @study.agent, assessment_frequency: @study.assessment_frequency,
-      comments: @study.comments, contact: @study.contact, duration: @study.duration, honorarium: @study.honorarium,
+      administration: @study.administration, agent: @study.agent,
+      assessment_frequency: @study.assessment_frequency, comments: @study.comments,
+      sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
+      budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
       interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
-      protocol: @study.protocol, published: @study.published, randomization: @study.randomization,
+      protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
       side_effects: @study.side_effects, topic_id: @study.topic_id
     } }
     assert_redirected_to study_url(@study)

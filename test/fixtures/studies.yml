@@ -10,8 +10,11 @@ DEFAULTS: &DEFAULTS
   duration: $LABEL
   assessment_frequency: $LABEL
   interventions: $LABEL
-  contact: $LABEL
-  honorarium: $LABEL
+  sponsor: $LABEL
+  sponsor_contact: $LABEL
+  cro_contact: $LABEL
+  budget: $LABEL
+  enrolled_or_committed: $LABEL
   comments: $LABEL
   published: false
   owner: $LABEL (User)

@@ -21,7 +21,7 @@ class Study < ApplicationRecord
   end
 
   def role(user)
-    owner_id == user.id ? nil : appointments.find { |app| app.member.user_id == user.id }.role
+    owner_id == user.id ? nil : members.find { |member| member.user_id == user.id }.role
   end
 
   private

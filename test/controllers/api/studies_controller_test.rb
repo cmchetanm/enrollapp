@@ -22,9 +22,10 @@ module Api
           post api_studies_url, params: {
             administration: @study.administration, agent: @study.agent,
             assessment_frequency: @study.assessment_frequency, comments: @study.comments,
-            contact: @study.contact, duration: @study.duration, honorarium: @study.honorarium,
+            sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
+            budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
             interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
-            protocol: @study.protocol, randomization: @study.randomization,
+            protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
             side_effects: @study.side_effects, topic_id: @topic.id,
             inclusion_criteria: [{text: 'test'}.to_json], exclusion_criteria: [{text: 'test'}.to_json]
           }, headers: @auth_tokens
@@ -43,10 +44,11 @@ module Api
         patch api_study_url(@study), params: {
           administration: @study.administration, agent: @study.agent,
           assessment_frequency: @study.assessment_frequency, comments: @study.comments,
-          contact: @study.contact, duration: @study.duration, honorarium: @study.honorarium,
+          sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
+          budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
           interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
-          protocol: @study.protocol, randomization: @study.randomization,
-          side_effects: @study.side_effects, topic_id: @study.topic_id,
+          protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
+          side_effects: @study.side_effects, topic_id: @topic.id,
           inclusion_criteria: [{text: 'test'}.to_json], exclusion_criteria: [{text: 'test'}.to_json]
         }, headers: @auth_tokens
       end

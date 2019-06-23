@@ -47,10 +47,9 @@ module Api
     end
 
     def delete_appointments(member_ids)
-      if member_ids.any?
-        Appointment.where(study: @study, member_id: member_ids, creator: current_api_user)
-                   .destroy_all
-      end
+      return unless member_ids.any?
+
+      Appointment.where(study: @study, member_id: member_ids, creator: current_api_user).destroy_all
     end
 
     def assign_appointments(member_ids)

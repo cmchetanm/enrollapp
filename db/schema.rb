@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_22_030415) do
+ActiveRecord::Schema.define(version: 2019_06_23_021923) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -87,8 +87,11 @@ ActiveRecord::Schema.define(version: 2019_06_22_030415) do
     t.string "duration"
     t.string "assessment_frequency"
     t.string "interventions"
-    t.string "contact"
-    t.string "honorarium"
+    t.string "sponsor"
+    t.string "sponsor_contact"
+    t.string "cro_contact"
+    t.string "budget"
+    t.string "enrolled_or_committed"
     t.text "comments"
     t.boolean "published", default: false
     t.string "owner_type", null: false

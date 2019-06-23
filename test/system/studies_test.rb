@@ -19,10 +19,13 @@ class StudiesTest < ApplicationSystemTestCase
     fill_in 'Agent', with: @study.agent
     fill_in 'Assessment frequency', with: @study.assessment_frequency
     fill_in 'Comments', with: @study.comments
-    fill_in 'Contact', with: @study.contact
+    fill_in 'Sponsor', with: @study.sponsor
+    fill_in 'Sponsor contact', with: @study.sponsor_contact
+    fill_in 'Cro contact', with: @study.cro_contact
     fill_in 'Duration', with: @study.duration
-    fill_in 'Honorarium', with: @study.honorarium
+    fill_in 'Budget', with: @study.budget
     fill_in 'Interventions', with: @study.interventions
+    fill_in 'Enrolled or committed', with: @study.enrolled_or_committed
     fill_in 'Mechanism', with: @study.mechanism
     fill_in 'Name', with: @study.name
     fill_in 'Protocol', with: @study.protocol
@@ -45,14 +48,17 @@ class StudiesTest < ApplicationSystemTestCase
     fill_in 'Agent', with: @study.agent
     fill_in 'Assessment frequency', with: @study.assessment_frequency
     fill_in 'Comments', with: @study.comments
-    fill_in 'Contact', with: @study.contact
+    fill_in 'Sponsor', with: @study.sponsor
+    fill_in 'Sponsor contact', with: @study.sponsor_contact
+    fill_in 'Cro contact', with: @study.cro_contact
     fill_in 'Duration', with: @study.duration
-    fill_in 'Honorarium', with: @study.honorarium
+    fill_in 'Budget', with: @study.budget
     fill_in 'Interventions', with: @study.interventions
+    fill_in 'Enrolled or committed', with: @study.enrolled_or_committed
     fill_in 'Mechanism', with: @study.mechanism
     fill_in 'Name', with: @study.name
     fill_in 'Protocol', with: @study.protocol
-    check 'Published' if @study.published
+    check 'Published'
     fill_in 'Randomization', with: @study.randomization
     fill_in 'Side effects', with: @study.side_effects
     select @study.topic.name, from: 'study_topic_id'

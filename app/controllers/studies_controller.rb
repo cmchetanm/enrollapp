@@ -48,8 +48,10 @@ class StudiesController < ApplicationController
   end
 
   def study_params
-    params.require(:study).permit(:topic_id, :name, :protocol, :agent, :mechanism, :side_effects,
-                                  :administration, :randomization, :duration, :assessment_frequency, :interventions,
-                                  :contact, :honorarium, :comments, :published, :owner_type, :owner_id)
+    params.require(:study).permit(
+      :topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization,
+      :duration, :assessment_frequency, :interventions, :sponsor, :sponsor_contact, :cro_contact,
+      :budget, :enrolled_or_committed, :comments, :published, :owner_type, :owner_id
+    )
   end
 end
