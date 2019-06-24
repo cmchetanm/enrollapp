@@ -1,3 +1,4 @@
 domain:       <%= Rails.application.credentials[Rails.env.to_sym][:host] %>
 website_name: <%= Rails.application.credentials[:website_name] %>
 system_email: <%= Rails.application.credentials[:system_email] %>
+firebase_url: https://fcm.googleapis.com/fcm/send

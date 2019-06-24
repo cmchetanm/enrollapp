@@ -65,7 +65,7 @@ module Api
 
     def email_new_members(appointments)
       appointments.each do |appointment|
-        AppointmentMailer.notify(appointment).deliver_later
+        AppointmentsMailer.notify(appointment).deliver_later
       end
     end
   end

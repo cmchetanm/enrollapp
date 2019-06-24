@@ -24,7 +24,8 @@ module Api
     def update
       @study.set_criteria(study_params, current_api_user, current_api_user)
 
-      if @study.update!(study_params)
+      if @study.update(study_params)
+        StudyNotifier.new(current_api_user, @study).notify
         render :show, status: :ok, location: @study
       else
         render json: {errors: @study.errors.full_messages}, status: :unprocessable_entity
