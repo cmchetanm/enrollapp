@@ -1,55 +1,13 @@
 - content_for :title, 'Studies'
 
-%h1 Listing studies
+%h1 Paid Studies
 
-%table
-  %thead
-    %tr
-      %th Topic
-      %th Nurse
-      %th Name
-      %th Protocol
-      %th Agent
-      %th Mechanism
-      %th Side effects
-      %th Administration
-      %th Randomization
-      %th Duration
-      %th Assessment frequency
-      %th Interventions
-      %th Contact
-      %th Honorarium
-      %th Comments
-      %th Published
-      %th
-      %th
-      %th
-
-  %tbody
-    - @studies.each do |study|
-      %tr
-        %td= study.topic.name
-        %td= study.name
-        %td= study.protocol
-        %td= study.agent
-        %td= study.mechanism
-        %td= study.side_effects
-        %td= study.administration
-        %td= study.randomization
-        %td= study.duration
-        %td= study.assessment_frequency
-        %td= study.interventions
-        %td= study.sponsor
-        %td= study.sponsor_contact
-        %td= study.cro_contact
-        %td= study.budget
-        %td= study.enrolled_or_committed
-        %td= study.comments
-        %td= study.published
-        %td= link_to 'Show', study
-        %td= link_to 'Edit', edit_study_path(study)
-        %td= link_to 'Destroy', study, method: :delete, data: { confirm: 'Are you sure?' }
+= render 'table', studies: @studies.select(&:published?)
 
 %br
 
-= link_to 'New Study', new_study_path
+%h1 Unpaid Studies
+
+= render 'table', studies: @studies.reject(&:published?)
+
+= link_to 'New Study', new_study_path, class: 'success button'

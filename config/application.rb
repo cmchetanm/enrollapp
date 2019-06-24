@@ -32,6 +32,9 @@ module Enroll
     # Set default timezone for all dates and times
     config.time_zone = 'Central Time (US & Canada)'
 
+    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml')]
+
     # Use custom exception handlers
     config.exceptions_app = routes
 

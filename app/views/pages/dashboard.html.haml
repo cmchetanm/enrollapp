@@ -1,9 +1,0 @@
-- content_for :title, 'Dashboard'
-
-%h1= current_admin.email
-
-%p
-  = link_to 'Edit Profile', edit_admin_registration_path, class: 'button'
-  = link_to 'Delete Account', admin_registration_path, data: { confirm: 'Are you sure?' }, method: :delete, class: 'alert button'
-
-%p= link_to 'Sign out', destroy_admin_session_path, method: :delete

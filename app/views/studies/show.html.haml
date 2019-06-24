@@ -1,63 +1,42 @@
 - content_for :title, @study.name
 
-%p
-  %b Topic:
-  = @study.topic.name
-%p
-  %b Name:
-  = @study.name
-%p
-  %b Protocol:
-  = @study.protocol
-%p
-  %b Agent:
-  = @study.agent
-%p
-  %b Mechanism:
-  = @study.mechanism
-%p
-  %b Side effects:
-  = @study.side_effects
-%p
-  %b Administration:
-  = @study.administration
-%p
-  %b Randomization:
-  = @study.randomization
-%p
-  %b Duration:
-  = @study.duration
-%p
-  %b Assessment frequency:
-  = @study.assessment_frequency
-%p
-  %b Interventions:
-  = @study.interventions
-%p
-  %b Sponsor:
-  = @study.sponsor
-%p
-  %b Sponsor Contact:
-  = @study.sponsor_contact
-%p
-  %b CRO Contact:
-  = @study.cro_contact
-%p
-  %b Budget:
-  = @study.budget
-%p
-  %b Enrolled/Committed:
-  = @study.enrolled_or_committed
-%p
-  %b Comments:
-  = @study.comments
-%p
-  %b Published:
-  = @study.published
-%p
-  %b Owner:
-  = @study.owner.full_name
+%h1= @study.name
 
-= link_to 'Edit', edit_study_path(@study)
-\|
-= link_to 'Back', studies_path
+.secondary.callout
+  .grid-x.grid-margin-x.small-up-2.medium-up-4
+    .cell
+      %small.subheader Create Date
+      %div= l @study.created_at, format: :short
+    .cell
+      %small.subheader Owner
+      %div= link_to @study.owner.full_name, @study.owner
+    .cell
+      %small.subheader Topic
+      %div= link_to @study.topic.name, @study.topic
+    .cell
+      %small.subheader Paid
+      %div= 'Yes' if @study.published?
+
+%br
+
+.grid-x.grid-margin-x.small-up-1.medium-up-2
+  .cell
+    %h2 Inclusion Criteria
+
+    %ul
+      - @study.criteria.select { |criterion| criterion.kind == CriterionType::INCL }.each do |criterion|
+        %li= criterion.text
+  .cell
+    %h2 Exclusion Criteria
+
+    %ul
+      - @study.criteria.select { |criterion| criterion.kind == CriterionType::EXCL }.each do |criterion|
+        %li= criterion.text
+
+%br
+
+%p
+  = link_to 'Edit Study', edit_study_path(@study), class: 'warning button'
+  = link_to 'Delete Study', @study, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'
+
+%p= link_to 'Back to Studies', studies_path

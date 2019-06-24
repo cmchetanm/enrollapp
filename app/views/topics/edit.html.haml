@@ -1,9 +1,9 @@
 - content_for :title, 'Editing Topic'
 
-%h1= yield :title
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h1= yield :title
 
-= render 'form', topic: @topic
+    = render 'form', topic: @topic
 
-= link_to 'Show', @topic
-\|
-= link_to 'Back', topics_path
+    = link_to "Back to #{@topic.name}", @topic

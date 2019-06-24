@@ -1,0 +1,26 @@
+.top-menu
+  .grid-container
+    .top-bar
+      .top-bar-left
+        %ul.menu
+          %li.menu-text
+            = APP[:website_name]
+          - if admin_signed_in?
+            %li{class: active?(users_path)}
+              = link_to 'Users', users_path
+            %li{class: active?(topics_path)}
+              = link_to 'Topics', topics_path
+            %li{class: active?(studies_path)}
+              = link_to 'Studies', studies_path
+      .top-bar-right
+        %ul.menu
+          - if admin_signed_in?
+            %li{class: active?(edit_admin_registration_path)}
+              = link_to 'Edit Profile', edit_admin_registration_path
+            %li
+              = link_to 'Sign Out', destroy_admin_session_path, method: :delete
+          - else
+            %li{class: active?(new_admin_session_path)}
+              = link_to 'Sign In', new_admin_session_path
+
+%br

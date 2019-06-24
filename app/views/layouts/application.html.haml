@@ -4,4 +4,6 @@
     = render 'layouts/head'
   %body
     = render 'layouts/callouts'
-    .grid-container= yield
+    = render 'layouts/topbar'
+    .grid-container
+      = yield

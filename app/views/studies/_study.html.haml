@@ -1,0 +1,5 @@
+%tr
+  %td{width: '35%'}= link_to study.name, study
+  %td{width: '20%'}= link_to study.topic.name, study.topic
+  %td= link_to study.owner.full_name, study.owner
+  %td.text-right= link_to 'Show', study

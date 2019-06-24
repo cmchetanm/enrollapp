@@ -14,4 +14,4 @@
     = f.hidden_field :owner_type, value: User.model_name.name
     = f.collection_select :owner_id, User.names, :id, :full_name, include_blank: true
   .actions
-    = f.submit class: 'button'
+    = f.submit

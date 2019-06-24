@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    attributes:
+      study:
+        name: Name
+        protocol: Protocol Name/Number
+        agent: Agent/intervention
+        mechanism: Principal Mechanism of Action
+        side_effects: Side Effects/Risks of Intervention
+        administration: Route & Frequency of Administration
+        randomization: Drug/Placebo Randomization
+        duration: Duration of Treatment/Study
+        assessment_frequency: Average Frequency of Clinic Visits/Assessments
+        interventions: Interventions Required
+        sponsor: Sponsor
+        sponsor_contact: Sponsor Contact
+        cro_contact: CRO Contact
+        budget: Site Budget
+        enrolled_or_committed: Patients Enrolled/Committed
+        comments: Comments
+        published: Paid

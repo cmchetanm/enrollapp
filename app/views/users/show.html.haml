@@ -1,0 +1,37 @@
+- content_for :title, @user.full_name
+
+%h1= @user.full_name
+
+.secondary.callout
+  .grid-x.grid-margin-x.small-up-2.medium-up-4
+    .cell
+      %small.subheader Create Date
+      %div= l @user.created_at, format: :short
+    .cell
+      %small.subheader Phone Number
+      %div= number_to_phone(@user.phone_number, area_code: true)
+    .cell
+      %small.subheader Email Address
+      %div= @user.email
+    .cell
+      %small.subheader Study Count
+      %div #{@user.studies.select(&:published?).length} paid, #{@user.studies.reject(&:published?).length} unpaid
+
+%br
+
+%h2 Paid Studies
+
+= render 'studies/table', studies: @user.studies.select(&:published?)
+
+%br
+
+%h2 Unpaid Studies
+
+= render 'studies/table', studies: @user.studies.reject(&:published?)
+
+%br
+
+%p
+  = link_to 'Delete User', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'
+
+%p= link_to 'Back to Users', users_path

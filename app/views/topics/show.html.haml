@@ -1,12 +1,35 @@
 - content_for :title, @topic.name
 
-%p
-  %b Name:
-  = @topic.name
-%p
-  %b Owner:
-  = @topic.owner.full_name
+%h1= @topic.name
 
-= link_to 'Edit', edit_topic_path(@topic)
-\|
-= link_to 'Back', topics_path
+.secondary.callout
+  .grid-x.grid-margin-x.small-up-2.medium-up-4.large-up-6
+    .cell
+      %small.subheader Create Date
+      %div= l @topic.created_at, format: :short
+    .cell
+      %small.subheader Owner
+      %div= link_to @topic.owner.full_name, @topic.owner
+    .cell
+      %small.subheader Study Count
+      %div #{@topic.studies.select(&:published?).length} paid, #{@topic.studies.reject(&:published?).length} unpaid
+
+%br
+
+%h2 Paid Studies
+
+= render 'studies/table', studies: @topic.studies.select(&:published?)
+
+%br
+
+%h2 Unpaid Studies
+
+= render 'studies/table', studies: @topic.studies.reject(&:published?)
+
+%br
+
+%p
+  = link_to 'Edit Topic', edit_topic_path(@topic), class: 'warning button'
+  = link_to 'Delete Topic', @topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'
+
+%p= link_to 'Back to Topics', topics_path

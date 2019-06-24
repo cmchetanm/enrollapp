@@ -1,7 +1,9 @@
 - content_for :title, 'New Study'
 
-%h1= yield :title
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h1= yield :title
 
-= render 'form', study: @study
+    = render 'form', study: @study
 
-= link_to 'Back', studies_path
+    %p= link_to 'Back to Studies', studies_path

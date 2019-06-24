@@ -7,11 +7,11 @@
           %li= message
 
   .field
-    = f.label :topic
-    = f.collection_select :topic_id, Topic.names, :id, :name, include_blank: true
-  .field
     = f.label :name
     = f.text_field :name
+  .field
+    = f.label :topic
+    = f.collection_select :topic_id, Topic.names, :id, :name, include_blank: true
   .field
     = f.label :protocol
     = f.text_field :protocol
@@ -23,6 +23,7 @@
     = f.text_field :mechanism
   .field
     = f.label :side_effects
+
     = f.text_field :side_effects
   .field
     = f.label :administration
@@ -58,11 +59,18 @@
     = f.label :comments
     = f.text_field :comments
   .field
-    = f.label :published
-    = f.check_box :published
+    .grid-x.grid-margin-x
+      .shrink.cell
+        = f.label :published, class: 'middle'
+      .auto.cell
+        .switch.large
+          = f.check_box :published, class: 'switch-input'
+          = f.label :published, class: 'switch-paddle' do
+            %span.switch-active Yes
+            %span.switch-inactive No
   .field
     = f.label :owner
     = f.hidden_field :owner_type, value: User.model_name.name
     = f.collection_select :owner_id, User.names, :id, :full_name, include_blank: true
   .actions
-    = f.submit
+    = f.submit class: 'button'

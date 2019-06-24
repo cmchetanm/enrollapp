@@ -43,7 +43,7 @@ module DeviseOverrides
           password: 'NewC0mPl3xPassw0rd!', password_confirmation: 'NewC0mPl3xPassw0rd!'
         }}
         assert_not_equal resource.encrypted_password, resource_class.find(resource.id).encrypted_password
-        assert_redirected_to root_url
+        assert_redirected_to url_for([:new, scope[0], :session])
       end
     end
   end

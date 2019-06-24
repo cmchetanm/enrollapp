@@ -6,3 +6,15 @@ en:
     messages:
       password:
         password_strength: 'is too weak'
+
+  date:
+    formats:
+      short: "%-d %b %Y"
+
+  time:
+    am: am
+    formats:
+      default: "%a, %-d %b %Y %I:%M:%S %p %Z"
+      long: "%-d %b %Y, %-I:%M %p"
+      short: "%-d %b %Y"
+    pm: pm

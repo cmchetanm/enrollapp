@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get '/dashboard', to: 'pages#dashboard'
-
-  devise_for :admins
+  devise_for :admins, controllers: {
+    registrations: 'devise_overrides/registrations'
+  }
+  resources :users, only: %i[index show destroy]
   resources :studies
   resources :topics
 

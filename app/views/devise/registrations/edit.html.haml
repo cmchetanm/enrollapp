@@ -1,30 +1,32 @@
 - content_for :title, "Edit #{resource_name.to_s.humanize}"
 - content_for :description, "Use this form to update #{resource_name.to_s.humanize}."
 
-%h2= yield :title
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h2= yield :title
 
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render 'devise/shared/error_messages', resource: resource
-  = f.label :email
-  = f.email_field :email, autofocus: true, autocomplete: 'email'
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    .primary.callout
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    .help-text (leave blank if you don't want to change it)
-    = f.password_field :password, autocomplete: 'new-password'
-    - if @minimum_password_length
-      %p.help-text
-        = @minimum_password_length
-        characters minimum
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation, autocomplete: 'new-password'
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      = render 'devise/shared/error_messages', resource: resource
+      = f.label :email
+      = f.email_field :email, autofocus: true, autocomplete: 'email'
+      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+        .primary.callout
+          Currently waiting confirmation for: #{resource.unconfirmed_email}
+      .field
+        = f.label :password
+        .help-text (leave blank if you don't want to change it)
+        = f.password_field :password, autocomplete: 'new-password'
+        - if @minimum_password_length
+          %p.help-text
+            = @minimum_password_length
+            characters minimum
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: 'new-password'
 
-  = f.label :current_password
-  .help-text (we need your current password to confirm your changes)
-  = f.password_field :current_password, autocomplete: 'current-password'
-  .actions
-    = f.submit 'Update Profile', class: 'button'
+      = f.label :current_password
+      .help-text (we need your current password to confirm your changes)
+      = f.password_field :current_password, autocomplete: 'current-password'
+      .actions
+        = f.submit 'Update Profile', class: 'button'
 
-= link_to 'Back', :back
+    = link_to 'Delete Account', admin_registration_path, data: { confirm: 'Are you sure?' }, method: :delete, class: 'alert button'

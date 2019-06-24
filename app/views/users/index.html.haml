@@ -1,0 +1,21 @@
+- content_for :title, 'Study Users'
+
+%h1 Users
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th.text-center Paid Studies
+      %th.text-center Unpaid Studies
+      %th.text-center Create Date
+      %th
+
+  %tbody
+    - @users.each do |user|
+      %tr.text-center
+        %td.text-left= link_to user.full_name, user
+        %td= user.studies.select(&:published?).length
+        %td= user.studies.reject(&:published?).length
+        %td= l user.created_at, format: :short
+        %td.text-right= link_to 'Show', user

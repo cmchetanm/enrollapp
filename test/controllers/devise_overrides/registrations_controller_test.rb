@@ -2,18 +2,30 @@ require 'test_helper'
 
 module DeviseOverrides
   class RegistrationsControllerTest < ActionDispatch::IntegrationTest
-    test 'should get new' do
+    test 'should get new for first resource' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
 
+        scope[0].to_s.classify.constantize.delete_all
         get url_for([:new, scope[0], :registration])
         assert_response :success
       end
     end
 
-    test 'should create resource' do
+    test 'should not get new for subsequent resources' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
+
+        get url_for([:new, scope[0], :registration])
+        assert_redirected_to url_for([:new, scope[0], :session])
+      end
+    end
+
+    test 'should create first resource' do
+      Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
+        scope[0].to_s.classify.constantize.delete_all
 
         assert_difference('scope[0].to_s.classify.constantize.count') do
           post url_for([scope[0], :registration]), params: {"#{scope[0]}": {
@@ -22,6 +34,17 @@ module DeviseOverrides
         end
       end
       assert_redirected_to root_url
+    end
+
+    test 'should not create subsequent resources' do
+      Devise.mappings.each do |scope|
+        next if scope[1].path.include? 'auth'
+
+        post url_for([scope[0], :registration]), params: {"#{scope[0]}": {
+          email: 'new@example.com', password: 'NewC0mPl3xPassw0rd!', password_confirmation: 'NewC0mPl3xPassw0rd!'
+        }}
+        assert_redirected_to url_for([:new, scope[0], :session])
+      end
     end
 
     test 'should get edit' do
