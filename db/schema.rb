@@ -153,7 +153,7 @@ ActiveRecord::Schema.define(version: 2019_06_23_021923) do
   add_foreign_key "appointments", "studies", on_update: :cascade, on_delete: :cascade
   add_foreign_key "appointments", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
   add_foreign_key "criteria", "studies", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "members", "users", name: "fk_rails_member_creator", on_update: :cascade, on_delete: :nullify
+  add_foreign_key "members", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
   add_foreign_key "members", "users", on_update: :cascade, on_delete: :cascade
   add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade
 end

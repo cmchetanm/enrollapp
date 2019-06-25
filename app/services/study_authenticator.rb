@@ -13,7 +13,7 @@ class StudyAuthenticator
 
   def find_one(study_id)
     members = Member.where(user: @user)
-    appointments = Appointment.select(:study_id).where(member: members)
+    appointments = Appointment.select(:study_id).where(study_id: study_id, member: members)
     study = Study.find_by(id: study_id, owner: @user)
     study = Study.published.where(id: appointments).first if study.nil?
     raise ActiveRecord::RecordNotFound if study.nil?

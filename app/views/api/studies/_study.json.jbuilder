@@ -1,8 +1,8 @@
 json.extract! study, :id
 json.topic study.topic, partial: 'api/topics/topic', as: :topic
-json.inclusion_criteria study.criteria.where(kind: CriterionType::INCL),
+json.inclusion_criteria study.criteria.select { |criterion| criterion.kind == CriterionType::INCL },
                         partial: 'api/criteria/criterion', as: :criterion
-json.exclusion_criteria study.criteria.where(kind: CriterionType::EXCL),
+json.exclusion_criteria study.criteria.select { |criterion| criterion.kind == CriterionType::EXCL },
                         partial: 'api/criteria/criterion', as: :criterion
 json.members study.members, partial: 'api/members/member', as: :member
 
