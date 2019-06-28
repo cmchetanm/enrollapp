@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :admins, controllers: {
     registrations: 'devise_overrides/registrations'
   }
+
   resources :users, only: %i[index show destroy]
   resources :studies
   resources :topics
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
       registrations: 'api/devise_token_auth_overrides/registrations',
       sessions: 'api/devise_token_auth_overrides/sessions'
     }
+
     resources :topics, except: %i[new edit]
     resources :studies, except: %i[new edit]
     resources :members, except: %i[new edit show]

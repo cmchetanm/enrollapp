@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:lynndylanhurley/devise_token_auth.git
+  revision: 749bea4eebcc98bea196f301f339706af4cfbb3e
+  specs:
+    devise_token_auth (1.1.0)
+      bcrypt (~> 3.0)
+      devise (> 3.5.2, < 4.7)
+      rails (>= 4.2.0, < 6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -98,9 +107,6 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    devise_token_auth (1.1.0)
-      devise (> 3.5.2, < 4.7)
-      rails (>= 4.2.0, < 6)
     dotenv (0.7.0)
     erubi (1.8.0)
     erubis (2.7.0)
@@ -362,7 +368,7 @@ DEPENDENCIES
   client_side_validations
   dalli
   devise
-  devise_token_auth
+  devise_token_auth!
   font-awesome-rails
   foreman
   foundation-rails
