@@ -4,7 +4,7 @@ module Api
     before_action :set_study, only: %i[show update destroy]
 
     def index
-      @studies = StudyAuthenticator.new(current_api_user).find_all(params[:topic_id])
+      @studies = StudyAuthenticator.new(current_api_user).find_all
     end
 
     def show
@@ -25,7 +25,7 @@ module Api
       @study.set_criteria(study_params, current_api_user, current_api_user)
 
       if @study.update(study_params)
-        StudyNotifier.new(current_api_user, @study).notify
+        StudyNotifier.new(current_api_user, @study).notify if @study.published?
         render :show, status: :ok, location: @study
       else
         render json: {errors: @study.errors.full_messages}, status: :unprocessable_entity

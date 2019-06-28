@@ -3,12 +3,12 @@ class StudyAuthenticator
     @user = user
   end
 
-  def find_all(topic_id)
+  def find_all
     members = Member.where(user: @user)
     appointments = Appointment.select(:study_id).where(member: members)
     mine = Study.where(owner: @user)
     shared = Study.published.where(id: appointments)
-    mine.or(shared).where(topic_id: topic_id).order(:name)
+    mine.or(shared).order(:name)
   end
 
   def find_one(study_id)
