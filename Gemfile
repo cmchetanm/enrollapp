@@ -24,7 +24,7 @@ gem 'foundation-rails'
 
 # Rails authentication mechanism
 gem 'devise'
-gem 'devise_token_auth', git: 'git@github.com:lynndylanhurley/devise_token_auth.git'
+gem 'devise_token_auth', git: 'https://github.com/lynndylanhurley/devise_token_auth.git'
 
 # Password Strength Enforcement
 gem 'strong_password'

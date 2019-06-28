@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:lynndylanhurley/devise_token_auth.git
+  remote: https://github.com/lynndylanhurley/devise_token_auth.git
   revision: 749bea4eebcc98bea196f301f339706af4cfbb3e
   specs:
     devise_token_auth (1.1.0)
@@ -403,4 +403,4 @@ RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   1.17.2
+   2.0.2
