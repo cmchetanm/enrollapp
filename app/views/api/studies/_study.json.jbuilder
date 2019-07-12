@@ -1,12 +1,8 @@
 json.extract! study, :id
 json.topic study.topic, partial: 'api/topics/topic', as: :topic
-json.inclusion_criteria study.criteria.select { |criterion| criterion.kind == CriterionType::INCL },
-                        partial: 'api/criteria/criterion', as: :criterion
-json.exclusion_criteria study.criteria.select { |criterion| criterion.kind == CriterionType::EXCL },
-                        partial: 'api/criteria/criterion', as: :criterion
 json.members study.members, partial: 'api/members/member', as: :member
 
-json.extract! study, :name, :protocol, :agent, :mechanism, :side_effects,
+json.extract! study, :inclusion_criteria, :exclusion_criteria, :name, :protocol, :agent, :mechanism, :side_effects,
               :administration, :randomization, :duration, :assessment_frequency, :interventions,
               :sponsor, :sponsor_contact, :cro_contact, :budget, :enrolled_or_committed, :comments,
               :published, :created_at, :updated_at

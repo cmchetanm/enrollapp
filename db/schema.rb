@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_23_021923) do
+ActiveRecord::Schema.define(version: 2019_07_12_184439) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
@@ -45,21 +45,6 @@ ActiveRecord::Schema.define(version: 2019_06_23_021923) do
     t.index ["study_id"], name: "index_appointments_on_study_id"
   end
 
-  create_table "criteria", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "study_id", null: false
-    t.string "kind", null: false
-    t.string "text", null: false
-    t.string "owner_type", null: false
-    t.bigint "owner_id", null: false
-    t.string "creator_type"
-    t.bigint "creator_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_type", "creator_id"], name: "index_criteria_on_creator_type_and_creator_id"
-    t.index ["owner_type", "owner_id"], name: "index_criteria_on_owner_type_and_owner_id"
-    t.index ["study_id"], name: "index_criteria_on_study_id"
-  end
-
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id"
     t.string "full_name", null: false
@@ -78,6 +63,8 @@ ActiveRecord::Schema.define(version: 2019_06_23_021923) do
   create_table "studies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "topic_id", null: false
     t.string "name", null: false
+    t.json "inclusion_criteria"
+    t.json "exclusion_criteria"
     t.string "protocol"
     t.string "agent"
     t.string "mechanism"
@@ -104,6 +91,9 @@ ActiveRecord::Schema.define(version: 2019_06_23_021923) do
     t.index ["name"], name: "index_studies_on_name"
     t.index ["owner_type", "owner_id"], name: "index_studies_on_owner_type_and_owner_id"
     t.index ["topic_id"], name: "index_studies_on_topic_id"
+  end
+
+  create_table "study_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
   end
 
   create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -152,7 +142,6 @@ ActiveRecord::Schema.define(version: 2019_06_23_021923) do
   add_foreign_key "appointments", "members", on_update: :cascade, on_delete: :cascade
   add_foreign_key "appointments", "studies", on_update: :cascade, on_delete: :cascade
   add_foreign_key "appointments", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
-  add_foreign_key "criteria", "studies", on_update: :cascade, on_delete: :cascade
   add_foreign_key "members", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
   add_foreign_key "members", "users", on_update: :cascade, on_delete: :cascade
   add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade

@@ -12,7 +12,6 @@ module Api
 
     def create
       @study = Study.new(study_params.merge(creator: current_api_user, owner: current_api_user))
-      @study.set_criteria(study_params, current_api_user, current_api_user)
 
       if @study.save
         render :show, status: :created, location: @study
@@ -22,8 +21,6 @@ module Api
     end
 
     def update
-      @study.set_criteria(study_params, current_api_user, current_api_user)
-
       if @study.update(study_params)
         StudyNotifier.new(current_api_user, @study).notify if @study.published?
         render :show, status: :ok, location: @study

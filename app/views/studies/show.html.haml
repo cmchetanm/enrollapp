@@ -23,15 +23,17 @@
   .cell
     %h2 Inclusion Criteria
 
-    %ul
-      - @study.criteria.select { |criterion| criterion.kind == CriterionType::INCL }.each do |criterion|
-        %li= criterion.text
+    - if @study.inclusion_criteria.present?
+      %ul
+        - @study.inclusion_criteria.each do |criterion|
+          %li= criterion
   .cell
     %h2 Exclusion Criteria
 
-    %ul
-      - @study.criteria.select { |criterion| criterion.kind == CriterionType::EXCL }.each do |criterion|
-        %li= criterion.text
+    - if @study.exclusion_criteria.present?
+      %ul
+        - @study.exclusion_criteria.each do |criterion|
+          %li= criterion
 
 %br
 
