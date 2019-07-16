@@ -1,0 +1,16 @@
+- content_for :title, 'Share Study'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = link_to 'Studies', studies_path
+    %li
+      = link_to @share.study.name, @share.study
+    %li
+      = yield :title
+
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h1= yield :title
+
+    = render 'form', share: @share

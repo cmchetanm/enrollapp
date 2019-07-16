@@ -1,46 +1,45 @@
 class User < ApplicationRecord
+  include HasFullName
   include HasStrongPassword
   include DeviseTokenAuth::Concerns::User
 
-  has_many :members, dependent: :destroy
-  has_many :studies, as: :owner, dependent: :destroy
-  has_many :topics, as: :owner, dependent: :destroy
+  has_many :shares, dependent: :destroy
+  has_many :studies, through: :shares
+  has_many :contacts, dependent: :destroy, foreign_key: :creator_id, inverse_of: :creator
 
-  devise :confirmable, :database_authenticatable, :lockable, :registerable,
+  devise :confirmable, :database_authenticatable, :invitable, :lockable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :first_name, :last_name, presence: true
-  validates :phone_number, presence: true, format:
-      { with: /\A\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\z/,
-        allow_blank: true, message: 'must have 10 digits' }
+  validates :phone_number, format:
+      {with: /\A\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\z/,
+       allow_blank: true, message: 'must have 10 digits'}
 
   before_validation :prettify
-  before_create :initialize_fcm_tokens
-  before_update :link_studies, if: :confirmed_at_changed?
-
-  def self.names
-    all.order(:first_name, :last_name).select(:id, :first_name, :last_name)
-  end
-
-  def full_name
-    "#{first_name} #{last_name}"
-  end
 
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
+  end
+
+  def self.from_contact(contact)
+    user = User.get_or_invite(contact.first_name, contact.last_name, contact.email, contact.phone_number)
+    contact.update(user_id: user.id) if contact.user_id != user.id
+    user
+  end
+
+  def self.get_or_invite(first_name, last_name, email, phone_number)
+    user = User.find_by(email: email)
+    if user.nil? || (!user.invitation_accepted? && !user.valid_invitation?)
+      user = User.invite!(
+        first_name: first_name, last_name: last_name,
+        email: email, phone_number: phone_number
+      )
+    end
+    user
   end
 
   private
 
   def prettify
     self.phone_number = phone_number.to_s.gsub(/\D/, '')
-  end
-
-  def initialize_fcm_tokens
-    self.fcm_tokens = {}
-  end
-
-  def link_studies
-    StudyTeamManager.link_studies(self)
   end
 end

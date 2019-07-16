@@ -10,9 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_12_184439) do
+ActiveRecord::Schema.define(version: 2019_07_15_011442) do
 
-  create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "admins", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.string "email", null: false
     t.string "encrypted_password", null: false
     t.string "reset_password_token"
@@ -25,43 +27,66 @@ ActiveRecord::Schema.define(version: 2019_07_12_184439) do
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
     t.datetime "locked_at"
+    t.string "invitation_token"
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer "invitation_limit"
+    t.integer "invited_by_id"
+    t.string "invited_by_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["confirmation_token"], name: "index_admins_on_confirmation_token", unique: true
     t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["invitation_token"], name: "index_admins_on_invitation_token", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_admins_on_unlock_token", unique: true
   end
 
-  create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "study_id", null: false
-    t.bigint "member_id", null: false
-    t.bigint "creator_id"
+  create_table "contacts", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "creator_id", limit: 36, null: false
+    t.string "user_id", limit: 36
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_id"], name: "index_appointments_on_creator_id"
-    t.index ["member_id"], name: "index_appointments_on_member_id"
-    t.index ["study_id", "member_id", "creator_id"], name: "fk_rails_appointment_uniqueness", unique: true
-    t.index ["study_id"], name: "index_appointments_on_study_id"
+    t.index ["creator_id"], name: "fk_rails_25702ebd35"
+    t.index ["last_name", "first_name"], name: "index_contacts_on_last_name_and_first_name"
+    t.index ["user_id"], name: "fk_rails_8d2134e55e"
   end
 
-  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "full_name", null: false
-    t.string "email", null: false
-    t.string "phone_number", null: false
+  create_table "shares", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "site_id", limit: 36, null: false
+    t.string "study_id", limit: 36, null: false
+    t.string "user_id", limit: 36, null: false
     t.string "role", null: false
-    t.bigint "creator_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_id"], name: "index_members_on_creator_id"
-    t.index ["email", "role", "creator_id"], name: "index_members_on_email_and_role_and_creator_id", unique: true
-    t.index ["email"], name: "index_members_on_study_id_and_email"
-    t.index ["user_id"], name: "index_members_on_user_id"
+    t.index ["site_id"], name: "fk_rails_2068a4fe35"
+    t.index ["study_id", "user_id"], name: "index_shares_on_study_id_and_user_id", unique: true
+    t.index ["user_id"], name: "fk_rails_d671d25093"
   end
 
-  create_table "studies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "topic_id", null: false
+  create_table "sites", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_sites_on_name"
+  end
+
+  create_table "sponsors", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "contact", null: false
+    t.string "cro", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_sponsors_on_name"
+  end
+
+  create_table "studies", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "topic_id", limit: 36, null: false
     t.string "name", null: false
     t.json "inclusion_criteria"
     t.json "exclusion_criteria"
@@ -74,42 +99,56 @@ ActiveRecord::Schema.define(version: 2019_07_12_184439) do
     t.string "duration"
     t.string "assessment_frequency"
     t.string "interventions"
-    t.string "sponsor"
+    t.string "sponsor_name"
     t.string "sponsor_contact"
     t.string "cro_contact"
     t.string "budget"
     t.string "enrolled_or_committed"
     t.text "comments"
-    t.boolean "published", default: false
-    t.string "owner_type", null: false
-    t.bigint "owner_id", null: false
-    t.string "creator_type"
-    t.bigint "creator_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_type", "creator_id"], name: "index_studies_on_creator_type_and_creator_id"
     t.index ["name"], name: "index_studies_on_name"
-    t.index ["owner_type", "owner_id"], name: "index_studies_on_owner_type_and_owner_id"
-    t.index ["topic_id"], name: "index_studies_on_topic_id"
+    t.index ["topic_id"], name: "fk_rails_09e41a5aa5"
   end
 
-  create_table "study_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-  end
-
-  create_table "topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "study_versions", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "site_id", limit: 36, null: false
+    t.string "study_id", limit: 36, null: false
     t.string "name", null: false
-    t.string "owner_type", null: false
-    t.bigint "owner_id", null: false
-    t.string "creator_type"
-    t.bigint "creator_id"
+    t.json "inclusion_criteria"
+    t.json "exclusion_criteria"
+    t.string "protocol"
+    t.string "agent"
+    t.string "mechanism"
+    t.string "side_effects"
+    t.string "administration"
+    t.string "randomization"
+    t.string "duration"
+    t.string "assessment_frequency"
+    t.string "interventions"
+    t.string "sponsor_name"
+    t.string "sponsor_contact"
+    t.string "cro_contact"
+    t.string "budget"
+    t.string "enrolled_or_committed"
+    t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_type", "creator_id"], name: "index_topics_on_creator_type_and_creator_id"
-    t.index ["name"], name: "index_topics_on_name"
-    t.index ["owner_type", "owner_id"], name: "index_topics_on_owner_type_and_owner_id"
+    t.index ["name"], name: "index_study_versions_on_name"
+    t.index ["site_id", "study_id"], name: "index_study_versions_on_site_id_and_study_id", unique: true
+    t.index ["study_id"], name: "fk_rails_c2835f87a1"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "topics", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "sponsor_id", limit: 36, null: false
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_topics_on_name"
+    t.index ["sponsor_id"], name: "fk_rails_4e916458a9"
+  end
+
+  create_table "users", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "provider", default: "email", null: false
     t.string "uid", null: false
     t.string "first_name", null: false
@@ -128,21 +167,32 @@ ActiveRecord::Schema.define(version: 2019_07_12_184439) do
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
     t.datetime "locked_at"
+    t.string "invitation_token"
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer "invitation_limit"
+    t.integer "invited_by_id"
+    t.string "invited_by_type"
     t.text "tokens"
-    t.json "fcm_tokens", null: false
+    t.json "fcm_tokens"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
-  add_foreign_key "appointments", "members", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "appointments", "studies", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "appointments", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
-  add_foreign_key "members", "users", column: "creator_id", on_update: :cascade, on_delete: :nullify
-  add_foreign_key "members", "users", on_update: :cascade, on_delete: :cascade
-  add_foreign_key "studies", "topics", on_update: :cascade, on_delete: :cascade
+  add_foreign_key "contacts", "users"
+  add_foreign_key "contacts", "users", column: "creator_id"
+  add_foreign_key "shares", "sites"
+  add_foreign_key "shares", "studies"
+  add_foreign_key "shares", "users"
+  add_foreign_key "studies", "topics"
+  add_foreign_key "study_versions", "sites"
+  add_foreign_key "study_versions", "studies"
+  add_foreign_key "topics", "sponsors"
 end

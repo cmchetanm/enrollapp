@@ -4,20 +4,10 @@ class StudyAuthenticator
   end
 
   def find_all
-    members = Member.where(user: @user)
-    appointments = Appointment.select(:study_id).where(member: members)
-    mine = Study.where(owner: @user)
-    shared = Study.published.where(id: appointments)
-    mine.or(shared).order(:name)
+    Study.where(id: Share.select(:study_id).where(user: @user)).order(:name)
   end
 
   def find_one(study_id)
-    members = Member.where(user: @user)
-    appointments = Appointment.select(:study_id).where(study_id: study_id, member: members)
-    study = Study.find_by(id: study_id, owner: @user)
-    study = Study.published.where(id: appointments).first if study.nil?
-    raise ActiveRecord::RecordNotFound if study.nil?
-
-    study
+    Study.find(study_id)
   end
 end

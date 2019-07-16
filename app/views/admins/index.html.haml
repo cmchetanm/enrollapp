@@ -1,0 +1,27 @@
+- content_for :title, 'Admins'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = yield :title
+
+%h1= yield :title
+
+%table
+  %thead
+    %tr
+      %th Full Name
+      %th Email
+      %th Create Date
+      %th
+  %tbody
+    - @admins.each do |admin|
+      %tr
+        %td= admin.full_name
+        %td= admin.email
+        %td= l admin.created_at, format: :short
+        %td.text-right
+          = link_to 'Resend Invitation', resend_invitation_admin_path(admin), method: :post, class: 'clear button' if admin.invited_to_sign_up?
+          = link_to 'Delete', admin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0'
+
+= link_to 'New Admin', new_admin_invitation_path, class: 'button'

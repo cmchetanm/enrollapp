@@ -6,12 +6,20 @@
         - study.errors.full_messages.each do |message|
           %li= message
 
+  = f.hidden_field :topic_id
+
   .field
-    = f.label :name
+    = f.label :name, autofocus: true
     = f.text_field :name
   .field
     = f.label :topic
     = f.collection_select :topic_id, Topic.names, :id, :name, include_blank: true
+  .field
+    = f.label :inclusion_criteria
+    = f.text_area :inclusion_criteria, rows: 10, value: (study.inclusion_criteria&.join("\n"))
+  .field
+    = f.label :exclusion_criteria
+    = f.text_area :exclusion_criteria, rows: 10, value: (study.exclusion_criteria&.join("\n"))
   .field
     = f.label :protocol
     = f.text_field :protocol
@@ -41,14 +49,14 @@
     = f.label :interventions
     = f.text_field :interventions
   .field
-    = f.label :sponsor
-    = f.text_field :sponsor
+    = f.label :sponsor_name
+    = f.text_field :sponsor_name, value: study.sponsor_name || study.sponsor.try(:name)
   .field
     = f.label :sponsor_contact
-    = f.text_field :sponsor_contact
+    = f.text_field :sponsor_contact, value: study.sponsor_contact || study.sponsor.try(:contact)
   .field
     = f.label :cro_contact
-    = f.text_field :cro_contact
+    = f.text_field :cro_contact, value: study.cro_contact || study.sponsor.try(:cro)
   .field
     = f.label :budget
     = f.text_field :budget
@@ -58,19 +66,6 @@
   .field
     = f.label :comments
     = f.text_field :comments
-  .field
-    .grid-x.grid-margin-x
-      .shrink.cell
-        = f.label :published, class: 'middle'
-      .auto.cell
-        .switch.large
-          = f.check_box :published, class: 'switch-input'
-          = f.label :published, class: 'switch-paddle' do
-            %span.switch-active Yes
-            %span.switch-inactive No
-  .field
-    = f.label :owner
-    = f.hidden_field :owner_type, value: User.model_name.name
-    = f.collection_select :owner_id, User.names, :id, :full_name, include_blank: true
-  .actions
+  .button-group
+    = link_to 'Cancel', study.new_record? ? study.sponsor || studies_path : study, class: 'secondary button'
     = f.submit class: 'button'

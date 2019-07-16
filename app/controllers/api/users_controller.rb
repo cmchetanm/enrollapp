@@ -3,6 +3,7 @@ module Api
     before_action :set_client
 
     def fcm_token
+      current_api_user.fcm_tokens ||= {}
       current_api_user.fcm_tokens[@client_id] = params[:token]
 
       if current_api_user.save

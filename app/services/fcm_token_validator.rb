@@ -4,6 +4,8 @@ class FcmTokenValidator
   end
 
   def valid_tokens
+    return [] if @user.fcm_tokens.nil?
+
     fcm_tokens = []
     @user.fcm_tokens.keys.each do |client|
       token = @user.tokens[client]

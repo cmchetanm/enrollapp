@@ -6,7 +6,7 @@ module DeviseOverrides
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
 
-        scope[0].to_s.classify.constantize.delete_all
+        scope[0].to_s.classify.constantize.destroy_all
         get url_for([:new, scope[0], :registration])
         assert_response :success
       end
@@ -25,11 +25,12 @@ module DeviseOverrides
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
 
-        scope[0].to_s.classify.constantize.delete_all
+        scope[0].to_s.classify.constantize.destroy_all
 
         assert_difference('scope[0].to_s.classify.constantize.count') do
           post url_for([scope[0], :registration]), params: {"#{scope[0]}": {
-            email: 'new@example.com', password: 'NewC0mPl3xPassw0rd!', password_confirmation: 'NewC0mPl3xPassw0rd!'
+            first_name: 'Test', last_name: 'Test', email: 'new@example.com',
+            password: 'NewC0mPl3xPassw0rd!', password_confirmation: 'NewC0mPl3xPassw0rd!'
           }}
         end
       end

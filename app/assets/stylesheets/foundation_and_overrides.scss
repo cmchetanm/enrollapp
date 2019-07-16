@@ -21,8 +21,8 @@
 //@include foundation-accordion;
 //@include foundation-accordion-menu;
 //@include foundation-badge;
-//@include foundation-breadcrumbs;
-//@include foundation-button-group;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
 @include foundation-callout;
 //@include foundation-card;
 //@include foundation-close-button;
@@ -41,7 +41,7 @@
 //@include foundation-slider;
 //@include foundation-sticky;
 //@include foundation-reveal;
-@include foundation-switch;
+//@include foundation-switch;
 @include foundation-table;
 //@include foundation-tabs;
 //@include foundation-thumbnail;
@@ -50,6 +50,8 @@
 @include foundation-top-bar;
 //@include foundation-visibility-classes;
 //@include foundation-float-classes;
+
+@include foundation-prototype-spacing;
 
 // If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports,
 // if you are not using the gem you need to install the motion-ui sass package.

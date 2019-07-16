@@ -1,0 +1,7 @@
+.callout.tight
+  %div
+    %b= user.full_name
+  %div
+    %small.subheader= user.email
+  %div
+    %small.subheader= number_to_phone(user.phone_number, area_code: true)

@@ -1,0 +1,32 @@
+= form_for share, remote: true, authenticity_token: true do |f|
+  - if share.errors.any?
+    .error-explanation
+      %h2 #{pluralize(share.errors.count, 'error')} prohibited this share from being saved:
+      %ul
+        - share.errors.full_messages.each do |message|
+          %li= message
+
+  = f.hidden_field :study_id, value: share.study.id
+
+  .field
+    = f.label :site_id
+    = f.collection_select :site_id, Site.names, :id, :name, include_blank: true
+  .field
+    = f.label :role
+    = f.collection_select :role, StudyRole.all, :first, :last, include_blank: true
+  - if share.new_record?
+    .field
+      = label_tag :users
+      .help-text Enter one user per line in CSV format, as shown below:
+      .help-text (The phone number field is optional)
+      %pre John,Smith,john@gmail.com,2041234567
+      %pre Jane,Stone,jane@gmail.com
+      = text_area_tag :users, params[:users], rows: 10, spellcheck: false
+      = primary_callout "Every user that doesn't already exist in the app will receive an invitation email asking them to create an account."
+  - else
+    = label_tag :user
+    = render share.user
+    = warning_callout 'You cannot edit user information, because this user record has already been created, and their information may be used in other studies.'
+  .button-group
+    = link_to 'Cancel', share.study, class: 'secondary button'
+    = f.submit class: 'button'

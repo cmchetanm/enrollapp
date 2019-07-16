@@ -11,9 +11,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should show user' do
-    get user_url(@user)
-    assert_response :success
+  test 'should resend invitation' do
+    assert_enqueued_jobs 1 do
+      post resend_invitation_user_url(@user)
+    end
+    assert_redirected_to users_url
   end
 
   test 'should destroy user' do

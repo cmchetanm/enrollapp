@@ -1,0 +1,13 @@
+- content_for :title, 'Accept Invitation'
+
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h1= t 'devise.invitations.edit.header'
+    = form_for resource, as: resource_name, url: invitation_path(resource_name), html: {method: :put} do |f|
+      = render 'devise/shared/error_messages', resource: resource
+      = f.hidden_field :invitation_token, readonly: true
+      - if f.object.class.require_password_on_accepting
+        = f.password_field :password, autofocus: true, autocomplete: :off, placeholder: 'New password'
+        = f.password_field :password_confirmation, autocomplete: :off, placeholder: 'Confirm new password'
+
+      = f.submit t('devise.invitations.edit.submit_button'), class: 'button'

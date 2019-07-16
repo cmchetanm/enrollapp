@@ -12,23 +12,7 @@ module Api
     end
 
     test 'should get index' do
-      get api_studies_url, params: { topic_id: @topic.id }, headers: @auth_tokens
-      assert_response :success
-    end
-
-    test 'should create study' do
-      assert_difference('Study.count') do
-        post api_studies_url, params: {
-          administration: @study.administration, agent: @study.agent,
-          assessment_frequency: @study.assessment_frequency, comments: @study.comments,
-          sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
-          budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
-          interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
-          protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
-          side_effects: @study.side_effects, topic_id: @topic.id,
-          inclusion_criteria: ['test'], exclusion_criteria: ['test']
-        }, headers: @auth_tokens
-      end
+      get api_studies_url, params: {topic_id: @topic.id}, headers: @auth_tokens
       assert_response :success
     end
 
@@ -38,22 +22,17 @@ module Api
     end
 
     test 'should update study' do
-      patch api_study_url(@study), params: {
-        administration: @study.administration, agent: @study.agent,
-        assessment_frequency: @study.assessment_frequency, comments: @study.comments,
-        sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
-        budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
-        interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
-        protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
-        side_effects: @study.side_effects, topic_id: @topic.id,
-        inclusion_criteria: ['test'], exclusion_criteria: ['test']
-      }, headers: @auth_tokens
-      assert_response :success
-    end
-
-    test 'should destroy study' do
-      assert_difference('Study.count', -1) do
-        delete api_study_url(@study), headers: @auth_tokens
+      assert_enqueued_with(job: StudyUpdateNotifierJob) do
+        patch api_study_url(@study), params: {
+          administration: @study.administration, agent: @study.agent,
+          assessment_frequency: @study.assessment_frequency, comments: @study.comments,
+          sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
+          budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
+          interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
+          protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
+          side_effects: @study.side_effects,
+          inclusion_criteria: ['test'], exclusion_criteria: ['test']
+        }, headers: @auth_tokens
       end
       assert_response :success
     end

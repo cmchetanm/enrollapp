@@ -1,9 +1,14 @@
 - content_for :title, 'New Study'
 
+%nav
+  %ul.breadcrumbs
+    %li
+      = link_to 'Studies', studies_path
+    %li
+      = yield :title
+
 .grid-x.align-center
   .medium-6.large-4.cell
     %h1= yield :title
 
     = render 'form', study: @study
-
-    %p= link_to 'Back to Studies', studies_path

@@ -6,12 +6,11 @@
         - topic.errors.full_messages.each do |message|
           %li= message
 
+  = f.hidden_field :sponsor_id
+
   .field
     = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :owner
-    = f.hidden_field :owner_type, value: User.model_name.name
-    = f.collection_select :owner_id, User.names, :id, :full_name, include_blank: true
-  .actions
+    = f.text_field :name, autofocus: true
+  .button-group
+    = link_to 'Cancel', topic.sponsor, class: 'secondary button'
     = f.submit class: 'button'

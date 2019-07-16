@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if admin_signed_in?
-      redirect_to users_url
+      redirect_to sponsors_url
     else
       redirect_to new_admin_session_url
     end

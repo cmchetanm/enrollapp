@@ -9,14 +9,14 @@ class StudiesController < ApplicationController
   end
 
   def new
-    @study = Study.new
+    @study = Study.new(topic: Topic.find_by(id: params[:topic_id]))
   end
 
   def edit
   end
 
   def create
-    @study = Study.new(study_params.merge(creator: current_admin))
+    @study = Study.new(study_params)
 
     if @study.save
       redirect_to @study, notice: 'Study was successfully created.'
@@ -50,8 +50,8 @@ class StudiesController < ApplicationController
   def study_params
     params.require(:study).permit(
       :topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization,
-      :duration, :assessment_frequency, :interventions, :sponsor, :sponsor_contact, :cro_contact,
-      :budget, :enrolled_or_committed, :comments, :published, :owner_type, :owner_id
+      :duration, :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact, :cro_contact,
+      :budget, :enrolled_or_committed, :comments, :inclusion_criteria, :exclusion_criteria
     )
   end
 end

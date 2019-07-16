@@ -1,7 +1,7 @@
 DEFAULTS: &DEFAULTS
+  id: $LABEL
+  sponsor_id: $LABEL
   name: $LABEL
-  owner: $LABEL (User)
-  creator: $LABEL (User)
 
 one:
   <<: *DEFAULTS

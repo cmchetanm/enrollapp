@@ -1,9 +1,16 @@
-- content_for :title, 'New Topics'
+- content_for :title, 'New Topic'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = link_to 'Sponsors', sponsors_path
+    %li
+      = link_to @topic.sponsor.name, @topic.sponsor
+    %li
+      = yield :title
 
 .grid-x.align-center
   .medium-6.large-4.cell
     %h1= yield :title
 
     = render 'form', topic: @topic
-
-    %p= link_to 'Back to Topics', topics_path

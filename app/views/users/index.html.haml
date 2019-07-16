@@ -1,23 +1,33 @@
-- content_for :title, 'Study Users'
+- content_for :title, 'Users'
 
-%h1 Users
+%nav
+  %ul.breadcrumbs
+    %li
+      = yield :title
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th.text-center Paid Studies
-      %th.text-center Unpaid Studies
-      %th.text-center Create Date
-      %th
+- if @users.size.zero?
+  = primary_callout do
+    You have not invited any users yet.
+- else
+  = primary_callout 'To invite a new user, use the "Share Study" button under a particular study.'
 
-  %tbody
-    - @users.each do |user|
-      %tr.text-center
-        %td.text-left
-          %div= link_to user.full_name, user
-          %small.subheader= user.email
-        %td= user.studies.select(&:published?).length
-        %td= user.studies.reject(&:published?).length
-        %td= l user.created_at, format: :short
-        %td.text-right= link_to 'Show', user
+  %h1= yield :title
+
+  %table
+    %thead
+      %tr
+        %th Full Name
+        %th.text-center Studies
+        %th.text-center Create Date
+        %th
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td.tight
+            %div= user.full_name
+            %small.subheader= user.email
+          %td.text-center= user.studies.size
+          %td.text-center= l user.created_at, format: :short
+          %td.text-right
+            = link_to 'Resend Invitation', resend_invitation_user_path(user), method: :post, class: 'clear button' if user.invited_to_sign_up?
+            = link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0'

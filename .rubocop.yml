@@ -72,11 +72,14 @@ Security/YAMLLoad:
 Style/Documentation:
   Enabled: false
 
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/EmptyMethod:
-  EnforcedStyle: expanded
+Style/GuardClause:
+  Enabled: false
 
 Style/MixinUsage:
   Exclude:

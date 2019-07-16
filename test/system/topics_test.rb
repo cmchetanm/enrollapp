@@ -3,41 +3,24 @@ require 'application_system_test_case'
 class TopicsTest < ApplicationSystemTestCase
   setup do
     sign_in admins(:one)
+    @sponsor = sponsors(:one)
     @topic = topics(:one)
   end
 
-  test 'visiting the index' do
-    visit topics_url
-    assert_selector 'h1', text: 'Topics'
-  end
-
-  test 'creating a topic' do
-    visit topics_url
-    click_on 'New Topic'
-
-    fill_in 'Name', with: @topic.name
-    select @topic.owner.full_name
-    click_on 'Create Topic'
-
-    assert_text 'Topic was successfully created.'
-    click_on 'Back'
-  end
-
   test 'updating a topic' do
-    visit topic_url(@topic)
-    click_on 'Edit Topic', match: :first
+    visit sponsor_url(@sponsor)
+    find('.button', text: 'EDIT', match: :first).click
 
     fill_in 'Name', with: @topic.name
     click_on 'Update Topic'
 
     assert_text 'Topic was successfully updated.'
-    click_on 'Back to Topics'
   end
 
   test 'destroying a topic' do
-    visit topic_url(@topic)
+    visit sponsor_url(@sponsor)
     page.accept_confirm do
-      click_on 'Delete Topic', match: :first
+      find('.button', text: 'DELETE', match: :first).click
     end
 
     assert_text 'Topic was successfully destroyed.'

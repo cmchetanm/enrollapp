@@ -6,15 +6,19 @@
           %li.menu-text
             = APP[:website_name]
           - if admin_signed_in?
-            %li{class: active?(users_path)}
-              = link_to 'Users', users_path
-            %li{class: active?(topics_path)}
-              = link_to 'Topics', topics_path
+            %li{class: active?(sponsors_path)}
+              = link_to 'Sponsors', sponsors_path
+            %li{class: active?(sites_path)}
+              = link_to 'Sites', sites_path
             %li{class: active?(studies_path)}
               = link_to 'Studies', studies_path
+            %li{class: active?(users_path)}
+              = link_to 'Users', users_path
       .top-bar-right
         %ul.menu
           - if admin_signed_in?
+            %li{class: active?(admins_path)}
+              = link_to 'Admins', admins_path
             %li{class: active?(edit_admin_registration_path)}
               = link_to 'Edit Profile', edit_admin_registration_path
             %li

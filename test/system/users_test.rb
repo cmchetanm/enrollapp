@@ -6,15 +6,15 @@ class UsersTest < ApplicationSystemTestCase
     @user = users(:one)
   end
 
-  test 'visiting the index' do
+  test 'visiting the users index' do
     visit users_url
     assert_selector 'h1', text: 'Users'
   end
 
   test 'destroying a user' do
-    visit user_url(@user)
+    visit users_url
     page.accept_confirm do
-      click_on 'Delete User', match: :first
+      click_on 'Delete', match: :first
     end
 
     assert_text 'User was successfully destroyed.'

@@ -2,12 +2,28 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   devise_for :admins, controllers: {
-    registrations: 'devise_overrides/registrations'
+    invitations: 'devise_overrides/invitations',
+    registrations: 'devise_overrides/registrations',
+    sessions: 'devise_overrides/sessions'
   }
 
-  resources :users, only: %i[index show destroy]
+  devise_for :users, controllers: {
+    invitations: 'devise_overrides/invitations',
+    registrations: 'devise_overrides/registrations',
+    sessions: 'devise_overrides/sessions'
+  }
+
+  resources :admins, only: %i[index destroy] do
+    post :resend_invitation, on: :member
+  end
+  resources :users, only: %i[index destroy] do
+    post :resend_invitation, on: :member
+  end
+  resources :sites, except: :show
+  resources :shares, except: %i[index show]
+  resources :sponsors
   resources :studies
-  resources :topics
+  resources :topics, except: %i[index show]
 
   namespace :api, defaults: {format: :json} do
     mount_devise_token_auth_for 'User', at: 'auth', controllers: {
@@ -15,10 +31,10 @@ Rails.application.routes.draw do
       sessions: 'api/devise_token_auth_overrides/sessions'
     }
 
-    resources :topics, except: %i[new edit]
-    resources :studies, except: %i[new edit]
-    resources :members, except: %i[new edit show]
-    resource :appointments, only: %i[update destroy]
+    resources :topics, only: :index
+    resources :studies, except: %i[new edit create]
+    resources :shares, only: %i[create destroy]
+    resources :contacts, except: %i[new edit]
     put '/auth/fcm_token', to: 'users#fcm_token'
   end
 

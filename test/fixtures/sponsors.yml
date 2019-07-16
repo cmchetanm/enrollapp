@@ -1,0 +1,11 @@
+DEFAULTS: &DEFAULTS
+  id: $LABEL
+  name: $LABEL
+  contact: $LABEL
+  cro: $LABEL
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

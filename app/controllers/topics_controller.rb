@@ -1,33 +1,26 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: %i[show edit update destroy]
-
-  def index
-    @topics = Topic.includes(:owner, :studies).order(:name)
-  end
-
-  def show
-  end
+  before_action :set_topic, only: %i[edit update destroy]
 
   def new
-    @topic = Topic.new
+    @topic = Topic.new(sponsor_id: params[:sponsor_id])
   end
 
   def edit
   end
 
   def create
-    @topic = Topic.new(topic_params.merge(creator: current_admin))
+    @topic = Topic.new(topic_params)
 
     if @topic.save
-      redirect_to @topic, notice: 'Topic was successfully created.'
+      redirect_to @topic.sponsor, notice: 'Topic was successfully created.'
     else
       render :new
     end
   end
 
   def update
-    if @topic.update(topic_params)
-      redirect_to @topic, notice: 'Topic was successfully updated.'
+    if @topic.update!(topic_params)
+      redirect_to @topic.sponsor, notice: 'Topic was successfully updated.'
     else
       render :edit
     end
@@ -35,9 +28,9 @@ class TopicsController < ApplicationController
 
   def destroy
     if @topic.destroy
-      redirect_to topics_url, notice: 'Topic was successfully destroyed.'
+      redirect_to @topic.sponsor, notice: 'Topic was successfully destroyed.'
     else
-      redirect_to topics_url, alert: @topic.errors.full_messages.to_sentence
+      redirect_to @topic.sponsor, alert: @topic.errors.full_messages.to_sentence
     end
   end
 
@@ -48,6 +41,6 @@ class TopicsController < ApplicationController
   end
 
   def topic_params
-    params.require(:topic).permit(:name, :owner_type, :owner_id)
+    params.require(:topic).permit(:name, :sponsor_id)
   end
 end

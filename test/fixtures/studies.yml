@@ -1,5 +1,6 @@
 DEFAULTS: &DEFAULTS
-  topic: $LABEL
+  id: $LABEL
+  topic_id: $LABEL
   name: $LABEL
   inclusion_criteria: [$LABEL]
   exclusion_criteria: [$LABEL]
@@ -12,15 +13,12 @@ DEFAULTS: &DEFAULTS
   duration: $LABEL
   assessment_frequency: $LABEL
   interventions: $LABEL
-  sponsor: $LABEL
+  sponsor_name: $LABEL
   sponsor_contact: $LABEL
   cro_contact: $LABEL
   budget: $LABEL
   enrolled_or_committed: $LABEL
   comments: $LABEL
-  published: false
-  owner: $LABEL (User)
-  creator: $LABEL (User)
 
 one:
   <<: *DEFAULTS

@@ -1,12 +1,10 @@
 class Topic < ApplicationRecord
-  belongs_to :creator, polymorphic: true
-  belongs_to :owner, polymorphic: true
-  has_many :studies, dependent: :destroy
-  has_many :appointments, through: :studies, dependent: :destroy
+  belongs_to :sponsor
+  has_many :studies, -> { order(:name) }, dependent: :destroy, inverse_of: :topic
 
   validates :name, presence: true
 
   def self.names
-    all.order(:name)
+    order(:name)
   end
 end

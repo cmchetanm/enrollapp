@@ -4,6 +4,8 @@ class PushNotification
   end
 
   def send(title, body)
+    return if @user.tokens.nil?
+
     uri = URI(APP[:firebase_url])
     req = prepare_request(uri)
 

@@ -30,7 +30,7 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
       } }
     end
 
-    assert_redirected_to study_url(Study.last)
+    assert_redirected_to study_url(Study.order(:created_at).last)
   end
 
   test 'should show study' do

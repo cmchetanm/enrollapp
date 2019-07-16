@@ -1,6 +1,6 @@
 module CalloutsHelper
-  def info_callout(text = nil, &block)
-    content_tag :div, fa_icon('info-circle', text: text || capture(&block)), class: 'info callout'
+  def primary_callout(text = nil, &block)
+    content_tag :div, fa_icon('info-circle', text: text || capture(&block)), class: 'primary callout'
   end
 
   def alert_callout(text = nil, &block)

@@ -1,9 +1,11 @@
 class StudiesMailer < ApplicationMailer
-  def notify(updater, study, user)
+  def notify(updater, study_version, user)
     @updater = updater
-    @study = study
+    @study = study_version
 
-    mail to: user.email,
-         subject: "#{@study.name} Updated"
+    if user.invitation_accepted?
+      mail to: user.email,
+           subject: "#{@study.name} Updated"
+    end
   end
 end

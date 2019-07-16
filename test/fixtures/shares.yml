@@ -1,0 +1,12 @@
+DEFAULTS: &DEFAULTS
+  id: $LABEL
+  site_id: $LABEL
+  study_id: $LABEL
+  user_id: $LABEL
+  role: <%= StudyRole.constants.sample %>
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

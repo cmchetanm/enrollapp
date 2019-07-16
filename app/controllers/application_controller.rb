@@ -5,9 +5,10 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_api_user!, if: :api_controller?, unless: :devise_controller?
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found unless Rails.env.development?
+  helper_method :no_admins?
 
-  def authenticated_user
-    current_admin || current_user
+  def no_admins?
+    Admin.count.zero?
   end
 
   protected
