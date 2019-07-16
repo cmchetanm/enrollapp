@@ -18,7 +18,7 @@ module Api
         StudyUpdateNotifierJob.perform_later(current_api_user, @study_version)
         render :show, status: :ok, location: @study
       else
-        render json: {errors: @study_version.errors.full_messages}, status: :unprocessable_entity
+        render json: {errors: @study_version.errors.full_messages.to_sentence}, status: :unprocessable_entity
       end
     end
 
@@ -26,7 +26,7 @@ module Api
       if @study.destroy
         render :show, status: :ok, location: @study
       else
-        render json: {errors: @study.errors.full_messages}, status: :unprocessable_entity
+        render json: {errors: @study.errors.full_messages.to_sentence}, status: :unprocessable_entity
       end
     end
 

@@ -8,6 +8,6 @@ class StudyAuthenticator
   end
 
   def find_one(study_id)
-    Study.find(study_id)
+    Study.find(Share.find_by(user: @user, study_id: study_id).study_id)
   end
 end

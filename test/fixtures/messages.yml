@@ -1,0 +1,11 @@
+DEFAULTS: &DEFAULTS
+  study_id: $LABEL
+  site_id: $LABEL
+  user_id: $LABEL
+  text: $LABEL
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

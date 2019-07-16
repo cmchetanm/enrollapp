@@ -20,7 +20,7 @@ module Api
       if @share.destroy!
         render :show, status: :ok
       else
-        render json: {errors: @share.errors.full_messages}, status: :unprocessable_entity
+        render json: {errors: @share.errors.full_messages.to_sentence}, status: :unprocessable_entity
       end
     end
 

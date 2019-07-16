@@ -9,7 +9,7 @@ module Api
       if current_api_user.save
         head :created
       else
-        render json: {errors: current_api_user.errors.full_messages}, status: :unprocessable_entity
+        render json: {errors: current_api_user.errors.full_messages.to_sentence}, status: :unprocessable_entity
       end
     end
 

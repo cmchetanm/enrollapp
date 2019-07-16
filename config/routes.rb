@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     resources :studies, except: %i[new edit create]
     resources :shares, only: %i[create destroy]
     resources :contacts, except: %i[new edit]
+    resources :messages, except: %i[new edit]
     put '/auth/fcm_token', to: 'users#fcm_token'
   end
 

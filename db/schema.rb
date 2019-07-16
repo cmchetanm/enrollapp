@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_15_011442) do
+ActiveRecord::Schema.define(version: 2019_07_16_152543) do
 
   create_table "admins", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "first_name", null: false
@@ -55,6 +55,18 @@ ActiveRecord::Schema.define(version: 2019_07_15_011442) do
     t.index ["creator_id"], name: "fk_rails_25702ebd35"
     t.index ["last_name", "first_name"], name: "index_contacts_on_last_name_and_first_name"
     t.index ["user_id"], name: "fk_rails_8d2134e55e"
+  end
+
+  create_table "messages", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "site_id", limit: 36, null: false
+    t.string "study_id", limit: 36, null: false
+    t.string "user_id", limit: 36, null: false
+    t.text "text", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["site_id", "study_id", "created_at"], name: "index_messages_on_site_id_and_study_id_and_created_at"
+    t.index ["study_id"], name: "fk_rails_4696ca4a8c"
+    t.index ["user_id"], name: "fk_rails_273a25a7a6"
   end
 
   create_table "shares", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
@@ -188,6 +200,9 @@ ActiveRecord::Schema.define(version: 2019_07_15_011442) do
 
   add_foreign_key "contacts", "users"
   add_foreign_key "contacts", "users", column: "creator_id"
+  add_foreign_key "messages", "sites"
+  add_foreign_key "messages", "studies"
+  add_foreign_key "messages", "users"
   add_foreign_key "shares", "sites"
   add_foreign_key "shares", "studies"
   add_foreign_key "shares", "users"

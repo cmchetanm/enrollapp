@@ -30,8 +30,8 @@ class User < ApplicationRecord
     user = User.find_by(email: email)
     if user.nil? || (!user.invitation_accepted? && !user.valid_invitation?)
       user = User.invite!(
-        first_name: first_name, last_name: last_name,
-        email: email, phone_number: phone_number
+        first_name: first_name.presence, last_name: last_name.presence,
+        email: email.presence, phone_number: phone_number.presence
       )
     end
     user
