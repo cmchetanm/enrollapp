@@ -23,10 +23,10 @@ module Api
     end
 
     def destroy
-      if @study.destroy
+      if @study_version.destroy
         render :show, status: :ok, location: @study
       else
-        render json: {errors: @study.errors.full_messages.to_sentence}, status: :unprocessable_entity
+        render json: {errors: @study_version.errors.full_messages.to_sentence}, status: :unprocessable_entity
       end
     end
 

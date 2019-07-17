@@ -2,7 +2,7 @@ class Study < ApplicationRecord
   belongs_to :topic
   has_one :sponsor, through: :topic
   has_many :shares, dependent: :destroy
-  has_many :sites, through: :shares
+  has_many :sites, -> { order(:name) }, through: :shares
   has_many :users, through: :shares
   has_many :study_versions, dependent: :destroy
 
