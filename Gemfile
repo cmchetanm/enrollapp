@@ -25,7 +25,7 @@ gem 'foundation-rails'
 # Rails authentication mechanism
 gem 'devise'
 gem 'devise_invitable'
-gem 'devise_token_auth', git: 'https://github.com/lynndylanhurley/devise_token_auth.git'
+gem 'devise_token_auth'
 
 # Password Strength Enforcement
 gem 'strong_password'
@@ -50,7 +50,7 @@ gem 'jbuilder'
 gem 'resque', require: 'resque/server'
 
 # Use Foreman for managing Rails processes
-gem 'foreman'
+gem 'foreman', require: false
 
 # File based caching
 gem 'dalli'

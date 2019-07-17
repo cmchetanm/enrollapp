@@ -8,8 +8,8 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :contacts, dependent: :destroy, foreign_key: :creator_id, inverse_of: :creator
 
-  devise :confirmable, :database_authenticatable, :invitable, :lockable, :registerable,
-         :recoverable, :rememberable, :validatable
+  devise :database_authenticatable, :invitable, :lockable,
+         :recoverable
 
   validates :phone_number, format:
       {with: /\A\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\z/,
