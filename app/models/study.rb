@@ -4,6 +4,7 @@ class Study < ApplicationRecord
   has_many :shares, dependent: :destroy
   has_many :sites, -> { order(:name) }, through: :shares
   has_many :users, through: :shares
+  has_many :messages, dependent: :destroy
   has_many :study_versions, dependent: :destroy
 
   validates :name, presence: true

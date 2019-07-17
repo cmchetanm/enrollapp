@@ -9,7 +9,7 @@ class SharesTest < ApplicationSystemTestCase
 
   test 'visiting the shares index' do
     visit study_url(@study)
-    assert_selector 'h2', text: 'Study Team'
+    assert_selector 'h3', text: @study.sites.sample.name
   end
 
   test 'creating a share' do

@@ -7,20 +7,19 @@ module Api
     setup do
       @user = users(:one)
       @auth_tokens = auth_tokens_for_user(@user)
+      @study = studies(:one)
       @message = messages(:one)
     end
 
     test 'should get index' do
-      get api_messages_url, headers: @auth_tokens
+      get api_messages_url(study_id: @study), headers: @auth_tokens
       assert_response :success
     end
 
     test 'should create message' do
       assert_difference('Message.count') do
         post api_messages_url, params: {
-          email: @message.email, first_name: @message.first_name,
-          last_name: @message.last_name, phone_number: @message.phone_number,
-          user_id: @message.user_id
+          study_id: @message.study_id, text: @message.text
         }, headers: @auth_tokens
       end
       assert_response :success
@@ -32,11 +31,7 @@ module Api
     end
 
     test 'should update message' do
-      patch api_message_url(@message), params: {
-        email: @message.email, first_name: @message.first_name,
-        last_name: @message.last_name, phone_number: @message.phone_number,
-        user_id: @message.user_id
-      }, headers: @auth_tokens
+      patch api_message_url(@message), params: {text: @message.text}, headers: @auth_tokens
       assert_response :success
     end
 
