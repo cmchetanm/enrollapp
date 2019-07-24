@@ -49,12 +49,6 @@ gem 'jbuilder'
 # Use Resque to process Active Jobs
 gem 'resque', require: 'resque/server'
 
-# Use Foreman for managing Rails processes
-gem 'foreman', require: false
-
-# File based caching
-gem 'dalli'
-
 # Provides hamlit generators for Rails. Hamlit = optimized HAML
 gem 'haml-rails'
 
@@ -86,6 +80,8 @@ group :development do
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
+  # Use Foreman for managing Rails processes
+  gem 'foreman', require: false
 end
 
 group :test do
@@ -96,4 +92,9 @@ group :test do
   gem 'webdrivers'
   # Used for controller testing
   gem 'rails-controller-testing'
+end
+
+group :production do
+  # File based caching
+  gem 'dalli'
 end
