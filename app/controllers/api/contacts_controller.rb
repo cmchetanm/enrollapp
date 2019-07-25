@@ -22,7 +22,7 @@ module Api
       if @contact.save
         render :show, status: :created
       else
-        render json: @contact.errors, status: :unprocessable_entity
+        render json: {errors: @contact.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
@@ -30,7 +30,7 @@ module Api
       if @contact.update(contact_params)
         render :show, status: :ok
       else
-        render json: @contact.errors, status: :unprocessable_entity
+        render json: {errors: @contact.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
@@ -38,7 +38,7 @@ module Api
       if @contact.destroy
         render :show, status: :ok
       else
-        render json: {errors: @contact.errors.full_messages.to_sentence}, status: :unprocessable_entity
+        render json: {errors: @contact.errors.full_messages}, status: :unprocessable_entity
       end
     end
 

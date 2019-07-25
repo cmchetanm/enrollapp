@@ -42,5 +42,6 @@ class User < ApplicationRecord
 
   def prettify
     self.phone_number = phone_number.to_s.gsub(/\D/, '')
+    self.phone_number = nil if phone_number.blank?
   end
 end

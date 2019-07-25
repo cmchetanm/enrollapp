@@ -13,7 +13,7 @@ module Api
       if @message.save
         render :show, status: :created
       else
-        render json: @message.errors, status: :unprocessable_entity
+        render json: {errors: @message.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
@@ -21,7 +21,7 @@ module Api
       if @message.update(message_params)
         render :show, status: :ok
       else
-        render json: @message.errors, status: :unprocessable_entity
+        render json: {errors: @message.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
@@ -29,7 +29,7 @@ module Api
       if @message.destroy
         render :show, status: :ok
       else
-        render json: {errors: @message.errors.full_messages.to_sentence}, status: :unprocessable_entity
+        render json: {errors: @message.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
