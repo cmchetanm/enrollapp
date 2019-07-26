@@ -14,6 +14,7 @@ en:
         duration: Duration of Treatment/Study
         assessment_frequency: Average Frequency of Clinic Visits/Assessments
         interventions: Interventions Required
+        travel_parking_costs: Travel/Parking Costs
         sponsor_name: Sponsor
         sponsor_contact: Sponsor Contact
         cro_contact: CRO Contact
