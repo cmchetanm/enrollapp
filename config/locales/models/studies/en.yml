@@ -4,16 +4,16 @@ en:
       study:
         name: Name
         inclusion_criteria: Inclusion Criteria
-        exclusion_criteria: exclusion Criteria
+        exclusion_criteria: Exclusion Criteria
         protocol: Protocol Name/Number
-        agent: Agent/intervention
+        agent: Agent/Intervention
         mechanism: Principal Mechanism of Action
         side_effects: Side Effects/Risks of Intervention
         administration: Route & Frequency of Administration
         randomization: Drug/Placebo Randomization
         duration: Duration of Treatment/Study
-        assessment_frequency: Average Frequency of Clinic Visits/Assessments
-        interventions: Interventions Required
+        assessment_frequency: Frequency of Clinic Visits
+        interventions: Invasive Procedures
         sponsor_name: Sponsor
         sponsor_contact: Sponsor Contact
         cro_contact: CRO Contact
