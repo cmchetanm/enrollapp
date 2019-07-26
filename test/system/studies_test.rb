@@ -29,6 +29,7 @@ class StudiesTest < ApplicationSystemTestCase
     fill_in Study.human_attribute_name(:duration), with: @study.duration
     fill_in Study.human_attribute_name(:budget), with: @study.budget
     fill_in Study.human_attribute_name(:interventions), with: @study.interventions
+    fill_in Study.human_attribute_name(:travel_parking_costs), with: @study.travel_parking_costs
     fill_in Study.human_attribute_name(:enrolled_or_committed), with: @study.enrolled_or_committed
     fill_in Study.human_attribute_name(:mechanism), with: @study.mechanism
     fill_in Study.human_attribute_name(:name), with: @study.name
@@ -58,6 +59,7 @@ class StudiesTest < ApplicationSystemTestCase
     fill_in Study.human_attribute_name(:duration), with: @study.duration
     fill_in Study.human_attribute_name(:budget), with: @study.budget
     fill_in Study.human_attribute_name(:interventions), with: @study.interventions
+    fill_in Study.human_attribute_name(:travel_parking_costs), with: @study.travel_parking_costs
     fill_in Study.human_attribute_name(:enrolled_or_committed), with: @study.enrolled_or_committed
     fill_in Study.human_attribute_name(:mechanism), with: @study.mechanism
     fill_in Study.human_attribute_name(:name), with: @study.name

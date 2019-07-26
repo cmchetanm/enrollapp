@@ -48,7 +48,7 @@ module Api
       params.permit(
         :topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration,
         :randomization, :duration, :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact,
-        :cro_contact, :budget, :enrolled_or_committed, :comments,
+        :cro_contact, :budget, :enrolled_or_committed, :comments, :travel_parking_costs,
         inclusion_criteria: [], exclusion_criteria: []
       )
     end

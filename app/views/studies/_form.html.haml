@@ -49,6 +49,9 @@
     = f.label :interventions
     = f.text_field :interventions
   .field
+    = f.label :travel_parking_costs
+    = f.text_field :travel_parking_costs
+  .field
     = f.label :sponsor_name
     = f.text_field :sponsor_name, value: study.sponsor_name || study.sponsor.try(:name)
   .field

@@ -24,7 +24,8 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
         assessment_frequency: @study.assessment_frequency, comments: @study.comments,
         sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
         budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
-        interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
+        interventions: @study.interventions, travel_parking_costs: @study.travel_parking_costs,
+        mechanism: @study.mechanism, name: @study.name,
         protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
         side_effects: @study.side_effects, topic_id: @study.topic_id, owner_id: @user.id, owner_type: 'User'
       } }
@@ -49,7 +50,8 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
       assessment_frequency: @study.assessment_frequency, comments: @study.comments,
       sponsor: @study.sponsor, sponsor_contact: @study.sponsor_contact, duration: @study.duration,
       budget: @study.budget, enrolled_or_committed: @study.enrolled_or_committed,
-      interventions: @study.interventions, mechanism: @study.mechanism, name: @study.name,
+      interventions: @study.interventions, travel_parking_costs: @study.travel_parking_costs,
+      mechanism: @study.mechanism, name: @study.name,
       protocol: @study.protocol, randomization: @study.randomization, cro_contact: @study.cro_contact,
       side_effects: @study.side_effects, topic_id: @study.topic_id
     } }
