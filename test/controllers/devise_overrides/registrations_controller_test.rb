@@ -5,6 +5,7 @@ module DeviseOverrides
     test 'should get new for first resource' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
+        next if scope[0].to_s.classify.constantize.new.respond_to?(:tokens?)
 
         scope[0].to_s.classify.constantize.destroy_all
         get url_for([:new, scope[0], :registration])
@@ -15,6 +16,7 @@ module DeviseOverrides
     test 'should not get new for subsequent resources' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
+        next if scope[0].to_s.classify.constantize.new.respond_to?(:tokens?)
 
         get url_for([:new, scope[0], :registration])
         assert_redirected_to url_for([:new, scope[0], :session])
@@ -24,6 +26,7 @@ module DeviseOverrides
     test 'should create first resource' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
+        next if scope[0].to_s.classify.constantize.new.respond_to?(:tokens?)
 
         scope[0].to_s.classify.constantize.destroy_all
 
@@ -40,6 +43,7 @@ module DeviseOverrides
     test 'should not create subsequent resources' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
+        next if scope[0].to_s.classify.constantize.new.respond_to?(:tokens?)
 
         post url_for([scope[0], :registration]), params: {"#{scope[0]}": {
           email: 'new@example.com', password: 'NewC0mPl3xPassw0rd!', password_confirmation: 'NewC0mPl3xPassw0rd!'
@@ -51,6 +55,7 @@ module DeviseOverrides
     test 'should get edit' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
+        next if scope[0].to_s.classify.constantize.new.respond_to?(:tokens?)
 
         resource = scope[0].to_s.classify.constantize.all.sample
         sign_in resource
@@ -62,6 +67,7 @@ module DeviseOverrides
     test 'should update resource' do
       Devise.mappings.each do |scope|
         next if scope[1].path.include? 'auth'
+        next if scope[0].to_s.classify.constantize.new.respond_to?(:tokens?)
 
         resource = scope[0].to_s.classify.constantize.all.sample
         sign_in resource

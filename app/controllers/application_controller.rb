@@ -28,4 +28,8 @@ class ApplicationController < ActionController::Base
   def record_not_found
     redirect_to not_found_url
   end
+
+  def after_sign_out_path_for(resource_or_scope)
+    [:new, resource_or_scope, :session]
+  end
 end

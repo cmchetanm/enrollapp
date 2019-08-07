@@ -8,4 +8,7 @@ class PagesController < ApplicationController
       redirect_to new_admin_session_url
     end
   end
+
+  def mobile_app
+  end
 end

@@ -23,7 +23,7 @@
               = link_to 'Edit Profile', edit_admin_registration_path
             %li
               = link_to 'Sign Out', destroy_admin_session_path, method: :delete
-          - else
+          - elsif defined?(resource) && !resource.respond_to?(:tokens?)
             %li{class: active?(new_admin_session_path)}
               = link_to 'Sign In', new_admin_session_path
 

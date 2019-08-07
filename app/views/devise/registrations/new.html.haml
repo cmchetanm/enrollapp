@@ -28,4 +28,5 @@
       .actions
         = f.submit 'Sign up', class: 'button'
 
-    = render 'devise/shared/links'
+    - unless no_admins?
+      = render 'devise/shared/links'

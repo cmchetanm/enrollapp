@@ -33,10 +33,12 @@
                 %row
                   %columns{large: 3}
                     %center
-                      = image_tag image_url("/email/app-store-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'App Store Badge'
+                      = link_to APP[:ios_url] do
+                        = image_tag image_url("/email/app-store-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'App Store Badge'
                   %columns{large: 3}
                     %center
-                      = image_tag image_url("/email/google-play-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'Google Play Badge'
+                      = link_to APP[:android_url] do
+                        = image_tag image_url("/email/google-play-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'Google Play Badge'
                 %spacer{size: 16}
                 %row
                   %columns{small: 12, large: 3}

@@ -1,15 +1,15 @@
 class User < ApplicationRecord
   include HasFullName
   include HasStrongPassword
-  include DeviseTokenAuth::Concerns::User
 
   has_many :shares, dependent: :destroy
   has_many :studies, through: :shares
   has_many :messages, dependent: :destroy
   has_many :contacts, dependent: :destroy, foreign_key: :creator_id, inverse_of: :creator
 
-  devise :database_authenticatable, :invitable, :lockable,
-         :recoverable
+  devise :confirmable, :database_authenticatable, :invitable, :lockable, :recoverable
+
+  include DeviseTokenAuth::Concerns::User
 
   validates :phone_number, format:
       {with: /\A\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\z/,

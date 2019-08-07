@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+  get 'mobile-app', to: 'pages#mobile_app'
+
   devise_for :admins, controllers: {
     invitations: 'devise_overrides/invitations',
     registrations: 'devise_overrides/registrations',
