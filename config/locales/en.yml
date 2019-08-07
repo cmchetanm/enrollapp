@@ -5,7 +5,7 @@ en:
   errors:
     messages:
       password:
-        password_strength: 'is too weak'
+        password_strength: 'is too weak, avoid words that can be found in a dictionary (e.g. hello, love, trust, etc), or passwords such as "12345". Never include names, dates, addresses or other personal information in your passwords.'
 
   date:
     formats:
