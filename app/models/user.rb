@@ -7,7 +7,8 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :contacts, dependent: :destroy, foreign_key: :creator_id, inverse_of: :creator
 
-  devise :confirmable, :database_authenticatable, :invitable, :lockable, :recoverable
+  devise :confirmable, :database_authenticatable, :invitable, :lockable, :registerable,
+         :recoverable, :rememberable, :validatable
 
   include DeviseTokenAuth::Concerns::User
 
