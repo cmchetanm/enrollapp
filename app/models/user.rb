@@ -12,10 +12,6 @@ class User < ApplicationRecord
 
   include DeviseTokenAuth::Concerns::User
 
-  validates :phone_number, format:
-      {with: /\A\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\d\D*\z/,
-       allow_blank: true, message: 'must have 10 digits'}
-
   before_validation :prettify
 
   def send_devise_notification(notification, *args)
