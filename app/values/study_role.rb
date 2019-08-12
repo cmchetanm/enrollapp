@@ -4,6 +4,7 @@ class StudyRole
   PI = 'Principal Investigator'
   SUB = 'Sub-Investigator'
   COLLEAGUE = 'Community Colleague'
+  OTHER = 'Other'
 
   def self.constants
     super.map(&:to_s)
