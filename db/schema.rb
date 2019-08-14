@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_161942) do
+ActiveRecord::Schema.define(version: 2019_07_26_162231) do
 
   create_table "admins", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "first_name", null: false
@@ -111,7 +111,6 @@ ActiveRecord::Schema.define(version: 2019_07_26_161942) do
     t.string "duration"
     t.string "assessment_frequency"
     t.string "interventions"
-    t.string "travel_parking_costs"
     t.string "sponsor_name"
     t.string "sponsor_contact"
     t.string "cro_contact"
@@ -120,6 +119,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_161942) do
     t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "travel_parking_costs"
     t.index ["name"], name: "index_studies_on_name"
     t.index ["topic_id"], name: "fk_rails_09e41a5aa5"
   end
@@ -139,7 +139,6 @@ ActiveRecord::Schema.define(version: 2019_07_26_161942) do
     t.string "duration"
     t.string "assessment_frequency"
     t.string "interventions"
-    t.string "travel_parking_costs"
     t.string "sponsor_name"
     t.string "sponsor_contact"
     t.string "cro_contact"
@@ -148,6 +147,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_161942) do
     t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "travel_parking_costs"
     t.index ["name"], name: "index_study_versions_on_name"
     t.index ["site_id", "study_id"], name: "index_study_versions_on_site_id_and_study_id", unique: true
     t.index ["study_id"], name: "fk_rails_c2835f87a1"
