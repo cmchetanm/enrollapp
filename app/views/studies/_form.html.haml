@@ -22,53 +22,52 @@
     = f.text_area :exclusion_criteria, rows: 10, value: (study.exclusion_criteria&.join("\n"))
   .field
     = f.label :protocol
-    = f.text_field :protocol
+    = f.text_area :protocol, rows: 2
   .field
     = f.label :agent
-    = f.text_field :agent
+    = f.text_area :agent, rows: 2
   .field
     = f.label :mechanism
-    = f.text_field :mechanism
+    = f.text_area :mechanism, rows: 2
   .field
     = f.label :administration
-    = f.text_field :administration
+    = f.text_area :administration, rows: 2
   .field
     = f.label :side_effects
-
-    = f.text_field :side_effects
+    = f.text_area :side_effects, rows: 2
   .field
     = f.label :randomization
-    = f.text_field :randomization
+    = f.text_area :randomization, rows: 2
   .field
     = f.label :duration
-    = f.text_field :duration
+    = f.text_area :duration, rows: 2
   .field
     = f.label :assessment_frequency
-    = f.text_field :assessment_frequency
+    = f.text_area :assessment_frequency, rows: 2
   .field
     = f.label :interventions
-    = f.text_field :interventions
+    = f.text_area :interventions, rows: 2
   .field
     = f.label :travel_parking_costs
-    = f.text_field :travel_parking_costs
+    = f.text_area :travel_parking_costs, rows: 2
   .field
     = f.label :sponsor_name
-    = f.text_field :sponsor_name, value: study.sponsor_name || study.sponsor.try(:name)
+    = f.text_area :sponsor_name, value: study.sponsor_name || study.sponsor.try(:name), rows: 2
   .field
     = f.label :sponsor_contact
-    = f.text_field :sponsor_contact, value: study.sponsor_contact || study.sponsor.try(:contact)
+    = f.text_area :sponsor_contact, value: study.sponsor_contact || study.sponsor.try(:contact), rows: 2
   .field
     = f.label :cro_contact
-    = f.text_field :cro_contact, value: study.cro_contact || study.sponsor.try(:cro)
+    = f.text_area :cro_contact, value: study.cro_contact || study.sponsor.try(:cro), rows: 2
   .field
     = f.label :budget
-    = f.text_field :budget
+    = f.text_area :budget, rows: 2
   .field
     = f.label :enrolled_or_committed
-    = f.text_field :enrolled_or_committed
+    = f.text_area :enrolled_or_committed, rows: 2
   .field
     = f.label :comments
-    = f.text_field :comments
+    = f.text_area :comments, rows: 2
   .button-group
     = link_to 'Cancel', study.new_record? ? study.sponsor || studies_path : study, class: 'secondary button'
     = f.submit class: 'button'

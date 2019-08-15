@@ -42,7 +42,7 @@ else
 fi
 
 echo 'Linting HAML using HAML Lint...'
-haml-lint -c ${HAMLLINT_CONFIG} app/views/ || { valid=false; }
+bundle exec haml-lint -c ${HAMLLINT_CONFIG} app/views/ || { valid=false; }
 
 echo 'Linting SCSS using SASS Lint...'
 ${NODE_PATH}/sass-lint -c ${SASSLINT_CONFIG} --ignore 'node_modules/**/*.scss' '**/*.scss' --no-exit --verbose || { valid=false; }
