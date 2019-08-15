@@ -3,6 +3,7 @@ require 'test_helper'
 class StudiesControllerTest < ActionDispatch::IntegrationTest
   setup do
     sign_in admins(:one)
+    @topic = topics(:one)
     @study = studies(:one)
     @user = users(:one)
   end
@@ -13,7 +14,7 @@ class StudiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get new' do
-    get new_study_url
+    get new_study_url(topic_id: @topic)
     assert_response :success
   end
 

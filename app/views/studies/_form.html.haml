@@ -13,7 +13,7 @@
     = f.text_field :name
   .field
     = f.label :topic
-    = f.collection_select :topic_id, Topic.names, :id, :name, include_blank: true
+    = f.collection_select :topic_id, Topic.names(study.sponsor), :id, :name, include_blank: true
   .field
     = f.label :inclusion_criteria
     = f.text_area :inclusion_criteria, rows: 10, value: (study.inclusion_criteria&.join("\n"))

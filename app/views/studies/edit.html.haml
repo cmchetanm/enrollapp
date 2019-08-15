@@ -3,7 +3,7 @@
 %nav
   %ul.breadcrumbs
     %li
-      = link_to 'Studies', studies_path
+      = link_to @study.sponsor.name, @study.sponsor
     %li
       = link_to @study.name, @study
     %li

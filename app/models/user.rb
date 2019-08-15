@@ -1,11 +1,11 @@
 class User < ApplicationRecord
   include HasFullName
-  include HasStrongPassword
 
   has_many :shares, dependent: :destroy
   has_many :studies, through: :shares
   has_many :messages, dependent: :destroy
   has_many :contacts, dependent: :destroy, foreign_key: :creator_id, inverse_of: :creator
+  has_many :user_associations, dependent: :nullify, class_name: 'Contact', foreign_key: :user_id, inverse_of: :user
 
   devise :confirmable, :database_authenticatable, :invitable, :lockable, :registerable,
          :recoverable, :rememberable, :validatable

@@ -6,7 +6,7 @@ class StudyUpdateNotifierJob < ApplicationJob
     users.each do |user|
       if user.invitation_accepted?
         send_email_notification(updater, study_version, user)
-        send_push_notification(study_version, user)
+        # send_push_notification(study_version, user)
       end
     end
   end

@@ -4,7 +4,7 @@ class Topic < ApplicationRecord
 
   validates :name, presence: true
 
-  def self.names
-    order(:name)
+  def self.names(sponsor)
+    where(sponsor: sponsor).order(:name)
   end
 end
