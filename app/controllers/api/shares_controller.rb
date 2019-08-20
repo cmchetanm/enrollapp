@@ -6,8 +6,8 @@ module Api
 
     def create
       site_id = @study.site_for(current_api_user)
-      @share = Share.find_or_initialize_by(site_id: site_id, study_id: @study.id, user: @user)
-      @share.role = params[:role]
+      @share = Share.find_or_initialize_by(study_id: @study.id, user: @user)
+      @share.assign_attributes(site_id: site_id, role: params[:role])
 
       if @share.save
         SharesMailer.notify(@share).deliver_later
