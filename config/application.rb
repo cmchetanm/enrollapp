@@ -48,8 +48,5 @@ module Enroll
     config.react.camelize_props = true # default false
 
     Jbuilder.key_format camelize: :lower
-
-    # Protecting against host header attacks
-    config.hosts << Rails.application.credentials[Rails.env.to_sym][:host] unless Rails.env.test?
   end
 end

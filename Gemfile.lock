@@ -103,7 +103,7 @@ GEM
       devise (>= 4.6)
     devise_token_auth (1.1.0)
       devise (> 3.5.2, < 4.7)
-      rails (>= 4.2.0, < 6.1)
+      rails (>= 4.2.0, < 6)
     dotenv (0.7.0)
     erubi (1.8.0)
     erubis (2.7.0)
@@ -376,7 +376,7 @@ DEPENDENCIES
   dalli
   devise
   devise_invitable
-  devise_token_auth
+  devise_token_auth (<= 1.1.0)
   font-awesome-rails
   foreman
   foundation-rails

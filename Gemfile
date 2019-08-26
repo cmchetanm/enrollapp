@@ -25,7 +25,7 @@ gem 'foundation-rails'
 # Rails authentication mechanism
 gem 'devise'
 gem 'devise_invitable'
-gem 'devise_token_auth'
+gem 'devise_token_auth', '<= 1.1.0'
 
 # Password Strength Enforcement
 gem 'strong_password'
