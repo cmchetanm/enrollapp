@@ -94,6 +94,11 @@ group :test do
   gem 'rails-controller-testing'
 end
 
+group :staging, :production do
+  # Sending emails
+  gem 'postmark-rails'
+end
+
 group :production do
   # File based caching
   gem 'dalli'

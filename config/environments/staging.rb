@@ -57,7 +57,7 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: Rails.application.credentials[Rails.env.to_sym][:host] }
 
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :postmark
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -106,13 +106,5 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.sparkpostmail.com',
-    port: 587,
-    user_name: 'SMTP_Injection',
-    password: Rails.application.credentials[:sparkpost_api_key],
-    authentication: 'plain',
-    enable_starttls_auto: true
-  }
+  config.action_mailer.postmark_settings = { api_token: Rails.application.credentials[:postmark_api_token] }
 end

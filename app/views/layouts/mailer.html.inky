@@ -43,5 +43,5 @@
                 %row
                   %columns{small: 12, large: 3}
                     %center
-                      = link_to APP[:domain], "//#{APP[:domain]}"
+                      = link_to Rails.application.credentials[:email_domain], "https://#{Rails.application.credentials[:email_domain]}"
                 %spacer{size: 16}

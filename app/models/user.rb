@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   include HasFullName
+  include SendsAsynchronousMail
 
   has_many :shares, dependent: :destroy
   has_many :studies, through: :shares
@@ -13,10 +14,6 @@ class User < ApplicationRecord
   include DeviseTokenAuth::Concerns::User
 
   before_validation :prettify
-
-  def send_devise_notification(notification, *args)
-    devise_mailer.send(notification, self, *args).deliver_later
-  end
 
   def self.from_contact(contact)
     user = User.get_or_invite(contact.first_name, contact.last_name, contact.email, contact.phone_number)
