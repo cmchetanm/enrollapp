@@ -11,4 +11,4 @@ staging:
   host: <%= ENV['REDIS_URL'] %>
 
 production:
-  <<: *default
+  host: <%= ENV['REDIS_URL'] %>
