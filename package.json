@@ -17,9 +17,9 @@
   "version": "0.1.0",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "eslint-plugin-react": "^7.14.3",
     "sass-lint": "^1.13.1",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.1"
   }
 }

@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0.beta3'
+gem 'rails'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -25,7 +25,7 @@ gem 'foundation-rails'
 # Rails authentication mechanism
 gem 'devise'
 gem 'devise_invitable'
-gem 'devise_token_auth', '<= 1.1.0'
+gem 'devise_token_auth'
 
 # Password Strength Enforcement
 gem 'strong_password'
