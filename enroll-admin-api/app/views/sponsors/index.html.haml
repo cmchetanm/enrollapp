@@ -1,0 +1,34 @@
+- content_for :title, 'Sponsors'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = yield :title
+
+- if @sponsors.size.zero?
+  = primary_callout do
+    You have not created any sponsors yet.
+    = link_to 'Create Sponsor', new_sponsor_path, class: 'small button'
+- else
+  %h1= yield :title
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th CRO
+        %th.text-center Studies
+        %th.text-center Create Date
+        %th
+    %tbody
+      - @sponsors.each do |sponsor|
+        %tr.link{onclick: "Turbolinks.visit('#{sponsor_path(sponsor)}')"}
+          %td.tight
+            %div= link_to sponsor.name, sponsor
+            %small.subheader= sponsor.contact
+          %td= sponsor.cro
+          %td.text-center= sponsor.studies.size
+          %td.text-center= l sponsor.created_at, format: :short
+          %td.text-right= link_to 'Show', sponsor, class: 'clear button'
+
+  = link_to 'New Sponsor', new_sponsor_path, class: 'button'

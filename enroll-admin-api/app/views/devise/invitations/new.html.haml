@@ -1,0 +1,30 @@
+- content_for :title, "New #{resource_name.to_s.titleize}"
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = link_to resource_name.to_s.pluralize.titleize, [resource_name.to_s.pluralize]
+    %li
+      = yield :title
+
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h1= yield :title
+    = form_for resource, as: resource_name, url: invitation_path(resource_name), html: {method: :post} do |f|
+      = render 'devise/shared/error_messages', resource: resource
+
+      .field
+        = f.label :first_name
+        = f.text_field :first_name, autocomplete: :off
+
+      .field
+        = f.label :last_name
+        = f.text_field :last_name, autocomplete: :off
+
+      .field
+        = f.label :email
+        = f.email_field :email, autocomplete: 'email'
+
+      .button-group
+        = link_to 'Cancel', [resource_name.to_s.pluralize], class: 'secondary button'
+        = f.submit t('devise.invitations.new.submit_button'), class: 'button'

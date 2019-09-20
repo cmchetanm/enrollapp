@@ -1,0 +1,12 @@
+DEFAULTS: &DEFAULTS
+  id: $LABEL
+  name: $LABEL
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS
+
+three:
+  <<: *DEFAULTS

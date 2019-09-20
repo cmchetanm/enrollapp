@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "797159695673",
+    "firebase_url": "https://enroll-1ba4b.firebaseio.com",
+    "project_id": "enroll-1ba4b",
+    "storage_bucket": "enroll-1ba4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797159695673:android:537c318a804c5b18",
+        "android_client_info": {
+          "package_name": "com.refuahsolutions.enroll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797159695673-401s6h9opofoj8hf416qkihbkmulgh8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGtyRL36kEctrbE_mPew2UiiflAeX3CKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797159695673-401s6h9opofoj8hf416qkihbkmulgh8h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "797159695673-r5fntk6c807om5bkdl54v98mv2eu13f1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.refuahsolutions.com",
+                "app_store_id": "1473298752"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797159695673:android:fc7fc074e2e38c9e",
+        "android_client_info": {
+          "package_name": "com.tactica.enroll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797159695673-401s6h9opofoj8hf416qkihbkmulgh8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGtyRL36kEctrbE_mPew2UiiflAeX3CKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797159695673-401s6h9opofoj8hf416qkihbkmulgh8h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "797159695673-r5fntk6c807om5bkdl54v98mv2eu13f1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.refuahsolutions.com",
+                "app_store_id": "1473298752"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+image: "node:latest"
+
+
+before_script:
+  - npm install -g yarn
+  - yarn install
+
+
+stages:
+  - lint
+
+
+lint:
+  stage: lint
+  script:
+    - bin/lint --no-fix

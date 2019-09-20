@@ -1,0 +1,16 @@
+@import 'settings';
+
+button,
+.button {
+  outline: none;
+}
+
+.button {
+  &.clear {
+    text-transform: uppercase;
+
+    &:hover {
+      background: $medium-gray;
+    }
+  }
+}

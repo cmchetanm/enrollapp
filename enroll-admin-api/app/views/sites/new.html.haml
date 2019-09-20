@@ -1,0 +1,14 @@
+- content_for :title, 'New Site'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = link_to 'Sites', sites_path
+    %li
+      = yield :title
+
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h1= yield :title
+
+    = render 'form', site: @site

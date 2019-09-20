@@ -1,0 +1,12 @@
+linters:
+  AltText:
+    enabled: true
+
+  FinalNewline:
+    present: false
+
+  LineLength:
+    enabled: false
+
+  SpaceInsideHashAttributes:
+    style: no_space

@@ -1,0 +1,47 @@
+@import 'settings';
+
+table {
+  border-radius: $global-radius;
+  overflow: hidden;
+
+  thead {
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include breakpoint(small only) {
+      display: none;
+    }
+
+    &.primary {
+      background: get-color(primary);
+      color: $white;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $medium-gray;
+      color: $body-font-color;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &.link {
+        // sass-lint:disable no-universal-selectors
+        &,
+        * {
+          cursor: pointer;
+        }
+
+        &:hover {
+          background: scale-color(get-color(primary), $lightness: 85%);
+        }
+      }
+
+      .button {
+        margin: 0;
+      }
+    }
+  }
+}

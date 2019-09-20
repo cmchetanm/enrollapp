@@ -1,0 +1,47 @@
+!!! Strict
+%html{xmlns: 'http//www.w3.org/1999/xhtml'}
+  %head
+    %meta{content: 'text/html; charset=utf-8', 'http-equiv': 'Content-Type'}
+    %meta{content: 'width=device-width', name: 'viewport'}
+    = stylesheet_link_tag 'foundation_emails'
+  %body
+    %table.body{'data-made-with-foundation': true}
+      %tr
+        %td.center{align: 'center', valign: 'top'}
+          %center
+            %spacer{size: 32}
+            %container.header
+              %row
+                %columns
+                  %spacer{size: 32}
+                  %row
+                    %columns{large: 3}
+                    %columns.small-offset-3{small: 6, large: 6}
+                      %center
+                        = image_tag image_url("/email/logo.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: APP[:company_name]
+                    %columns{large: 3}
+
+            %container.main-content
+              %container.body-border
+                %row
+                  %columns
+                    %spacer{size: 36}
+                    .main-body= yield
+                    %spacer{size: 16}
+
+              %container.footer
+                %row
+                  %columns{large: 3}
+                    %center
+                      = link_to APP[:ios_url] do
+                        = image_tag image_url("/email/app-store-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'App Store Badge'
+                  %columns{large: 3}
+                    %center
+                      = link_to APP[:android_url] do
+                        = image_tag image_url("/email/google-play-badge.png?date=#{Time.zone.today.beginning_of_month.to_time.to_i}"), alt: 'Google Play Badge'
+                %spacer{size: 16}
+                %row
+                  %columns{small: 12, large: 3}
+                    %center
+                      = link_to Rails.application.credentials[:email_domain], "https://#{Rails.application.credentials[:email_domain]}"
+                %spacer{size: 16}

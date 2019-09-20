@@ -1,0 +1,34 @@
+- content_for :title, 'Sites'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = yield :title
+
+- if @sites.size.zero?
+  = primary_callout do
+    You have not created any sites yet.
+    = link_to 'Create Site', new_site_path, class: 'small button'
+- else
+  %h1= yield :title
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th.text-center Studies
+        %th.text-center Users
+        %th.text-center Create Date
+        %th
+    %tbody
+      - @sites.each do |site|
+        %tr
+          %td= site.name
+          %td.text-center= site.studies.uniq.size
+          %td.text-center= site.users.uniq.size
+          %td.text-center= l site.created_at, format: :short
+          %td.text-right
+            = link_to 'Edit', edit_site_path(site), class: 'clear warning button'
+            = link_to 'Delete', site, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0'
+
+  = link_to 'New Site', new_site_path, class: 'button'

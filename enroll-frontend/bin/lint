@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# global directory paths
+LINT_PATH=. # lint config directory
+NODE_PATH=node_modules/.bin # NodeJS executables path
+
+# lint configuration file paths
+ESLINT_CONFIG=${LINT_PATH}/.eslintrc.yml
+
+# Checking for existence of configuration files...
+test -e ${ESLINT_CONFIG} || { ${ESLINT_CONFIG}; valid=false; }
+
+! ${valid} && exit 1 # crash the program any configuration files are missing
+
+echo 'Linting JavaScript using ESLint...'
+if [[ "$1" == "--no-fix" ]]; then
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --ext '.js' . || { valid=false; }
+else
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --fix --ext '.js' . || { valid=false; }
+fi
+
+# echo 'Linting JSX using ESLint...'
+# if [[ "$1" == "--no-fix" ]]; then
+#         ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --ext '.jsx' . || { valid=false; }
+# else
+#         ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --fix --ext '.jsx' . || { valid=false; }
+# fi
+
+! ${valid} && exit 1 # crash the program if any lint errors were found
+
+echo 'SUCCESS: All lints have completed without errors.';

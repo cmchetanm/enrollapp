@@ -1,0 +1,28 @@
+DEFAULTS: &DEFAULTS
+  id: $LABEL
+  topic_id: $LABEL
+  name: $LABEL
+  inclusion_criteria: [$LABEL]
+  exclusion_criteria: [$LABEL]
+  protocol: $LABEL
+  agent: $LABEL
+  mechanism: $LABEL
+  side_effects: $LABEL
+  administration: $LABEL
+  randomization: $LABEL
+  duration: $LABEL
+  assessment_frequency: $LABEL
+  interventions: $LABEL
+  travel_parking_costs: $LABEL
+  sponsor_name: $LABEL
+  sponsor_contact: $LABEL
+  cro_contact: $LABEL
+  budget: $LABEL
+  enrolled_or_committed: $LABEL
+  comments: $LABEL
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS

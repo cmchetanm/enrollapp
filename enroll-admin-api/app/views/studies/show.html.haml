@@ -1,0 +1,78 @@
+- content_for :title, @study.name
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = link_to @study.sponsor.name, @study.sponsor
+    %li
+      = yield :title
+
+%h1= yield :title
+
+.secondary.callout
+  .grid-x.grid-margin-x.small-up-2.medium-up-3
+    .cell
+      %small.subheader Create Date
+      %div= l @study.created_at, format: :short
+    .cell
+      %small.subheader Sponsor
+      %div= link_to @study.sponsor.name, @study.sponsor
+    .cell
+      %small.subheader Topic
+      %div= link_to @study.topic.name, @study.topic
+
+%br
+
+.grid-x.grid-margin-x.small-up-1.medium-up-2
+  .cell
+    %h2 Inclusion Criteria
+
+    - if @study.inclusion_criteria.present?
+      %ul
+        - @study.inclusion_criteria.each do |criterion|
+          %li= criterion
+  .cell
+    %h2 Exclusion Criteria
+
+    - if @study.exclusion_criteria.present?
+      %ul
+        - @study.exclusion_criteria.each do |criterion|
+          %li= criterion
+
+%br
+
+- if @study.sites.size.zero?
+  = primary_callout do
+    This study is not shared with anyone.
+    = link_to 'Share Study', new_share_path(study_id: @study.id), class: 'small button'
+- else
+  - @study.sites.uniq.each do |site|
+
+    %h3 Site: #{site.name}
+
+    %table
+      %thead
+        %tr
+          %th Full Name
+          %th Role
+          %th Share Date
+          %th
+      %tbody
+        - @study.shares.where(site: site).each do |share|
+          %tr
+            %td.tight
+              %div= share.user.full_name
+              %small.subheader= share.user.email
+            %td= study_role(share.role)
+            %td= l share.created_at, format: :short
+            %td.text-right
+              = link_to 'Edit', edit_share_path(share), class: 'clear warning button'
+              = link_to 'Delete', share, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0'
+
+
+%br
+
+.button-group
+  = link_to 'Share Study', new_share_path(study_id: @study.id), class: 'button'
+  = link_to 'Edit Study', edit_study_path(@study), class: 'warning button'
+  = link_to 'Delete Study', @study, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'

@@ -1,0 +1,10 @@
+DEFAULTS: &DEFAULTS
+  id: $LABEL
+  sponsor_id: $LABEL
+  name: $LABEL
+
+one:
+  <<: *DEFAULTS
+
+two:
+  <<: *DEFAULTS
