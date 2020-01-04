@@ -38,7 +38,7 @@
           %th.text-center Sites
           %th.text-center Users
           %th.text-center Create Date
-          %th.text-right= link_to 'Create Study yooo', new_study_path(topic_id: topic), class: 'small clear button margin-0'
+          %th.text-right= link_to 'Create Study', new_study_path(topic_id: topic), class: 'small clear button margin-0'
       %tbody
         - topic.studies.each do |study|
           %tr.link{onclick: "Turbolinks.visit('#{study_path(study)}')"}
