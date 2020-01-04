@@ -17,6 +17,7 @@ class StudiesController < ApplicationController
 
   def create
     @study = Study.new(study_params)
+    notice: 'Bar was here!'
 
     if @study.save
       redirect_to @study, notice: 'Study was successfully created.'
