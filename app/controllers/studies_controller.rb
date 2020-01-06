@@ -17,7 +17,6 @@ class StudiesController < ApplicationController
 
   def create
     @study = Study.new(study_params)
-    puts "Bar was here!"
 
     if @study.save
       redirect_to @study, notice: 'Study was successfully created.'
@@ -49,8 +48,9 @@ class StudiesController < ApplicationController
   end
 
   def study_params
+    notice params
     params.require(:study).permit(
-      :topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization,
+      :topic_id, :name, :study_icon, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization,
       :duration, :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact, :cro_contact,
       :budget, :enrolled_or_committed, :comments, :inclusion_criteria, :exclusion_criteria, :travel_parking_costs
     )
