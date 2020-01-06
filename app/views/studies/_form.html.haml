@@ -12,9 +12,6 @@
     = f.label :name, autofocus: true
     = f.text_field :name
   .field
-    = f.label :study_icon
-    = f.text_field :study_icon
-  .field
     = f.label :topic
     = f.collection_select :topic_id, Topic.names(study.sponsor), :id, :name, include_blank: true
   .field
