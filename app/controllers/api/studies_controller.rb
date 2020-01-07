@@ -5,13 +5,16 @@ module Api
     before_action :set_study, except: :index
 
     def index
+      puts 'index'
       @studies = StudyAuthenticator.new(current_api_user).find_all
     end
 
     def show
+      puts 'show'
     end
 
     def update
+      puts 'update'
       @study_version.assign_attributes(study_params)
 
       if @study_version.save
@@ -23,6 +26,7 @@ module Api
     end
 
     def destroy
+      puts 'destroy'
       if @study_version.destroy
         render :show, status: :ok, location: @study
       else
@@ -33,18 +37,22 @@ module Api
     private
 
     def set_share
+      puts 'set_share'
       @share = Share.find_by!(study_id: params[:id], user: current_api_user)
     end
 
     def set_study
+      puts 'set_study'
       @study = StudyAuthenticator.new(current_api_user).find_one(params[:id])
     end
 
     def set_study_version
+      puts 'set_study_version'
       @study_version = StudyVersion.find_or_initialize_by(study_id: params[:id], site_id: @share.site_id)
     end
 
     def study_params
+      puts 'study_params'
       params.permit(
         :topic_id, :study_icon, :name, :protocol, :agent, :mechanism, :side_effects, :administration,
         :randomization, :duration, :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact,
