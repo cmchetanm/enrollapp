@@ -7,10 +7,9 @@ module Api
     def index
       puts 'index'
       @studies = StudyAuthenticator.new(current_api_user).find_all
-      puts @studies.class
-      puts @studies[0].class
-      puts @studies[0]
-      puts @studies[0].keys
+      @studies[0].class.each do |key|
+        puts key
+      end
     end
 
     def show
