@@ -6,7 +6,7 @@ module Api
       puts 'users api controller'
       puts 'params'
       puts params
-      @sites = Share.where(user_id: current_api_user)
+      @sites = Share.select(:site_id).where(user_id: current_api_user)
       puts @sites
       @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
       puts 'users that share a site'
