@@ -6,6 +6,9 @@ module Api
       puts 'users api controller'
       puts 'params'
       puts params
+      @users = User.where.not(id: [nil, ""])
+      puts 'all users?'
+      puts @users
     end
 
     def fcm_token
