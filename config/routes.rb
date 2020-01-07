@@ -25,7 +25,6 @@ Rails.application.routes.draw do
   resources :shares, except: %i[index show]
   resources :sponsors
   resources :studies
-  resources :users
   resources :topics, except: %i[index show]
 
   namespace :api, defaults: {format: :json} do
@@ -39,6 +38,7 @@ Rails.application.routes.draw do
     resources :shares, only: %i[create destroy]
     resources :contacts, except: %i[new edit]
     resources :messages, except: %i[new edit]
+    resources :users
     put '/auth/fcm_token', to: 'users#fcm_token'
   end
 
