@@ -1,1 +1,1 @@
-json.peers @users
+json.peers @users, partial: 'api/users/user', as: :user
