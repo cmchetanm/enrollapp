@@ -2,13 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[resend_invitation destroy]
 
   def index
-    puts 'users base controller'
-    puts ':first_name'
-    puts :first_name
-    puts ':last_name'
-    puts :last_name
-    puts 'params'
-    puts params
     @users = User.order(:last_name, :first_name)
   end
 

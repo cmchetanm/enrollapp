@@ -6,8 +6,10 @@ module Api
       puts 'users api controller'
       puts 'params'
       puts params
-      @users = User.where.not(id: [nil, ""])
-      puts 'all users?'
+      @sites = Share.where(user_id: current_api_user)
+      puts @sites
+      @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
+      puts 'users that share a site'
       puts @users
     end
 
