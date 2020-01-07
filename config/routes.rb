@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   resources :shares, except: %i[index show]
   resources :sponsors
   resources :studies
+  resources :users
   resources :topics, except: %i[index show]
 
   namespace :api, defaults: {format: :json} do
