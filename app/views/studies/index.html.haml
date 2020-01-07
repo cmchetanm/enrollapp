@@ -21,6 +21,7 @@
         %th Sponsor
         %th.text-center Sites
         %th.text-center Users
+        %th.text-center Icon
         %th.text-center Create Date
         %th
     %tbody
@@ -30,5 +31,7 @@
           %td= link_to study.sponsor.name, study.sponsor
           %td.text-center= study.sites.uniq.size
           %td.text-center= study.users.size
+          %td
+            %img{ :src => study.study_icon, :alt => "Should be the Icon", :height => 50, :width => 50 }
           %td.text-center= l study.created_at, format: :short
           %td.text-right= link_to 'Show', study, class: 'clear button'

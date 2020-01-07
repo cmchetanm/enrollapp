@@ -52,7 +52,7 @@ class StudiesController < ApplicationController
 
   def set_study
     puts 'set_study'
-    @study = Study.find(params[:id])
+    @study = Study.find params.require(:id)
   end
 
   def study_params
