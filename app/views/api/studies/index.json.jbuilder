@@ -20,6 +20,12 @@ json.array! @studies do |study|
   json.enrolled_or_committed study.enrolled_or_committed
   json.comments study.comments
   json.travel_parking_costs study.travel_parking_costs
+  puts 'study'
+  puts study
+  puts '@topics'
+  puts @topics
+  puts '@@sponsors'
+  puts @sponsors
   study_topic = @topics.detect {|t| t.id == study.topic_id}
   study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
   json.study_icon study_sponsor.avatar
