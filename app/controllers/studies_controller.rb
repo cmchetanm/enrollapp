@@ -5,7 +5,7 @@ class StudiesController < ApplicationController
     @studies = Study.all.order(:name)
     @studies.each do |study|
       @topic = Topic.where(id: study.topic_id)
-      study.study_icon = Sponsor.select(:avatar).where(id: @topic.sponsor_id)
+      study.study_icon = Sponsor.select(:avatar).where(id: @topic[:sponsor_id])
     end
   end
 
