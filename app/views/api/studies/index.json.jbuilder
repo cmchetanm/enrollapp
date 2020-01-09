@@ -26,4 +26,4 @@ json.study do
   end
 end
 puts 'json isssswssssssssssssss'
-puts JSON.pretty_generate(json)
+puts json
