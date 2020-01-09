@@ -21,6 +21,7 @@ json.study do
     json.comments study.comments
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
+    json.topic study_topic
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
     json.study_icon study_sponsor.avatar
   end
