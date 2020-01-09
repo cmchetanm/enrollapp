@@ -3,14 +3,16 @@ class StudiesController < ApplicationController
 
   def index
     @studies = Study.all.order(:name)
-    @studies.each do |study|
-      puts 'topic id'
-      puts study.topic_id
-      @topic = Topic.where(id: study.topic_id)
-      puts 'topic attributes'
-      puts @topic[0].attributes()
-      study.study_icon = Sponsor.select(:avatar).where(id: @topic[0][:sponsor_id])
-    end
+    @topics = Topic.all.order(:name)
+    @sponsors = Sponsor.all.order(:name)
+    #@studies.each do |study|
+    #  puts 'topic id'
+    #  puts study.topic_id
+    #  @topic = Topic.where(id: study.topic_id)
+    #  puts 'topic attributes'
+    #  puts @topic[0].attributes()
+    #  study.study_icon = Sponsor.select(:avatar).where(id: @topic[0][:sponsor_id])
+    #end
   end
 
   def show
