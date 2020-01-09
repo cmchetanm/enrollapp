@@ -21,13 +21,9 @@ json.study do
     json.comments study.comments
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
-    puts 'study_topic'
-    puts study_topic.attributes()
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
-    puts 'study_sponsor'
-    puts study_sponsor.attributes()
     json.study_icon study_sponsor.avatar
   end
 end
 puts 'json isssswssssssssssssss'
-puts json
+puts JSON.pretty_generate(json)
