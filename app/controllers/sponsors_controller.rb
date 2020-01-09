@@ -3,7 +3,7 @@ class SponsorsController < ApplicationController
 
   def index
     @sponsors = Sponsor.order(:name)
-    puts @sponsors.attributes
+    puts @sponsors[0].attributes()
   end
 
   def show
