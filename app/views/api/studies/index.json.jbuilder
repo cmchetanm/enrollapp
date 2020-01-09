@@ -1,5 +1,4 @@
-json.array! @studies, partial: 'api/studies/study', as: :study
-json.array! @studies do |study|
+json.array! @studies, partial: 'api/studies/study', as: :study do |study|
   json.id study.id
   json.inclusion_criteria study.inclusion_criteria
   json.exclusion_criteria study.exclusion_criteria
@@ -20,13 +19,11 @@ json.array! @studies do |study|
   json.enrolled_or_committed study.enrolled_or_committed
   json.comments study.comments
   json.travel_parking_costs study.travel_parking_costs
-  puts 'study'
-  puts study
-  puts '@topics'
-  puts @topics
-  puts '@@sponsors'
-  puts @sponsors
   study_topic = @topics.detect {|t| t.id == study.topic_id}
+  puts 'study_topic'
+  puts study_topic.attributes()
   study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
+  puts 'study_sponsor'
+  puts study_sponsor.attributes()
   json.study_icon study_sponsor.avatar
 end
