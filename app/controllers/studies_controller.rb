@@ -8,8 +8,8 @@ class StudiesController < ApplicationController
       puts study.topic_id
       @topic = Topic.where(id: study.topic_id)
       puts 'topic attributes'
-      puts @topic.attributes()
-      study.study_icon = Sponsor.select(:avatar).where(id: @topic[:sponsor_id])
+      puts @topic[0].attributes()
+      study.study_icon = Sponsor.select(:avatar).where(id: @topic[0][:sponsor_id])
     end
   end
 
