@@ -9,6 +9,7 @@ module Api
       @studies = StudyAuthenticator.new(current_api_user).find_all
       @topics = Topic.all.order(:name)
       @sponsors = Sponsor.all.order(:name)
+      @shares = Share.all.order(:name)
     end
 
     def show

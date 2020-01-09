@@ -21,10 +21,10 @@ json.study do
     json.comments study.comments
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
-    json.topic study_topic
+    study_shares = @shares.select {|t| t.study_id == study.id}
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
     json.study_icon study_sponsor.avatar
+    json.topic study_topic
+    json.shares study_shares
   end
 end
-puts 'json isssswssssssssssssss'
-puts json
