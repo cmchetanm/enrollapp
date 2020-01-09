@@ -7,6 +7,8 @@ module Api
     def index
       puts 'index'
       @studies = StudyAuthenticator.new(current_api_user).find_all
+      @topics = Topic.all.order(:name)
+      @sponsors = Sponsor.all.order(:name)
     end
 
     def show
