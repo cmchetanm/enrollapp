@@ -27,3 +27,6 @@ json.array! @studies, partial: 'api/studies/study', as: :study do |study|
   puts study_sponsor.attributes()
   json.study_icon study_sponsor.avatar
 end
+
+puts 'json isssswssssssssssssss'
+puts json

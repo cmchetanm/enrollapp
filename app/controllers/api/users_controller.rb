@@ -3,14 +3,8 @@ module Api
     before_action :set_client
 
     def index
-      puts 'users api controller'
-      puts 'params'
-      puts params
       @sites = Share.select(:site_id).where(user_id: current_api_user)
-      puts @sites
       @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
-      puts 'users that share a site'
-      puts @users
     end
 
     def fcm_token
