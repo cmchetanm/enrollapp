@@ -54,7 +54,7 @@ module Api
     def study_params
       puts 'study_params'
       params.permit(
-        :topic_id, :study_icon, :name, :protocol, :agent, :mechanism, :side_effects, :administration,
+        :topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration,
         :randomization, :duration, :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact,
         :cro_contact, :budget, :enrolled_or_committed, :comments, :travel_parking_costs,
         inclusion_criteria: [], exclusion_criteria: []

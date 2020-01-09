@@ -48,6 +48,6 @@ class SponsorsController < ApplicationController
   end
 
   def sponsor_params
-    params.require(:sponsor).permit(:name, :contact, :cro)
+    params.require(:sponsor).permit(:name, :contact, :cro, :avatar)
   end
 end

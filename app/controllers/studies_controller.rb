@@ -3,6 +3,10 @@ class StudiesController < ApplicationController
 
   def index
     @studies = Study.all.order(:name)
+    @studies.each do |study|
+      @topic = Topic.where(id: study.topic_id)
+      study.study_icon = Sponsor.select(:avatar).where(id: @topic.sponsor_id)
+    end
   end
 
   def show
@@ -49,7 +53,7 @@ class StudiesController < ApplicationController
 
   def study_params
     params.require(:study).permit(
-      :topic_id, :name, :study_icon, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization,
+      :topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization,
       :duration, :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact, :cro_contact,
       :budget, :enrolled_or_committed, :comments, :inclusion_criteria, :exclusion_criteria, :travel_parking_costs
     )

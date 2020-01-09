@@ -11,7 +11,7 @@
 %h1= yield :title
 
 .secondary.callout
-  .grid-x.grid-margin-x.small-up-2.medium-up-3
+  .grid-x.grid-margin-x.small-up-2.medium-up-4
     .cell
       %small.subheader Create Date
       %div= l @sponsor.created_at, format: :short
@@ -21,7 +21,10 @@
     .cell
       %small.subheader CRO
       %div= @sponsor.cro
-
+    .cell
+      %small.subheader Icon
+      %div
+        %img{ :src => @sponsor.avatar, :alt => "Should be the Avatar", :height => 50, :width => 50 }
 %br
 
 - @sponsor.topics.each do |topic|

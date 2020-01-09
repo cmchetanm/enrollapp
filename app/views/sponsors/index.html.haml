@@ -18,6 +18,7 @@
         %th Name
         %th CRO
         %th.text-center Studies
+        %th.text-center Icon
         %th.text-center Create Date
         %th
     %tbody
@@ -28,6 +29,8 @@
             %small.subheader= sponsor.contact
           %td= sponsor.cro
           %td.text-center= sponsor.studies.size
+          %td
+            %img{ :src => sponsor.avatar, :alt => "Should be the Avatar", :height => 50, :width => 50 }
           %td.text-center= l sponsor.created_at, format: :short
           %td.text-right= link_to 'Show', sponsor, class: 'clear button'
 
