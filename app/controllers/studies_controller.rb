@@ -4,7 +4,11 @@ class StudiesController < ApplicationController
   def index
     @studies = Study.all.order(:name)
     @studies.each do |study|
+      puts 'topic id'
+      puts study.topic_id
       @topic = Topic.where(id: study.topic_id)
+      puts 'topic attributes'
+      puts @topic.attributes()
       study.study_icon = Sponsor.select(:avatar).where(id: @topic[:sponsor_id])
     end
   end
