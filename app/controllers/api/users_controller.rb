@@ -19,6 +19,7 @@ module Api
     end
 
     def check_exists
+      puts 'in check existssssssssssssss'
       @user = User.where(id: params[:email])
 
       puts 'got user'
