@@ -40,7 +40,7 @@ Rails.application.routes.draw do
     resources :messages, except: %i[new edit]
     resources :users
     put '/auth/fcm_token', to: 'users#fcm_token'
-    put '/auth/check_exists', to: 'users#check_exists'
+    put '/api/auth/check_exists', to: 'users#check_exists'
   end
 
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized
