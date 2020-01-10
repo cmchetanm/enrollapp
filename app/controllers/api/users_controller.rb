@@ -18,6 +18,20 @@ module Api
       end
     end
 
+    def check_exists
+      @user = User.where(id: params[:email])
+
+      puts 'got user'
+      puts @user
+      if @user
+        puts 'returning true'
+        render json: {exists: true}
+      else
+        puts 'returning false'
+        render json: {exists: false}
+      end
+    end
+
     private
 
     def set_client
