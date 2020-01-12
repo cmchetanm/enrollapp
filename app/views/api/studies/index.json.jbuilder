@@ -25,7 +25,7 @@ json.study do
     study_shares = @shares.select {|t| t.study_id == study.id}
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
     this_user_share = study_shares.detect {|t| t.user_id == @user}
-    json.role this_user_share
+    json.role this_user_share.role
     json.study_icon study_sponsor.avatar
     json.topic study_topic
     json.shares study_shares
