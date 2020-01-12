@@ -24,6 +24,7 @@ json.study do
     study_topic = @topics.detect {|t| t.id == study.topic_id}
     study_shares = @shares.select {|t| t.study_id == study.id}
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
+    json.role = @shares.detect {|t| t.user_id == @user}
     json.study_icon study_sponsor.avatar
     json.topic study_topic
     json.shares study_shares
