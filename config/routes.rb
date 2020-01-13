@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   resources :topics, except: %i[index show]
 
   namespace :api, defaults: {format: :json} do
+    get '/auth/check_exists', to: 'users#check_exists'
     mount_devise_token_auth_for 'User', at: 'auth', controllers: {
       registrations: 'api/devise_token_auth_overrides/registrations',
       sessions: 'api/devise_token_auth_overrides/sessions'
@@ -40,7 +41,6 @@ Rails.application.routes.draw do
     resources :messages, except: %i[new edit]
     resources :users
     put '/auth/fcm_token', to: 'users#fcm_token'
-    get '/auth/check_exists', to: 'users#check_exists'
   end
 
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized
