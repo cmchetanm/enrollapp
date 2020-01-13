@@ -1,4 +1,6 @@
-json.array! @studies, partial: 'api/studies/study', as: :study
+json.old do
+  array! @studies, partial: 'api/studies/study', as: :study
+end
 json.study do
   json.array! @studies do |study|
     puts study.attributes()
