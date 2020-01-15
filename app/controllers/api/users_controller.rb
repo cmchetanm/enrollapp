@@ -4,7 +4,11 @@ module Api
 
     def index
       @sites = Share.select(:site_id).where(user_id: current_api_user)
+      puts '@sites:'
+      puts @sites
       @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
+      puts '@users:'
+      puts @users
     end
 
     def fcm_token
