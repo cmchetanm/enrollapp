@@ -4,11 +4,7 @@ module Api
 
     def index
       @sites = Share.select(:site_id).where(user_id: current_api_user)
-      puts '@sites:'
-      puts @sites
       @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
-      puts '@users:'
-      puts @users
     end
 
     def fcm_token
@@ -19,21 +15,6 @@ module Api
         head :created
       else
         render json: {errors: current_api_user.errors.full_messages.to_sentence}, status: :unprocessable_entity
-      end
-    end
-
-    def check_exists
-      puts 'in check existssssssssssssss'
-      @user = User.where(id: params[:email])
-
-      puts 'got user'
-      puts @user
-      if @user
-        puts 'returning true'
-        render json: {exists: true}
-      else
-        puts 'returning false'
-        render json: {exists: false}
       end
     end
 
