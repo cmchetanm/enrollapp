@@ -36,8 +36,7 @@ module Api
 
     def set_user
       puts 'set_user api'
-      contact = Contact.find_by!(id: params[:contact_id], creator: current_api_user)
-      @user = User.from_contact(contact)
+      @user = User.find_by!(id: params[:contact_id])
     end
 
     def set_share
