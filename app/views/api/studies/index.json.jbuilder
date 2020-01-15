@@ -31,6 +31,11 @@ json.study do
     json.role this_user_share.role
     json.study_icon study_sponsor.avatar
     json.topic study_topic
-    json.array! study_shares, partial: 'api/shares/share', as: :shares
+    json.shares do
+      json.array! study_shares do |share|
+        json.extract! share, :id, :role
+        json.user share.user, partial: 'api/users/user', as: :user
+      end
+    end
   end
 end
