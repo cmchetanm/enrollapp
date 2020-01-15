@@ -8,18 +8,18 @@ module Api
       @studies = StudyAuthenticator.new(current_api_user).find_all
       @topics = Topic.all.order(:name)
       @sponsors = Sponsor.all.order(:name)
-      raw_shares = Share.all.order(:id)
-      @shares = Array.new
-      raw_shares.each do |share|
-        study_user = User.find_by!(id: share.user_id)
-        new_share = {
-            "id" => share.id,
-            "study_id" => share.study_id,
-            "role" => share.role,
-            "user" => study_user
-        }
-        @shares.push(new_share)
-      end
+      @shares = Share.all.order(:id)
+      #@shares = Array.new
+      #raw_shares.each do |share|
+      #  study_user = User.find_by!(id: share.user_id)
+      #  new_share = {
+      #      "id" => share.id,
+      #      "study_id" => share.study_id,
+      #      "role" => share.role,
+      #      "user" => study_user
+      #  }
+      #  @shares.push(new_share)
+      #end
       @user = current_api_user
     end
 

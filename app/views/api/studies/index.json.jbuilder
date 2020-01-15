@@ -25,19 +25,12 @@ json.study do
     json.comments study.comments
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
-    puts 'before error'
-    puts @shares
-    puts 'in index 0'
-    puts @shares[0]
-    puts 'printing attributes'
-    puts @shares[0].attributes()
     study_shares = @shares.select {|t| t.study_id == study.id}
-    puts 'after error'
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
     this_user_share = study_shares.detect {|t| t.user_id == @user.id}
     json.role this_user_share.role
     json.study_icon study_sponsor.avatar
     json.topic study_topic
-    json.shares study_shares
+    json.array! study_shares, partial: 'api/shares/share', as: :shares
   end
 end
