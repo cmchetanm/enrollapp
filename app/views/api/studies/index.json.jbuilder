@@ -26,6 +26,8 @@ json.study do
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
     puts 'before error'
+    puts @shares
+    puts @shares[0]
     puts @shares[0].attributes()
     study_shares = @shares.select {|t| t.study_id == study.id}
     puts 'after error'
