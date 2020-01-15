@@ -4,7 +4,6 @@ end
 #json.array! @studies, partial: 'api/studies/study', as: :study
 json.study do
   json.array! @studies do |study|
-    puts study.attributes()
     json.id study.id
     json.inclusion_criteria study.inclusion_criteria
     json.exclusion_criteria study.exclusion_criteria
