@@ -27,7 +27,9 @@ json.study do
     study_topic = @topics.detect {|t| t.id == study.topic_id}
     puts 'before error'
     puts @shares
+    puts 'in index 0'
     puts @shares[0]
+    puts 'printing attributes'
     puts @shares[0].attributes()
     study_shares = @shares.select {|t| t.study_id == study.id}
     puts 'after error'
