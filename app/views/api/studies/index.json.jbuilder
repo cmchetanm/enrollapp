@@ -25,7 +25,10 @@ json.study do
     json.comments study.comments
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
+    puts 'before error'
+    puts @shares[0].attributes()
     study_shares = @shares.select {|t| t.study_id == study.id}
+    puts 'after error'
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
     this_user_share = study_shares.detect {|t| t.user_id == @user.id}
     json.role this_user_share.role
