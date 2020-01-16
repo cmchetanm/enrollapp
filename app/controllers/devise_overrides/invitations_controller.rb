@@ -1,7 +1,17 @@
 module DeviseOverrides
   class InvitationsController < Devise::InvitationsController
     before_action :configure_permitted_parameters, if: :devise_controller?
+    #GET /resource/sign_in
+    def new
+      puts 'new'
+      super
+    end
 
+    #DELETE /resource/sign_out
+    def destroy
+      puts 'destroy'
+      super
+    end
     # POST /resource/invitation
     def create
       self.resource = invite_resource
@@ -32,10 +42,12 @@ module DeviseOverrides
     protected
 
     def after_invite_path_for(_inviter, _invitee = nil)
+      puts 'after_invite_path_for'
       [resource_name.to_s.pluralize]
     end
 
     def configure_permitted_parameters
+      puts 'configure_permitted_parameters'
       devise_parameter_sanitizer.permit(:invite, keys: %i[first_name last_name phone_number])
     end
   end
