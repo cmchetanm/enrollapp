@@ -40,7 +40,23 @@ module Api
     def set_study
       puts 'set_study api'
       puts params
-      @study = StudyAuthenticator.new(current_api_user).find_one(params[:study_id])
+      if params.shares.kind_of?(Array)
+        puts 'shares is array!'
+        @studies = []
+        params.shares.each do |share|
+          puts '|share|'
+          puts share
+          study = StudyAuthenticator.new(current_api_user).find_one(share[:study_id])
+          puts '|study|'
+          puts study
+          @studies.push(study)
+        end
+        puts 'end studies'
+        puts @studies
+      else
+        puts 'not array shares yo'
+        @study = StudyAuthenticator.new(current_api_user).find_one(params[:study_id])
+      end
     end
 
     def set_user
