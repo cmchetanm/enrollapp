@@ -43,7 +43,7 @@ module Api
       if params.shares.kind_of?(Array)
         puts 'shares is array!'
         @studies = []
-        params.shares.each do |share|
+        params[:shares].each do |share|
           puts '|share|'
           puts share
           study = StudyAuthenticator.new(current_api_user).find_one(share[:study_id])
