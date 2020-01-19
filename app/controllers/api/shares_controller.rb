@@ -6,14 +6,22 @@ module Api
 
     def create
       puts 'create api'
+      puts '@study'
+      puts @study
+      puts '@user'
+      puts @user
       site_id = @study.site_for(current_api_user)
       @share = Share.find_or_initialize_by(study_id: @study.id, user: @user)
       @share.assign_attributes(site_id: site_id, role: params[:role])
+      puts '@@share'
+      puts @share
 
       if @share.save
+        puts 'save true'
         SharesMailer.notify(@share).deliver_later
         render :show, status: :created
       else
+        uts 'save false'
         render json: {errors: @share.errors.full_messages}, status: :unprocessable_entity
       end
     end
