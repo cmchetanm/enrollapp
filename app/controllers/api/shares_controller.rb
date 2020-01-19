@@ -39,6 +39,7 @@ module Api
 
     def set_study
       puts 'set_study api'
+      puts params
       @study = StudyAuthenticator.new(current_api_user).find_one(params[:study_id])
     end
 

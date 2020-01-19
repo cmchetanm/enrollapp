@@ -28,7 +28,6 @@ Rails.application.routes.draw do
   resources :topics, except: %i[index show]
 
   namespace :api, defaults: {format: :json} do
-    get '/auth/check_exists', to: 'users#check_exists'
     mount_devise_token_auth_for 'User', at: 'auth', controllers: {
       registrations: 'api/devise_token_auth_overrides/registrations',
       sessions: 'api/devise_token_auth_overrides/sessions'
