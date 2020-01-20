@@ -53,7 +53,7 @@ module Api
           puts share
           puts 'share["study_id"]'
           puts share["study_id"]
-          study = StudyAuthenticator.new(current_api_user).find_one(share[:study_id])
+          study = StudyAuthenticator.new(current_api_user).find_one(share["study_id"])
           puts '|study|'
           puts study
           @studies.push(study)
