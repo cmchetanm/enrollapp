@@ -11,6 +11,7 @@ module Api
       puts '@users'
       puts @users
       @shares = []
+      @share = nil
       @studies.each_with_index do |study, i|
         site_id = study.site_for(current_api_user)
         share = Share.find_or_initialize_by(study_id: study.id, user: @users[i])
@@ -18,6 +19,7 @@ module Api
         puts 'share'
         puts share
         @shares.push(share)
+        @share = share
       end
 
       onesuccess = false
