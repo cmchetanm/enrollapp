@@ -1,8 +1,6 @@
 puts 'yes, share json builder'
 puts 'share'
 puts share
-puts 'shares'
-puts shares
 puts '@shares'
 puts @shares
 json.extract! share, :id, :role
