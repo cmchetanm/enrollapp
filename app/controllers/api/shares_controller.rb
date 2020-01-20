@@ -46,6 +46,8 @@ module Api
         params[:shares].each do |share|
           puts '|share|'
           puts share
+          puts 'share.class'
+          puts share.class
           puts 'share.study_id'
           puts share.study_id
           study = StudyAuthenticator.new(current_api_user).find_one(share.study_id)
