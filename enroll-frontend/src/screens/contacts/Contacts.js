@@ -1,37 +1,58 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import {Body, Container, Content, Fab, Icon, Left, ListItem, Right, Text} from 'native-base';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import commonColor from '../../theme/variables/commonColor';
 import Callout from '../../components/Callout';
 import UTIL_STYLES from '../../styles/common';
+import {addToList, editInlist, removeFromList, sortList, print} from '../../utils/list';
 
-const Team = ({contacts, navigation}) =>
-    <Container>
-        <Content>
-            {contacts.length > 0 ? contacts.map(contact =>
-                <ListItem icon key={contact.id} onPress={() =>
-                    navigation.navigate('Contact', {contact})}>
-                    <Left>
-                        <Icon name='contact' style={{color: commonColor.brandInfo}}/>
-                    </Left>
-                    <Body>
-                        <Text>{contact.fullName}</Text>
-                    </Body>
-                    <Right>
-                        <Icon name='arrow-forward'/>
-                    </Right>
-                </ListItem>)
-                : <Content padder>
-                    <Callout>You have not added anyone to the team directory.</Callout>
-                </Content>}
-        </Content>
-        <Fab
-            onPress={() => navigation.navigate('NewContact')}
-            position='bottomRight' style={{backgroundColor: commonColor.brandSuccess}}>
-            <Text style={UTIL_STYLES.FAB_TEXT}>Add Person</Text>
-        </Fab>
-    </Container>;
+
+class Team extends PureComponent {
+    static navigationOptions = {
+        title: "Team",
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: 72,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        },
+    };
+
+    render() {
+        const {contacts, navigation} = this.props;
+        return (<Container>
+                <Content>
+                    {contacts.length > 0 ? sortList(contacts, 'fullName').map(contact =>
+                        <ListItem icon key={contact.id} onPress={() => {
+                            navigation.navigate('Contact', {contact});
+                        }}>
+                            <Left>
+                                <Icon name='contact' style={{color: commonColor.brandInfo}}/>
+                            </Left>
+                            <Body>
+                                <Text>{contact.fullName}</Text>
+                            </Body>
+                            <Right>
+                                <Icon name='arrow-forward'/>
+                            </Right>
+                        </ListItem>)
+                        : <Content padder>
+                            <Callout>You have not added anyone to the team directory.</Callout>
+                        </Content>}
+                </Content>
+                <Fab
+                    onPress={() => navigation.navigate('ManageContacts')}
+                    position='topRight' style={{backgroundColor: commonColor.brandSuccess}}>
+                    <Text style={UTIL_STYLES.FAB_TEXT}>Add Person</Text>
+                </Fab>
+            </Container>
+        );
+    };
+}
 
 Team.propTypes = {
     contacts: PropTypes.array.isRequired,
@@ -41,7 +62,7 @@ Team.propTypes = {
 };
 
 const mapStateToProps = ({contacts, studies}) => ({
-    contacts: contacts.list,
+    contacts: contacts.peers,
     study: studies.study
 });
 

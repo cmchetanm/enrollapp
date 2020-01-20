@@ -44,7 +44,7 @@ class EditStudy extends PureComponent {
                 axiosAlert('Unable to reset study.', response.error);
             }
             else {
-                navigation.navigate('Studies');
+                navigation.navigate('Dashboard');
             }
         });
     };

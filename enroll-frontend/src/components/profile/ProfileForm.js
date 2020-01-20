@@ -62,7 +62,7 @@ class ProfileForm extends PureComponent {
                     this.inputs.phoneNumber = input;
                 }} returnKeyType='next' value={profile.phoneNumber}/>
             </Item>
-            <Item stackedLabel>
+            {/* <Item stackedLabel>
                 <Label>New Password (leave blank if unchanged)</Label>
                 <Input
                     blurOnSubmit
@@ -75,7 +75,7 @@ class ProfileForm extends PureComponent {
                     secureTextEntry
                     value={profile.password}
                 />
-            </Item>
+            </Item> */}
         </Form>;
     }
 }

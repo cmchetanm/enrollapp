@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {SafeAreaView} from 'react-native';
-import {Body, Button, Content, Form, H1, Icon, Input, Item, Left, ListItem, Text} from 'native-base';
+import {Body, Button, Content, Form, H1, H3, Icon, Input, Item, Left, ListItem, Text} from 'native-base';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {signIn} from '../../redux/actions/authentication';
@@ -11,23 +11,27 @@ import commonColor from '../../theme/variables/commonColor';
 import Logo from '../../components/Logo';
 
 class SignIn extends PureComponent {
-    state = {email: null, loading: false, password: null, recontactMe: true};
+    state = {stage: 'email', email: null, loading: false, password: null, recontactMe: true};
 
     inputs = {};
 
-    handleSubmit = () => {
+    handleSubmit = (pw) => {
         const {dispatch, navigation} = this.props;
         this.setState({loading: true});
-        dispatch(signIn(this.state)).then(response => {
-            this.setState({loading: false});
-
-            if (response.error) {
-                axiosAlert('Authentication Failed', response.error);
-            }
-            else {
-                navigation.navigate('AppSwitch', {initialRoute: 'Dashboard'});
-            }
-        });
+        if (pw) {
+            dispatch(signIn(this.state)).then(response => {
+                this.setState({loading: false});
+    
+                if (response.error) {
+                    axiosAlert('Authentication Failed', response.error);
+                }
+                else {
+                    navigation.navigate('AppSwitch', {initialRoute: 'Dashboard'});
+                }
+            });
+        } else {
+            this.setState({loading: false, stage: 'password'});
+        }
     };
 
     focusNextField = id => {
@@ -35,34 +39,19 @@ class SignIn extends PureComponent {
     };
 
     render() {
-        const {email, loading, password, recontactMe} = this.state;
+        const {stage, email, loading, password, recontactMe} = this.state;
+        const pw = stage === 'password';
+        const buttonText = pw ? 'Sign In' : 'Submit';
         return (
             <SafeAreaView style={UTIL_STYLES.ALIGN_MIDDLE}>
                 <Content contentContainerStyle={UTIL_STYLES.ALIGN_MIDDLE} padder>
                     {loading ? <Loading/>
                         : <Form>
                             <Logo/>
-                            <H1 style={UTIL_STYLES.TEXT_CENTER}>Sign In</H1>
+                            <H1 style={{margin: 20, textAlign: 'center'}}>Sign In</H1>
+                            {pw && <H3 style={{ alignSelf: 'center', margin: 10 }}>{email}</H3>}
                             <Item>
-                                <Input
-                                    autoCapitalize='none'
-                                    autoCorrect={false}
-                                    blurOnSubmit={false}
-                                    keyboardType='email-address'
-                                    onChangeText={text =>
-                                        this.setState({email: text})
-                                    }
-                                    onSubmitEditing={() => this.focusNextField('password')}
-                                    placeholder='Email'
-                                    ref={input => {
-                                        this.inputs.email = input;
-                                    }}
-                                    returnKeyType='next'
-                                    value={email}
-                                />
-                            </Item>
-                            <Item>
-                                <Input
+                                {pw ? <Input
                                     blurOnSubmit
                                     onChangeText={text =>
                                         this.setState({password: text})
@@ -75,16 +64,41 @@ class SignIn extends PureComponent {
                                     returnKeyType='done'
                                     secureTextEntry
                                     value={password}
-                                />
+                                /> : <Input
+                                    autoCapitalize='none'
+                                    autoCorrect={false}
+                                    blurOnSubmit={false}
+                                    keyboardType='email-address'
+                                    onChangeText={text =>
+                                        this.setState({email: text})
+                                    }
+                                    onSubmitEditing={() => this.focusNextField('password')}
+                                    placeholder='Please Enter Your Email Address'
+                                    ref={input => {
+                                        this.inputs.email = input;
+                                    }}
+                                    returnKeyType='next'
+                                    value={email}
+                                />}
                             </Item>
-                            <ListItem icon noBorder onPress={() => this.setState({recontactMe: !recontactMe})}>
+                            {pw && <ListItem icon noBorder onPress={() => this.setState({recontactMe: !recontactMe})}>
                                 <Left>
                                     <Icon name={recontactMe ? 'checkmark-circle' : 'radio-button-off'}
                                         style={{color: commonColor.brandPrimary}}/>
                                 </Left>
                                 <Body><Text>Keep me signed in</Text></Body>
-                            </ListItem>
-                            <Button
+                            </ListItem>}
+                            {pw && <Button
+                                onPress={() =>
+                                    this.setState({ stage: 'email' })
+                                }
+                                small
+                                style={UTIL_STYLES.MARGIN_BOTTOM}
+                                transparent
+                            >
+                                <Text>Login with a different email</Text>
+                            </Button>}
+                            {pw && <Button
                                 onPress={() =>
                                     this.props.navigation.navigate('ForgotPassword')
                                 }
@@ -93,14 +107,14 @@ class SignIn extends PureComponent {
                                 transparent
                             >
                                 <Text>Forgot your password? Reset</Text>
-                            </Button>
+                            </Button>}
                             <Button
                                 block
-                                onPress={this.handleSubmit}
-                                style={UTIL_STYLES.MARGIN_BOTTOM}
+                                onPress={() => this.handleSubmit(pw)}
+                                style={UTIL_STYLES.MARGIN_BOTTOM, { marginTop: pw ? 0 : 100 }}
                                 success
                             >
-                                <Text>Sign In</Text>
+                                <Text>{buttonText}</Text>
                             </Button>
                             {/* <Button*/}
                             {/*    block*/}
@@ -112,7 +126,7 @@ class SignIn extends PureComponent {
                             {/* >*/}
                             {/*    <Text>Sign Up for an Account</Text>*/}
                             {/* </Button>*/}
-                            <Button
+                            {/* {pw && <Button
                                 block
                                 onPress={() =>
                                     this.props.navigation.navigate('ResendUnlockInstructions')
@@ -120,7 +134,8 @@ class SignIn extends PureComponent {
                                 transparent
                             >
                                 <Text>Account locked? Unlock</Text>
-                            </Button>
+                            </Button>} */}
+ 
                             {/* <Button*/}
                             {/*    block*/}
                             {/*    onPress={() => {*/}

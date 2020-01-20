@@ -8,30 +8,38 @@ import Loading from '../../components/network/Loading';
 import {axiosAlert} from '../../utils/axios';
 import ContactRole, {ContactRoleHuman} from '../../values/ContactRole';
 import UTIL_STYLES from '../../styles/common';
+import { print } from '../../utils/list';
 
 class Share extends PureComponent {
     static navigationOptions = ({navigation}) => ({
-        headerTitle: navigation.state.params.share.user.fullName
-
+        headerTitle: navigation.state.params.share.user.fullName,
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: 15,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        }
     });
 
     state = {loading: false};
 
     authorizedToRemove = role => role === ContactRole.PI;
 
-    deleteShare = (share, study) => {
+    deleteShare = async(share, study) => {
         const {dispatch, navigation} = this.props;
         this.setState({loading: true});
-        dispatch(deleteShare(share, study)).then(response => {
-            this.setState({loading: false});
+        const response = await dispatch(deleteShare(share, study));
+        this.setState({loading: false});
 
-            if (response.error) {
-                axiosAlert('Unable to remove person.', response.error);
-            }
-            else {
-                navigation.goBack();
-            }
-        });
+        if (response.error) {
+            axiosAlert('Unable to remove person.', response.error);
+        }
+        else {
+            navigation.goBack();
+        }
     };
 
     render() {

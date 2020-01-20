@@ -1,9 +1,10 @@
 import {API} from '../../settings.json';
 import snakeCaseKeys from 'snakecase-keys';
 import axios from 'axios';
+import {Alert} from 'react-native';
 
 const client = axios.create({
-    baseURL: API.baseURL,
+    baseURL: 'https://enrollapp.herokuapp.com/api', //API.baseURL,
     responseType: 'json'
 });
 
@@ -25,7 +26,9 @@ export const axiosConfig = {
             }
         ],
         response: [
-            (action, request) => request
+            (action, request) => {
+                return request;
+            }
         ]
     }
 };

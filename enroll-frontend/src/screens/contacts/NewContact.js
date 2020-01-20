@@ -16,6 +16,7 @@ class NewContact extends PureComponent {
     state = {loading: false, contact: {}};
 
     componentDidMount() {
+        console.log('NewContact mounted');
         this.props.navigation.setParams({handleSubmit: this.handleSubmit});
     }
 

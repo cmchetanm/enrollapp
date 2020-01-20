@@ -28,6 +28,7 @@ import {TouchableOpacity} from 'react-native';
 import {createMessage} from '../../redux/actions/messages';
 import {axiosAlert} from '../../utils/axios';
 import {connect} from 'react-redux';
+import {print} from '../../utils/list';
 
 class StudyView extends PureComponent {
     constructor(props) {
@@ -37,8 +38,12 @@ class StudyView extends PureComponent {
 
     state = {showMoreIncl: false, showMoreExcl: false, shareEnabled: false, text: ''};
 
-    filterShares = memoize((shares, role) => shares.filter(share =>
-        share.role === role || role === ContactRole.OTHER && !Object.keys(ContactRole).includes(share.role)));
+    filterShares = memoize((shares, role) => {
+        return shares.filter(share => {
+            const returnValue = share.role === role || role === ContactRole.OTHER && !Object.keys(ContactRole).includes(share.role);
+            return returnValue;
+        });
+    });
 
     addItem = () => {
         this.setState(prevState => ({
@@ -241,7 +246,15 @@ class StudyView extends PureComponent {
         </Tab>;
 
     renderStudyTeam = (study, navigation) =>
-        <Tab activeTextStyle={{fontSize: 12}} heading='Contact/Share' textStyle={{fontSize: 12}}>
+        <Tab activeTextStyle={{fontSize: 12}} heading='Contact & Invite' textStyle={{fontSize: 12}}>
+            {this.authorizedToShare() && <ListItem style={{ alignSelf: 'center', margin: -10 }}>
+                <Button
+                block onPress={() => navigation.navigate('ManageContacts', {study})} primary transparent>
+                    <Icon name='add' />
+                    <Text style={{ marginLeft: -20 }}>Share this Study with a Colleage</Text>
+                </Button>
+            </ListItem>
+            }
             {Object.keys(ContactRole).map(role =>
                 this.authorizedToViewTeam(role) && <List key={role}>
                     <ListItem itemDivider key={`${role}-title`}>
@@ -334,14 +347,6 @@ class StudyView extends PureComponent {
                 <ListItem>
                     <View>
                         <Text note style={UTIL_STYLES.ALIGN_LEFT}>
-                            Sponsor Contact
-                        </Text>
-                        <Text>{study.sponsorContact}</Text>
-                    </View>
-                </ListItem>
-                <ListItem>
-                    <View>
-                        <Text note style={UTIL_STYLES.ALIGN_LEFT}>
                             CRO Contact
                         </Text>
                         <Text>{study.croContact}</Text>
@@ -379,11 +384,11 @@ class StudyView extends PureComponent {
                         {study.role === ContactRole.PI && this.renderAdminIssues(study)}
                     </Tabs>
                 </Content>
-                {this.authorizedToShare() && <Fab
+                {/* {this.authorizedToShare() && <Fab
                     onPress={() => navigation.navigate('ManageContacts', {study})}
                     position='bottomRight' style={{backgroundColor: commonColor.brandSuccess}}>
-                    <Text style={UTIL_STYLES.FAB_TEXT}>Add Person</Text>
-                </Fab>}
+                    <Text style={UTIL_STYLES.FAB_TEXT}>Invite Colleague</Text>
+                </Fab>} */}
             </Container>
         );
     }

@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton} from 'react-native';
+import {Button as DefaultButton, TouchableHighlight, Text} from 'react-native';
 import {Container, Content} from 'native-base';
 import {updateProfile} from '../../redux/actions/authentication';
 import {axiosAlert} from '../../utils/axios';
@@ -9,18 +9,25 @@ import ProfileForm from '../../components/profile/ProfileForm';
 import Loading from '../../components/network/Loading';
 
 class EditProfile extends PureComponent {
-    static navigationOptions = ({profile, navigation}) => ({
-        headerLeft:
-            <DefaultButton
-                onPress={() => navigation.navigate('Profile', {profile})}
-                title='Cancel'
-            />,
-        headerRight:
-            <DefaultButton
+    static navigationOptions = ({navigation, profile}) => ({
+        headerTitle: 'Edit My Profile',
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: 15,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        },
+        headerRight: (() => (
+            <TouchableHighlight
                 onPress={navigation.getParam('handleSubmit')}
-                title='Save'
-            />
-
+                style={{ marginTop: 12, marginRight: 12 }}
+            >
+                <Text style={{ fontSize: 17, color: '#FFFFFF' }}>Save</Text>
+            </TouchableHighlight>
+        ))
     });
 
     state = {loading: false, profile: this.props.profile};

@@ -1,8 +1,19 @@
 import {CONTACT} from '../constants';
 import {fetchStudies} from './studies';
 
+export const fetchPeers = () => ({
+    type: CONTACT.GET_PEERS,
+    payload: {
+        request: {
+            url: '/users',
+            method: 'GET'
+        }
+    }
+});
+
+
 export const fetchContacts = () => ({
-    type: CONTACT.GET_CONTACTS,
+    type: CONTACT.GET_PEERS,
     payload: {
         request: {
             url: '/contacts',

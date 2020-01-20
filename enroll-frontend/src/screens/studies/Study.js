@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton, SafeAreaView} from 'react-native';
+import {Button as DefaultButton, SafeAreaView, TouchableHighlight} from 'react-native';
 import {Badge, Button, Body, Icon, Left, ListItem, Right, Text} from 'native-base';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -10,14 +10,28 @@ import UTIL_STYLES from '../../styles/common';
 import ContactRole from '../../values/ContactRole';
 import {axiosAlert} from '../../utils/axios';
 import {fetchMessages} from '../../redux/actions/messages';
+import {print} from '../../utils/list';
 
 class Study extends PureComponent {
     static navigationOptions = ({navigation}) => ({
         headerTitle: navigation.state.params.study.name,
-        headerRight:
-            navigation.state.params.study.role === ContactRole.PI &&
-            <DefaultButton onPress={() => navigation.navigate('EditStudy', {study: navigation.state.params.study})}
-                title='Edit'/>
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: 30,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        },
+        headerRight: (() => navigation.state.params.study.role === ContactRole.PI && (
+            <TouchableHighlight
+                onPress={() => navigation.navigate('EditStudy', {study: navigation.state.params.study})}
+                style={{ marginTop: 12, marginRight: 12 }}
+            >
+                <Text style={{ color: '#FFFFFF' }}>Edit</Text>
+            </TouchableHighlight>
+        ))
     });
 
     static getDerivedStateFromProps(nextProps, prevState) {
@@ -38,11 +52,11 @@ class Study extends PureComponent {
         const {comparisonList, dispatch, navigation} = this.props;
         return (
             <SafeAreaView style={UTIL_STYLES.FLEX}>
-                <StudyView messageList={this.props.messageList} navigation={navigation} study={this.state.study}/>
+                <StudyView messageList={this.props.messageList} navigation={navigation} study={this.props.study}/>
                 {comparisonList.length > 0 ? <ListItem iconLeft noBorder noIndent
-                    style={{backgroundColor: commonColor.brandWarning}}>
+                    style={{backgroundColor: '#AAAAFF'}}>
                     <Left>
-                        <Button onPress={() => navigation.navigate('Comparison')} primary small>
+                        <Button style={ButtonStyle, {alignText: 'center', alignItems: 'center'}} onPress={() => navigation.navigate('Comparison')} small>
                             <Text style={{fontSize: 12}}>Compare studies</Text>
                         </Button>
                     </Left>
@@ -53,15 +67,15 @@ class Study extends PureComponent {
                     </Right>
                     <Body>
                         {comparisonList.indexOf(this.state.study.id) >= 0
-                            ? <Button block danger iconLeft onPress={() =>
+                            ? <Button style={ButtonStyle, { marginLeft: 40, color: '#FF8888' }} block iconLeft onPress={() =>
                                 dispatch(removeFromCompareList(this.state.study))} small>
-                                <Icon name='close-circle-outline'/>
-                                <Text style={{fontSize: 12}}>Remove</Text>
+                                <Icon style={{ alignSelf: 'flex-start', justifyContent: 'center' }} name='close-circle-outline'/>
+                                <Text style={{fontSize: 12, alignSelf: 'flex-end'}}>Remove</Text>
                             </Button>
-                            : <Button block iconLeft onPress={() =>
-                                dispatch(addToCompareList(this.state.study))} small success>
-                                <Icon name='add-circle'/>
-                                <Text style={{fontSize: 12}}>Add</Text>
+                            : <Button style={ButtonStyle, { marginLeft: 40, color: '#88FF88' }} block iconLeft onPress={() =>
+                                dispatch(addToCompareList(this.state.study))} small>
+                                <Icon style={{ alignSelf: 'flex-start', justifyContent: 'center', marginRight: 7 }} name='add-circle'/>
+                                <Text style={{fontSize: 12, alignSelf: 'flex-end' }}>Add</Text>
                             </Button>}
                     </Body>
                 </ListItem>
@@ -97,3 +111,7 @@ const mapStateToProps = ({comparison, messages, studies}, ownProps) => ({
 });
 
 export default connect(mapStateToProps)(Study);
+
+const ButtonStyle = {
+    width: 150
+};

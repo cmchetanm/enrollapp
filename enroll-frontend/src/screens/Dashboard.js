@@ -1,135 +1,107 @@
 import React, {PureComponent} from 'react';
+import { findIndex } from 'lodash';
 import PropTypes from 'prop-types';
-import {Button as DefaultButton} from 'react-native';
-import {Body, Button, Container, Content, Footer, Icon, Left, ListItem, Right, Text} from 'native-base';
+import {Button as DefaultButton, SectionList, Dimensions, TouchableHighlight } from 'react-native';
+import {Body, Button, Container, Content, Footer, Icon, Left, ListItem, Right, Text, View, ScrollView} from 'native-base';
+import styled from 'styled-components/native';
 import {setFCMToken, signOut} from '../redux/actions/authentication';
 import {connect} from 'react-redux';
 import firebase from 'react-native-firebase';
 import commonColor from '../theme/variables/commonColor';
+import { print } from '../utils/list';
 
 class Dashboard extends PureComponent {
-    static navigationOptions = ({navigation}) => ({
-        headerRight:
-            <DefaultButton onPress={() => navigation.navigate('Profile')} title='Profile'/>
-    });
+    static navigationOptions = {
+        title: "Studies",
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: 72,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        },
+    };
 
-    componentDidMount() {
-        this.checkPermission();
+    renderItem(arg) {
+        const {studies, navigation} = this.props;
+        return (
+            <>
+                {arg.item.index !== 0 && <Underline />}
+                <TouchableHighlight
+                    onPress={() => {
+                        const studyIndex = findIndex(studies, s => s.id === arg.item.id);
+                        const study = studies[studyIndex];
+                        navigation.navigate('Study', {study});
+                    }}
+                >
+                    <ItemContainer>
+                        <ItemLogo source={{ uri: `${arg.item.logo}` }} />
+                        <ItemRight>
+                            <ItemTitle>{arg.item.title}</ItemTitle>
+                            <ItemSecondary>{arg.item.secondary}</ItemSecondary>
+                            <ItemSecondary>{arg.item.footer}</ItemSecondary>
+                        </ItemRight>
+                    {/*<Icon type="FontAwesome" name="right" style={{ alignSelf: 'flex-end' }} />*/}
+                    </ItemContainer>
+                </TouchableHighlight>
+                <></>
+            </>
+        );
     }
 
-    // 3
-    async getToken() {
-        const {dispatch} = this.props;
-        const fcmToken = await firebase.messaging().getToken();
-
-        if (fcmToken) {
-            dispatch(setFCMToken(fcmToken));
-        }
+    renderHeader(arg) {
+        return (
+            <HeaderContainer>
+                <HeaderText>{arg.section.title}</HeaderText>
+            </HeaderContainer>
+        );
     }
 
-    // 1
-    async checkPermission() {
-        const enabled = await firebase.messaging().hasPermission();
-
-        if (enabled) {
-            this.getToken();
-        }
-        else {
-            this.requestPermission();
-        }
-    }
-
-    // 2
-    async requestPermission() {
-        try {
-            await firebase.messaging().requestPermission();
-            // User has authorised
-            this.getToken();
-        }
-        catch (error) {
-            // User has rejected permissions
-        }
+    studiesToSections = (studies) => {
+        const sections = [];
+        studies.forEach(study => {
+            let topicIndex = findIndex(sections, t => t.title === study.topic.name);
+            if (topicIndex === -1) {
+                topicIndex = sections.length;
+                sections.push({
+                    data: [],
+                    index: topicIndex,
+                    title: study.topic.name,
+                    id: study.topic.id,
+                });
+            }
+            sections[topicIndex].data.push({
+                index: sections[topicIndex].data.length,
+                title: study.name || 'STUDY',
+                id: study.id || '11111',
+                secondary: study.sponsorName || 'GENFIT | GFT600-333-1',
+                footer: study.protocol || 'Kinamonim',
+                logo: study.studyIcon || 'https://image.shutterstock.com/image-vector/sign-button-free-icon-260nw-1039733560.jpg',
+                icon: study.icon || 'pills'
+            });
+        });
+        return sections;
     }
 
     render() {
-        const {comparisonList, dispatch, navigation} = this.props;
+        const {studies, topics, comparisonList, dispatch, navigation} = this.props;
+        const sections = this.studiesToSections(studies);
+
         return (
             <Container>
                 <Content>
-                    <ListItem icon onPress={() => navigation.navigate('Contacts')}>
-                        <Left>
-                            <Icon name='people' style={{color: commonColor.brandSuccess}}/>
-                        </Left>
-                        <Body>
-                            <Text>Study Team Directory</Text>
-                        </Body>
-                        <Right>
-                            <Icon name='arrow-forward'/>
-                        </Right>
-                    </ListItem>
-                    <ListItem icon onPress={() => navigation.navigate('Topics')}>
-                        <Left>
-                            <Icon name='flask' style={{color: commonColor.brandWarning}}/>
-                        </Left>
-                        <Body>
-                            <Text>Open Topics/Studies</Text>
-                        </Body>
-                        <Right>
-                            <Icon name='arrow-forward'/>
-                        </Right>
-                    </ListItem>
-                    {comparisonList.length > 1 && <ListItem icon onPress={() => navigation.navigate('Comparison')}>
-                        <Left>
-                            <Icon name='swap' style={{color: commonColor.brandDanger}}/>
-                        </Left>
-                        <Body>
-                            <Text>Compare Studies ({comparisonList.length})</Text>
-                        </Body>
-                        <Right>
-                            <Icon name='arrow-forward'/>
-                        </Right>
-                    </ListItem>}
-                    <ListItem icon onPress={() => navigation.navigate('HowToShareStudies')}>
-                        <Left>
-                            <Icon name='share-alt' style={{color: commonColor.brandDark}}/>
-                        </Left>
-                        <Body>
-                            <Text>How To Share a Study</Text>
-                        </Body>
-                        <Right>
-                            <Icon name='arrow-forward'/>
-                        </Right>
-                    </ListItem>
-                    <ListItem icon onPress={() => navigation.navigate('Disclaimer')}>
-                        <Left>
-                            <Icon name='warning' style={{color: commonColor.brandDark}}/>
-                        </Left>
-                        <Body>
-                            <Text>Disclaimer</Text>
-                        </Body>
-                        <Right>
-                            <Icon name='arrow-forward'/>
-                        </Right>
-                    </ListItem>
-                    <ListItem icon onPress={() => navigation.navigate('ContactUs')}>
-                        <Left>
-                            <Icon name='mail' style={{color: commonColor.brandInfo}}/>
-                        </Left>
-                        <Body>
-                            <Text>Contact Us</Text>
-                        </Body>
-                        <Right>
-                            <Icon name='arrow-forward'/>
-                        </Right>
-                    </ListItem>
+                    <SectionList
+                        contentInset={{ bottom: 20 }}
+                        maxToRenderPerBatch={15}
+                        initialNumToRender={15}
+                        sections={sections}
+                        renderItem={(arg) => this.renderItem(arg)}
+                        renderSectionHeader={this.renderHeader}
+                        keyExtractor={({ id }) => `${id}`}
+                    />
                 </Content>
-                <Footer>
-                    <Button block danger iconLeft onPress={() =>
-                        dispatch(signOut())} transparent>
-                        <Icon name='power'/>
-                        <Text>Sign Out</Text>
-                    </Button>
-                </Footer>
             </Container>
         );
     }
@@ -143,8 +115,78 @@ Dashboard.propTypes = {
     }).isRequired
 };
 
-const mapStateToProps = ({comparison}) => ({
-    comparisonList: comparison.list
-});
+const mapStateToProps = ({comparison, topics, studies}) => {
+    return {
+        comparisonList: comparison.list,
+        topics: topics.list,
+        studies: studies.list
+    }
+};
 
 export default connect(mapStateToProps)(Dashboard);
+
+const FooterContainer = styled.View`
+    display: flex;
+    flex-direction: row;
+`;
+
+const FooterButton = styled.View`
+    flex: 1;
+`;
+
+const HeaderContainer = styled.View`
+    margin: 5px;
+    padding: 5px;
+    border-bottom-width: 1px;
+    border-bottom-color: #DCDBE0;
+    background-color: #F0F0F0;
+`;
+
+const HeaderText = styled.Text`
+    font-size: 14px;
+    color: #6E6D72;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    margin-left: 7px
+`;
+
+const ItemContainer = styled.View`
+    display: flex;
+    flex-direction: row;
+`;
+
+const Underline = styled.View`
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 1px;
+    width: 100%;
+    border-bottom-width: 1px;
+    border-bottom-color: #D0CFD4;
+`;
+
+const ItemLogo = styled.Image`
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 25px
+    border-color: #838383;
+    border-width: 1px;
+`;
+
+const ItemRight = styled.View`
+    display: flex;
+    flex-direction: column;
+`;
+
+const ItemTitle = styled.Text`
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1px;
+`;
+
+const ItemSecondary = styled.Text`
+    font-size: 14px;
+    margin: 1px;
+    color: #838383;
+`;

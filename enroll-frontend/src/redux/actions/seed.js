@@ -1,7 +1,8 @@
 import {fetchTopics} from './topics';
 import {axiosAlert} from '../../utils/axios';
 import {fetchStudies} from './studies';
-import {fetchContacts} from './contacts';
+import {fetchPeers, fetchContacts} from './contacts';
+import { print } from '../../utils/list';
 
 export const loadUserData = () => dispatch => {
     dispatch(fetchTopics()).then(res => {
@@ -17,6 +18,12 @@ export const loadUserData = () => dispatch => {
     });
 
     dispatch(fetchContacts()).then(res => {
+        if (res.error) {
+            axiosAlert('Unable to load study team directory.', res.error);
+        }
+    });
+
+    dispatch(fetchPeers()).then(res => {
         if (res.error) {
             axiosAlert('Unable to load study team directory.', res.error);
         }

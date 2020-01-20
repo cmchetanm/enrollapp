@@ -15,7 +15,7 @@ class AppSwitch extends PureComponent {
                 navigation.navigate(navigation.state.params.initialRoute);
             }
             else {
-                navigation.navigate('Topics');
+                navigation.navigate('MainTabs');
             }
         }
         else {

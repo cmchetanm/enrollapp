@@ -17,3 +17,27 @@ export const editInlist = (list, item) => {
 };
 
 export const removeFromList = (list, item) => list.filter(o => o.id !== item.id);
+
+export const print = (something, indent = 0) => {
+    const prefix = '---'.repeat(indent);
+    if (!!something && typeof something === "function") {
+        console.log(prefix + 'function');
+    } else if (Array.isArray(something)) {
+        console.log(prefix + '[');
+        something.forEach((s) => {
+            print(s, indent + 1);
+            console.log(prefix + ',');
+        });
+        console.log(prefix + ']');
+    } else if (!!something && typeof something === 'object') {
+        console.log(prefix + '{');
+        Object.keys(something).forEach((s) => {
+            console.log(prefix + s + ': ');
+            print(something[s], indent + 1);
+            console.log(prefix + ',');
+        });
+        console.log(prefix + '}');
+    } else {
+        console.log(prefix + something);
+    }
+};

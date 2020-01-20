@@ -3,14 +3,30 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import UTIL_STYLES from '../../styles/common';
 import StudyView from '../../components/studies/StudyView';
-import {Button as DefaultButton} from 'react-native';
+import {Button as DefaultButton, TouchableHighlight} from 'react-native';
 import {resetCompareList} from '../../redux/actions/comparison';
 import {Container, Content, Footer, FooterTab, Button, Text} from 'native-base';
 
 class Comparison extends PureComponent {
     static navigationOptions = ({navigation}) => ({
         headerTitle: (navigation.getParam('study') || {}).name,
-        headerRight: <DefaultButton onPress={navigation.getParam('stopComparison')} title='Reset'/>
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: 15,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        },
+        headerRight: (() => (
+            <TouchableHighlight
+                onPress={navigation.getParam('stopComparison')}
+                style={{ marginTop: 12, marginRight: 12 }}
+            >
+                <Text style={{ fontSize: 17, color: '#FFFFFF' }}>End Comparison</Text>
+            </TouchableHighlight>
+        ))
     });
 
     state = {activeStudy: this.props.list.length > 0 ? this.props.list[0] : null};
@@ -46,7 +62,7 @@ class Comparison extends PureComponent {
                         {list.map(study =>
                             <Button active={study.id === activeStudy.id} key={study.id}
                                 onPress={() => this.changeActiveStudy(study)}>
-                                <Text style={UTIL_STYLES.TEXT_CENTER}>{study.name}</Text>
+                                <Text style={UTIL_STYLES.TEXT_CENTER, {fontSize: 16}}>{study.name}</Text>
                             </Button>)}
                     </FooterTab>
                 </Footer>

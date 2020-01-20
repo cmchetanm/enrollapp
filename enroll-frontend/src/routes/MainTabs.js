@@ -1,3 +1,7 @@
+import React from 'react';
+import {Icon} from 'native-base';
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 import Dashboard from '../screens/Dashboard';
 import Topics from '../screens/topics/Topics';
@@ -19,8 +23,12 @@ import Disclaimer from '../screens/Disclaimer';
 import HowToShareStudies from '../screens/HowToShareStudies';
 import Message from '../screens/messages/Message';
 import EditMessage from '../screens/messages/EditMessage';
+import GuestStack from './GuestStack';
+import AppSwitch from './AppSwitch';
+import AuthStack from './AuthStack';
+import {TransitionConfiguration} from './TransitionElement';
 
-const AuthStack = createStackNavigator({
+const MainStack = createStackNavigator({
     Dashboard: {
         screen: Dashboard,
         navigationOptions: {
@@ -45,12 +53,6 @@ const AuthStack = createStackNavigator({
             title: 'Disclaimer'
         }
     },
-    Topics: {
-        screen: Topics,
-        navigationOptions: {
-            headerTitle: 'Topics'
-        }
-    },
     NewStudy: {
         screen: NewStudy,
         navigationOptions: {
@@ -61,12 +63,6 @@ const AuthStack = createStackNavigator({
         screen: EditStudy,
         navigationOptions: {
             title: 'Edit Study'
-        }
-    },
-    Studies: {
-        screen: Studies,
-        navigationOptions: {
-            title: 'Studies'
         }
     },
     Study: {
@@ -82,28 +78,10 @@ const AuthStack = createStackNavigator({
             title: 'Study Comparison'
         }
     },
-    Contacts: {
-        screen: Contacts,
-        navigationOptions: {
-            title: 'Team Directory'
-        }
-    },
-    Contact: {
-        screen: Contact,
-        navigationOptions: {
-            title: 'Team Contact'
-        }
-    },
     NewContact: {
         screen: NewContact,
         navigationOptions: {
             title: 'New Team Contact'
-        }
-    },
-    EditContact: {
-        screen: EditContact,
-        navigationOptions: {
-            title: 'Edit Contact'
         }
     },
     ManageContacts: {
@@ -129,7 +107,37 @@ const AuthStack = createStackNavigator({
         navigationOptions: {
             title: 'Team Contact'
         }
+    }
+});
+
+const ContactsStack = createStackNavigator({
+    Contacts: {
+        screen: Contacts,
+        navigationOptions: {
+            title: 'Team Directory'
+        }
     },
+    Contact: {
+        screen: Contact,
+        navigationOptions: {
+            title: 'Team Contact'
+        }
+    },
+    NewContact: {
+        screen: NewContact,
+        navigationOptions: {
+            title: 'New Team Contact'
+        }
+    },
+    EditContact: {
+        screen: EditContact,
+        navigationOptions: {
+            title: 'Edit Contact'
+        }
+    }
+});
+
+const ProfileStack = createStackNavigator({
     Profile: {
         screen: Profile,
         navigationOptions: {
@@ -144,4 +152,52 @@ const AuthStack = createStackNavigator({
     }
 });
 
-export default AuthStack;
+const MainTabs = createBottomTabNavigator({
+    AppSwitch: {
+        screen: MainStack,
+        navigationOptions: {
+            tabBarLabel: 'Studies',
+            tabBarIcon: ({focused}) => (
+                <Icon name='pulse' style={iconStyle(focused)}/>
+            )
+        },
+    },
+    Contacts: {
+        screen: ContactsStack,
+        navigationOptions: {
+            tabBarLabel: 'Team',
+            tabBarIcon: ({focused}) => (
+                <Icon name='people' style={iconStyle(focused)}/>
+            )
+        },
+    },
+    Profile: {
+        screen: ProfileStack,
+        navigationOptions: {
+            tabBarLabel: 'More',
+            tabBarIcon: ({focused}) => (
+                <Icon name='more' style={iconStyle(focused)}/>
+            )
+        },
+    },
+});
+// , {
+//         initialRouteName: 'AppSwitch',
+//         headerMode: "screen",
+//         mode: Platform.OS === "ios" ? "modal" : "card",
+//         navigationOptions: {
+//             cardStack: {
+//                 gesturesEnabled: false
+//             },
+//             gesturesEnabled: false
+//         },
+//         gesturesEnabled: false,
+//         transitionConfig: TransitionConfiguration,
+// });
+
+// export default MainTabs;
+
+export default createStackNavigator({
+    MainTabs,
+    Study
+}, {headerMode: 'none', transitionConfig: TransitionConfiguration})

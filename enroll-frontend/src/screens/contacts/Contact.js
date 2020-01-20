@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton} from 'react-native';
+import {Button as DefaultButton, TouchableHighlight} from 'react-native';
 import {ActionSheet, Button, Container, Content, Footer, Root, Text} from 'native-base';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -7,16 +7,20 @@ import ContactView from '../../components/contacts/ContactView';
 import {deleteContact} from '../../redux/actions/contacts';
 import Loading from '../../components/network/Loading';
 import {axiosAlert} from '../../utils/axios';
+import { print } from '../../utils/list';
 
 class Contact extends PureComponent {
     static navigationOptions = ({navigation}) => ({
         headerTitle: navigation.state.params.contact.fullName,
-        headerRight:
-            <DefaultButton
-                onPress={() => navigation.navigate('EditContact', {contact: navigation.state.params.contact})}
-                title='Edit'
-            />
-
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: 15,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        }
     });
 
     state = {loading: false};
@@ -45,21 +49,6 @@ class Contact extends PureComponent {
                         <ContactView contact={contact}/>
                     </Content>
                 </Container>
-                <Footer>
-                    <Button block danger onPress={() =>
-                        ActionSheet.show({
-                            options: ['Cancel', 'Delete Contact'],
-                            cancelButtonIndex: 0,
-                            destructiveButtonIndex: 1
-                        },
-                        buttonIndex => {
-                            if (buttonIndex === 1) {
-                                this.deleteContact(contact);
-                            }
-                        })} transparent>
-                        <Text>Delete Contact</Text>
-                    </Button>
-                </Footer>
             </Root>;
     }
 }
@@ -77,8 +66,9 @@ Contact.propTypes = {
     }).isRequired
 };
 
-const mapStateToProps = ({contacts}, ownProps) => ({
-    contact: contacts.list.find(contact => contact.id === ownProps.navigation.state.params.contact.id)
-});
+const mapStateToProps = ({contacts}, ownProps) => {
+    const contact = contacts.peers.find(contact => contact.id === ownProps.navigation.state.params.contact.id);
+    return ({contact});
+};
 
 export default connect(mapStateToProps)(Contact);

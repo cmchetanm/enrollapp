@@ -1,8 +1,9 @@
 import {CONTACT, SHARE} from '../constants';
+import { print } from '../../utils/list';
 
 export const createShare = (contactId, study, role, contact) => dispatch => dispatch({
     type: SHARE.CREATE_SHARE,
-    study,
+    // study,
     payload: {
         request: {
             url: '/shares',
@@ -35,3 +36,19 @@ export const deleteShare = (share, study) => ({
         }
     }
 });
+
+export const createShares = (shares) => dispatch => {
+    dispatch({
+        type: SHARE.CREATE_SHARES,
+        payload: {
+            meta: {shares},
+            request: {
+                url: '/shares',
+                method: 'POST',
+                params: {shares}
+            }
+        }
+    }).then(response => {
+        return response;
+    });
+}

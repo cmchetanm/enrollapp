@@ -39,7 +39,7 @@ export default (variables /*: * */ = variable) => {
       borderBottomWidth: 0,
     },
     height: 38,
-    backgroundColor: '#F0EFF5',
+    backgroundColor: '#F0F0F0',
     flex: 1,
     justifyContent: 'center',
     paddingLeft: variables.listItemPadding + 5,
