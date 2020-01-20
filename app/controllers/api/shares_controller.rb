@@ -6,22 +6,33 @@ module Api
 
     def create
       puts 'create api'
-      puts '@study'
-      puts @study
-      puts '@user'
-      puts @user
-      site_id = @study.site_for(current_api_user)
-      @share = Share.find_or_initialize_by(study_id: @study.id, user: @user)
-      @share.assign_attributes(site_id: site_id, role: params[:role])
-      puts '@@share'
-      puts @share
+      puts '@studies'
+      puts @studies
+      puts '@users'
+      puts @users
+      @shares = []
+      @studies.each_with_index do |study, i|
+        site_id = study.site_for(current_api_user)
+        share = Share.find_or_initialize_by(study_id: study.id, user: @users[i])
+        share.assign_attributes(site_id: site_id, role: @roles[i])
+        puts 'share'
+        puts share
+        @shares.push(share)
+      end
 
-      if @share.save
-        puts 'save true'
-        SharesMailer.notify(@share).deliver_later
+      onesuccess = false
+      @shares.each do |share|
+        if share.save
+          puts 'save true'
+          onesuccess = true
+          SharesMailer.notify(share).deliver_later
+        end
+      end
+      if onesuccess
+        puts 'Success!!'
         render :show, status: :created
       else
-        uts 'save false'
+        puts 'Fail!!'
         render json: {errors: @share.errors.full_messages}, status: :unprocessable_entity
       end
     end
@@ -41,22 +52,13 @@ module Api
       puts 'set_study api'
       puts params
       if params[:shares].kind_of?(Array)
-        puts 'shares is array!'
         @studies = []
+        @roles = []
         params[:shares].each do |sharestring|
-          puts '|sharestring|'
-          puts sharestring
-          puts 'sharestring.class'
-          puts sharestring.class
           share = JSON.parse(sharestring)
-          puts 'share'
-          puts share
-          puts 'share["study_id"]'
-          puts share["study_id"]
           study = StudyAuthenticator.new(current_api_user).find_one(share["study_id"])
-          puts '|study|'
-          puts study
           @studies.push(study)
+          @roles.push(share["role"])
         end
         puts 'end studies'
         puts @studies
@@ -68,7 +70,19 @@ module Api
 
     def set_user
       puts 'set_user api'
-      @user = User.find_by!(id: params[:contact_id])
+      if params[:shares].kind_of?(Array)
+        @users = []
+        params[:shares].each do |sharestring|
+          share = JSON.parse(sharestring)
+          study = User.find_by!(id: share["contact_id"])
+          @users.push(study)
+        end
+        puts 'end users'
+        puts @users
+      else
+        puts 'not array shares yo'
+        @user = User.find_by!(id: params[:contact_id])
+      end
     end
 
     def set_share
