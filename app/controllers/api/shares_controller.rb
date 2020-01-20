@@ -40,7 +40,7 @@ module Api
     def set_study
       puts 'set_study api'
       puts params
-      if params.shares.kind_of?(Array)
+      if params[:shares].kind_of?(Array)
         puts 'shares is array!'
         @studies = []
         params[:shares].each do |share|
