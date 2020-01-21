@@ -9,25 +9,25 @@ json.study do
   json.array! @studies do |study|
     study_version = study.version_for(@user)
     json.id study.id
-    json.inclusion_criteria study.inclusion_criteria
-    json.exclusion_criteria study.exclusion_criteria
+    json.inclusion_criteria study_version ? study_version.inclusion_criteria : study.inclusion_criteria
+    json.exclusion_criteria study_version ? study_version.exclusion_criteria : study.exclusion_criteria
     json.name study_version ? study_version.name : study.name
-    json.protocol study.protocol
-    json.agent study.agent
-    json.mechanism study.mechanism
-    json.side_effects study.side_effects
-    json.administration study.administration
-    json.randomization study.randomization
-    json.duration study.duration
-    json.assessment_frequency study.assessment_frequency
-    json.interventions study.interventions
-    json.sponsor_name study.sponsor_name
-    json.sponsor_contact study.sponsor_contact
-    json.cro_contact study.cro_contact
-    json.budget study.budget
-    json.enrolled_or_committed study.enrolled_or_committed
-    json.comments study.comments
-    json.travel_parking_costs study.travel_parking_costs
+    json.protocol study_version ? study_version.protocol : study.protocol
+    json.agent study_version ? study_version.agent : study.agent
+    json.mechanism study_version ? study_version.mechanism : study.mechanism
+    json.side_effects study_version ? study_version.side_effects : study.side_effects
+    json.administration study_version ? study_version.administration : study.administration
+    json.randomization study_version ? study_version.randomization : study.randomization
+    json.duration study_version ? study_version.duration : study.duration
+    json.assessment_frequency study_version ? study_version.assessment_frequency : study.assessment_frequency
+    json.interventions study_version ? study_version.interventions : study.interventions
+    json.sponsor_name study_version ? study_version.sponsor_name : study.sponsor_name
+    json.sponsor_contact study_version ? study_version.sponsor_contact : study.sponsor_contact
+    json.cro_contact study_version ? study_version.cro_contact : study.cro_contact
+    json.budget study_version ? study_version.budget : study.budget
+    json.enrolled_or_committed study_version ? study_version.enrolled_or_committed : study.enrolled_or_committed
+    json.comments study_version ? study_version.comments : study.comments
+    json.travel_parking_costs study_version ? study_version.travel_parking_costs : study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
     study_shares = @shares.select {|t| t.study_id == study.id}
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}

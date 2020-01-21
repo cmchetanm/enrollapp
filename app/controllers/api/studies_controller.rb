@@ -6,7 +6,6 @@ module Api
 
     def index
       @studies = StudyAuthenticator.new(current_api_user).find_all
-      @studiesv = StudyVersion.all.order(:name)
       @topics = Topic.all.order(:name)
       @sponsors = Sponsor.all.order(:name)
       @shares = Share.all.order(:id)
