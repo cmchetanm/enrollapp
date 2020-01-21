@@ -27,7 +27,7 @@ json.study do
     json.comments study.comments
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
-    study_version = @studiesv.detect {|t| t.id == study.id}
+    study_version = study.version_for(@user)
     puts 'study_version.attributes'
     puts study_version ? study_version.attributes : 'nope'
     study_shares = @shares.select {|t| t.study_id == study.id}
