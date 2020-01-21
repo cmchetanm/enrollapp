@@ -32,6 +32,18 @@ class User < ApplicationRecord
     user
   end
 
+  def site_for(user)
+    share = Share.find_by(user_id: user.id)
+    puts 'user model got share'
+    puts share
+    puts 'with site id'
+    puts share.site_id
+    site = Site.find_by(id: share.site_id)
+    puts 'site found'
+    puts site
+    @site_for ||= site
+  end
+
   private
 
   def prettify
