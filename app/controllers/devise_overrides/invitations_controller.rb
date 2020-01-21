@@ -8,12 +8,6 @@ module DeviseOverrides
       resource_invited = resource.errors.empty?
 
       yield resource if block_given?
-      puts 'invite_resource'
-      puts invite_resource
-      puts 'is_flashing_format?'
-      puts is_flashing_format?
-      puts 'is_flashing_format'
-      puts is_flashing_format
 
       if resource_invited
         if is_flashing_format? && self.resource.invitation_sent_at
