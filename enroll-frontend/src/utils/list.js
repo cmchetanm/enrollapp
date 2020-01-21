@@ -24,7 +24,8 @@ export const addToList = (list, item) => [...list, item];
 
 export const editInlist = (list, item) => {
     const index = list.findIndex(o => o.id === item.id);
-    return [...list.slice(0, index), item, ...list.slice(index + 1)];
+    const it = typeof item === 'object' && item !== null ? { ...list[index], ...item } : item;
+    return [...list.slice(0, index), it, ...list.slice(index + 1)];
 };
 
 export const removeFromList = (list, item) => list.filter(o => o.id !== item.id);

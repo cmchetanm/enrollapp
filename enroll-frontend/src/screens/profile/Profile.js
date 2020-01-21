@@ -21,7 +21,7 @@ class Profile extends PureComponent {
         title: "More",
         headerTintColor: '#FFFFFF',
         headerTitleStyle: {
-          marginLeft: 72,
+          marginLeft: Platform.OS === 'ios' ? -150 : 72,
           marginTop: 15,
         },
         headerStyle: {
@@ -77,6 +77,9 @@ class Profile extends PureComponent {
         const lastNameText = profile ? profile.lastName : '';
         const emailText = profile ? profile.email : '';
         const phoneNumberText = profile ? profile.phoneNumber : '';
+        console.log('phoneNumberText');
+        console.log(phoneNumberText);
+
 
         return this.state.loading ? <Loading/>
             : <Root>
@@ -177,11 +180,11 @@ const ListStyleMiddle = {
 };
 
 const ListItemStyle = {
-    height: 32
+    height: Platform.OS === 'ios' ? 50 : 32,
 };
 
 const CenterListItemStyle = {
-    height: 32,
+    height: Platform.OS === 'ios' ? 50 : 32,
     justifyContent: 'center'
 };
 

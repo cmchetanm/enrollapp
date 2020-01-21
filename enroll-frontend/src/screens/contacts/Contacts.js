@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import {Body, Container, Content, Fab, Icon, Left, ListItem, Right, Text} from 'native-base';
+import { Platform } from 'react-native';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import commonColor from '../../theme/variables/commonColor';
@@ -13,7 +14,7 @@ class Team extends PureComponent {
         title: "Team",
         headerTintColor: '#FFFFFF',
         headerTitleStyle: {
-          marginLeft: 72,
+          marginLeft: Platform.OS === 'ios' ? -90 : 72,
           marginTop: 15,
         },
         headerStyle: {

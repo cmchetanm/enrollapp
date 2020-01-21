@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from 'native-base';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
+import { Platform } from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
 import Dashboard from '../screens/Dashboard';
@@ -199,4 +200,26 @@ const MainTabs = createBottomTabNavigator({
 export default createStackNavigator({
     MainTabs,
     Study
-}, {headerMode: 'none'})
+}, {
+    headerMode: 'none'
+    // defaultNavigationOptions: {
+    //     title: "Studies",
+    //     headerTintColor: '#FFFFFF',
+    //     headerTitleStyle: {
+    //         marginLeft: 72,
+    //         marginTop: 15,
+    //     },
+    //     headerStyle: {
+    //         backgroundColor: '#3F51B5',
+    //         height: 70
+    //     },
+    // }
+});
+
+
+export const iconStyle = (focused) => ({
+    alignSelf: 'center',
+    fontSize: Platform.OS === 'ios' ? 20 : 35,
+    margin: 8,
+    color: focused ? '#1D7EE5' : '#8E8E8E'
+});

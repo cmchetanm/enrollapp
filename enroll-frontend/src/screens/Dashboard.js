@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import { findIndex } from 'lodash';
 import PropTypes from 'prop-types';
-import {Button as DefaultButton, SectionList, Dimensions, TouchableHighlight } from 'react-native';
+import {Button as DefaultButton, SectionList, Dimensions, TouchableHighlight, Platform } from 'react-native';
 import {Body, Button, Container, Content, Footer, Icon, Left, ListItem, Right, Text, View, ScrollView} from 'native-base';
 import styled from 'styled-components/native';
 import {setFCMToken, signOut} from '../redux/actions/authentication';
@@ -15,7 +15,7 @@ class Dashboard extends PureComponent {
         title: "Studies",
         headerTintColor: '#FFFFFF',
         headerTitleStyle: {
-          marginLeft: 72,
+          marginLeft: Platform.OS === 'ios' ? -150 : 72,
           marginTop: 15,
         },
         headerStyle: {

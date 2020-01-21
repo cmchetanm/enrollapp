@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton} from 'react-native';
+import {Button as DefaultButton, TouchableHighlight} from 'react-native';
 import {ActionSheet, Button, Container, Content, Footer, Root, Text} from 'native-base';
 import {resetStudy, updateStudy} from '../../redux/actions/studies';
 import {axiosAlert} from '../../utils/axios';
@@ -9,10 +9,39 @@ import StudyForm from '../../components/studies/StudyForm';
 import Loading from '../../components/network/Loading';
 
 class EditStudy extends PureComponent {
+
     static navigationOptions = ({navigation}) => ({
-        headerLeft: <DefaultButton onPress={() => navigation.goBack()} title='Cancel'/>,
-        headerRight: <DefaultButton onPress={() => navigation.getParam('handleSubmit')()} title='Save'/>
+        title: "Edit My Profile",
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+            marginLeft: Platform.OS === 'ios' ? -70 : 72,
+            marginTop: 15,
+        },
+        headerStyle: {
+            backgroundColor: '#3F51B5',
+            height: 70
+        },
+        headerRight: (() => (
+            <TouchableHighlight
+                onPress={() => navigation.getParam('handleSubmit')()}
+                style={{ marginTop: 12, marginRight: 12 }}
+            >
+                <Text style={{ color: '#FFFFFF' }}>Save</Text>
+            </TouchableHighlight>
+        )),
+        headerLeft: (() => (
+            <TouchableHighlight
+                onPress={() => navigation.goBack()}
+                style={{ marginTop: 12, marginRight: 12 }}
+            >
+                <Text style={{ color: '#FFFFFF' }}>Cancel</Text>
+            </TouchableHighlight>
+        ))
     });
+    // static navigationOptions = ({navigation}) => ({
+    //     headerLeft: <DefaultButton onPress={() => navigation.goBack()} title='Cancel'/>,
+    //     headerRight: <DefaultButton onPress={() => navigation.getParam('handleSubmit')()} title='Save'/>
+    // });
 
     state = {loading: false, study: this.props.navigation.state.params.study};
 
