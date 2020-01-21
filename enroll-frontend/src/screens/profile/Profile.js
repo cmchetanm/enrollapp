@@ -8,6 +8,7 @@ import UTIL_STYLES from '../../styles/common';
 import {connect} from 'react-redux';
 import {axiosAlert} from '../../utils/axios';
 import Loading from '../../components/network/Loading';
+import {print} from '../../utils/list';
 /*
 Avatar / intials
 Name, email, phone - profile
@@ -36,6 +37,15 @@ class Profile extends PureComponent {
             </TouchableHighlight>
         ))
     });
+
+    constructor(props) {
+        super(props);
+
+        const peers = props.contacts.peers;
+        const id = props.profile.id;
+        const me = peers.find(c => c.id === id);
+        this.siteName = me.site.name;
+    }
 
     state = {loading: false};
 
@@ -104,27 +114,23 @@ class Profile extends PureComponent {
                                         Site
                                         </Text>
                                     </Left>
-                                    <Text>{emailText}</Text>
+                                    <Text>{this.siteName}</Text>
                                 </ListItem>
                                 <ListItem style={ListItemStyle}>
-                                    <Left>
+                                    {/* <Left>
                                         <Text note style={UTIL_STYLES.ALIGN_LEFT}>
                                         Department
                                         </Text>
                                     </Left>
-                                    <Text>{phoneNumberText}</Text>
+                                    <Text>{phoneNumberText}</Text> */}
                                 </ListItem>
                             </List>
                             <List style={ListStyleEnds}>
-                                <ListItem style={ListItemStyle}>
-                                    <Left>
-                                        <Text>Disclaimer</Text>
-                                    </Left>
+                                <ListItem style={CenterListItemStyle}>
+                                    <Text style={{ alignSelf: 'center' }}>Disclaimer</Text>
                                 </ListItem>
-                                <ListItem style={ListItemStyle}>
-                                    <Left>
-                                        <Text>Contact us</Text>
-                                    </Left>
+                                <ListItem style={CenterListItemStyle}>
+                                    <Text>Contact us</Text>
                                 </ListItem>
                             </List>
                             <List style={ListStyleEnds}>
@@ -155,7 +161,7 @@ Profile.propTypes = {
     profile: PropTypes.object.isRequired
 };
 
-const mapStateToProps = ({authentication: {profile}}) => ({profile});
+const mapStateToProps = ({authentication: {profile}, contacts}) => ({profile, contacts});
 
 export default connect(mapStateToProps)(Profile);
 
@@ -172,6 +178,11 @@ const ListStyleMiddle = {
 
 const ListItemStyle = {
     height: 32
+};
+
+const CenterListItemStyle = {
+    height: 32,
+    justifyContent: 'center'
 };
 
 const Background = styled.View`

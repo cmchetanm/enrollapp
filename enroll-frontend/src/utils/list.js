@@ -9,6 +9,17 @@ export const sortList = (list, key) => list.slice().sort((a, b) => {
     return 0;
 });
 
+export const sortListAb = (list, key) => list.slice().sort((a, b) => {
+    if (a[key].toLowerCase() < b[key].toLowerCase()) {
+        return -1;
+    }
+    else if (a[key].toLowerCase() > b[key].toLowerCase()) {
+        return 1;
+    }
+
+    return 0;
+});
+
 export const addToList = (list, item) => [...list, item];
 
 export const editInlist = (list, item) => {

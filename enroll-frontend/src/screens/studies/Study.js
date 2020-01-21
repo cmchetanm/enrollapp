@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton, SafeAreaView, TouchableHighlight} from 'react-native';
+import {Button as DefaultButton, SafeAreaView, TouchableHighlight, View} from 'react-native';
 import {Badge, Button, Body, Icon, Left, ListItem, Right, Text} from 'native-base';
+import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import commonColor from '../../theme/variables/commonColor';
@@ -14,12 +15,23 @@ import {print} from '../../utils/list';
 
 class Study extends PureComponent {
     static navigationOptions = ({navigation}) => ({
-        headerTitle: navigation.state.params.study.name,
+        headerTitle: (() => {
+            return (
+                <View style={{
+                    flexDirection: 'row'
+                }}>
+                    <ItemLogo source={{ uri: `${navigation.state.params.study.studyIcon}` }} />
+                    <Text style={{
+                        marginTop: 29,
+                        fontSize: 22,
+                        color: '#FFFFFF'
+                    }}>
+                        {navigation.state.params.study.name}
+                    </Text>
+                </View>
+            );
+        }),
         headerTintColor: '#FFFFFF',
-        headerTitleStyle: {
-          marginLeft: 30,
-          marginTop: 15,
-        },
         headerStyle: {
           backgroundColor: '#3F51B5',
           height: 70
@@ -115,3 +127,13 @@ export default connect(mapStateToProps)(Study);
 const ButtonStyle = {
     width: 150
 };
+
+const ItemLogo = styled.Image`
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 25px
+    border-color: #838383;
+    border-width: 1px;
+`;

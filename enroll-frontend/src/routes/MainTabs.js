@@ -26,7 +26,6 @@ import EditMessage from '../screens/messages/EditMessage';
 import GuestStack from './GuestStack';
 import AppSwitch from './AppSwitch';
 import AuthStack from './AuthStack';
-import {TransitionConfiguration} from './TransitionElement';
 
 const MainStack = createStackNavigator({
     Dashboard: {
@@ -200,4 +199,4 @@ const MainTabs = createBottomTabNavigator({
 export default createStackNavigator({
     MainTabs,
     Study
-}, {headerMode: 'none', transitionConfig: TransitionConfiguration})
+}, {headerMode: 'none'})

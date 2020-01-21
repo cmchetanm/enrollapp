@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import commonColor from '../../theme/variables/commonColor';
 import Callout from '../../components/Callout';
 import UTIL_STYLES from '../../styles/common';
-import {addToList, editInlist, removeFromList, sortList, print} from '../../utils/list';
+import {sortListAb} from '../../utils/list';
 
 
 class Team extends PureComponent {
@@ -26,7 +26,7 @@ class Team extends PureComponent {
         const {contacts, navigation} = this.props;
         return (<Container>
                 <Content>
-                    {contacts.length > 0 ? sortList(contacts, 'fullName').map(contact =>
+                    {contacts.length > 0 ? sortListAb(contacts, 'fullName').map(contact =>
                         <ListItem icon key={contact.id} onPress={() => {
                             navigation.navigate('Contact', {contact});
                         }}>
