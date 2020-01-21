@@ -1,15 +1,17 @@
 #json.old do
 #  json.array! @studies, partial: 'api/studies/study', as: :study
 #end
-#json.array! @studies, partial: 'api/studies/study', as: :study
+# :inclusion_criteria, :exclusion_criteria,
+#  :name, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization, :duration,
+#              :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact, :cro_contact,
+#              :budget, :enrolled_or_committed, :comments, :travel_parking_costs
 json.study do
   json.array! @studies do |study|
-    #puts 'index study.attributes'
-    #puts study.attributes
+    study_version = study.version_for(@user)
     json.id study.id
     json.inclusion_criteria study.inclusion_criteria
     json.exclusion_criteria study.exclusion_criteria
-    json.name study.name
+    json.name study_version ? study_version.name : study.name
     json.protocol study.protocol
     json.agent study.agent
     json.mechanism study.mechanism
@@ -27,9 +29,6 @@ json.study do
     json.comments study.comments
     json.travel_parking_costs study.travel_parking_costs
     study_topic = @topics.detect {|t| t.id == study.topic_id}
-    study_version = study.version_for(@user)
-    puts 'study_version.attributes'
-    puts study_version ? study_version.attributes : 'nope'
     study_shares = @shares.select {|t| t.study_id == study.id}
     study_sponsor = @sponsors.detect {|s| s.id == study_topic.sponsor_id}
     this_user_share = study_shares.detect {|t| t.user_id == @user.id}
