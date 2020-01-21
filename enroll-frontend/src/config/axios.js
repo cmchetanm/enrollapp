@@ -1,4 +1,4 @@
-import {API} from '../../settings.json';
+// import {API} from '../../settings.json';
 import snakeCaseKeys from 'snakecase-keys';
 import axios from 'axios';
 import {Alert} from 'react-native';
