@@ -1,9 +1,11 @@
-json.old do
-  json.array! @studies, partial: 'api/studies/study', as: :study
-end
+#json.old do
+#  json.array! @studies, partial: 'api/studies/study', as: :study
+#end
 #json.array! @studies, partial: 'api/studies/study', as: :study
 json.study do
   json.array! @studies do |study|
+    puts 'index study'
+    puts study
     json.id study.id
     json.inclusion_criteria study.inclusion_criteria
     json.exclusion_criteria study.exclusion_criteria
