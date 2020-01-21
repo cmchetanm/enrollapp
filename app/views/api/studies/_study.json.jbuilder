@@ -6,4 +6,9 @@ json.extract! study.version_for(current_api_user) || study, :inclusion_criteria,
               :name, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization, :duration,
               :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact, :cro_contact,
               :budget, :enrolled_or_committed, :comments, :travel_parking_costs
-puts JSON.pretty_generate(json)
+puts 'study.version_for(current_api_user)'
+puts study.version_for(current_api_user)
+puts 'study'
+puts study
+puts 'json.attributes()'
+puts json.attributes()
