@@ -9,14 +9,14 @@ json.extract! study.version_for(current_api_user) || study, :inclusion_criteria,
 puts 'study.version_for(current_api_user)'
 puts study.version_for(current_api_user)
 puts 'study.version_for(current_api_user).attributes()'
-puts study.version_for(current_api_user).attributes()
+puts study.version_for(current_api_user) ? study.version_for(current_api_user).attributes() : 'nope'
 puts 'study.version_for(current_api_user).attributes'
-puts study.version_for(current_api_user).attributes
+puts study.version_for(current_api_user) ? study.version_for(current_api_user).attributes : 'nope'
 puts 'study'
 puts study
 puts 'study.attributes'
-puts study.attributes
+puts study ? study.attributes : 'nope'
 puts 'study.attributes()'
-puts study.attributes()
+puts study ? study.attributes() : 'nope'
 puts 'json.attributes'
 puts json.attributes
