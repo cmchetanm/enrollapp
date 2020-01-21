@@ -34,9 +34,9 @@ class SignIn extends PureComponent {
         }
     };
 
-    focusNextField = id => {
-        this.inputs[id]._root.focus();
-    };
+    // focusNextField = id => {
+    //     this.inputs[id]._root.focus();
+    // };
 
     render() {
         const {stage, email, loading, password, recontactMe} = this.state;
@@ -72,7 +72,7 @@ class SignIn extends PureComponent {
                                     onChangeText={text =>
                                         this.setState({email: text})
                                     }
-                                    onSubmitEditing={() => this.focusNextField('password')}
+                                    onSubmitEditing={() => console.log('should focus next maybe "password"')}
                                     placeholder='Please Enter Your Email Address'
                                     ref={input => {
                                         this.inputs.email = input;
