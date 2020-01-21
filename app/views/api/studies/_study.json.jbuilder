@@ -8,7 +8,15 @@ json.extract! study.version_for(current_api_user) || study, :inclusion_criteria,
               :budget, :enrolled_or_committed, :comments, :travel_parking_costs
 puts 'study.version_for(current_api_user)'
 puts study.version_for(current_api_user)
+puts 'study.version_for(current_api_user).attributes()'
+puts study.version_for(current_api_user).attributes()
+puts 'study.version_for(current_api_user).attributes'
+puts study.version_for(current_api_user).attributes
 puts 'study'
 puts study
-puts 'json.attributes()'
-puts json.attributes()
+puts 'study.attributes'
+puts study.attributes
+puts 'study.attributes()'
+puts study.attributes()
+puts 'json.attributes'
+puts json.attributes
