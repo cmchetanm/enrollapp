@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton, Platform, TouchableHighlight, Dimensions, View} from 'react-native';
+import {Button as DefaultButton, Platform, TouchableOpacity, Dimensions, View} from 'react-native';
 import {Button, Container, Content, Form, Icon, Input, Item, Label, Picker, Text} from 'native-base';
 import { Dropdown } from 'react-native-material-dropdown';
 import {fetchStudies} from '../../redux/actions/studies';
@@ -54,13 +54,13 @@ class ManageShares extends PureComponent {
           height: 70
         },
         headerRight: (() => (
-            navigation.getParam('contactsLength') > 0 ? <TouchableHighlight
+            navigation.getParam('contactsLength') > 0 ? <TouchableOpacity
                 disabled={navigation.getParam('saveButtonDisabled')}
                 onPress={navigation.getParam('handleSubmit')}
                 style={{ marginTop: 12, marginRight: 12 }}
             >
                 <Text style={{ fontSize: 17, color: '#FFFFFF' }}>Invite</Text>
-            </TouchableHighlight> : null
+            </TouchableOpacity> : null
         ))
     });
 
@@ -219,7 +219,7 @@ class ManageShares extends PureComponent {
                         be immediately sent to all newly added team contacts.
                     </Callout>
                 </Content>}
-                {filterContacts.length > 0 ? 
+                {filterContacts.length > 0 ?
                 <Form>
                     <Item>
                         <Dropdown

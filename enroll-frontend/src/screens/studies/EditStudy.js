@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton, TouchableHighlight} from 'react-native';
+import {Button as DefaultButton, TouchableOpacity} from 'react-native';
 import {ActionSheet, Button, Container, Content, Footer, Root, Text} from 'native-base';
 import {resetStudy, updateStudy} from '../../redux/actions/studies';
 import {axiosAlert} from '../../utils/axios';
@@ -22,20 +22,20 @@ class EditStudy extends PureComponent {
             height: 70
         },
         headerRight: (() => (
-            <TouchableHighlight
+            <TouchableOpacity
                 onPress={() => navigation.getParam('handleSubmit')()}
                 style={{ marginTop: 12, marginRight: 12 }}
             >
                 <Text style={{ color: '#FFFFFF' }}>Save</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         )),
         headerLeft: (() => (
-            <TouchableHighlight
+            <TouchableOpacity
                 onPress={() => navigation.goBack()}
                 style={{ marginTop: 12, marginRight: 12 }}
             >
                 <Text style={{ color: '#FFFFFF' }}>Cancel</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         ))
     });
     // static navigationOptions = ({navigation}) => ({

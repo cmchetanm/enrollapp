@@ -251,7 +251,7 @@ class StudyView extends PureComponent {
                 <Button
                 block onPress={() => navigation.navigate('ManageContacts', {study})} primary transparent>
                     <Icon name='add' />
-                    <Text style={{ marginLeft: -20 }}>Share this Study with a Colleage</Text>
+                    <Text style={{ marginLeft: -20 }}>Invite a colleage to this study</Text>
                 </Button>
             </ListItem>
             }

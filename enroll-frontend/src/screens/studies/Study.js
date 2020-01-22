@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton, SafeAreaView, TouchableHighlight, View} from 'react-native';
+import {Button as DefaultButton, SafeAreaView, TouchableOpacity, View} from 'react-native';
 import {Badge, Button, Body, Icon, Left, ListItem, Right, Text} from 'native-base';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
@@ -41,12 +41,12 @@ class Study extends PureComponent {
           height: 70
         },
         headerRight: (() => navigation.state.params.study.role === ContactRole.PI && (
-            <TouchableHighlight
+            <TouchableOpacity
                 onPress={() => navigation.navigate('EditStudy', {study: navigation.state.params.study})}
                 style={{ marginTop: 12, marginRight: 12 }}
             >
                 <Text style={{ color: '#FFFFFF' }}>Edit</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         ))
     });
 

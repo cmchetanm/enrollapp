@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Alert, Button as DefaultButton, TouchableHighlight} from 'react-native';
+import {Alert, Button as DefaultButton, TouchableOpacity} from 'react-native';
 import {Button, ActionSheet, Container, Content, Footer, Left, List, ListItem, Text, Root} from 'native-base';
 import {deleteProfile, signOut} from '../../redux/actions/authentication';
 import PropTypes from 'prop-types';
@@ -29,12 +29,12 @@ class Profile extends PureComponent {
           height: 70
         },
         headerRight: (() => (
-            <TouchableHighlight
+            <TouchableOpacity
                 onPress={() => navigation.navigate('EditProfile')}
                 style={{ marginTop: 12, marginRight: 12 }}
             >
                 <Text style={{ color: '#FFFFFF' }}>Edit Profile</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         ))
     });
 
@@ -137,7 +137,7 @@ class Profile extends PureComponent {
                                 </ListItem>
                             </List>
                             <List style={ListStyleEnds}>
-                                <TouchableHighlight
+                                <TouchableOpacity
                                     style={{ justifyContent: 'center', alignSelf: 'center', height: 40 }}
                                     onPress={() => {
                                         navigation.navigate('SignIn');
@@ -147,7 +147,7 @@ class Profile extends PureComponent {
                                     <Text style={{ color: '#9F0000' }}>
                                         Logout
                                     </Text>
-                                </TouchableHighlight>
+                                </TouchableOpacity>
                             </List>
                         </Background>
                     </Content>

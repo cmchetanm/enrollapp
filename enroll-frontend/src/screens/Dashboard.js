@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import { findIndex } from 'lodash';
 import PropTypes from 'prop-types';
-import {Button as DefaultButton, SectionList, Dimensions, TouchableHighlight, Platform } from 'react-native';
+import {Button as DefaultButton, SectionList, Dimensions, TouchableOpacity, Platform } from 'react-native';
 import {Body, Button, Container, Content, Footer, Icon, Left, ListItem, Right, Text, View, ScrollView} from 'native-base';
 import styled from 'styled-components/native';
 import {setFCMToken, signOut} from '../redux/actions/authentication';
@@ -29,7 +29,7 @@ class Dashboard extends PureComponent {
         return (
             <>
                 {arg.item.index !== 0 && <Underline />}
-                <TouchableHighlight
+                <TouchableOpacity
                     onPress={() => {
                         const studyIndex = findIndex(studies, s => s.id === arg.item.id);
                         const study = studies[studyIndex];
@@ -45,7 +45,7 @@ class Dashboard extends PureComponent {
                         </ItemRight>
                     {/*<Icon type="FontAwesome" name="right" style={{ alignSelf: 'flex-end' }} />*/}
                     </ItemContainer>
-                </TouchableHighlight>
+                </TouchableOpacity>
                 <></>
             </>
         );

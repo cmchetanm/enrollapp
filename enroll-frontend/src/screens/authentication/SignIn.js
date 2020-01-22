@@ -21,7 +21,7 @@ class SignIn extends PureComponent {
         if (pw) {
             dispatch(signIn(this.state)).then(response => {
                 this.setState({loading: false});
-    
+
                 if (response.error) {
                     axiosAlert('Authentication Failed', response.error);
                 }
@@ -57,7 +57,7 @@ class SignIn extends PureComponent {
                                         this.setState({password: text})
                                     }
                                     onSubmitEditing={this.handleSubmit}
-                                    placeholder='Password'
+                                    placeholder='Please Enter Your Password'
                                     ref={input => {
                                         this.inputs.password = input;
                                     }}
@@ -135,7 +135,7 @@ class SignIn extends PureComponent {
                             >
                                 <Text>Account locked? Unlock</Text>
                             </Button>} */}
- 
+
                             {/* <Button*/}
                             {/*    block*/}
                             {/*    onPress={() => {*/}

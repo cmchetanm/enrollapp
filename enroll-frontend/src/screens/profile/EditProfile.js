@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton, TouchableHighlight, Text} from 'react-native';
+import {Button as DefaultButton, TouchableOpacity, Text} from 'react-native';
 import {Container, Content} from 'native-base';
 import {updateProfile} from '../../redux/actions/authentication';
 import {axiosAlert} from '../../utils/axios';
@@ -21,12 +21,12 @@ class EditProfile extends PureComponent {
           height: 70
         },
         headerRight: (() => (
-            <TouchableHighlight
+            <TouchableOpacity
                 onPress={navigation.getParam('handleSubmit')}
                 style={{ marginTop: 12, marginRight: 12 }}
             >
                 <Text style={{ fontSize: 17, color: '#FFFFFF' }}>Save</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         ))
     });
 

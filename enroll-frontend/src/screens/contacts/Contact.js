@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton, TouchableHighlight} from 'react-native';
+import {Button as DefaultButton, TouchableOpacity} from 'react-native';
 import {ActionSheet, Button, Container, Content, Footer, Root, Text} from 'native-base';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';

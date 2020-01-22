@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import UTIL_STYLES from '../../styles/common';
 import StudyView from '../../components/studies/StudyView';
-import {Button as DefaultButton, TouchableHighlight} from 'react-native';
+import {Button as DefaultButton, TouchableOpacity} from 'react-native';
 import {resetCompareList} from '../../redux/actions/comparison';
 import {Container, Content, Footer, FooterTab, Button, Text} from 'native-base';
 
@@ -20,12 +20,12 @@ class Comparison extends PureComponent {
           height: 70
         },
         headerRight: (() => (
-            <TouchableHighlight
+            <TouchableOpacity
                 onPress={navigation.getParam('stopComparison')}
                 style={{ marginTop: 12, marginRight: 12 }}
             >
                 <Text style={{ fontSize: 17, color: '#FFFFFF' }}>End Comparison</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
         ))
     });
 
