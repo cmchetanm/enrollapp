@@ -27,14 +27,14 @@ json.ph do
   puts varr
   puts 'varr should have been printed'
 end
-if varr.nil?
-  puts 'extracting user'
-  json.extract! user,:full_name, :first_name, :last_name, :email
-  puts 'extracted user'
-else
+unless varr.nil?
   puts 'extracting varr.first'
   json.extract! varr.first,:full_name, :first_name, :last_name, :email
   puts 'extracted varr.first'
+else
+  puts 'extracting user'
+  json.extract! user,:full_name, :first_name, :last_name, :email
+  puts 'extracted user'
 end
 json.phone_number number_to_phone(user.phone_number)
 json.site user.site_for(user)
