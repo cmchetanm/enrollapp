@@ -4,6 +4,8 @@ module Api
 
     def index
       @sites = Share.select(:site_id).where(user_id: current_api_user)
+      puts 'in controller @sites are'
+      puts @sites
       @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
       puts 'in controller users are'
       puts @users

@@ -26,10 +26,8 @@ json.ph do
   puts varr
 end
 unless varr.first.nil?
-  puts 'extracting varr.first'
   json.extract! varr.first,:full_name, :first_name, :last_name, :email
 else
-  puts 'extracting user'
   json.extract! user,:full_name, :first_name, :last_name, :email
 end
 json.phone_number number_to_phone(user.phone_number)
