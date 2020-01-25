@@ -27,7 +27,7 @@ json.ph do
   puts varr
   puts 'varr should have been printed'
 end
-unless varr.nil?
+unless varr.first.nil?
   puts 'extracting varr.first'
   json.extract! varr.first,:full_name, :first_name, :last_name, :email
   puts 'extracted varr.first'
