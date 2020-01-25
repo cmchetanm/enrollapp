@@ -3,7 +3,7 @@ module Api
     before_action :set_client
 
     def index
-      @shares = Share.select(:site_id).where(user_id: current_api_user)
+      @shares = Share.where(user_id: current_api_user)
       puts 'in controller @@shares are'
       puts @shares
       @sites = []
