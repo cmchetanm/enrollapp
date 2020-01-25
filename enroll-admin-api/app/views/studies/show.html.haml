@@ -10,7 +10,7 @@
 %h1= yield :title
 
 .secondary.callout
-  .grid-x.grid-margin-x.small-up-2.medium-up-3
+  .grid-x.grid-margin-x.small-up-2.medium-up-4
     .cell
       %small.subheader Create Date
       %div= l @study.created_at, format: :short
@@ -20,6 +20,10 @@
     .cell
       %small.subheader Topic
       %div= link_to @study.topic.name, @study.topic
+    .cell
+      %small.subheader Icon
+      %div
+        %img{ :src => @study.study_icon, :alt => "Should be the Icon", :height => 50, :width => 50 }
 
 %br
 

@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
-import {Alert, Button as DefaultButton, TouchableOpacity} from 'react-native';
+import {Alert, Button as DefaultButton, TouchableOpacity, Linking} from 'react-native';
 import {Button, ActionSheet, Container, Content, Footer, Left, List, ListItem, Text, Root} from 'native-base';
 import {deleteProfile, signOut} from '../../redux/actions/authentication';
+import Dialog, { DialogContent, SlideAnimation, DialogTitle, DialogFooter, DialogButton } from 'react-native-popup-dialog';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
 import UTIL_STYLES from '../../styles/common';
@@ -40,14 +41,13 @@ class Profile extends PureComponent {
 
     constructor(props) {
         super(props);
-
-        const peers = props.contacts.peers;
         const id = props.profile.id;
-        const me = peers.find(c => c.id === id);
-        this.siteName = me.site.name;
+        const myStudy = props.studies.find(st => st.shares.map(sh => sh.user.id).includes(id));
+        const myShare = myStudy.shares.find(sh => sh.user.id === id);
+        this.siteName = myShare.user.site.name;
     }
 
-    state = {loading: false};
+    state = {loading: false, disclaimerPopupOpen: false};
 
     deleteAccount = () => {
         const {dispatch, navigation} = this.props;
@@ -77,8 +77,6 @@ class Profile extends PureComponent {
         const lastNameText = profile ? profile.lastName : '';
         const emailText = profile ? profile.email : '';
         const phoneNumberText = profile ? profile.phoneNumber : '';
-        console.log('phoneNumberText');
-        console.log(phoneNumberText);
 
 
         return this.state.loading ? <Loading/>
@@ -130,10 +128,15 @@ class Profile extends PureComponent {
                             </List>
                             <List style={ListStyleEnds}>
                                 <ListItem style={CenterListItemStyle}>
-                                    <Text style={{ alignSelf: 'center' }}>Disclaimer</Text>
+                                    <Text
+                                        onPress={() => this.setState({ disclaimerPopupOpen: true })}
+                                        style={{ alignSelf: 'center' }}
+                                    >
+                                        Disclaimer
+                                    </Text>
                                 </ListItem>
                                 <ListItem style={CenterListItemStyle}>
-                                    <Text>Contact us</Text>
+                                    <Text onPress={() => Linking.openURL(`mailto:${'info@refuahsolutions.com'}`)}>Contact us</Text>
                                 </ListItem>
                             </List>
                             <List style={ListStyleEnds}>
@@ -150,6 +153,37 @@ class Profile extends PureComponent {
                                 </TouchableOpacity>
                             </List>
                         </Background>
+                        <Dialog
+                            visible={this.state.disclaimerPopupOpen}
+                            dialogAnimation={new SlideAnimation({
+                                    slideFrom: 'bottom',
+                                })
+                            }
+                            dialogTitle={<DialogTitle title="Disclaimer" />}
+                            footer={
+                                <DialogFooter>
+                                    <DialogButton
+                                        text="OK"
+                                        onPress={() => this.setState({ disclaimerPopupOpen: false })}
+                                    />
+                                </DialogFooter>
+                            }
+                        >
+                            <DialogContent>
+                                <Text>
+                                {'Enroll does not require or advise the inputting of confidential medical patient ' +
+                                'information into the App.\n\nWhen using the App, you agree to abide by all governing ' +
+                                'privacy legislation in your jurisdiction, including but not limited, any laws related ' +
+                                'to the protection of patient information. For clarity, you agree to assume full ' +
+                                'responsibility of your actions to the extent that Refuah Solutions Ltd (the developer ' +
+                                'of Enroll)  is not liable in any way for any privacy breaches that arise as a result ' +
+                                'of your use of the App.\n\nYou further agree to fully indemnify (Refuah), legal costs ' +
+                                'included, from any costs it incurs in the event that you are alleged, in a legal ' +
+                                'proceeding, to have committed a breach of any provision of such applicable legislation ' +
+                                'or in law as a result of your use of the App.'}
+                                </Text>
+                            </DialogContent>
+                        </Dialog>
                     </Content>
                 </Container>
             </Root>;
@@ -164,7 +198,7 @@ Profile.propTypes = {
     profile: PropTypes.object.isRequired
 };
 
-const mapStateToProps = ({authentication: {profile}, contacts}) => ({profile, contacts});
+const mapStateToProps = ({authentication: {profile}, contacts, studies: {list}}) => ({profile, contacts, studies: list});
 
 export default connect(mapStateToProps)(Profile);
 

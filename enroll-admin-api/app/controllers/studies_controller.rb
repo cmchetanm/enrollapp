@@ -44,7 +44,7 @@ class StudiesController < ApplicationController
   private
 
   def set_study
-    @study = Study.find(params[:id])
+    @study = Study.find params.required(:id)
   end
 
   def study_params

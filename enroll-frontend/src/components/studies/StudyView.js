@@ -33,6 +33,10 @@ import {print} from '../../utils/list';
 class StudyView extends PureComponent {
     constructor(props) {
         super(props);
+        const id = props.profile.id;
+        const thisShares = props.study.shares;
+        const myShare = thisShares.find(c => c.user.id === id);
+        this.mySite = myShare.user.site.id;
         this.messageField = null;
     }
 
@@ -40,7 +44,11 @@ class StudyView extends PureComponent {
 
     filterShares = memoize((shares, role) => {
         return shares.filter(share => {
-            const returnValue = share.role === role || role === ContactRole.OTHER && !Object.keys(ContactRole).includes(share.role);
+            const returnValue =
+                (share.role === role
+                || role === ContactRole.OTHER
+                && !Object.keys(ContactRole).includes(share.role))
+                && share.user.site.id === this.mySite;
             return returnValue;
         });
     });
@@ -54,6 +62,8 @@ class StudyView extends PureComponent {
 
     authorizedToViewTeam = role => {
         const myRole = this.props.study.role;
+        return true;
+        
 
         if (myRole === ContactRole.PI) {
             return true;
@@ -403,4 +413,6 @@ StudyView.propTypes = {
     study: PropTypes.object.isRequired
 };
 
-export default connect()(StudyView);
+const mapStateToProps = ({authentication: {profile}, contacts}) => ({profile, contacts});
+
+export default connect(mapStateToProps)(StudyView);

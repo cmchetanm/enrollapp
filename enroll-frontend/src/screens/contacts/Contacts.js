@@ -47,7 +47,7 @@ class Team extends PureComponent {
                 </Content>
                 <Fab
                     onPress={() => navigation.navigate('ManageContacts')}
-                    position='topRight' style={{backgroundColor: commonColor.brandSuccess}}>
+                    position='bottomRight' style={{backgroundColor: commonColor.brandSuccess}}>
                     <Text style={UTIL_STYLES.FAB_TEXT}>Invite</Text>
                 </Fab>
             </Container>

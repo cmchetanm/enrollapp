@@ -39,7 +39,7 @@ class Dashboard extends PureComponent {
                     <ItemContainer>
                         <ItemLogo source={{ uri: `${arg.item.logo}` }} />
                         <ItemRight>
-                            <ItemTitle>{arg.item.title}</ItemTitle>
+                            <ItemTitle numberOfLines={1}>{arg.item.title}</ItemTitle>
                             <ItemSecondary>{arg.item.secondary}</ItemSecondary>
                             <ItemSecondary>{arg.item.footer}</ItemSecondary>
                         </ItemRight>
@@ -76,8 +76,8 @@ class Dashboard extends PureComponent {
                 index: sections[topicIndex].data.length,
                 title: study.name || 'STUDY',
                 id: study.id || '11111',
-                secondary: study.sponsorName || 'GENFIT | GFT600-333-1',
-                footer: study.protocol || 'Kinamonim',
+                secondary: study.protocol || 'GENFIT | GFT600-333-1',
+                footer: study.agent || 'Kinamonim',
                 logo: study.studyIcon || 'https://image.shutterstock.com/image-vector/sign-button-free-icon-260nw-1039733560.jpg',
                 icon: study.icon || 'pills'
             });
@@ -153,6 +153,7 @@ const HeaderText = styled.Text`
 const ItemContainer = styled.View`
     display: flex;
     flex-direction: row;
+    max-width: 75%;
 `;
 
 const Underline = styled.View`

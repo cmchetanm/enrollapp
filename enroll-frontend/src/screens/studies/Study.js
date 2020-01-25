@@ -16,16 +16,15 @@ import {print} from '../../utils/list';
 class Study extends PureComponent {
     static navigationOptions = ({navigation}) => ({
         headerTitle: (() => {
-            const name = navigation.state.params.study.name.length > 15 ?
-                navigation.state.params.study.name.slice(0, 12) + '...' :
-                navigation.state.params.study.name;
+            const name = navigation.state.params.study.name;
             return (
                 <View style={{
+                    maxWidth: '70%',
                     marginLeft: Platform.OS === 'ios' ? name.length * 5 - 50 : 0,
                     flexDirection: 'row'
                 }}>
                     <ItemLogo source={{ uri: `${navigation.state.params.study.studyIcon}` }} />
-                    <Text style={{
+                    <Text numberOfLines={1} style={{
                         marginTop: 29,
                         fontSize: 22,
                         color: '#FFFFFF'

@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     }
 
     resources :topics, only: :index
+    resources :users
     resources :studies, except: %i[new edit create]
     resources :shares, only: %i[create destroy]
     resources :contacts, except: %i[new edit]
