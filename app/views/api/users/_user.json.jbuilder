@@ -25,11 +25,16 @@ json.ph do
   varr = user.user_associations.where(creator: current_api_user)
   puts 'in do varr is:'
   puts varr
+  puts 'varr should have been printed'
 end
 if varr.nil?
+  puts 'extracting user'
   json.extract! user,:full_name, :first_name, :last_name, :email
+  puts 'extracted user'
 else
+  puts 'extracting varr.first'
   json.extract! varr.first,:full_name, :first_name, :last_name, :email
+  puts 'extracted varr.first'
 end
 json.phone_number number_to_phone(user.phone_number)
 json.site user.site_for(user)
