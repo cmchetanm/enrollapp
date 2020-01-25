@@ -27,7 +27,6 @@ json.ph do
 end
 unless varr.first.nil?
   json.extract! varr.first,:full_name, :first_name, :last_name, :email
-  json.site varr.first.site_for(varr.first)
 else
   json.extract! user,:full_name, :first_name, :last_name, :email
   json.site user.site_for(user)

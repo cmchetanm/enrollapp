@@ -9,18 +9,6 @@ class Contact < ApplicationRecord
 
   before_create :link_to_user
 
-  def site_for(user)
-    puts 'contact'
-    puts user
-    share = Share.find_by(user_id: user.id)
-    puts 'share'
-    puts share
-    site = Site.find_by(id: share.site_id)
-    puts 'site'
-    puts site
-    @site_for ||= site
-  end
-
   private
 
   def link_to_user
