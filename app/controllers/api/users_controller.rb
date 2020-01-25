@@ -3,11 +3,15 @@ module Api
     before_action :set_client
 
     def index
-      @sites = Share.select(:site_id).where(user_id: current_api_user)
-      puts 'in controller @sites are'
+      @shares = Share.select(:site_id).where(user_id: current_api_user)
+      puts 'in controller @@shares are'
+      puts @shares
+      @sites = []
+      @shares.each do |share|
+        @sites.push(share[:site_id])
+      end
+      puts 'sites are'
       puts @sites
-      puts 'frist @site is'
-      puts @sites[0].attributes
       @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
       puts 'in controller users are'
       puts @users
