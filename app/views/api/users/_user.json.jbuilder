@@ -17,8 +17,6 @@
 #json.phone_number number_to_phone(user.phone_number)
 #json.site user.site_for(user)
 
-puts 'in jbuilder user is'
-puts user
 json.id user.id
 varr = 'anything'
 json.ph do
