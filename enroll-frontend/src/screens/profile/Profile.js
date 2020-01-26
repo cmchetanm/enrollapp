@@ -227,6 +227,9 @@ const Background = styled.View`
 `;
 
 const IntialsContainer = styled.View`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #FFFFFF;
     width: 100px;
     height: 100px;
@@ -241,7 +244,6 @@ const IntialsContainer = styled.View`
 const IntialsText = styled.Text`
     font-size: 40px;
     margin: 20px;
-    margin-left: 25px;
     color: #3F51B5
 `;
 

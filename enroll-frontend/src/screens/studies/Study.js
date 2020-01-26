@@ -20,7 +20,7 @@ class Study extends PureComponent {
             return (
                 <View style={{
                     maxWidth: '70%',
-                    marginLeft: Platform.OS === 'ios' ? name.length * 5 - 50 : 0,
+                    marginLeft: Platform.OS === 'ios' ? -50 : 0,
                     flexDirection: 'row'
                 }}>
                     <ItemLogo source={{ uri: `${navigation.state.params.study.studyIcon}` }} />

@@ -32,7 +32,7 @@ class EditStudy extends PureComponent {
         headerLeft: (() => (
             <TouchableOpacity
                 onPress={() => navigation.goBack()}
-                style={{ marginTop: 12, marginRight: 12 }}
+                style={{ marginTop: 12, marginRight: 12, marginLeft: Platform.OS === 'ios' ? 12 : 0 }}
             >
                 <Text style={{ color: '#FFFFFF' }}>Cancel</Text>
             </TouchableOpacity>
