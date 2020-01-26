@@ -37,6 +37,8 @@ json.study do
     json.topic study_topic
     json.shares do
       json.array! study_shares do |share|
+        puts 'share!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+        puts share
         json.extract! share, :id, :role
         json.user share.user, partial: 'api/users/user', as: :user
       end

@@ -8,13 +8,8 @@ module Api
       @shares = []
       @share = nil
       @studies.each_with_index do |study, i|
-        puts 'in create'
         site_id = study.site_for(current_api_user)
-        puts 'got site'
-        puts site_id
         share = Share.find_or_initialize_by(study_id: study.id, user: @users[i])
-        puts 'got share'
-        puts share
         share.assign_attributes(site_id: site_id, role: @roles[i])
         @shares.push(share)
         @share = share
@@ -46,7 +41,6 @@ module Api
 
     def set_study
       if params[:shares].kind_of?(Array)
-        puts 'its an array'
         @studies = []
         @roles = []
         params[:shares].each do |sharestring|
@@ -55,11 +49,8 @@ module Api
           @studies.push(study)
           @roles.push(share["role"])
         end
-        puts @studies
       else
-        puts 'its a single'
         @study = StudyAuthenticator.new(current_api_user).find_one(params[:study_id])
-        puts @study
       end
     end
 
