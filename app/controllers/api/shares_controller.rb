@@ -23,7 +23,7 @@ module Api
         end
       end
       if onesuccess
-        render :show, status: :created
+        render shares: @shares, status: :created
       else
         render json: {errors: @share.errors.full_messages}, status: :unprocessable_entity
       end
@@ -43,8 +43,6 @@ module Api
       if params[:shares].kind_of?(Array)
         @studies = []
         @roles = []
-        puts 'is array'
-        puts params[:shares]
         params[:shares].each do |sharestring|
           share = JSON.parse(sharestring)
           study = StudyAuthenticator.new(current_api_user).find_one(share["study_id"])
