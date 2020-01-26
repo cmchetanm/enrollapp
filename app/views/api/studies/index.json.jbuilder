@@ -41,6 +41,7 @@ json.study do
         puts share.attributes
         json.extract! share, :id, :role
         json.user share.user, partial: 'api/users/user', as: :user
+        json.site share.site, partial: 'api/sites/site', as: :site
       end
     end
   end

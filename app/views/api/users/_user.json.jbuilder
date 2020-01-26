@@ -29,4 +29,4 @@ else
   json.extract! user,:full_name, :first_name, :last_name, :email
 end
 json.phone_number number_to_phone(user.phone_number)
-json.site user.site_for(user)
+#json.site user.site_for(user)
