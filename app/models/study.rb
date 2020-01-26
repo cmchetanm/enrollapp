@@ -26,7 +26,7 @@ class Study < ApplicationRecord
   private
 
   def my_share(user)
-    @my_share ||= Share.find_by(user_id: user.id, study_id: id)
+    @my_share ||= Share.find_by(user_id: user, study_id: id)
   end
 
   def format_criteria
