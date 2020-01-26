@@ -13,7 +13,7 @@ export const fetchPeers = () => ({
 
 
 export const fetchContacts = () => ({
-    type: CONTACT.GET_PEERS,
+    type: CONTACT.GET_CONTACTS,
     payload: {
         request: {
             url: '/contacts',

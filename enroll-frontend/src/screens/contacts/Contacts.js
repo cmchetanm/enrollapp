@@ -27,7 +27,7 @@ class Team extends PureComponent {
         const {contacts, navigation} = this.props;
         return (<Container>
                 <Content>
-                    {contacts.length > 0 ? sortListAb(contacts, 'fullName').map(contact =>
+                    {contacts.length > 0 ? sortListAb(contacts, c => c.fullName).map(contact =>
                         <ListItem icon key={contact.id} onPress={() => {
                             navigation.navigate('Contact', {contact});
                         }}>

@@ -17,11 +17,11 @@ export const loadUserData = () => dispatch => {
         }
     });
 
-    dispatch(fetchContacts()).then(res => {
-        if (res.error) {
-            axiosAlert('Unable to load study team directory.', res.error);
-        }
-    });
+    // dispatch(fetchContacts()).then(res => {
+    //     if (res.error) {
+    //         axiosAlert('Unable to load study team directory.', res.error);
+    //     }
+    // });
 
     dispatch(fetchPeers()).then(res => {
         if (res.error) {

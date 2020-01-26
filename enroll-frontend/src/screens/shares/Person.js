@@ -38,6 +38,7 @@ class Share extends PureComponent {
             axiosAlert('Unable to remove person.', response.error);
         }
         else {
+            print('what we do here is go back');
             navigation.goBack();
         }
     };

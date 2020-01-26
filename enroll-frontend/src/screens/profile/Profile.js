@@ -44,7 +44,7 @@ class Profile extends PureComponent {
         const id = props.profile.id;
         const myStudy = props.studies.find(st => st.shares.map(sh => sh.user.id).includes(id));
         const myShare = myStudy.shares.find(sh => sh.user.id === id);
-        this.siteName = myShare.user.site.name;
+        this.siteName = myShare.site.name;
     }
 
     state = {loading: false, disclaimerPopupOpen: false};

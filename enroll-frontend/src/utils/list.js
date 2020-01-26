@@ -9,11 +9,11 @@ export const sortList = (list, key) => list.slice().sort((a, b) => {
     return 0;
 });
 
-export const sortListAb = (list, key) => list.slice().sort((a, b) => {
-    if (a[key].toLowerCase() < b[key].toLowerCase()) {
+export const sortListAb = (list, getKey) => list.slice().sort((a, b) => {
+    if (getKey(a).toLowerCase() < getKey(b).toLowerCase()) {
         return -1;
     }
-    else if (a[key].toLowerCase() > b[key].toLowerCase()) {
+    else if (getKey(a).toLowerCase() > getKey(b).toLowerCase()) {
         return 1;
     }
 

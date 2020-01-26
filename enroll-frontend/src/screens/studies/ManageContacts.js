@@ -74,6 +74,14 @@ class ManageShares extends PureComponent {
                     contactsLength: this.filterContacts(this.props.contacts).length
                 });
             });
+        const id = props.profile.id;
+        print('manage contacts constructor study');
+        print(study);
+        const fullStudy = props.studies.find(s => s.id === study);
+        const thisShares = fullStudy.shares;
+        const myShare = thisShares.find(c => c.user.id === id);
+        this.mySite = myShare.site;
+        this.messageField = null;
     }
 
     componentDidMount() {
@@ -91,6 +99,7 @@ class ManageShares extends PureComponent {
     handleSubmit = async () => {
         this.setState({loading: true});
         const { invite, invites } = this.state;
+        const { studies } = this.props;
         const fullInvites = invites.slice();
         if (this.inviteReady()) {
             fullInvites.push(invite);
@@ -103,11 +112,22 @@ class ManageShares extends PureComponent {
                 role: inv.role
             };
         });
+        const fullShares = fullInvites.map(inv => {
+            return {
+                id: -1,
+                studyId: inv.study,
+                role: inv.role,
+                user: this.getContact(inv.contact),
+                site: this.mySite
+            };
+        });
         let response = null;
         try {
             const params = this.props.navigation.state.params;
             const study = params && params.study ? params.study.id : '';
-            response = await this.props.dispatch(createShares(shares, study));
+            print('manage contacts fullShares');
+            print(fullShares);
+            response = await this.props.dispatch(createShares(shares, fullShares));
         } catch (e) {
             print('error caught');
             print(e);
@@ -118,8 +138,11 @@ class ManageShares extends PureComponent {
             axiosAlert('Unable to update shares.', response.error);
         }
         else {
-            await this.props.dispatch(fetchStudies());
-            this.props.navigation.goBack();
+            print('fetching studies');
+            setTimeout(() => {
+                this.props.dispatch(fetchStudies());
+                this.props.navigation.goBack();
+            }, 200);
         }
     };
 
@@ -349,9 +372,10 @@ ManageShares.propTypes = {
     }).isRequired
 };
 
-const mapStateToProps = ({contacts, studies}) => ({
+const mapStateToProps = ({authentication: {profile}, contacts, studies}) => ({
     contacts: contacts.peers,
-    studies: studies.list
+    studies: studies.list,
+    profile
 });
 
 export default connect(mapStateToProps)(ManageShares);

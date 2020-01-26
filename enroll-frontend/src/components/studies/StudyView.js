@@ -28,7 +28,7 @@ import {TouchableOpacity} from 'react-native';
 import {createMessage} from '../../redux/actions/messages';
 import {axiosAlert} from '../../utils/axios';
 import {connect} from 'react-redux';
-import {print} from '../../utils/list';
+import {print, sortListAb} from '../../utils/list';
 
 class StudyView extends PureComponent {
     constructor(props) {
@@ -36,7 +36,7 @@ class StudyView extends PureComponent {
         const id = props.profile.id;
         const thisShares = props.study.shares;
         const myShare = thisShares.find(c => c.user.id === id);
-        this.mySite = myShare.user.site.id;
+        this.mySite = myShare.site.id;
         this.messageField = null;
     }
 
@@ -48,7 +48,7 @@ class StudyView extends PureComponent {
                 (share.role === role
                 || role === ContactRole.OTHER
                 && !Object.keys(ContactRole).includes(share.role))
-                && share.user.site.id === this.mySite;
+                && share.site.id === this.mySite;
             return returnValue;
         });
     });
@@ -271,7 +271,7 @@ class StudyView extends PureComponent {
                         <Text>{ContactRoleHumanPlural[role]}</Text>
                     </ListItem>
                     {this.filterShares(study.shares, role).length > 0 ? <List key={`${role}-contact`}>
-                        {this.filterShares(study.shares, role).map(share =>
+                        {sortListAb(this.filterShares(study.shares, role), s => s.user.fullName).map(share =>
                             <ListItem icon key={share.id} onPress={() =>
                                 navigation.navigate('Person', {share, study})}>
                                 <Left>
