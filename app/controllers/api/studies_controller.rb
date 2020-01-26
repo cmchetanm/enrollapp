@@ -9,6 +9,7 @@ module Api
       @topics = Topic.all.order(:name)
       @sponsors = Sponsor.all.order(:name)
       @shares = Share.all.order(:id)
+      @sites = Site.all.order(:id)
       @user = current_api_user
     end
 
