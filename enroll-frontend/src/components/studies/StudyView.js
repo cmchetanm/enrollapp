@@ -36,7 +36,7 @@ class StudyView extends PureComponent {
         const id = props.profile.id;
         const thisShares = props.study.shares;
         const myShare = thisShares.find(c => c.user.id === id);
-        this.mySite = myShare.site.id;
+        this.mySite = myShare && myShare.site && myShare.site.id;
         this.messageField = null;
     }
 
