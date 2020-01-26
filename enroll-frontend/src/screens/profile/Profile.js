@@ -69,7 +69,7 @@ class Profile extends PureComponent {
         const firstNameLetter = profile ? profile.firstName.slice(0, 1) : '';
         const lastNameLetter = profile ? profile.lastName.slice(0, 1) : '';
         return (firstNameLetter + lastNameLetter).toUpperCase();
-    }
+    };
 
     render() {
         const {profile, navigation, dispatch} = this.props;

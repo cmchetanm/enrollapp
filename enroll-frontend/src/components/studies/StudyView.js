@@ -48,7 +48,7 @@ class StudyView extends PureComponent {
                 (share.role === role
                 || role === ContactRole.OTHER
                 && !Object.keys(ContactRole).includes(share.role))
-                && share.site.id === this.mySite;
+                && share.site && share.site.id === this.mySite;
             return returnValue;
         });
     });
@@ -63,7 +63,7 @@ class StudyView extends PureComponent {
     authorizedToViewTeam = role => {
         const myRole = this.props.study.role;
         return true;
-        
+
 
         if (myRole === ContactRole.PI) {
             return true;
