@@ -37,9 +37,7 @@ json.study do
     json.topic study_topic
     json.shares do
       json.array! study_shares do |share|
-        puts 'share!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-        puts share.attributes
-        json.extract! share, :id, :role, :site_id
+        json.extract! share, :id, :role
         json.user share.user, partial: 'api/users/user', as: :user
         json.site @sites.detect {|s| s.id == share.site_id}
       end
