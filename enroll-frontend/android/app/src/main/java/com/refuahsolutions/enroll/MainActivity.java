@@ -1,4 +1,4 @@
-package com.pi;
+package com.refuahsolutions.enroll;
 
 import com.facebook.react.ReactActivity;
 import org.devio.rn.splashscreen.SplashScreen;
@@ -17,6 +17,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "PI";
+        return "Enroll";
     }
 }
