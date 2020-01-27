@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'PIEnroll' do
-  # Pods for PIEnroll
+target 'PI' do
+  # Pods for PI
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -31,7 +31,7 @@ target 'PIEnroll' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
 
-  target 'PIEnrollTests' do
+  target 'PITests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -39,10 +39,10 @@ target 'PIEnroll' do
   use_native_modules!
 end
 
-target 'PIEnroll-tvOS' do
-  # Pods for PIEnroll-tvOS
+target 'PI-tvOS' do
+  # Pods for PI-tvOS
 
-  target 'PIEnroll-tvOSTests' do
+  target 'PI-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
