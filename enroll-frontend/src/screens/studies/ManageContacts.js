@@ -43,7 +43,7 @@ const isOtherEnabled = role => {
 
 class ManageShares extends PureComponent {
     static navigationOptions = ({navigation}) => ({
-        headerTitle: 'Invite a Colleage',
+        headerTitle: 'Invite a Colleague',
         headerTintColor: '#FFFFFF',
         headerTitleStyle: {
           marginLeft: 15,
@@ -75,10 +75,13 @@ class ManageShares extends PureComponent {
                 });
             });
         const id = props.profile.id;
-        print('manage contacts constructor study');
-        print(study);
-        const fullStudy = props.studies.find(s => s.id === study);
-        const thisShares = fullStudy.shares;
+        let thisShares = [];
+        if (study) {
+            const fullStudy = props.studies.find(s => s.id === study);
+            thisShares = fullStudy.shares;
+        } else {
+            thisShares = props.studies.map(st => st.shares).flat();
+        }
         const myShare = thisShares.find(c => c.user.id === id);
         this.mySite = myShare.site;
         this.messageField = null;
@@ -125,8 +128,6 @@ class ManageShares extends PureComponent {
         try {
             const params = this.props.navigation.state.params;
             const study = params && params.study ? params.study.id : '';
-            print('manage contacts fullShares');
-            print(fullShares);
             response = await this.props.dispatch(createShares(shares, fullShares));
         } catch (e) {
             print('error caught');
@@ -148,6 +149,8 @@ class ManageShares extends PureComponent {
 
     filterContacts = (contacts, study) => {
         const fullStudy = this.props.studies.find(s => s.id === study);
+        print('----------------------------------------------------');
+        print(fullStudy);
         const userIdsToFromStudy = fullStudy ? fullStudy.shares.map(a => a.user.id) : [];
         const filteredInvites = this.state.invites.filter(inv => inv.study === study);
         const userIdsToExclude = userIdsToFromStudy.concat(filteredInvites.map(inv => inv.contact));
@@ -239,7 +242,7 @@ class ManageShares extends PureComponent {
                 {filterContacts.length > 0 && <Content padder>
                     <Callout>
                         A notification email with instructions on how to join the study will
-                        be immediately sent to all newly added team contacts.
+                        be immediately sent to all newly added directory contacts.
                     </Callout>
                 </Content>}
                 {filterContacts.length > 0 ?

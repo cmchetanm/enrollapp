@@ -23,7 +23,6 @@ class Study extends PureComponent {
                     marginLeft: Platform.OS === 'ios' ? -50 : 0,
                     flexDirection: 'row'
                 }}>
-                    <ItemLogo source={{ uri: `${navigation.state.params.study.studyIcon}` }} />
                     <Text numberOfLines={1} style={{
                         marginTop: 29,
                         fontSize: 22,

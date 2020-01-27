@@ -85,19 +85,19 @@ const AuthStack = createStackNavigator({
     Contacts: {
         screen: Contacts,
         navigationOptions: {
-            title: 'Team Directory'
+            title: 'Directory'
         }
     },
     Contact: {
         screen: Contact,
         navigationOptions: {
-            title: 'Team Contact'
+            title: 'Directory Contact'
         }
     },
     NewContact: {
         screen: NewContact,
         navigationOptions: {
-            title: 'New Team Contact'
+            title: 'New Directory Contact'
         }
     },
     EditContact: {
@@ -127,7 +127,7 @@ const AuthStack = createStackNavigator({
     Person: {
         screen: Person,
         navigationOptions: {
-            title: 'Team Contact'
+            title: 'Directory Contact'
         }
     },
     Profile: {

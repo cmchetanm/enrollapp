@@ -11,7 +11,7 @@ import {sortListAb} from '../../utils/list';
 
 class Team extends PureComponent {
     static navigationOptions = {
-        title: "Team",
+        title: "Directory",
         headerTintColor: '#FFFFFF',
         headerTitleStyle: {
           marginLeft: Platform.OS === 'ios' ? -90 : 72,
@@ -48,7 +48,7 @@ class Team extends PureComponent {
                 <Fab
                     onPress={() => navigation.navigate('ManageContacts')}
                     position='bottomRight' style={{backgroundColor: commonColor.brandSuccess}}>
-                    <Text style={UTIL_STYLES.FAB_TEXT}>Invite</Text>
+                    <Text style={UTIL_STYLES.FAB_TEXT}>Add</Text>
                 </Fab>
             </Container>
         );

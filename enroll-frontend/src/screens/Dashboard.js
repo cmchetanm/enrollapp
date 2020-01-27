@@ -8,7 +8,7 @@ import {setFCMToken, signOut} from '../redux/actions/authentication';
 import {connect} from 'react-redux';
 import firebase from 'react-native-firebase';
 import commonColor from '../theme/variables/commonColor';
-import { print } from '../utils/list';
+import { print, sortListAb } from '../utils/list';
 
 class Dashboard extends PureComponent {
     static navigationOptions = {
@@ -60,20 +60,20 @@ class Dashboard extends PureComponent {
     }
 
     studiesToSections = (studies) => {
-        const sections = [];
+        const unsortedSections = [];
         studies.forEach(study => {
-            let topicIndex = findIndex(sections, t => t.title === study.topic.name);
+            let topicIndex = findIndex(unsortedSections, t => t.title === study.topic.name);
             if (topicIndex === -1) {
-                topicIndex = sections.length;
-                sections.push({
+                topicIndex = unsortedSections.length;
+                unsortedSections.push({
                     data: [],
                     index: topicIndex,
                     title: study.topic.name,
                     id: study.topic.id,
                 });
             }
-            sections[topicIndex].data.push({
-                index: sections[topicIndex].data.length,
+            unsortedSections[topicIndex].data.push({
+                index: unsortedSections[topicIndex].data.length,
                 title: study.name || 'STUDY',
                 id: study.id || '11111',
                 secondary: study.protocol || 'GENFIT | GFT600-333-1',
@@ -82,6 +82,10 @@ class Dashboard extends PureComponent {
                 icon: study.icon || 'pills'
             });
         });
+        const sections = sortListAb(unsortedSections, s => s.title);
+        sections.forEach(sec => {
+            sec.data = sortListAb(sec.data, s => s.title);
+        })
         return sections;
     }
 

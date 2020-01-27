@@ -81,7 +81,7 @@ const MainStack = createStackNavigator({
     NewContact: {
         screen: NewContact,
         navigationOptions: {
-            title: 'New Team Contact'
+            title: 'New Directory Contact'
         }
     },
     ManageContacts: {
@@ -105,7 +105,7 @@ const MainStack = createStackNavigator({
     Person: {
         screen: Person,
         navigationOptions: {
-            title: 'Team Contact'
+            title: 'Directory Contact'
         }
     }
 });
@@ -114,19 +114,19 @@ const ContactsStack = createStackNavigator({
     Contacts: {
         screen: Contacts,
         navigationOptions: {
-            title: 'Team Directory'
+            title: 'Directory'
         }
     },
     Contact: {
         screen: Contact,
         navigationOptions: {
-            title: 'Team Contact'
+            title: 'Directory Contact'
         }
     },
     NewContact: {
         screen: NewContact,
         navigationOptions: {
-            title: 'New Team Contact'
+            title: 'New Directory Contact'
         }
     },
     EditContact: {
@@ -158,14 +158,14 @@ const MainTabs = createBottomTabNavigator({
         navigationOptions: {
             tabBarLabel: 'Studies',
             tabBarIcon: ({focused}) => (
-                <Icon name='pulse' style={iconStyle(focused)}/>
+                <Icon name='folder-open' style={iconStyle(focused)}/>
             )
         },
     },
     Contacts: {
         screen: ContactsStack,
         navigationOptions: {
-            tabBarLabel: 'Team',
+            tabBarLabel: 'Directory',
             tabBarIcon: ({focused}) => (
                 <Icon name='people' style={iconStyle(focused)}/>
             )
