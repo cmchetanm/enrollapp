@@ -256,12 +256,12 @@ class StudyView extends PureComponent {
         </Tab>;
 
     renderStudyTeam = (study, navigation) =>
-        <Tab activeTextStyle={{fontSize: 11}} heading='Contact & Share' textStyle={{fontSize: 12}}>
+        <Tab activeTextStyle={{fontSize: 11}} heading='Notify & Share' textStyle={{fontSize: 12}}>
             {this.authorizedToShare() && <ListItem style={{ alignSelf: 'center', margin: -10 }}>
                 <Button
                 block onPress={() => navigation.navigate('ManageContacts', {study})} primary transparent>
                     <Icon name='add' />
-                    <Text style={{ marginLeft: -20 }}>Share this study with a colleague to this study</Text>
+                    <Text style={{ marginLeft: -20 }}>Share this study with a colleague</Text>
                 </Button>
             </ListItem>
             }
