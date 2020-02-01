@@ -9,6 +9,7 @@ module Api
       puts @shares
       @sites = []
       @shares.each do |share|
+        puts share.attributes
         @sites.push(share[:site_id])
       end
       puts 'sites are'
@@ -16,6 +17,9 @@ module Api
       @users = User.where(id: Share.select(:user_id).where(site_id: @sites))
       puts 'in controller users are'
       puts @users
+      @users.each do |user|
+        puts user.attributes
+      end
     end
 
     def fcm_token
