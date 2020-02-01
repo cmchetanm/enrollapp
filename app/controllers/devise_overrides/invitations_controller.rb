@@ -5,6 +5,12 @@ module DeviseOverrides
     def update
       puts 'update'
     end
+    def new
+      puts 'new'
+    end
+    def edit
+      puts 'edit'
+    end
     # POST /resource/invitation
     def create
       puts 'create'
