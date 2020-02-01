@@ -3,6 +3,7 @@ module Api
     before_action :set_client
 
     def index
+      puts 'api users controller index'
       @shares = Share.where(user_id: current_api_user)
       puts 'in controller @@shares are'
       puts @shares
@@ -18,6 +19,7 @@ module Api
     end
 
     def fcm_token
+      puts 'api users controller fcm_tokem'
       current_api_user.fcm_tokens ||= {}
       current_api_user.fcm_tokens[@client_id] = params[:token]
 
@@ -31,6 +33,7 @@ module Api
     private
 
     def set_client
+      puts 'api users controller set_client'
       client_name = DeviseTokenAuth.headers_names[:client]
       @client_id = request.headers[client_name] || params[client_name]
     end

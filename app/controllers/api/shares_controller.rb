@@ -5,6 +5,7 @@ module Api
     before_action :set_share, only: :destroy
 
     def create
+      puts 'api shares controller create'
       @shares = []
       @share = nil
       @studies.each_with_index do |study, i|
@@ -30,6 +31,7 @@ module Api
     end
 
     def destroy
+      puts 'api shares controller destory'
       if @share.destroy!
         render :show, status: :ok
       else
@@ -40,6 +42,7 @@ module Api
     private
 
     def set_study
+      puts 'api shares controller set_study'
       if params[:shares].kind_of?(Array)
         @studies = []
         @roles = []
@@ -55,6 +58,7 @@ module Api
     end
 
     def set_user
+      puts 'api shares controller set_user'
       if params[:shares].kind_of?(Array)
         @users = []
         params[:shares].each do |sharestring|
@@ -68,6 +72,7 @@ module Api
     end
 
     def set_share
+      puts 'api shares controller set_share'
       @share = Share.find(params[:id])
     end
 

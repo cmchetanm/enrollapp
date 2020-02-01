@@ -2,13 +2,16 @@ class SharesController < ApplicationController
   before_action :set_share, only: %i[edit update destroy]
 
   def new
+    puts 'shares controller new'
     @share = Share.new(study: Study.find(params[:study_id]))
   end
 
   def edit
+    puts 'shares controller edit'
   end
 
   def create
+    puts 'shares controller create'
     @share = Share.new(share_params)
 
     if @share.bulk_save(params[:users])
@@ -19,6 +22,7 @@ class SharesController < ApplicationController
   end
 
   def update
+    puts 'shares controller update'
     if @share.update(share_params)
       redirect_to @share.study, notice: 'Share was successfully updated.'
     else
@@ -37,6 +41,8 @@ class SharesController < ApplicationController
   private
 
   def set_share
+    puts 'shares controller set_share'
+    puts params[:id]
     @share = Share.find(params[:id])
   end
 
