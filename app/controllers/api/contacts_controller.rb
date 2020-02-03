@@ -21,7 +21,7 @@ module Api
       puts 'in create'
       puts params
       generated_password = Devise.friendly_token.first(8)
-      user = User.create!(:email => params["email"], :password => generated_password)
+      user = User.create!(:first_name => params["first_name"], :last_name => params["last_name"], :email => params["email"], :password => generated_password, :phone_number => params["phone_number"])
 
       RegistrationMailer.welcome(user, generated_password).deliver
 
