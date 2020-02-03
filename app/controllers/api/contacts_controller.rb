@@ -18,6 +18,12 @@ module Api
 
     def create
       @contact = Contact.new(contact_params.merge(creator: current_api_user))
+      puts 'in create'
+      puts params
+      #generated_password = Devise.friendly_token.first(8)
+      #user = User.create!(:email => email, :password => generated_password)
+      #
+      #RegistrationMailer.welcome(user, generated_password).deliver
 
       if @contact.save
         render :show, status: :created

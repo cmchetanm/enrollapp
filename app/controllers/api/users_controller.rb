@@ -9,6 +9,7 @@ module Api
       puts @shares
       @sites = []
       @shares.each do |share|
+        puts 'share'
         puts share.attributes
         @sites.push(share[:site_id])
       end
