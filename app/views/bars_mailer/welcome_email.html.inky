@@ -1,0 +1,18 @@
+%p Hello
+
+%spacer{size: 16}
+
+%h3= #{@user.first_name} #{@user.last_name}
+
+%spacer{size: 16}
+
+%p You have been invited to Enroll app
+%p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
+
+%spacer{size: 16}
+
+%p You may change the password once you log in.
+
+%p If you are not the intended recipient of this message, you can safely disregard this email.
+
+%spacer{size: 32}
