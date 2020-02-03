@@ -1,4 +1,5 @@
 class BarsMailer < ActionMailer::Base
+  default from: "Enroll <info@refuahsolutions.com>"
   def welcome_email(user, password)
     @user = user
     @password = password
