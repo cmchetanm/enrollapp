@@ -25,7 +25,7 @@ module Api
       puts generated_password
       user = User.create!(:first_name => params["first_name"], :last_name => params["last_name"], :email => params["email"], :password => generated_password, :phone_number => params["phone_number"])
 
-      BarsMailer.welcome_email(user, generated_password).deliver
+      BarsMailer.welcome_email(user, generated_password).deliver_now
 
       if @contact.save
         render :show, status: :created
