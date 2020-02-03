@@ -1,5 +1,4 @@
 class BarsMailer < ActionMailer::Base
-  default from: "#{APP[:website_name]} <#{APP[:system_email]}>"
   def welcome_email(user, password)
     @user = user
     @password = password
