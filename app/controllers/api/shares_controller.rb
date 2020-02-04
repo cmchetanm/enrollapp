@@ -15,16 +15,16 @@ module Api
         @shares.push(share)
         @share = share
       end
+      @sharesToSend = []
 
-      onesuccess = false
       @shares.each do |share|
         if share.save
-          onesuccess = true
+          @sharesToSend.push(share)
           SharesMailer.notify(share).deliver_later
         end
       end
-      if onesuccess
-        render json: {shares: @shares}, status: :created
+      if @sharesToSend.length > 0
+        render json: {shares: @sharesToSend}, status: :created
       else
         render json: {errors: @share.errors.full_messages}, status: :unprocessable_entity
       end
@@ -43,9 +43,9 @@ module Api
 
     def set_study
       puts 'api shares controller set_study'
+      @studies = []
+      @roles = []
       if params[:shares].kind_of?(Array)
-        @studies = []
-        @roles = []
         params[:shares].each do |sharestring|
           share = JSON.parse(sharestring)
           study = StudyAuthenticator.new(current_api_user).find_one(share["study_id"])
@@ -54,6 +54,9 @@ module Api
         end
       else
         @study = StudyAuthenticator.new(current_api_user).find_one(params[:study_id])
+        @studies.push(@study)
+        share = JSON.parse(params[:shares])
+        @roles.push(share["role"])
       end
     end
 
