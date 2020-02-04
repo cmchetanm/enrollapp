@@ -24,9 +24,9 @@ module Api
         end
       end
       if onesuccess
-        render layout: false, shares: @shares, status: :created
+        render json: {shares: @shares}, status: :created
       else
-        render layout: false, json: {errors: @share.errors.full_messages}, status: :unprocessable_entity
+        render json: {errors: @share.errors.full_messages}, status: :unprocessable_entity
       end
     end
 
