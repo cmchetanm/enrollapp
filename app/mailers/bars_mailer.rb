@@ -10,5 +10,6 @@ class BarsMailer < ActionMailer::Base
     puts user.email
     mail to: @user.email,
          subject: "Welcome to Enroll!"
+    puts 'email processed!'
   end
 end
