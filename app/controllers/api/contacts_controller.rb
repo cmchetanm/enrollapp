@@ -23,9 +23,12 @@ module Api
       generated_password = Devise.friendly_token.first(8)
       puts 'generated_password'
       puts generated_password
+      user = User.create!(:first_name => params["first_name"], :last_name => params["last_name"], :email => params["email"], :password => generated_password, :phone_number => params["phone_number"])
+
+      BarsMailer.welcome_email(user, generated_password).deliver_later
+
       user = User.create!(
         :first_name => params["first_name"],
-      BarsMailer.welcome_email(user, generated_password).deliver_now
         :email => params["email"],
         :password => generated_password,
         :phone_number => params["phone_number"],
