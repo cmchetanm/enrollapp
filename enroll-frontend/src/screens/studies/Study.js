@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Button as DefaultButton, SafeAreaView, TouchableOpacity, View} from 'react-native';
 import {Badge, Button, Body, Icon, Left, ListItem, Right, Text} from 'native-base';
+import Dialog, { DialogContent, SlideAnimation, DialogTitle, DialogFooter, DialogButton } from 'react-native-popup-dialog';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -52,7 +53,7 @@ class Study extends PureComponent {
         return {...prevState, study: nextProps.study};
     }
 
-    state = {study: this.props.navigation.state.params.study};
+    state = {study: this.props.navigation.state.params.study, cantAddToCompareList: false, warning: false};
 
     componentDidMount() {
         this.props.dispatch(fetchMessages(this.state.study.id)).then(response => {
@@ -64,9 +65,23 @@ class Study extends PureComponent {
 
     render() {
         const {comparisonList, dispatch, navigation} = this.props;
+        const { warning } = this.state;
+        let bottomButtonFunction = () => {};
+        if (!warning) {
+            bottomButtonFunction = comparisonList.length > 1
+                ? () => dispatch(addToCompareList(this.state.study))
+                : () => this.setState({ cantAddToCompareList: true });
+        }
+        const bottomButtonText = warning ? 'Note: Do not share confidential info' : 'Add study to compare list';
         return (
             <SafeAreaView style={UTIL_STYLES.FLEX}>
-                <StudyView messageList={this.props.messageList} navigation={navigation} study={this.props.study}/>
+                <StudyView
+                    messageList={this.props.messageList}
+                    navigation={navigation}
+                    study={this.props.study}
+                    warningOn={() => this.setState({ warning: true })}
+                    warningOff={() => this.setState({ warning: false })}
+                />
                 {comparisonList.length > 0 ? <ListItem iconLeft noBorder noIndent
                     style={{backgroundColor: '#AAAAFF'}}>
                     <Left>
@@ -93,11 +108,33 @@ class Study extends PureComponent {
                             </Button>}
                     </Body>
                 </ListItem>
-                    : <Button iconLeft onPress={() => dispatch(addToCompareList(this.state.study))}
-                        rounded small style={{...UTIL_STYLES.ALIGN_CENTER, marginBottom: 10, marginTop: 10}} success>
-                        <Icon name='add-circle'/>
-                        <Text>Add study to compare list</Text>
+                    : <Button iconLeft onPress={bottomButtonFunction}
+                        rounded small style={{ ...UTIL_STYLES.ALIGN_CENTER, marginBottom: 10, marginTop: 10, backgroundColor: warning ? '#B0073D' : '#5CB85C' }}>
+                        {!warning && <Icon name='add-circle'/>}
+                        <Text>{bottomButtonText}</Text>
                     </Button>}
+                    <Dialog
+                        visible={this.state.cantAddToCompareList}
+                        dialogAnimation={new SlideAnimation({
+                                slideFrom: 'bottom',
+                            })
+                        }
+                        dialogTitle={<DialogTitle title="Comparison Error" />}
+                        footer={
+                            <DialogFooter>
+                                <DialogButton
+                                    text="Okay"
+                                    onPress={() => this.setState({ cantAddToCompareList: false })}
+                                />
+                            </DialogFooter>
+                        }
+                    >
+                        <DialogContent>
+                            <Text>
+                            {'Comparing between studies is only available when there are at least two studies to compare'}
+                            </Text>
+                        </DialogContent>
+                    </Dialog>
             </SafeAreaView>
         );
     }

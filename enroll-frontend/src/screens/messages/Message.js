@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Button as DefaultButton} from 'react-native';
+import {Button as DefaultButton, TouchableOpacity} from 'react-native';
 import {ActionSheet, Button, Container, Content, Footer, Root, Text} from 'native-base';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -10,15 +10,26 @@ import MessageView from '../../components/messages/MessageView';
 
 class Message extends PureComponent {
     static navigationOptions = ({navigation}) => ({
-        headerRight:
-            navigation.getParam('profile') &&
-            navigation.state.params.message.userId === navigation.getParam('profile').id && <DefaultButton
-                onPress={() => navigation.navigate('EditMessage', {message: navigation.state.params.message})}
-                title='Edit'
-            />
-
-    });
-
+        title: "Message",
+        headerTintColor: '#FFFFFF',
+        headerTitleStyle: {
+          marginLeft: Platform.OS === 'ios' ? -150 : 72,
+          marginTop: 15,
+        },
+        headerStyle: {
+          backgroundColor: '#3F51B5',
+          height: 70
+        },
+        headerRight: navigation.getParam('profile') &&
+        navigation.state.params.message.userId === navigation.getParam('profile').id && (() => (
+            <TouchableOpacity
+                onPress={() => navigation.navigate('EditMessage')}
+                style={{ marginTop: 12, marginRight: 12 }}
+            >
+                <Text style={{ color: '#FFFFFF' }}>Edit</Text>
+            </TouchableOpacity>
+        ))
+    });    
     static getDerivedStateFromProps(nextProps) {
         const nextMessage = nextProps.navigation.state.params.message;
         return {message: {...nextMessage}};
@@ -55,7 +66,7 @@ class Message extends PureComponent {
                     </Content>
                 </Container>
                 {message.userId === this.props.profile.id && <Footer>
-                    <Button block danger onPress={() =>
+                    <Button block onPress={() =>
                         ActionSheet.show({
                             options: ['Cancel', 'Delete Message'],
                             cancelButtonIndex: 0,

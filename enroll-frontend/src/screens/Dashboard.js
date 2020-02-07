@@ -1,10 +1,11 @@
 import React, {PureComponent} from 'react';
 import { findIndex } from 'lodash';
 import PropTypes from 'prop-types';
-import {Button as DefaultButton, SectionList, Dimensions, TouchableOpacity, Platform } from 'react-native';
-import {Body, Button, Container, Content, Footer, Icon, Left, ListItem, Right, Text, View, ScrollView} from 'native-base';
+import { Button as DefaultButton, SectionList, Dimensions, TouchableOpacity, Platform } from 'react-native';
+import { Body, Button, Container, Content, Footer, Icon, Left, ListItem, Right, Text, View, ScrollView} from 'native-base';
 import styled from 'styled-components/native';
 import {setFCMToken, signOut} from '../redux/actions/authentication';
+import Callout from '../components/Callout';
 import {connect} from 'react-redux';
 import firebase from 'react-native-firebase';
 import commonColor from '../theme/variables/commonColor';
@@ -96,15 +97,24 @@ class Dashboard extends PureComponent {
         return (
             <Container>
                 <Content>
-                    <SectionList
-                        contentInset={{ bottom: 20 }}
-                        maxToRenderPerBatch={15}
-                        initialNumToRender={15}
-                        sections={sections}
-                        renderItem={(arg) => this.renderItem(arg)}
-                        renderSectionHeader={this.renderHeader}
-                        keyExtractor={({ id }) => `${id}`}
-                    />
+                    {sections.length > 0 ? (
+                        <SectionList
+                            contentInset={{ bottom: 20 }}
+                            maxToRenderPerBatch={15}
+                            initialNumToRender={15}
+                            sections={sections}
+                            renderItem={(arg) => this.renderItem(arg)}
+                            renderSectionHeader={this.renderHeader}
+                            keyExtractor={({ id }) => `${id}`}
+                        />
+                    ) : (
+                        <Content padder>
+                            <Callout>
+                                As for now you are not associated with any study.
+                                Please contact your PI.
+                            </Callout>
+                        </Content>
+                    )}
                 </Content>
             </Container>
         );

@@ -1,12 +1,13 @@
 import React, {PureComponent} from 'react';
-import {Body, Container, Content, Fab, Icon, Left, ListItem, Right, Text} from 'native-base';
+import {Button, Body, Container, Content, Fab, Icon, Left, ListItem, Right, Text} from 'native-base';
 import { Platform } from 'react-native';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import ContactRole from '../../values/ContactRole';
 import commonColor from '../../theme/variables/commonColor';
 import Callout from '../../components/Callout';
 import UTIL_STYLES from '../../styles/common';
-import {sortListAb} from '../../utils/list';
+import {sortListAb, print} from '../../utils/list';
 
 
 class Team extends PureComponent {
@@ -21,6 +22,16 @@ class Team extends PureComponent {
           backgroundColor: '#3F51B5',
           height: 70
         },
+    };
+
+    constructor(props) {
+        super(props);
+        this.myStudies = props.studies.filter(st => this.canAdd(st.id, props.permissions));
+    }
+
+    canAdd = (studyId, permissions) => {
+        const role = permissions[studyId];
+        return role === ContactRole.SUB || role === ContactRole.NURSE || role === ContactRole.PI;
     };
 
     render() {
@@ -44,12 +55,28 @@ class Team extends PureComponent {
                         : <Content padder>
                             <Callout>You have not added anyone to the team directory.</Callout>
                         </Content>}
+                    {this.myStudies.length > 0 && 
+                        <Content padder>
+                            <Callout>To add an additional contact and share the study with that individual</Callout>
+                            <Button
+                                block
+                                onPress={() =>
+                                    this.props.navigation.navigate('NewContact', { studies: this.myStudies })
+                                }
+                                transparent
+                            >
+                                <Text>Add new colleague</Text>
+                            </Button>
+                        </Content>
+                    }
                 </Content>
-                <Fab
-                    onPress={() => navigation.navigate('ManageContacts')}
-                    position='bottomRight' style={{backgroundColor: commonColor.brandSuccess}}>
-                    <Text style={UTIL_STYLES.FAB_TEXT}>Add</Text>
-                </Fab>
+                {this.myStudies.length > 0 &&
+                    <Fab
+                        onPress={() => navigation.navigate('ManageContacts')}
+                        position='bottomRight' style={{backgroundColor: commonColor.brandSuccess}}>
+                        <Text style={UTIL_STYLES.FAB_TEXT}>Add</Text>
+                    </Fab>
+                }
             </Container>
         );
     };
@@ -62,9 +89,12 @@ Team.propTypes = {
     }).isRequired
 };
 
-const mapStateToProps = ({contacts, studies}) => ({
+const mapStateToProps = ({authentication: {profile, permissions}, contacts, studies}) => ({
     contacts: contacts.peers,
-    study: studies.study
+    study: studies.study,
+    studies: studies.list,
+    permissions,
+    profile
 });
 
 export default connect(mapStateToProps)(Team);

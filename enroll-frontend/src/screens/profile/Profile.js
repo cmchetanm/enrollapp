@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Alert, Button as DefaultButton, TouchableOpacity, Linking} from 'react-native';
+import { ScrollView, Alert, Button as DefaultButton, TouchableOpacity, Linking, Dimensions } from 'react-native';
 import {Button, ActionSheet, Container, Content, Footer, Left, List, ListItem, Text, Root} from 'native-base';
 import {deleteProfile, signOut} from '../../redux/actions/authentication';
 import Dialog, { DialogContent, SlideAnimation, DialogTitle, DialogFooter, DialogButton } from 'react-native-popup-dialog';
@@ -43,11 +43,15 @@ class Profile extends PureComponent {
         super(props);
         const id = props.profile.id;
         const myStudy = props.studies.find(st => st.shares.map(sh => sh.user.id).includes(id));
-        const myShare = myStudy.shares.find(sh => sh.user.id === id);
-        this.siteName = myShare.site.name;
+        if (myStudy) {
+            const myShare = myStudy.shares.find(sh => sh.user.id === id);
+            this.siteName = myShare.site.name;
+        } else {
+            this.siteName = 'no site';
+        }
     }
 
-    state = {loading: false, disclaimerPopupOpen: false};
+    state = {loading: false, disclaimerPopupOpen: false, logoutConfirmation: false};
 
     deleteAccount = () => {
         const {dispatch, navigation} = this.props;
@@ -77,6 +81,7 @@ class Profile extends PureComponent {
         const lastNameText = profile ? profile.lastName : '';
         const emailText = profile ? profile.email : '';
         const phoneNumberText = profile ? profile.phoneNumber : '';
+        const maxHeight = Dimensions.get('window').height * 0.6;
 
 
         return this.state.loading ? <Loading/>
@@ -117,14 +122,6 @@ class Profile extends PureComponent {
                                     </Left>
                                     <Text>{this.siteName}</Text>
                                 </ListItem>
-                                <ListItem style={ListItemStyle}>
-                                    {/* <Left>
-                                        <Text note style={UTIL_STYLES.ALIGN_LEFT}>
-                                        Department
-                                        </Text>
-                                    </Left>
-                                    <Text>{phoneNumberText}</Text> */}
-                                </ListItem>
                             </List>
                             <List style={ListStyleEnds}>
                                 <ListItem style={CenterListItemStyle}>
@@ -142,10 +139,7 @@ class Profile extends PureComponent {
                             <List style={ListStyleEnds}>
                                 <TouchableOpacity
                                     style={{ justifyContent: 'center', alignSelf: 'center', height: 40 }}
-                                    onPress={() => {
-                                        navigation.navigate('SignIn');
-                                        dispatch(signOut());
-                                    }}
+                                    onPress={() => this.setState({ logoutConfirmation: true })}
                                 >
                                     <Text style={{ color: '#9F0000' }}>
                                         Logout
@@ -170,17 +164,51 @@ class Profile extends PureComponent {
                             }
                         >
                             <DialogContent>
+                                <ScrollView style={{ maxHeight }}>
+                                    <Text>
+                                    {'Enroll does not require or advise the inputting of confidential medical patient ' +
+                                    'information into the App.\n\nWhen using the App, you agree to abide by all governing ' +
+                                    'privacy legislation in your jurisdiction, including but not limited, any laws related ' +
+                                    'to the protection of patient information. For clarity, you agree to assume full ' +
+                                    'responsibility of your actions to the extent that Refuah Solutions Ltd (the developer ' +
+                                    'of Enroll)  is not liable in any way for any privacy breaches that arise as a result ' +
+                                    'of your use of the App.\n\nYou further agree to fully indemnify (Refuah), legal costs ' +
+                                    'included, from any costs it incurs in the event that you are alleged, in a legal ' +
+                                    'proceeding, to have committed a breach of any provision of such applicable legislation ' +
+                                    'or in law as a result of your use of the App.'}
+                                    </Text>
+                                </ScrollView>
+                            </DialogContent>
+                        </Dialog>
+                        <Dialog
+                            visible={this.state.logoutConfirmation}
+                            dialogAnimation={new SlideAnimation({
+                                    slideFrom: 'bottom',
+                                })
+                            }
+                            dialogTitle={<DialogTitle title="Logout" />}
+                            footer={
+                                <DialogFooter>
+                                    <DialogButton
+                                        text="Yes"
+                                        onPress={() => {
+                                            this.setState({ logoutConfirmation: false });
+                                            setTimeout(() => {
+                                                navigation.navigate('SignIn');
+                                                dispatch(signOut());
+                                            }, 500);
+                                        }}
+                                    />
+                                    <DialogButton
+                                        text="No"
+                                        onPress={() => this.setState({ logoutConfirmation: false })}
+                                    />
+                                </DialogFooter>
+                            }
+                        >
+                            <DialogContent>
                                 <Text>
-                                {'Enroll does not require or advise the inputting of confidential medical patient ' +
-                                'information into the App.\n\nWhen using the App, you agree to abide by all governing ' +
-                                'privacy legislation in your jurisdiction, including but not limited, any laws related ' +
-                                'to the protection of patient information. For clarity, you agree to assume full ' +
-                                'responsibility of your actions to the extent that Refuah Solutions Ltd (the developer ' +
-                                'of Enroll)  is not liable in any way for any privacy breaches that arise as a result ' +
-                                'of your use of the App.\n\nYou further agree to fully indemnify (Refuah), legal costs ' +
-                                'included, from any costs it incurs in the event that you are alleged, in a legal ' +
-                                'proceeding, to have committed a breach of any provision of such applicable legislation ' +
-                                'or in law as a result of your use of the App.'}
+                                {'Are you sure you want to logout?'}
                                 </Text>
                             </DialogContent>
                         </Dialog>
@@ -209,7 +237,7 @@ const ListStyleEnds = {
 };
 
 const ListStyleMiddle = {
-    marginBottom: 20,
+    marginBottom: Platform.OS === 'ios' ? 70 : 52,
     backgroundColor: '#FFFFFF'
 };
 

@@ -85,7 +85,13 @@ class ManageShares extends PureComponent {
         const myShare = thisShares.find(c => c.user.id === id);
         this.mySite = myShare.site;
         this.messageField = null;
+        this.myStudies = props.studies.filter(st => this.canAdd(st.id, props.permissions));
     }
+
+    canAdd = (studyId, permissions) => {
+        const role = permissions[studyId];
+        return role === ContactRole.SUB || role === ContactRole.NURSE || role === ContactRole.PI;
+    };
 
     componentDidMount() {
         this.props.navigation.setParams({handleSubmit: this.handleSubmit});
@@ -139,7 +145,6 @@ class ManageShares extends PureComponent {
             axiosAlert('Unable to update shares.', response.error);
         }
         else {
-            print('fetching studies');
             setTimeout(() => {
                 this.props.dispatch(fetchStudies());
                 this.props.navigation.goBack();
@@ -149,8 +154,6 @@ class ManageShares extends PureComponent {
 
     filterContacts = (contacts, study) => {
         const fullStudy = this.props.studies.find(s => s.id === study);
-        print('----------------------------------------------------');
-        print(fullStudy);
         const userIdsToFromStudy = fullStudy ? fullStudy.shares.map(a => a.user.id) : [];
         const filteredInvites = this.state.invites.filter(inv => inv.study === study);
         const userIdsToExclude = userIdsToFromStudy.concat(filteredInvites.map(inv => inv.contact));
@@ -245,7 +248,6 @@ class ManageShares extends PureComponent {
                         be immediately sent to all newly added directory contacts.
                     </Callout>
                 </Content>}
-                {filterContacts.length > 0 ?
                 <Form>
                     <Item>
                         <Dropdown
@@ -253,7 +255,7 @@ class ManageShares extends PureComponent {
                             value={this.studyName(invite.study)}
                             onChangeText={study => this.onValueChange(null, null, study)}
                             containerStyle={{ justifyContent: 'center', width }}
-                            data={this.props.studies.map(study => {
+                            data={this.myStudies.map(study => {
                                 const dataObject = {
                                     label: study.name,
                                     value: study.id
@@ -340,20 +342,20 @@ class ManageShares extends PureComponent {
                             returnKeyType='done'
                             value={this.state.role === ContactRole.OTHER ? this.state.text : ''}/>
                     </Item>}
-                </Form>
-                    : <Content padder>
+                    <Content padder>
                         <Callout>To add an additional contact and share the study with that individual, the
                             contact must first be entered into the Study Directory on the Home page</Callout>
                         <Button
                             block
                             onPress={() =>
-                                this.props.navigation.navigate('NewContact')
+                                this.props.navigation.navigate('Contacts')
                             }
                             transparent
                         >
-                            <Text>Add new person</Text>
+                            <Text>Directory</Text>
                         </Button>
-                    </Content>}
+                    </Content>
+                </Form>
             </Content>
         </Container>;
     }
@@ -375,9 +377,10 @@ ManageShares.propTypes = {
     }).isRequired
 };
 
-const mapStateToProps = ({authentication: {profile}, contacts, studies}) => ({
+const mapStateToProps = ({authentication: {permissions, profile}, contacts, studies}) => ({
     contacts: contacts.peers,
     studies: studies.list,
+    permissions,
     profile
 });
 

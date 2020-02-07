@@ -81,6 +81,14 @@ class SignIn extends PureComponent {
                                     value={email}
                                 />}
                             </Item>
+                            <Button
+                                block
+                                onPress={() => this.handleSubmit(pw)}
+                                style={UTIL_STYLES.MARGIN_BOTTOM}
+                                success
+                            >
+                                <Text>{buttonText}</Text>
+                            </Button>
                             {pw && <ListItem icon noBorder onPress={() => this.setState({recontactMe: !recontactMe})}>
                                 <Left>
                                     <Icon name={recontactMe ? 'checkmark-circle' : 'radio-button-off'}
@@ -108,14 +116,6 @@ class SignIn extends PureComponent {
                             >
                                 <Text>Forgot your password? Reset</Text>
                             </Button>}
-                            <Button
-                                block
-                                onPress={() => this.handleSubmit(pw)}
-                                style={UTIL_STYLES.MARGIN_BOTTOM, { marginTop: pw ? 0 : 100 }}
-                                success
-                            >
-                                <Text>{buttonText}</Text>
-                            </Button>
                             {/* <Button*/}
                             {/*    block*/}
                             {/*    light*/}

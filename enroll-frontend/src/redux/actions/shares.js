@@ -38,7 +38,6 @@ export const deleteShare = (share, study) => ({
 });
 
 export const createShares = (shares, fullShares) => dispatch => {
-    print('action fullShares');
     dispatch({
         type: SHARE.CREATE_SHARES,
         payload: {

@@ -93,7 +93,7 @@ class StudyView extends PureComponent {
         const myRole = study.role;
 
         if (this.state.shareEnabled &&
-            (myRole === ContactRole.PI || myRole === ContactRole.SUB)) {
+            (myRole === ContactRole.PI || myRole === ContactRole.SUB || myRole === ContactRole.NURSE)) {
             return true;
         }
 
@@ -357,6 +357,30 @@ class StudyView extends PureComponent {
                 <ListItem>
                     <View>
                         <Text note style={UTIL_STYLES.ALIGN_LEFT}>
+                            Sponsor Contact Person
+                        </Text>
+                        <Text>{study.sponsorContact}</Text>
+                    </View>
+                </ListItem>
+                <ListItem>
+                    <View>
+                        <Text note style={UTIL_STYLES.ALIGN_LEFT}>
+                            Sponsor Contact Email
+                        </Text>
+                        <Text>{study.sponsorContactEmail}</Text>
+                    </View>
+                </ListItem>
+                <ListItem>
+                    <View>
+                        <Text note style={UTIL_STYLES.ALIGN_LEFT}>
+                            Sponsor Contact Phone Number
+                        </Text>
+                        <Text>{study.sponsorContactPhone}</Text>
+                    </View>
+                </ListItem>
+                <ListItem>
+                    <View>
+                        <Text note style={UTIL_STYLES.ALIGN_LEFT}>
                             CRO Contact
                         </Text>
                         <Text>{study.croContact}</Text>
@@ -365,11 +389,27 @@ class StudyView extends PureComponent {
                 <ListItem>
                     <View>
                         <Text note style={UTIL_STYLES.ALIGN_LEFT}>
+                            CRO Contact Email
+                        </Text>
+                        <Text>{study.croContactEmail}</Text>
+                    </View>
+                </ListItem>
+                <ListItem>
+                    <View>
+                        <Text note style={UTIL_STYLES.ALIGN_LEFT}>
+                            CRO Contact Phone
+                        </Text>
+                        <Text>{study.croContactPhone}</Text>
+                    </View>
+                </ListItem>
+                {/* <ListItem>
+                    <View>
+                        <Text note style={UTIL_STYLES.ALIGN_LEFT}>
                             Site Budget
                         </Text>
                         <Text>{study.budget}</Text>
                     </View>
-                </ListItem>
+                </ListItem> */}
                 <ListItem>
                     <View>
                         <Text note style={UTIL_STYLES.ALIGN_LEFT}>
@@ -382,11 +422,20 @@ class StudyView extends PureComponent {
         </Tab>;
 
     render() {
-        const {navigation, study} = this.props;
+        const { navigation, study, warningOn, warningOff } = this.props;
+        print('Object.keys(study)');
+        print(Object.keys(study));
         return (
             <Container>
                 <Content>
-                    <Tabs onChangeTab={tab => this.setState({shareEnabled: tab.i === 2})}>
+                    <Tabs onChangeTab={tab => {
+                        if (tab.i === 2 || tab.i === 3) {
+                            warningOn();
+                        } else {
+                            warningOff();
+                        }
+                        this.setState({shareEnabled: tab.i === 2});
+                    }}>
                         {this.renderCriteria(study)}
                         {this.renderDetails(study)}
                         {this.renderStudyTeam(study, navigation)}

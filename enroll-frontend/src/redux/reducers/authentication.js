@@ -1,6 +1,8 @@
-import {AUTHENTICATION} from '../constants';
+import {AUTHENTICATION, STUDY} from '../constants';
+import { print } from '../../utils/list';
 
 const initialState = {
+    permissions: {},
     authenticated: false,
     headers: {},
     profile: null
@@ -28,6 +30,18 @@ export default function authentication(state = initialState, action) {
         return {...state, profile: action.payload.data};
     case AUTHENTICATION.UPDATE_HEADERS:
         return {...state, headers: updateHeaders(state.headers, action)};
+    case STUDY.GET_STUDIES_SUCCESS: {
+        const list = action.payload.data.study;
+        const allSharesArrays = list.map(st => st.shares.map(sh => ({ ...sh, studyId: st.id })));
+        const allShares = allSharesArrays.flat();
+        const myShares = allShares.filter(sh => sh.user.id === state.profile.id)
+        const permissions = {};
+        myShares.forEach(sh => {
+            permissions[sh.studyId] = sh.role;
+        });
+        print(permissions)
+        return {...state, permissions};
+    }
     default:
         return state;
     }
