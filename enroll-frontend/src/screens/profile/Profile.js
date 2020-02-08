@@ -41,11 +41,15 @@ class Profile extends PureComponent {
 
     constructor(props) {
         super(props);
-        const id = props.profile.id;
-        const myStudy = props.studies.find(st => st.shares.map(sh => sh.user.id).includes(id));
-        if (myStudy) {
-            const myShare = myStudy.shares.find(sh => sh.user.id === id);
-            this.siteName = myShare.site.name;
+        if (props.profile) {
+            const id = props.profile.id;
+            const myStudy = props.studies.find(st => st.shares.map(sh => sh.user.id).includes(id));
+            if (myStudy) {
+                const myShare = myStudy.shares.find(sh => sh.user.id === id);
+                this.siteName = myShare.site.name;
+            } else {
+                this.siteName = 'no site';
+            }
         } else {
             this.siteName = 'no site';
         }
@@ -141,7 +145,7 @@ class Profile extends PureComponent {
                                     style={{ justifyContent: 'center', alignSelf: 'center', height: 40 }}
                                     onPress={() => this.setState({ logoutConfirmation: true })}
                                 >
-                                    <Text style={{ color: '#9F0000' }}>
+                                    <Text style={{ color: '#B0073D' }}>
                                         Logout
                                     </Text>
                                 </TouchableOpacity>

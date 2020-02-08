@@ -423,8 +423,6 @@ class StudyView extends PureComponent {
 
     render() {
         const { navigation, study, warningOn, warningOff } = this.props;
-        print('Object.keys(study)');
-        print(Object.keys(study));
         return (
             <Container>
                 <Content>

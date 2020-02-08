@@ -64,11 +64,11 @@ class Study extends PureComponent {
     }
 
     render() {
-        const {comparisonList, dispatch, navigation} = this.props;
+        const { comparisonList, dispatch, navigation, studiesCount } = this.props;
         const { warning } = this.state;
         let bottomButtonFunction = () => {};
         if (!warning) {
-            bottomButtonFunction = comparisonList.length > 1
+            bottomButtonFunction = studiesCount > 1
                 ? () => dispatch(addToCompareList(this.state.study))
                 : () => this.setState({ cantAddToCompareList: true });
         }
@@ -158,7 +158,8 @@ Study.propTypes = {
 const mapStateToProps = ({comparison, messages, studies}, ownProps) => ({
     comparisonList: comparison.list,
     messageList: messages.list[ownProps.navigation.state.params.study.id],
-    study: studies.list.find(study => study.id === ownProps.navigation.state.params.study.id)
+    study: studies.list.find(study => study.id === ownProps.navigation.state.params.study.id),
+    studiesCount: studies.list.length
 });
 
 export default connect(mapStateToProps)(Study);
