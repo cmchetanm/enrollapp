@@ -1,4 +1,5 @@
-class BarsMailer < ApplicationMailer
+class BarsMailer < ActionMailer::Base
+  default :from => "info@refuahsolutions.com"
   def welcome_email(user, password)
     @user = user
     @password = password
@@ -9,6 +10,5 @@ class BarsMailer < ApplicationMailer
     puts user.email
     mail to: @user.email,
          subject: "Welcome to Enroll!"
-    puts 'email processed!'
   end
 end
