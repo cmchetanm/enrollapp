@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token, if: :api_controller?
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_any!, unless: :api_controller?
-  skip_before_action :authenticate_api_user!, if: :api_controller?, unless: :devise_controller?
+  before_action :authenticate_api_user!, if: :api_controller?, unless: :devise_controller?
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found unless Rails.env.development?
   helper_method :no_admins?
