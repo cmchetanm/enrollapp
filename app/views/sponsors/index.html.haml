@@ -8,7 +8,7 @@
 - if @sponsors.size.zero?
   = primary_callout do
     You have not created any sponsors yet.
-    = link_to 'Create Sponsor', new_sponsor_path, class: 'small button'
+    = link_to 'Create Sponsor', new_sponsor_invitation_path, class: 'small button'
 - else
   %h1= yield :title
 
