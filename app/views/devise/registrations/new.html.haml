@@ -7,14 +7,14 @@
 
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render 'devise/shared/error_messages', resource: resource
-      - if admin_signed_in?
+      - if resource.is_a? Admin
 
         = f.label :first_name
         = f.text_field :first_name, autofocus: true
 
         = f.label :last_name
         = f.text_field :last_name
-      - elsif sponsor_signed_in?
+      - elsif resource.is_a? Sponsor
 
         = f.label :name
         = f.text_field :name, autofocus: true
