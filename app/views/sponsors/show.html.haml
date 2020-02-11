@@ -3,7 +3,10 @@
 %nav
   %ul.breadcrumbs
     %li
-      = link_to 'Sponsors', sponsors_path
+      - if admin_signed_in?
+        = link_to 'Sponsors', sponsors_path
+      - else
+        Sponsors
     %li
       = yield :title
 
@@ -28,11 +31,15 @@
 %br
 
 - @sponsor.topics.each do |topic|
-  %p.lead #{fa_icon 'folder-open-o', text: topic.name} #{content_tag :small, link_to('edit', edit_topic_path(topic), class: 'clear warning button margin-0')}#{content_tag :small, link_to('Delete', topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0')}
+  - if admin_signed_in?
+    %p.lead #{fa_icon 'folder-open-o', text: topic.name} #{content_tag :small, link_to('edit', edit_topic_path(topic), class: 'clear warning button margin-0')}#{content_tag :small, link_to('Delete', topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0')}
+  - else
+    %p.lead #{fa_icon 'folder-open-o', text: topic.name}
   - if topic.studies.size.zero?
     = primary_callout do
       You have not created any studies for this topic.
-      = link_to 'Create Study', new_study_path(topic_id: topic), class: 'small button'
+      - if admin_signed_in?
+        = link_to 'Create Study', new_study_path(topic_id: topic), class: 'small button'
   - else
     %table
       %thead
@@ -41,7 +48,8 @@
           %th.text-center Sites
           %th.text-center Users
           %th.text-center Create Date
-          %th.text-right= link_to 'Create Study', new_study_path(topic_id: topic), class: 'small clear button margin-0'
+          - if admin_signed_in?
+            %th.text-right= link_to 'Create Study', new_study_path(topic_id: topic), class: 'small clear button margin-0'
       %tbody
         - topic.studies.each do |study|
           %tr.link{onclick: "Turbolinks.visit('#{study_path(study)}')"}
