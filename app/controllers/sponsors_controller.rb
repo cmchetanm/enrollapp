@@ -1,6 +1,6 @@
 class SponsorsController < ApplicationController
   before_action :set_sponsor, only: %i[show edit update destroy]
-
+  before_action :authenticate_admin!, except: :show
   def index
     @sponsors = Sponsor.order(:name)
   end
@@ -48,6 +48,6 @@ class SponsorsController < ApplicationController
   end
 
   def sponsor_params
-    params.require(:sponsor).permit(:name, :contact, :cro, :avatar)
+    params.require(:sponsor).permit(:name, :email, :contact, :avatar)
   end
 end

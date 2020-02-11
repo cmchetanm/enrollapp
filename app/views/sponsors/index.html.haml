@@ -16,7 +16,7 @@
     %thead
       %tr
         %th Name
-        %th CRO
+        %th Email
         %th.text-center Studies
         %th.text-center Icon
         %th.text-center Create Date
@@ -27,11 +27,11 @@
           %td.tight
             %div= link_to sponsor.name, sponsor
             %small.subheader= sponsor.contact
-          %td= sponsor.cro
+          %td= sponsor.email
           %td.text-center= sponsor.studies.size
           %td
             %img{ :src => sponsor.avatar, :alt => "Should be the Avatar", :height => 50, :width => 50 }
           %td.text-center= l sponsor.created_at, format: :short
           %td.text-right= link_to 'Show', sponsor, class: 'clear button'
 
-  = link_to 'New Sponsor', new_sponsor_path, class: 'button'
+  = link_to 'New Sponsor', new_sponsor_invitation_path, class: 'button'

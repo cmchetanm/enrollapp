@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_161942) do
+ActiveRecord::Schema.define(version: 2020_02_11_132629) do
 
   create_table "admins", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "first_name", null: false
@@ -91,10 +91,30 @@ ActiveRecord::Schema.define(version: 2019_07_26_161942) do
   create_table "sponsors", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "contact", null: false
-    t.string "cro", null: false
+    t.string "cro", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "avatar"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "invitation_token"
+    t.datetime "invitation_created_at"
+    t.datetime "invitation_sent_at"
+    t.datetime "invitation_accepted_at"
+    t.integer "invitation_limit"
+    t.integer "invited_by_id"
+    t.string "invited_by_type"
+    t.index ["email"], name: "index_sponsors_on_email", unique: true
     t.index ["name"], name: "index_sponsors_on_name"
+    t.index ["reset_password_token"], name: "index_sponsors_on_reset_password_token", unique: true
   end
 
   create_table "studies", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
@@ -120,6 +140,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_161942) do
     t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "study_icon"
     t.index ["name"], name: "index_studies_on_name"
     t.index ["topic_id"], name: "fk_rails_09e41a5aa5"
   end
@@ -148,6 +169,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_161942) do
     t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "study_icon"
     t.index ["name"], name: "index_study_versions_on_name"
     t.index ["site_id", "study_id"], name: "index_study_versions_on_site_id_and_study_id", unique: true
     t.index ["study_id"], name: "fk_rails_c2835f87a1"

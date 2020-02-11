@@ -1,0 +1,34 @@
+- content_for :title, 'New Sponsor'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = link_to 'Sponsors', sponsors_path
+    %li
+      = yield :title
+
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h1= yield :title
+
+    = form_for resource, as: resource_name, url: invitation_path(resource_name), html: {method: :post} do |f|
+      - if resource.errors.any?
+        .error-explanation
+          %h2 #{pluralize(resource.errors.count, 'error')} prohibited this resource from being saved:
+          %ul
+            - resource.errors.full_messages.each do |message|
+              %li= message
+
+      .field
+        = f.label :name
+        = f.text_field :name, autofocus: true
+      .field
+        = f.label :contact
+        = f.text_field :contact
+      .field
+        = f.label :email
+        = f.text_field :email
+      .button-group
+        = link_to 'Cancel', resource.new_record? ? sponsors_path : resource, class: 'secondary button'
+        = f.submit class: 'button'
+

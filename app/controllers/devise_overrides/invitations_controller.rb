@@ -1,16 +1,6 @@
 module DeviseOverrides
   class InvitationsController < Devise::InvitationsController
     before_action :configure_permitted_parameters, if: :devise_controller?
-
-    def update
-      puts 'update'
-    end
-    def new
-      puts 'new'
-    end
-    def edit
-      puts 'edit'
-    end
     # POST /resource/invitation
     def create
       puts 'create'
@@ -39,7 +29,6 @@ module DeviseOverrides
       puts '7'
     end
 
-    protected
 
     def after_invite_path_for(_inviter, _invitee = nil)
       puts 'after_invite_path_for'
@@ -48,10 +37,9 @@ module DeviseOverrides
 
     def configure_permitted_parameters
       puts 'configure_permitted_parameters'
-      devise_parameter_sanitizer.permit(:invite, keys: %i[first_name last_name phone_number])
+      devise_parameter_sanitizer.permit(:invite, keys: %i[first_name last_name phone_number, contact, name])
     end
 
-    private
 
 
     # this is called when creating invitation

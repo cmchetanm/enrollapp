@@ -14,6 +14,9 @@
               = link_to 'Studies', studies_path
             %li{class: active?(users_path)}
               = link_to 'Users', users_path
+          - if sponsor_signed_in?
+            %li{class: active?(sponsor_path(current_sponsor))}
+              = link_to 'My Profile', sponsor_path(current_sponsor)
       .top-bar-right
         %ul.menu
           - if admin_signed_in?
@@ -23,8 +26,15 @@
               = link_to 'Edit Profile', edit_admin_registration_path
             %li
               = link_to 'Sign Out', destroy_admin_session_path, method: :delete
+          - elsif sponsor_signed_in?
+            %li{class: active?(edit_sponsor_registration_path)}
+              = link_to 'Edit Profile', edit_sponsor_registration_path
+            %li
+              = link_to 'Sign Out', destroy_sponsor_session_path, method: :delete
           - elsif defined?(resource) && !resource.respond_to?(:tokens?)
             %li{class: active?(new_admin_session_path)}
-              = link_to 'Sign In', new_admin_session_path
+              = link_to 'Admin Sign In', new_admin_session_path
+            %li{class: active?(new_sponsor_session_path)}
+              = link_to 'Sponsor Sign In', new_sponsor_session_path
 
 %br

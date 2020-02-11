@@ -19,8 +19,8 @@
       %small.subheader Contact
       %div= @sponsor.contact
     .cell
-      %small.subheader CRO
-      %div= @sponsor.cro
+      %small.subheader Email
+      %div= @sponsor.email
     .cell
       %small.subheader Icon
       %div
@@ -53,6 +53,7 @@
   %br
 
 .button-group
-  = link_to 'New Topic', new_topic_path(sponsor_id: @sponsor), class: 'button'
-  = link_to 'Edit Sponsor', edit_sponsor_path(@sponsor), class: 'warning button'
-  = link_to 'Delete Sponsor', @sponsor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'
+  - if admin_signed_in?
+    = link_to 'New Topic', new_topic_path(sponsor_id: @sponsor), class: 'button'
+    = link_to 'Edit Sponsor', edit_sponsor_path(@sponsor), class: 'warning button'
+    = link_to 'Delete Sponsor', @sponsor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'

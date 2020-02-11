@@ -66,7 +66,8 @@
             %td= l share.created_at, format: :short
             %td.text-right
               = link_to 'Edit', edit_share_path(share), class: 'clear warning button'
-              = link_to 'Delete', share, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0'
+              - if admin_signed_in?
+                = link_to 'Delete', share, method: :delete, data: { confirm: 'Are you sure?' }, class: 'clear alert button margin-0'
 
 
 %br
@@ -74,4 +75,5 @@
 .button-group
   = link_to 'Share Study', new_share_path(study_id: @study.id), class: 'button'
   = link_to 'Edit Study', edit_study_path(@study), class: 'warning button'
-  = link_to 'Delete Study', @study, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'
+  - if admin_signed_in?
+    = link_to 'Delete Study', @study, method: :delete, data: { confirm: 'Are you sure?' }, class: 'alert button'

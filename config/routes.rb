@@ -9,6 +9,12 @@ Rails.application.routes.draw do
     sessions: 'devise_overrides/sessions'
   }
 
+  devise_for :sponsors, controllers: {
+    invitations: 'sponsors/invitations',
+    registrations: 'devise_overrides/registrations',
+    sessions: 'devise_overrides/sessions'
+  }
+
   devise_for :users, controllers: {
     invitations: 'devise_overrides/invitations',
     registrations: 'devise_overrides/registrations',

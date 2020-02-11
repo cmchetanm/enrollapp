@@ -1,0 +1,10 @@
+%p= t('devise.mailer.invitation_instructions.hello', name: @resource.name)
+
+%p= t('devise.mailer.invitation_instructions.someone_invited_you', app: APP[:website_name])
+
+%button.large.expanded.success{href: accept_invitation_url(@resource, invitation_token: @token)} #{t('devise.mailer.invitation_instructions.accept')}
+
+- if @resource.invitation_due_at
+  %p= t('devise.mailer.invitation_instructions.accept_until', due_date: l(@resource.invitation_due_at, format: :'devise.mailer.invitation_instructions.accept_until_format'))
+
+%p= t('devise.mailer.invitation_instructions.ignore')
