@@ -16,6 +16,7 @@ class Share < ApplicationRecord
   def validate_users_csv(users_csv)
     users_csv.lines.each_with_index do |csv_line, index|
       user = user_from_csv(csv_line)
+      user.skip_confirmation!
       unless user.valid?
         errors[:base] << "Line #{index + 1}: '#{csv_line}' is invalid: #{user.errors.full_messages.to_sentence}"
         return false
@@ -27,7 +28,7 @@ class Share < ApplicationRecord
     first_name, last_name, email, phone_number = csv_line.split(',')
     User.new(
       first_name: first_name, last_name: last_name, email: email + 'test',
-      phone_number: phone_number, password: Devise.friendly_token.first(16)
+      phone_number: phone_number, password: Devise.friendly_token.first(6)
     )
   end
 
