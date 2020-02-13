@@ -23,11 +23,22 @@ class User < ApplicationRecord
 
   def self.get_or_invite(first_name, last_name, email, phone_number)
     user = User.find_by(email: email)
-    if user.nil? || (!user.invitation_accepted? && !user.valid_invitation?)
-      user = User.invite!(
+    if user.nil?
+      user = User.new(
         first_name: first_name.presence, last_name: last_name.presence,
         email: email.presence, phone_number: phone_number.presence
       )
+      generated_password = rand.to_s[2..7]
+      user.password = generated_password
+      user.skip_confirmation!
+      user.save!
+      BarsMailer.welcome_email(user, generated_password).deliver_now
+    else
+      generated_password = rand.to_s[2..7]
+      user.password = generated_password
+      user.skip_confirmation!
+      user.save!
+      BarsMailer.welcome_email(user, generated_password).deliver_now
     end
     user
   end

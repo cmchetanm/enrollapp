@@ -28,7 +28,7 @@ class Share < ApplicationRecord
     first_name, last_name, email, phone_number = csv_line.split(',')
     User.new(
       first_name: first_name, last_name: last_name, email: email + 'test',
-      phone_number: phone_number, password: Devise.friendly_token.first(6)
+      phone_number: phone_number, password: rand.to_s[2..7]
     )
   end
 
