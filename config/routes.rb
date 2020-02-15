@@ -45,6 +45,9 @@ Rails.application.routes.draw do
     resources :contacts, except: %i[new edit]
     resources :messages, except: %i[new edit]
     resources :users
+    resources :sites_studies, except: [] do
+      put :update_enrolled_committed, on: :collection
+    end
     put '/auth/fcm_token', to: 'users#fcm_token'
   end
 

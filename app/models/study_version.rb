@@ -5,6 +5,14 @@ class StudyVersion < ApplicationRecord
 
   before_save :format_criteria
 
+  def enrolled
+    self.study.enrolled
+  end
+
+  def committed
+    self.study.committed
+  end
+
   private
 
   def format_criteria
