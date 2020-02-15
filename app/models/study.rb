@@ -6,6 +6,7 @@ class Study < ApplicationRecord
   has_many :users, through: :shares
   has_many :messages, dependent: :destroy
   has_many :study_versions, dependent: :destroy
+  has_many :sites_studies, dependent: :destroy
 
   validates :name, presence: true
 
@@ -23,6 +24,13 @@ class Study < ApplicationRecord
     @version_for ||= StudyVersion.find_by(site_id: my_share(user).site_id, study_id: id)
   end
 
+  def enrolled
+    self.sites_studies.sum(:enrolled)
+  end
+
+  def committed
+    self.sites_studies.sum(:committed)
+  end
   private
 
   def my_share(user)

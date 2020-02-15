@@ -4,11 +4,15 @@ class Share < ApplicationRecord
   belongs_to :user, optional: true
 
   validates :role, presence: true
-
+  after_create :create_sites_study
   def bulk_save(users_csv)
     return false unless valid? && validate_users_csv(users_csv)
 
     create_shares_from_csv(users_csv)
+  end
+
+  def create_sites_study
+    SitesStudy.find_or_create_by(site: site, study: study)
   end
 
   private

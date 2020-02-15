@@ -5,4 +5,4 @@ json.shares study.shares.where(site_id: study.site_for(current_api_user)), parti
 json.extract! study.version_for(current_api_user) || study, :inclusion_criteria, :exclusion_criteria,
               :name, :protocol, :agent, :mechanism, :side_effects, :administration, :randomization, :duration,
               :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact, :cro_contact,
-              :budget, :enrolled_or_committed, :comments, :travel_parking_costs
+              :budget, :comments, :travel_parking_costs

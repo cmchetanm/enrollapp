@@ -20,6 +20,9 @@
     .cell
       %small.subheader Topic
       %div= link_to @study.topic.name, @study.topic
+    .cell
+      %small.subheader Enrolled/Committed:
+      %div #{@study.enrolled}/#{@study.committed}
 %br
 
 .grid-x.grid-margin-x.small-up-1.medium-up-2
@@ -46,9 +49,9 @@
     = link_to 'Share Study', new_share_path(study_id: @study.id), class: 'small button'
 - else
   - @study.sites.uniq.each do |site|
-
-    %h3 Site: #{site.name}
-
+    %div
+      %h3 Site: #{site.name}
+      Enrolled/Committed: #{site.enrolled(@study)}/#{site.committed(@study)}
     %table
       %thead
         %tr

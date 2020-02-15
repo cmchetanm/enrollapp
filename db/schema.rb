@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_132629) do
+ActiveRecord::Schema.define(version: 2020_02_15_113656) do
 
   create_table "admins", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "first_name", null: false
@@ -86,6 +86,17 @@ ActiveRecord::Schema.define(version: 2020_02_11_132629) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_sites_on_name"
+  end
+
+  create_table "sites_studies", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "study_id", null: false
+    t.string "site_id", null: false
+    t.integer "enrolled", default: 0
+    t.integer "committed", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["site_id"], name: "index_sites_studies_on_site_id"
+    t.index ["study_id"], name: "index_sites_studies_on_study_id"
   end
 
   create_table "sponsors", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
