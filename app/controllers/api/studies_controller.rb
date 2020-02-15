@@ -20,6 +20,8 @@ module Api
       @study_version.assign_attributes(study_params)
 
       if @study_version.save
+        site_study = @study_version.site_study
+        site_study&.update_attributes(enrolled: (params[:enrolled] || site_study.enrolled), committed: (params[:committed] || site_study.committed))
         StudyUpdateNotifierJob.perform_later(current_api_user, @study_version)
         render :show, status: :ok, location: @study
       else
