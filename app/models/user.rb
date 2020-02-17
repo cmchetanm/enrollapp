@@ -19,6 +19,10 @@ class User < ApplicationRecord
 
   before_validation :prettify
 
+  def full_name
+    "#{last_name}, #{first_name}"
+  end
+
   def self.from_contact(contact)
     user = User.get_or_invite(contact.first_name, contact.last_name, contact.email, contact.phone_number)
     contact.update(user_id: user.id) if contact.user_id != user.id
