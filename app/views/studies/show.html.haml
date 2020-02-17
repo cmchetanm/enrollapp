@@ -21,7 +21,7 @@
       %small.subheader Topic
       %div= link_to @study.topic.name, @study.topic
     .cell
-      %small.subheader Enrolled/Committed:
+      %small.subheader Patients Enrolled/Site Committed:
       %div #{@study.enrolled}/#{@study.committed}
 %br
 
@@ -51,7 +51,7 @@
   - @study.sites.uniq.each do |site|
     %div
       %h3 Site: #{site.name}
-      Enrolled/Committed: #{site.enrolled(@study)}/#{site.committed(@study)}
+      Patients Enrolled/Site Committed: #{site.enrolled(@study)}/#{site.committed(@study)}
     %table
       %thead
         %tr

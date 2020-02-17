@@ -38,6 +38,8 @@ json.study do
     json.role this_user_share.role
     json.study_icon study_sponsor.avatar
     json.topic study_topic
+    json.enrolled study.enrolled
+    json.committed study.committed
     json.shares do
       json.array! study_shares do |share|
         json.extract! share, :id, :role
