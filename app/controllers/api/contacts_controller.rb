@@ -29,7 +29,7 @@ module Api
         :email => params["email"],
         :password => generated_password,
         :phone_number => params["phone_number"]
-      }.reject {|p| p.present?})
+      }.reject {|p| !p.present?})
       user.skip_confirmation!
       user.save!
       BarsMailer.welcome_email(user, generated_password).deliver_now
