@@ -40,6 +40,12 @@ json.study do
     json.topic study_topic
     json.enrolled study.enrolled
     json.committed study.committed
+
+    json.sponsor_contact_email study_version ? study_version.sponsor_contact_email : study.sponsor_contact_email
+    json.sponsor_contact_phone study_version ? study_version.sponsor_contact_phone : study.sponsor_contact_phone
+    json.cro_name study_version ? study_version.cro_name : study.cro_name
+    json.cro_contact_email study_version ? study_version.cro_contact_email : study.cro_contact_email
+    json.cro_contact_phone study_version ? study_version.cro_contact_phone : study.cro_contact_phone
     json.shares do
       json.array! study_shares do |share|
         json.extract! share, :id, :role
