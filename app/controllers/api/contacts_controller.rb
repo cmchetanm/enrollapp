@@ -18,6 +18,7 @@ module Api
 
     def create
       @contact = Contact.new(contact_params.merge(creator: current_api_user))
+      study = Study.find_by(id: params[:study_id]) || StudyVersion.find_by(id: params[:study_id])
       puts 'in create'
       puts params
       generated_password = rand.to_s[2..7]
@@ -32,7 +33,7 @@ module Api
       }.reject {|p| !p.present?})
       user.skip_confirmation!
       user.save!
-      BarsMailer.welcome_email(user, generated_password).deliver_now
+      BarsMailer.welcome_email(user, generated_password, study, :app, current_api_user&.full_name).deliver_now
 
       if @contact.save
         render :show, status: :created

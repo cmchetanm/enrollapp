@@ -1,18 +1,40 @@
-%p Hello
+- if @source == :admin
+  %p Hello
 
-%spacer{size: 16}
+  %spacer{size: 16}
 
-%h3= #{@user.first_name} #{@user.last_name}
+  %h3= #{@user.first_name} #{@user.last_name}
 
-%spacer{size: 16}
+  %spacer{size: 16}
 
-%p You have been invited to Enroll app
-%p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
+  %p #{@name} has selected and formatted specific information from the #{study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
 
-%spacer{size: 16}
+  %p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
 
-%p You may change the password once you log in.
+  %spacer{size: 16}
 
-%p If you are not the intended recipient of this message, you can safely disregard this email.
+  %p You may change the password once you log in.
 
-%spacer{size: 32}
+  %p If you are not the intended recipient of this message, you can safely disregard this email.
+
+  %spacer{size: 32}
+- else
+  %p Hello
+
+  %spacer{size: 16}
+
+  %h3= #{@user.first_name} #{@user.last_name}
+
+  %spacer{size: 16}
+
+  %p #{@name} has selected and formatted specific information from the #{study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
+
+  %p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
+
+  %spacer{size: 16}
+
+  %p You may change the password once you log in.
+
+  %p If you are not the intended recipient of this message, you can safely disregard this email.
+
+  %spacer{size: 32}

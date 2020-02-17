@@ -29,8 +29,9 @@ class User < ApplicationRecord
     user
   end
 
-  def self.get_or_invite(first_name, last_name, email, phone_number)
+  def self.get_or_invite(first_name, last_name, email, phone_number, study_id = nil, name=nil)
     user = User.find_by(email: email)
+    study = Study.find_by(id: study_id)
     if user.nil?
       user = User.new(
         first_name: first_name.presence, last_name: last_name.presence,
@@ -40,13 +41,13 @@ class User < ApplicationRecord
       user.password = generated_password
       user.skip_confirmation!
       user.save!
-      BarsMailer.welcome_email(user, generated_password).deliver_now
+      BarsMailer.welcome_email(user, generated_password, study, :admin, name).deliver_now
     else
       generated_password = rand.to_s[2..7]
       user.password = generated_password
       user.skip_confirmation!
       user.save!
-      BarsMailer.welcome_email(user, generated_password).deliver_now
+      BarsMailer.welcome_email(user, generated_password, study, :admin, name).deliver_now
     end
     user
   end

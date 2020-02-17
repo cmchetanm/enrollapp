@@ -5,10 +5,10 @@ class Share < ApplicationRecord
 
   validates :role, presence: true
   after_create :create_sites_study
-  def bulk_save(users_csv)
+  def bulk_save(users_csv, name=nil)
     return false unless valid? && validate_users_csv(users_csv)
 
-    create_shares_from_csv(users_csv)
+    create_shares_from_csv(users_csv, name)
   end
 
   def create_sites_study
@@ -36,10 +36,10 @@ class Share < ApplicationRecord
     )
   end
 
-  def create_shares_from_csv(users_csv)
+  def create_shares_from_csv(users_csv, name=nil)
     users_csv.lines.each do |user_str|
       first_name, last_name, email, phone_number = user_str.split(',')
-      user = User.get_or_invite(first_name, last_name, email, phone_number)
+      user = User.get_or_invite(first_name, last_name, email, phone_number, study_id, name)
       share = Share.find_or_initialize_by(study_id: study_id, user: user)
       share.assign_attributes(site_id: site_id, role: role)
       SharesMailer.notify(share).deliver_later if share.save

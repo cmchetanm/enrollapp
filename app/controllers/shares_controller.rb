@@ -14,7 +14,7 @@ class SharesController < ApplicationController
     puts 'shares controller create'
     @share = Share.new(share_params)
 
-    if @share.bulk_save(params[:users])
+    if @share.bulk_save(params[:users], (current_admin&.full_name || current_sponsor&.name))
       redirect_to @share.study, notice: 'Study was successfully shared.'
     else
       render :new
