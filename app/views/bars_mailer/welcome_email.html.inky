@@ -7,7 +7,7 @@
 
   %spacer{size: 16}
 
-  %p #{@name} has selected and formatted specific information from the #{study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
+  %p #{@name} has selected and formatted specific information from the #{@study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
 
   %p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
 
@@ -27,7 +27,7 @@
 
   %spacer{size: 16}
 
-  %p #{@name} has selected and formatted specific information from the #{study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
+  %p #{@name} has selected and formatted specific information from the #{@study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
 
   %p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
 
