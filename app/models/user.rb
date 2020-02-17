@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  include HasFullName
+  # include HasFullName
   include SendsAsynchronousMail
 
   has_many :shares, dependent: :destroy
@@ -12,6 +12,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   include DeviseTokenAuth::Concerns::User
+  validates :email, presence: true, format: {
+    with: URI::MailTo::EMAIL_REGEXP, message: 'is invalid', allow_blank: true
+  }
+  validates :first_name, presence: true, length: {maximum: 255}
 
   before_validation :prettify
 
