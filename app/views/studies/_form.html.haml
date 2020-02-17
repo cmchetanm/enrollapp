@@ -57,8 +57,17 @@
     = f.label :sponsor_contact
     = f.text_area :sponsor_contact, value: study.sponsor_contact || study.sponsor.try(:contact), rows: 2
   .field
+    = f.label :sponsor_contact_email
+    = f.text_area :sponsor_contact_email, value: study.sponsor_contact_email || study.sponsor.try(:email), rows: 2
+  .field
+    = f.label :cro_name
+    = f.text_area :cro_name, value: study.cro_name || study.sponsor.try(:cro), rows: 2
+  .field
     = f.label :cro_contact
     = f.text_area :cro_contact, value: study.cro_contact || study.sponsor.try(:cro), rows: 2
+  .field
+    = f.label :cro_contact_email
+    = f.text_area :cro_contact_email, value: study.cro_contact_email || study.sponsor.try(:cro), rows: 2
   .field
     = f.label :budget
     = f.text_area :budget, rows: 2

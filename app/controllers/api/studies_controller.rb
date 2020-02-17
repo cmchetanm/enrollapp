@@ -56,7 +56,8 @@ module Api
         :topic_id, :name, :protocol, :agent, :mechanism, :side_effects, :administration,
         :randomization, :duration, :assessment_frequency, :interventions, :sponsor_name, :sponsor_contact,
         :cro_contact, :budget, :comments, :travel_parking_costs,
-        inclusion_criteria: [], exclusion_criteria: []
+        inclusion_criteria: [], exclusion_criteria: [],
+        :sponsor_contact_email, :sponsor_contact_phone, :cro_name, :cro_contact_email, :cro_contact_phone
       )
     end
   end

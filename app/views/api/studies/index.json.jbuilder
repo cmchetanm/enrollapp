@@ -23,7 +23,10 @@ json.study do
     json.interventions study_version ? study_version.interventions : study.interventions
     json.sponsor_name study_version ? study_version.sponsor_name : study.sponsor_name
     json.sponsor_contact study_version ? study_version.sponsor_contact : study.sponsor_contact
+    json.sponsor_contact_email study_version ? study_version.sponsor_contact_email : study.sponsor_contact_email
+    json.cro_name study_version ? study_version.cro_name : study.cro_name
     json.cro_contact study_version ? study_version.cro_contact : study.cro_contact
+    json.cro_contact_email study_version ? study_version.cro_contact_email : study.cro_contact_email
     json.budget study_version ? study_version.budget : study.budget
     json.enrolled_or_committed study_version ? study_version.enrolled_or_committed : study.enrolled_or_committed
     json.comments study_version ? study_version.comments : study.comments

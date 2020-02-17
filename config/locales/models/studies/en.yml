@@ -17,7 +17,10 @@ en:
         interventions: Invasive Procedures
         sponsor_name: Sponsor
         sponsor_contact: Sponsor Contact
+        sponsor_contact_email: Sponsor Contact Email
+        cro_name: CRO
         cro_contact: CRO Contact
+        cro_contact_email: CRO Contact Email
         budget: Site Budget
         enrolled_or_committed: Patients Enrolled/Committed
         comments: Comments
