@@ -29,7 +29,7 @@
         %tr.link{onclick: "Turbolinks.visit('#{study_path(study)}')"}
           %td= link_to study.name, study
           %td= link_to study.sponsor.name, study.sponsor
-          %td.text-center= "#{@study.enrolled}/#{@study.committed}"
+          %td.text-center= "#{study.enrolled}/#{study.committed}"
           %td.text-center= study.sites.uniq.size
           %td.text-center= study.users.size
           %td.text-center= l study.created_at, format: :short
