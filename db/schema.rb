@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_15_113656) do
+ActiveRecord::Schema.define(version: 2020_02_17_181428) do
 
   create_table "admins", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "first_name", null: false
@@ -152,6 +152,11 @@ ActiveRecord::Schema.define(version: 2020_02_15_113656) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "study_icon"
+    t.string "sponsor_contact_email"
+    t.string "sponsor_contact_phone"
+    t.string "cro_name"
+    t.string "cro_contact_email"
+    t.string "cro_contact_phone"
     t.index ["name"], name: "index_studies_on_name"
     t.index ["topic_id"], name: "fk_rails_09e41a5aa5"
   end
@@ -181,6 +186,11 @@ ActiveRecord::Schema.define(version: 2020_02_15_113656) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "study_icon"
+    t.string "sponsor_contact_email"
+    t.string "sponsor_contact_phone"
+    t.string "cro_name"
+    t.string "cro_contact_email"
+    t.string "cro_contact_phone"
     t.index ["name"], name: "index_study_versions_on_name"
     t.index ["site_id", "study_id"], name: "index_study_versions_on_site_id_and_study_id", unique: true
     t.index ["study_id"], name: "fk_rails_c2835f87a1"
@@ -199,7 +209,7 @@ ActiveRecord::Schema.define(version: 2020_02_15_113656) do
     t.string "provider", default: "email", null: false
     t.string "uid", null: false
     t.string "first_name", null: false
-    t.string "last_name", null: false
+    t.string "last_name"
     t.string "phone_number"
     t.string "email", null: false
     t.string "encrypted_password", null: false
