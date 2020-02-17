@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    attributes:
+      study:
+        name: Name
+        inclusion_criteria: Inclusion Criteria
+        exclusion_criteria: Exclusion Criteria
+        protocol: Protocol Name/Number
+        agent: Agent/Intervention
+        mechanism: Principal Mechanism of Action
+        side_effects: Side Effects/Risks of Intervention
+        administration: Route & Frequency of Administration
+        randomization: Drug/Placebo Randomization
+        duration: Duration of Treatment/Study
+        travel_parking_costs: Travel/Parking Costs
+        assessment_frequency: Frequency of Clinic Visits
+        interventions: Invasive Procedures
+        sponsor_name: Sponsor
+        sponsor_contact: Sponsor Contact
+        cro_contact: CRO Contact
+        budget: Site Budget
+        enrolled_or_committed: Patients Enrolled/Committed
+        comments: Comments

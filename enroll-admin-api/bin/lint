@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+# global directory paths
+LINT_PATH=. # lint config directory
+NODE_PATH=node_modules/.bin # NodeJS executables path
+
+# lint configuration file paths
+RUBOCOP_CONFIG=${LINT_PATH}/.rubocop.yml
+ESLINT_CONFIG=${LINT_PATH}/.eslintrc.yml
+HAMLLINT_CONFIG=${LINT_PATH}/.haml-lint.yml
+SASSLINT_CONFIG=${LINT_PATH}/.sass-lint.yml
+
+# Checking for existence of configuration files...
+test -e ${RUBOCOP_CONFIG} || { ${RUBOCOP_CONFIG}; valid=false; }
+test -e ${HAMLLINT_CONFIG} || { ${HAMLLINT_CONFIG}; valid=false; }
+test -e ${SASSLINT_CONFIG} || { ${SASSLINT_CONFIG}; valid=false; }
+test -e ${ESLINT_CONFIG} || { ${ESLINT_CONFIG}; valid=false; }
+
+! ${valid} && exit 1 # crash the program any configuration files are missing
+
+! ${valid} && exit 1 # crash the program any configuration files are missing
+
+echo 'Linting Ruby using RuboCop...'
+if [[ "$1" == "--no-fix" ]]; then
+        bundle exec rubocop || { valid=false; }
+else
+        bundle exec rubocop --auto-correct || { valid=false; }
+fi
+
+echo 'Linting JavaScript using ESLint...'
+if [[ "$1" == "--no-fix" ]]; then
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --ext '.js' app/. || { valid=false; }
+else
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --fix --ext '.js' app/. || { valid=false; }
+fi
+
+echo 'Linting JSX using ESLint...'
+if [[ "$1" == "--no-fix" ]]; then
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --ext '.jsx' app/. || { valid=false; }
+else
+        ${NODE_PATH}/eslint -c ${ESLINT_CONFIG} --fix --ext '.jsx' app/. || { valid=false; }
+fi
+
+echo 'Linting HAML using HAML Lint...'
+bundle exec haml-lint -c ${HAMLLINT_CONFIG} app/views/ || { valid=false; }
+
+echo 'Linting SCSS using SASS Lint...'
+${NODE_PATH}/sass-lint -c ${SASSLINT_CONFIG} --ignore 'node_modules/**/*.scss' '**/*.scss' --no-exit --verbose || { valid=false; }
+
+! ${valid} && exit 1 # crash the program if any lint errors were found
+
+echo 'SUCCESS: All lints have completed without errors.';

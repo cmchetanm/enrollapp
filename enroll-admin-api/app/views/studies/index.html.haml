@@ -1,0 +1,37 @@
+- content_for :title, 'Studies'
+
+%nav
+  %ul.breadcrumbs
+    %li
+      = yield :title
+
+- if @studies.size.zero?
+  = primary_callout do
+    You have not created any studies yet.
+    = link_to 'Create Study', new_study_path, class: 'small button'
+- else
+  = primary_callout 'To create a new study, go to "Sponsors" and open or create the sponsor that is requisitioning the study.'
+
+  %h1= yield :title
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Sponsor
+        %th.text-center Sites
+        %th.text-center Users
+        %th.text-center Icon
+        %th.text-center Create Date
+        %th
+    %tbody
+      - @studies.each do |study|
+        %tr.link{onclick: "Turbolinks.visit('#{study_path(study)}')"}
+          %td= link_to study.name, study
+          %td= link_to study.sponsor.name, study.sponsor
+          %td.text-center= study.sites.uniq.size
+          %td.text-center= study.users.size
+          %td
+            %img{ :src => study.study_icon, :alt => "Should be the Icon", :height => 50, :width => 50 }
+          %td.text-center= l study.created_at, format: :short
+          %td.text-right= link_to 'Show', study, class: 'clear button'

@@ -1,0 +1,16 @@
+- content_for :title, 'Unlock Instructions'
+- content_for :description, 'Use this form to resend unlock instructions.'
+
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h2= yield :title
+
+    = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
+      = render 'devise/shared/error_messages', resource: resource
+      = f.label :email
+      = f.email_field :email, autofocus: true, autocomplete: 'email'
+
+      .actions
+        = f.submit 'Resend unlock instructions', class: 'button'
+
+    = render 'devise/shared/links'

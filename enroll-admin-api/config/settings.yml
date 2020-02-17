@@ -1,0 +1,6 @@
+domain:       <%= Rails.application.credentials[Rails.env.to_sym][:host] %>
+website_name: <%= Rails.application.credentials[:website_name] %>
+system_email: <%= Rails.application.credentials[:system_email] %>
+firebase_url: https://fcm.googleapis.com/fcm/send
+ios_url:      https://apps.apple.com/app/enroll/id1473298752
+android_url:  https://play.google.com/store/apps/details?id=com.refuahsolutions.enroll

@@ -1,0 +1,16 @@
+- content_for :title, 'Confirm Your Email'
+- content_for :description, 'You must confirm your email address before you can use this application.'
+
+.grid-x.align-center
+  .medium-6.large-4.cell
+    %h2= yield :title
+
+    = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+      = render 'devise/shared/error_messages', resource: resource
+      = f.label :email
+      = f.email_field :email, autofocus: true, autocomplete: 'email', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
+
+      .actions
+        = f.submit 'Resend confirmation instructions', class: 'button'
+
+    = render 'devise/shared/links'

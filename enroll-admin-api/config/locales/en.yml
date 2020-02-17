@@ -1,0 +1,20 @@
+en:
+  no_title: Every page must have a title.
+  no_description: Every page must have a description.
+
+  errors:
+    messages:
+      password:
+        password_strength: 'is too weak, avoid words that can be found in a dictionary (e.g. hello, love, trust, etc), or passwords such as "12345". Never include names, dates, addresses or other personal information in your passwords.'
+
+  date:
+    formats:
+      short: "%-d %b %Y"
+
+  time:
+    am: am
+    formats:
+      default: "%a, %-d %b %Y %I:%M:%S %p %Z"
+      long: "%-d %b %Y, %-I:%M %p"
+      short: "%-d %b %Y"
+    pm: pm

@@ -1,0 +1,7 @@
+.tight {
+  // sass-lint:disable no-universal-selectors
+  &,
+  * {
+    line-height: 1;
+  }
+}

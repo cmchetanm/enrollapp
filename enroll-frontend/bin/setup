@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo 'Installing node_modules'
+yarn install
+
+echo 'Installing cocoapods'
+gem install cocoapods --conservative
+
+echo 'Installing Pods'
+cd ios && pod install && cd ..
+
+echo 'Using Jetifier to migrate to AndroidX'
+yarn run jetify

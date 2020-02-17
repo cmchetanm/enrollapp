@@ -1,0 +1,2787 @@
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:18:41+0200
+total : 5116502
+procs :
+    - [    2508400,  49.0, /usr/bin/kextutil ]
+    - [     945648,  18.5, /usr/libexec/trustd ]
+    - [     628147,  12.3, /usr/libexec/syspolicyd ]
+    - [     610318,  11.9, /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent ]
+    - [      84384,   1.6, /usr/libexec/locationd ]
+    - [      44828,   0.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40776,   0.8, /usr/sbin/ocspd ]
+    - [      36432,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      31388,   0.6, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      20303,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20248,   0.4, /usr/libexec/corebrightnessd ]
+    - [      16192,   0.3, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      12178,   0.2, /usr/libexec/hidd ]
+    - [      12127,   0.2, /usr/libexec/watchdogd ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8136,   0.2, /usr/libexec/symptomsd ]
+    - [       8128,   0.2, /usr/sbin/securityd ]
+    - [       8125,   0.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       8088,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8076,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:21:28+0200
+total : 5110005
+procs :
+    - [    2915452,  57.1, /usr/bin/kextutil ]
+    - [    1080456,  21.1, /usr/libexec/trustd ]
+    - [     693280,  13.6, /usr/libexec/syspolicyd ]
+    - [      69228,   1.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      64637,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      48576,   1.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      44984,   0.9, /usr/sbin/ocspd ]
+    - [      32678,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20240,   0.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      16344,   0.3, /usr/sbin/securityd ]
+    - [      16252,   0.3, /usr/libexec/opendirectoryd ]
+    - [      16104,   0.3, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12252,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12148,   0.2, /usr/libexec/watchdogd ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [      11304,   0.2, /usr/libexec/symptomsd ]
+    - [       8160,   0.2, /usr/libexec/UserEventAgent ]
+    - [       8019,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4086,   0.1, /usr/sbin/mDNSResponder ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:23:59+0200
+total : 5107885
+procs :
+    - [    2893644,  56.7, /usr/bin/kextutil ]
+    - [    1080008,  21.1, /usr/libexec/trustd ]
+    - [     672599,  13.2, /usr/libexec/syspolicyd ]
+    - [      56884,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40832,   0.8, /usr/sbin/ocspd ]
+    - [      40150,   0.8, /usr/libexec/locationd ]
+    - [      32432,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28274,   0.6, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      24425,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20019,   0.4, /usr/libexec/opendirectoryd ]
+    - [      16368,   0.3, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      16184,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      16184,   0.3, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      16167,   0.3, /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow ]
+    - [      13071,   0.3, /usr/sbin/bluetoothd ]
+    - [      12192,   0.2, /usr/sbin/securityd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      12146,   0.2, /usr/libexec/biometrickitd ]
+    - [      12072,   0.2, /usr/libexec/runningboardd ]
+    - [       8160,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:26:30+0200
+total : 5109123
+procs :
+    - [    2958144,  57.9, /usr/bin/kextutil ]
+    - [    1099912,  21.5, /usr/libexec/trustd ]
+    - [     677031,  13.3, /usr/libexec/syspolicyd ]
+    - [      64677,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      60740,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40888,   0.8, /usr/sbin/ocspd ]
+    - [      28548,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      27840,   0.5, /usr/libexec/runningboardd ]
+    - [      16184,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      16160,   0.3, /usr/sbin/securityd ]
+    - [      16136,   0.3, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      16112,   0.3, /usr/libexec/watchdogd ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [       8192,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8120,   0.2, /usr/libexec/symptomsd ]
+    - [       8112,   0.2, /usr/libexec/UserEventAgent ]
+    - [       8051,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8012,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       4096,   0.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:29:17+0200
+total : 5108806
+procs :
+    - [    2903276,  56.8, /usr/bin/kextutil ]
+    - [    1088312,  21.3, /usr/libexec/trustd ]
+    - [     742149,  14.5, /usr/libexec/syspolicyd ]
+    - [      75700,   1.5, /usr/libexec/locationd ]
+    - [      65148,   1.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40872,   0.8, /usr/sbin/ocspd ]
+    - [      28526,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      27960,   0.5, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      16224,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12221,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12200,   0.2, /usr/sbin/securityd ]
+    - [      12160,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12148,   0.2, /usr/libexec/watchdogd ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [       8152,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       7936,   0.2, /usr/libexec/sharingd ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4096,   0.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [       4072,   0.1, /usr/libexec/symptomsd ]
+    - [       4071,   0.1, /usr/sbin/WirelessRadioManagerd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:31:48+0200
+total : 5108041
+procs :
+    - [    2905712,  56.9, /usr/bin/kextutil ]
+    - [    1092868,  21.4, /usr/libexec/trustd ]
+    - [     717328,  14.0, /usr/libexec/syspolicyd ]
+    - [      60175,   1.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56992,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      53120,   1.0, /usr/sbin/ocspd ]
+    - [      27920,   0.5, /Applications/Safari.app/Contents/MacOS/Safari ]
+    - [      24443,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      19764,   0.4, /usr/libexec/amfid ]
+    - [      16264,   0.3, /usr/sbin/securityd ]
+    - [      16228,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12257,   0.2, /usr/libexec/opendirectoryd ]
+    - [      12192,   0.2, /usr/libexec/symptomsd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      12104,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      11766,   0.2, /usr/sbin/mDNSResponder ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8120,   0.2, /usr/libexec/UserEventAgent ]
+    - [       8049,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8012,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:34:13+0200
+total : 5101574
+procs :
+    - [    2740724,  53.7, /usr/bin/kextutil ]
+    - [    1114916,  21.9, /usr/libexec/trustd ]
+    - [     672959,  13.2, /usr/libexec/syspolicyd ]
+    - [     276779,   5.4, /usr/libexec/locationd ]
+    - [      57024,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40888,   0.8, /usr/sbin/ocspd ]
+    - [      35818,   0.7, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      25469,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      24389,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16248,   0.3, /usr/sbin/securityd ]
+    - [      16112,   0.3, /usr/libexec/watchdogd ]
+    - [      12120,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8072,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8008,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       7856,   0.2, /usr/libexec/symptomsd ]
+    - [       7808,   0.2, /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent ]
+    - [       4064,   0.1, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper ]
+    - [       4048,   0.1, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:35:12+0200
+total : 5068420
+procs :
+    - [    1492193,  29.4, /usr/libexec/hidd ]
+    - [    1133344,  22.4, /usr/bin/kextutil ]
+    - [     789128,  15.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [     421928,   8.3, /usr/libexec/trustd ]
+    - [     269936,   5.3, /usr/libexec/syspolicyd ]
+    - [     238318,   4.7, /usr/libexec/pboard ]
+    - [     109712,   2.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      73128,   1.4, /usr/libexec/sharingd ]
+    - [      64776,   1.3, /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow ]
+    - [      60386,   1.2, /usr/libexec/opendirectoryd ]
+    - [      59496,   1.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/ContextStoreAgent ]
+    - [      45655,   0.9, /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd ]
+    - [      40496,   0.8, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      36656,   0.7, /usr/libexec/TouchBarServer ]
+    - [      28362,   0.6, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      24147,   0.5, /usr/sbin/bluetoothd ]
+    - [      20294,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      12272,   0.2, /usr/sbin/ocspd ]
+    - [      12232,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:36:20+0200
+total : 5018073
+procs :
+    - [    2044496,  40.7, /usr/libexec/hidd ]
+    - [    1270576,  25.3, /usr/bin/kextutil ]
+    - [     582456,  11.6, /usr/libexec/trustd ]
+    - [     269936,   5.4, /usr/libexec/syspolicyd ]
+    - [     125606,   2.5, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [     109792,   2.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      88920,   1.8, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      64824,   1.3, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      56282,   1.1, /usr/libexec/opendirectoryd ]
+    - [      40824,   0.8, /usr/libexec/TouchBarServer ]
+    - [      40528,   0.8, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      39808,   0.8, /usr/libexec/runningboardd ]
+    - [      36808,   0.7, /usr/sbin/ocspd ]
+    - [      36432,   0.7, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      32433,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      32242,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      25538,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      19924,   0.4, /usr/libexec/nsurlsessiond ]
+    - [       8160,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8144,   0.2, /usr/sbin/securityd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:38:21+0200
+total : 5088467
+procs :
+    - [    2367256,  46.5, /usr/bin/kextutil ]
+    - [     887148,  17.4, /usr/libexec/trustd ]
+    - [     884859,  17.4, /usr/libexec/locationd ]
+    - [     575911,  11.3, /usr/libexec/syspolicyd ]
+    - [      60553,   1.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      44634,   0.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      39558,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      36792,   0.7, /usr/sbin/ocspd ]
+    - [      36432,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      24224,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16312,   0.3, /usr/sbin/securityd ]
+    - [      13656,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12144,   0.2, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      12127,   0.2, /usr/libexec/watchdogd ]
+    - [      12116,   0.2, /usr/libexec/opendirectoryd ]
+    - [      12028,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       8080,   0.2, /usr/libexec/symptomsd ]
+    - [       8032,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4096,   0.1, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:41:07+0200
+total : 5103979
+procs :
+    - [    2927532,  57.4, /usr/bin/kextutil ]
+    - [    1092448,  21.4, /usr/libexec/trustd ]
+    - [     709362,  13.9, /usr/libexec/syspolicyd ]
+    - [      65072,   1.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      49064,   1.0, /usr/sbin/ocspd ]
+    - [      48576,   1.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28547,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20240,   0.4, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      16368,   0.3, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      16128,   0.3, /usr/libexec/watchdogd ]
+    - [      16084,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12160,   0.2, /usr/sbin/securityd ]
+    - [      12064,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12008,   0.2, /usr/libexec/opendirectoryd ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [       8160,   0.2, /usr/libexec/symptomsd ]
+    - [       7986,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       7833,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       4096,   0.1, /usr/libexec/UserEventAgent ]
+    - [       4080,   0.1, /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:43:38+0200
+total : 5106593
+procs :
+    - [    2805008,  54.9, /usr/bin/kextutil ]
+    - [    1051728,  20.6, /usr/libexec/trustd ]
+    - [     710262,  13.9, /usr/libexec/syspolicyd ]
+    - [      67445,   1.3, /usr/libexec/locationd ]
+    - [      64485,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      60940,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      48576,   1.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      44928,   0.9, /usr/sbin/ocspd ]
+    - [      39544,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      32628,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20240,   0.4, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      19711,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      16296,   0.3, /usr/sbin/securityd ]
+    - [      16156,   0.3, /usr/libexec/opendirectoryd ]
+    - [      16144,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12208,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12208,   0.2, /usr/libexec/symptomsd ]
+    - [      12161,   0.2, /usr/libexec/watchdogd ]
+    - [       8036,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       7864,   0.2, /usr/libexec/UserEventAgent ]
+
+--- !logd statistics record
+type  : File Rotate
+file  : Special/0000000000000098.tracev3
+time  : 2019-12-25 16:45:32+0200
+total : 18768461
+procs :
+    - [   17630406,  93.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     528917,   2.8, /usr/libexec/dasd ]
+    - [     112374,   0.6, /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow ]
+    - [      80960,   0.4, /System/Applications/App Store.app/Contents/MacOS/App Store ]
+    - [      78920,   0.4, /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated ]
+    - [      63240,   0.3, /usr/libexec/routined ]
+    - [      40416,   0.2, /usr/sbin/bluetoothd ]
+    - [      34443,   0.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      33404,   0.2, /Applications/Xcode.app/Contents/Developer/usr/bin/instruments ]
+    - [      32520,   0.2, /usr/libexec/UserEventAgent ]
+    - [      24096,   0.1, /usr/libexec/mobileassetd ]
+    - [      20108,   0.1, /usr/libexec/sharingd ]
+    - [      11368,   0.1, /System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/Support/followupd ]
+    - [       8184,   0.0, /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd ]
+    - [       8172,   0.0, /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd ]
+    - [       7983,   0.0, /usr/libexec/lsd ]
+    - [       7959,   0.0, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [       4599,   0.0, /usr/libexec/locationd ]
+    - [       4088,   0.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4062,   0.0, /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:45:39+0200
+total : 5114219
+procs :
+    - [    2343136,  45.8, /usr/bin/kextutil ]
+    - [     872080,  17.1, /usr/libexec/trustd ]
+    - [     654617,  12.8, /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent ]
+    - [     539872,  10.6, /usr/libexec/syspolicyd ]
+    - [     130048,   2.5, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [      80968,   1.6, /usr/sbin/securityd ]
+    - [      44834,   0.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      43824,   0.9, /usr/libexec/symptomsd ]
+    - [      39664,   0.8, /System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookManager.app/Contents/MacOS/AddressBookManager ]
+    - [      36144,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28600,   0.6, /usr/sbin/ocspd ]
+    - [      27963,   0.5, /System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookSourceSync.app/Contents/MacOS/AddressBookSourceSync ]
+    - [      27740,   0.5, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      24502,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24224,   0.5, /usr/libexec/runningboardd ]
+    - [      16224,   0.3, /usr/libexec/configd ]
+    - [      16176,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      15986,   0.3, /usr/libexec/opendirectoryd ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      12182,   0.2, /usr/libexec/PerfPowerServices ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:47:56+0200
+total : 5110733
+procs :
+    - [    2707220,  53.0, /usr/bin/kextutil ]
+    - [    1020488,  20.0, /usr/libexec/trustd ]
+    - [     660401,  12.9, /usr/libexec/syspolicyd ]
+    - [     123362,   2.4, /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd ]
+    - [      64642,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56796,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44984,   0.9, /usr/sbin/ocspd ]
+    - [      40175,   0.8, /usr/sbin/filecoordinationd ]
+    - [      39912,   0.8, /usr/libexec/runningboardd ]
+    - [      36600,   0.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      25475,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      24020,   0.5, /usr/libexec/opendirectoryd ]
+    - [      19845,   0.4, /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow ]
+    - [      16316,   0.3, /usr/sbin/securityd ]
+    - [      16118,   0.3, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      16084,   0.3, /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/Versions/A/com.apple.Safari.SafeBrowsing.Service ]
+    - [      13527,   0.3, /usr/sbin/bluetoothd ]
+    - [      12200,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12149,   0.2, /usr/libexec/biometrickitd ]
+    - [      12148,   0.2, /usr/libexec/watchdogd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:50:42+0200
+total : 5109623
+procs :
+    - [    2878972,  56.3, /usr/bin/kextutil ]
+    - [    1072836,  21.0, /usr/libexec/trustd ]
+    - [     689279,  13.5, /usr/libexec/syspolicyd ]
+    - [     107819,   2.1, /usr/libexec/locationd ]
+    - [      65110,   1.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44944,   0.9, /usr/sbin/ocspd ]
+    - [      43296,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      36534,   0.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16184,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      15528,   0.3, /usr/libexec/routined ]
+    - [      14410,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12192,   0.2, /usr/sbin/securityd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      12106,   0.2, /usr/libexec/opendirectoryd ]
+    - [      12088,   0.2, /usr/libexec/symptomsd ]
+    - [      12064,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      11931,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       8134,   0.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       4096,   0.1, /usr/sbin/mDNSResponder ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:53:09+0200
+total : 5110909
+procs :
+    - [    2817156,  55.1, /usr/bin/kextutil ]
+    - [    1060628,  20.8, /usr/libexec/trustd ]
+    - [     672599,  13.2, /usr/libexec/syspolicyd ]
+    - [     108879,   2.1, /usr/libexec/nsurlsessiond ]
+    - [      68887,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56980,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      49080,   1.0, /usr/sbin/ocspd ]
+    - [      40011,   0.8, /usr/libexec/locationd ]
+    - [      35233,   0.7, /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd ]
+    - [      28512,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24130,   0.5, /usr/libexec/opendirectoryd ]
+    - [      16200,   0.3, /usr/sbin/securityd ]
+    - [      12192,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12164,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12024,   0.2, /usr/libexec/watchdogd ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8160,   0.2, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [       8160,   0.2, /usr/libexec/UserEventAgent ]
+    - [       8098,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8066,   0.2, /usr/libexec/sharingd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:55:45+0200
+total : 5104723
+procs :
+    - [    2950264,  57.8, /usr/bin/kextutil ]
+    - [    1095248,  21.5, /usr/libexec/trustd ]
+    - [     716914,  14.0, /usr/libexec/syspolicyd ]
+    - [      61102,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40848,   0.8, /usr/sbin/ocspd ]
+    - [      39864,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      28503,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      23903,   0.5, /usr/libexec/locationd ]
+    - [      16236,   0.3, /usr/libexec/watchdogd ]
+    - [      16224,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      15714,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12192,   0.2, /usr/sbin/securityd ]
+    - [      12072,   0.2, /usr/libexec/symptomsd ]
+    - [      12048,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8064,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8012,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       7808,   0.2, /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent ]
+    - [       4064,   0.1, /usr/libexec/UserEventAgent ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 16:58:16+0200
+total : 5111898
+procs :
+    - [    2881872,  56.4, /usr/bin/kextutil ]
+    - [    1068264,  20.9, /usr/libexec/trustd ]
+    - [     672959,  13.2, /usr/libexec/syspolicyd ]
+    - [     144386,   2.8, /usr/libexec/locationd ]
+    - [      61002,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      60595,   1.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      40888,   0.8, /usr/sbin/ocspd ]
+    - [      28483,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24224,   0.5, /usr/libexec/runningboardd ]
+    - [      16312,   0.3, /usr/sbin/securityd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      12152,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      11695,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8166,   0.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       8160,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8056,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       8048,   0.2, /usr/libexec/opendirectoryd ]
+    - [       4096,   0.1, /usr/libexec/timed ]
+    - [       4088,   0.1, /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd ]
+    - [       4074,   0.1, /usr/sbin/mDNSResponder ]
+
+--- !logd statistics record
+type  : File Rotate
+file  : Persist/000000000000012e.tracev3
+time  : 2019-12-25 17:00:47+0200
+total : 36674335
+procs :
+    - [    7455640,  20.3, /usr/libexec/syspolicyd ]
+    - [    6414972,  17.5, /usr/sbin/mDNSResponder ]
+    - [    6085505,  16.6, /usr/libexec/diskarbitrationd ]
+    - [    2078127,   5.7, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [    1973632,   5.4, /usr/bin/kextutil ]
+    - [    1761184,   4.8, /usr/libexec/taskgated ]
+    - [    1204473,   3.3, /usr/libexec/trustd ]
+    - [     868056,   2.4, /kernel ]
+    - [     807951,   2.2, /usr/libexec/pkd ]
+    - [     648520,   1.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     613616,   1.7, /usr/libexec/xpcproxy ]
+    - [     452289,   1.2, /usr/libexec/nsurlsessiond ]
+    - [     447552,   1.2, /usr/sbin/distnoted ]
+    - [     441516,   1.2, /usr/libexec/timed ]
+    - [     351200,   1.0, /usr/libexec/runningboardd ]
+    - [     320168,   0.9, /usr/libexec/locationd ]
+    - [     251904,   0.7, /usr/libexec/AirPlayXPCHelper ]
+    - [     230319,   0.6, /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd ]
+    - [     202932,   0.6, /usr/libexec/UserEventAgent ]
+    - [     184492,   0.5, /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd ]
+
+--- !logd purge record
+type  : Persist Periodic Purge
+goal  : 9223372036854775807
+time  : 2019-12-25 17:00:47+0200
+files :
+    - Persist/00000000000000fa.tracev3
+count : 1
+size  : 10478528
+kept  : 51 files, 529788248 bytes
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:00:48+0200
+total : 5105950
+procs :
+    - [    2909736,  57.0, /usr/bin/kextutil ]
+    - [    1095360,  21.5, /usr/libexec/trustd ]
+    - [     720960,  14.1, /usr/libexec/syspolicyd ]
+    - [      61102,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44952,   0.9, /usr/sbin/ocspd ]
+    - [      39740,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      38945,   0.8, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      28532,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20104,   0.4, /usr/libexec/symptomsd ]
+    - [      16136,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      14397,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12232,   0.2, /usr/sbin/securityd ]
+    - [      12124,   0.2, /usr/libexec/opendirectoryd ]
+    - [      12024,   0.2, /usr/libexec/watchdogd ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8012,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       4096,   0.1, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       4086,   0.1, /usr/libexec/PerfPowerServices ]
+    - [       4085,   0.1, /usr/sbin/mDNSResponder ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:03:19+0200
+total : 5110051
+procs :
+    - [    2861764,  56.0, /usr/bin/kextutil ]
+    - [    1072576,  21.0, /usr/libexec/trustd ]
+    - [     697040,  13.6, /usr/libexec/syspolicyd ]
+    - [     107441,   2.1, /usr/libexec/locationd ]
+    - [      63967,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56758,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44944,   0.9, /usr/sbin/ocspd ]
+    - [      39774,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      28531,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16248,   0.3, /usr/sbin/securityd ]
+    - [      16236,   0.3, /usr/libexec/watchdogd ]
+    - [      12262,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12068,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12016,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8120,   0.2, /usr/libexec/UserEventAgent ]
+    - [       8032,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8032,   0.2, /usr/libexec/symptomsd ]
+    - [       7808,   0.2, /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent ]
+    - [       4072,   0.1, /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:05:51+0200
+total : 5101696
+procs :
+    - [    2804956,  55.0, /usr/bin/kextutil ]
+    - [    1056392,  20.7, /usr/libexec/trustd ]
+    - [     652640,  12.8, /usr/libexec/syspolicyd ]
+    - [     258717,   5.1, /usr/sbin/system_profiler ]
+    - [      61084,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44984,   0.9, /usr/sbin/ocspd ]
+    - [      39908,   0.8, /usr/libexec/amfid ]
+    - [      28502,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16296,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12200,   0.2, /usr/sbin/securityd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      12136,   0.2, /usr/libexec/symptomsd ]
+    - [      12096,   0.2, /usr/libexec/opendirectoryd ]
+    - [      11913,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [       8160,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8036,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       8000,   0.2, /Applications/Avast.app/Contents/Backend/services/com.avast.daemon ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4086,   0.1, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:08:22+0200
+total : 5107145
+procs :
+    - [    2829368,  55.4, /usr/bin/kextutil ]
+    - [    1060080,  20.8, /usr/libexec/trustd ]
+    - [     701091,  13.7, /usr/libexec/syspolicyd ]
+    - [     104402,   2.0, /usr/libexec/locationd ]
+    - [      69109,   1.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      68693,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      49048,   1.0, /usr/sbin/ocspd ]
+    - [      40110,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      32541,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24008,   0.5, /usr/libexec/runningboardd ]
+    - [      16296,   0.3, /usr/sbin/securityd ]
+    - [      12048,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12024,   0.2, /usr/libexec/watchdogd ]
+    - [      11848,   0.2, /usr/libexec/symptomsd ]
+    - [      11836,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8128,   0.2, /usr/libexec/UserEventAgent ]
+    - [       8080,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       8016,   0.2, /usr/libexec/opendirectoryd ]
+    - [       4096,   0.1, /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:11:08+0200
+total : 5105985
+procs :
+    - [    3007976,  58.9, /usr/bin/kextutil ]
+    - [    1115728,  21.9, /usr/libexec/trustd ]
+    - [     705416,  13.8, /usr/libexec/syspolicyd ]
+    - [      69169,   1.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44984,   0.9, /usr/sbin/ocspd ]
+    - [      28402,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16236,   0.3, /usr/libexec/watchdogd ]
+    - [      16120,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      12202,   0.2, /usr/libexec/opendirectoryd ]
+    - [      12137,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      10039,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8128,   0.2, /usr/sbin/securityd ]
+    - [       8068,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       8056,   0.2, /usr/libexec/symptomsd ]
+    - [       4085,   0.1, /usr/sbin/mDNSResponder ]
+    - [       4070,   0.1, /usr/sbin/WirelessRadioManagerd ]
+    - [       4043,   0.1, /usr/libexec/corebrightnessd ]
+    - [       4040,   0.1, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:13:40+0200
+total : 5110906
+procs :
+    - [    2764896,  54.1, /usr/bin/kextutil ]
+    - [    1041192,  20.4, /usr/libexec/trustd ]
+    - [     676721,  13.2, /usr/libexec/syspolicyd ]
+    - [     112020,   2.2, /usr/libexec/locationd ]
+    - [      65090,   1.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      53002,   1.0, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      44400,   0.9, /usr/libexec/runningboardd ]
+    - [      40848,   0.8, /usr/sbin/ocspd ]
+    - [      40168,   0.8, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      39430,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      28467,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      28379,   0.6, /Users/bar/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Helpers/GoogleSoftwareUpdateAgent.app/Contents/MacOS/GoogleSoftwareUpdateAgent ]
+    - [      20352,   0.4, /usr/sbin/securityd ]
+    - [      16232,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12232,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12192,   0.2, /System/Library/CoreServices/launchservicesd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      11364,   0.2, /usr/libexec/routined ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8104,   0.2, /usr/libexec/UserEventAgent ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:16:11+0200
+total : 5113808
+procs :
+    - [    3006448,  58.8, /usr/bin/kextutil ]
+    - [    1111632,  21.7, /usr/libexec/trustd ]
+    - [     672959,  13.2, /usr/libexec/syspolicyd ]
+    - [      60931,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      36792,   0.7, /usr/sbin/ocspd ]
+    - [      28445,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      23936,   0.5, /usr/libexec/runningboardd ]
+    - [      17092,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      16112,   0.3, /usr/libexec/watchdogd ]
+    - [      16080,   0.3, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      15928,   0.3, /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/Versions/A/com.apple.Safari.SafeBrowsing.Service ]
+    - [      15064,   0.3, /usr/libexec/routined ]
+    - [      12168,   0.2, /usr/libexec/configd ]
+    - [      12144,   0.2, /System/Library/CoreServices/diagnostics_agent ]
+    - [      12024,   0.2, /usr/libexec/symptomsd ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8152,   0.2, /usr/sbin/securityd ]
+    - [       8132,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       8008,   0.2, /usr/libexec/opendirectoryd ]
+    - [       7920,   0.2, /usr/libexec/UserEventAgent ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:18:43+0200
+total : 5107691
+procs :
+    - [    2837456,  55.6, /usr/bin/kextutil ]
+    - [    1064536,  20.8, /usr/libexec/trustd ]
+    - [     713043,  14.0, /usr/libexec/syspolicyd ]
+    - [      71865,   1.4, /usr/libexec/locationd ]
+    - [      64535,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      61126,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      47778,   0.9, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      44952,   0.9, /usr/sbin/ocspd ]
+    - [      40600,   0.8, /usr/libexec/symptomsd ]
+    - [      24376,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16312,   0.3, /usr/sbin/securityd ]
+    - [      16304,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12204,   0.2, /usr/libexec/biometrickitd ]
+    - [      12148,   0.2, /usr/libexec/watchdogd ]
+    - [      11712,   0.2, /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent ]
+    - [       8160,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8111,   0.2, /usr/libexec/PerfPowerServices ]
+    - [       8068,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       7864,   0.2, /usr/libexec/UserEventAgent ]
+    - [       4096,   0.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:21:29+0200
+total : 5114961
+procs :
+    - [    2923508,  57.2, /usr/bin/kextutil ]
+    - [    1097048,  21.4, /usr/libexec/trustd ]
+    - [     742620,  14.5, /usr/libexec/syspolicyd ]
+    - [      65000,   1.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      53176,   1.0, /usr/sbin/ocspd ]
+    - [      32443,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      31986,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      24128,   0.5, /usr/libexec/opendirectoryd ]
+    - [      16200,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      16096,   0.3, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12208,   0.2, /usr/sbin/securityd ]
+    - [      12208,   0.2, /usr/libexec/symptomsd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      11350,   0.2, /usr/libexec/routined ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       7995,   0.2, /usr/libexec/biometrickitd ]
+    - [       4096,   0.1, /usr/libexec/PerfPowerServices ]
+    - [       4073,   0.1, /usr/libexec/biokitaggdd ]
+    - [       4072,   0.1, /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/Versions/A/com.apple.Safari.SafeBrowsing.Service ]
+    - [       4065,   0.1, /usr/libexec/airportd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:24:01+0200
+total : 5111764
+procs :
+    - [    2885480,  56.4, /usr/bin/kextutil ]
+    - [    1083732,  21.2, /usr/libexec/trustd ]
+    - [     672599,  13.2, /usr/libexec/syspolicyd ]
+    - [      99890,   2.0, /usr/libexec/locationd ]
+    - [      64039,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      60976,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44944,   0.9, /usr/sbin/ocspd ]
+    - [      28472,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      28164,   0.6, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      16280,   0.3, /usr/sbin/securityd ]
+    - [      16112,   0.3, /usr/libexec/watchdogd ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      12031,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8132,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       8104,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8048,   0.2, /usr/libexec/symptomsd ]
+    - [       8044,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       8027,   0.2, /usr/sbin/mDNSResponder ]
+    - [       8008,   0.2, /usr/libexec/opendirectoryd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:26:32+0200
+total : 5107008
+procs :
+    - [    2897992,  56.7, /usr/bin/kextutil ]
+    - [    1072376,  21.0, /usr/libexec/trustd ]
+    - [     677081,  13.3, /usr/libexec/syspolicyd ]
+    - [     104136,   2.0, /usr/libexec/locationd ]
+    - [      61010,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      36784,   0.7, /usr/sbin/ocspd ]
+    - [      32318,   0.6, /usr/libexec/biometrickitd ]
+    - [      28541,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      27944,   0.5, /usr/libexec/runningboardd ]
+    - [      27888,   0.5, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      16144,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12248,   0.2, /usr/sbin/securityd ]
+    - [      12193,   0.2, /usr/libexec/biokitaggdd ]
+    - [      12148,   0.2, /usr/libexec/watchdogd ]
+    - [      12120,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12064,   0.2, /usr/libexec/opendirectoryd ]
+    - [      11712,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8112,   0.2, /usr/libexec/symptomsd ]
+    - [       8036,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       7808,   0.2, /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:29:04+0200
+total : 5110741
+procs :
+    - [    2909796,  56.9, /usr/bin/kextutil ]
+    - [    1120948,  21.9, /usr/libexec/trustd ]
+    - [     688695,  13.5, /usr/libexec/syspolicyd ]
+    - [      64699,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56984,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      53176,   1.0, /usr/sbin/ocspd ]
+    - [      28453,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      26396,   0.5, /usr/libexec/routined ]
+    - [      16320,   0.3, /usr/sbin/securityd ]
+    - [      16144,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12228,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      12112,   0.2, /usr/libexec/UserEventAgent ]
+    - [      12106,   0.2, /usr/libexec/biometrickitd ]
+    - [      12048,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12048,   0.2, /usr/libexec/symptomsd ]
+    - [      11891,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8080,   0.2, /System/Library/PrivateFrameworks/CalendarAgent.framework/Executables/CalendarAgent ]
+    - [       4058,   0.1, /usr/libexec/biokitaggdd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:31:50+0200
+total : 5104524
+procs :
+    - [    2895100,  56.7, /usr/bin/kextutil ]
+    - [    1080316,  21.2, /usr/libexec/trustd ]
+    - [     725392,  14.2, /usr/libexec/syspolicyd ]
+    - [      67926,   1.3, /usr/libexec/locationd ]
+    - [      65204,   1.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      55934,   1.1, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      40832,   0.8, /usr/sbin/ocspd ]
+    - [      28497,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16208,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      16112,   0.3, /usr/libexec/watchdogd ]
+    - [      12288,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      12192,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12168,   0.2, /usr/sbin/securityd ]
+    - [      11985,   0.2, /usr/libexec/opendirectoryd ]
+    - [      11712,   0.2, /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent ]
+    - [       8168,   0.2, /usr/libexec/symptomsd ]
+    - [       8068,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       8064,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       4064,   0.1, /System/Applications/App Store.app/Contents/MacOS/App Store ]
+    - [       4064,   0.1, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:33:22+0200
+total : 5077124
+procs :
+    - [    1967148,  38.7, /usr/bin/kextutil ]
+    - [     985629,  19.4, /usr/libexec/hidd ]
+    - [     744812,  14.7, /usr/libexec/trustd ]
+    - [     508297,  10.0, /usr/libexec/syspolicyd ]
+    - [      76849,   1.5, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      69008,   1.4, /usr/libexec/sharingd ]
+    - [      68415,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      65008,   1.3, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      64671,   1.3, /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow ]
+    - [      63900,   1.3, /usr/libexec/opendirectoryd ]
+    - [      58824,   1.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/ContextStoreAgent ]
+    - [      36792,   0.7, /usr/sbin/ocspd ]
+    - [      36352,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      32608,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      28530,   0.6, /usr/libexec/TouchBarServer ]
+    - [      28336,   0.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      28314,   0.6, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      20835,   0.4, /usr/sbin/bluetoothd ]
+    - [      16320,   0.3, /usr/sbin/securityd ]
+    - [      16241,   0.3, /usr/libexec/corebrightnessd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:33:41+0200
+total : 5008258
+procs :
+    - [    2987207,  59.6, /usr/libexec/hidd ]
+    - [     375775,   7.5, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [     283336,   5.7, /usr/bin/kextutil ]
+    - [     270841,   5.4, /System/Library/CoreServices/iconservicesagent ]
+    - [     146336,   2.9, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     141261,   2.8, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [     134157,   2.7, /usr/libexec/trustd ]
+    - [      72912,   1.5, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      68816,   1.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      68678,   1.4, /usr/libexec/syspolicyd ]
+    - [      68295,   1.4, /usr/libexec/lsd ]
+    - [      40349,   0.8, /usr/sbin/usernoted ]
+    - [      40224,   0.8, /usr/libexec/runningboardd ]
+    - [      40094,   0.8, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      35423,   0.7, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      31718,   0.6, /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent ]
+    - [      24360,   0.5, /usr/libexec/TouchBarServer ]
+    - [      16189,   0.3, /usr/libexec/pkd ]
+    - [      16184,   0.3, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      15632,   0.3, /System/Library/CoreServices/launchservicesd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:34:06+0200
+total : 5029315
+procs :
+    - [    1531040,  30.4, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [    1378959,  27.4, /usr/libexec/hidd ]
+    - [     420757,   8.4, /usr/libexec/opendirectoryd ]
+    - [     311740,   6.2, /usr/bin/kextutil ]
+    - [     282139,   5.6, /usr/libexec/trustd ]
+    - [     184615,   3.7, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [     139802,   2.8, /usr/libexec/swcd ]
+    - [     113460,   2.3, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService ]
+    - [      99846,   2.0, /usr/libexec/lsd ]
+    - [      92790,   1.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker ]
+    - [      77280,   1.5, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      68413,   1.4, /usr/libexec/syspolicyd ]
+    - [      40492,   0.8, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      36432,   0.7, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      31684,   0.6, /System/Library/CoreServices/diagnostics_agent ]
+    - [      20400,   0.4, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [      16119,   0.3, /usr/libexec/secinitd ]
+    - [      12248,   0.2, /usr/sbin/securityd ]
+    - [      12235,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      12216,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:34:12+0200
+total : 5082122
+procs :
+    - [    3502814,  68.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker ]
+    - [     703776,  13.8, /usr/libexec/hidd ]
+    - [     254932,   5.0, /usr/bin/kextutil ]
+    - [     216760,   4.3, /usr/libexec/trustd ]
+    - [     100974,   2.0, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      96900,   1.9, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      68407,   1.3, /usr/libexec/syspolicyd ]
+    - [      32512,   0.6, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      20240,   0.4, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      20240,   0.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      12168,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      11971,   0.2, /Applications/Xcode.app/Contents/SharedFrameworks/SourceKit.framework/Versions/A/XPCServices/com.apple.dt.SKAgent.xpc/Contents/MacOS/com.apple.dt.SKAgent ]
+    - [       8180,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8144,   0.2, /usr/libexec/TouchBarServer ]
+    - [       8040,   0.2, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       7912,   0.2, /usr/libexec/sandboxd ]
+    - [       4096,   0.1, /usr/sbin/ocspd ]
+    - [       4056,   0.1, /usr/libexec/pboard ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:34:37+0200
+total : 4980865
+procs :
+    - [    3120662,  62.7, /usr/libexec/hidd ]
+    - [     509076,  10.2, /usr/bin/kextutil ]
+    - [     306900,   6.2, /usr/libexec/trustd ]
+    - [     272836,   5.5, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [     158592,   3.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     115396,   2.3, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      72912,   1.5, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      68816,   1.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      68582,   1.4, /usr/libexec/syspolicyd ]
+    - [      50180,   1.0, /usr/bin/codesign ]
+    - [      47604,   1.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      28508,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      28320,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      16280,   0.3, /usr/libexec/TouchBarServer ]
+    - [      15749,   0.3, /usr/sbin/filecoordinationd ]
+    - [      12144,   0.2, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      12101,   0.2, /usr/libexec/opendirectoryd ]
+    - [      12082,   0.2, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [       8160,   0.2, /usr/sbin/securityd ]
+    - [       8116,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:35:10+0200
+total : 5015687
+procs :
+    - [    2127864,  42.4, /usr/libexec/hidd ]
+    - [     624268,  12.4, /usr/bin/kextutil ]
+    - [     353864,   7.1, /usr/libexec/trustd ]
+    - [     285733,   5.7, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [     221966,   4.4, /usr/libexec/syspolicyd ]
+    - [     194733,   3.9, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [     189688,   3.8, /usr/libexec/taskgated ]
+    - [     164994,   3.3, /usr/sbin/mDNSResponder ]
+    - [     101592,   2.0, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      89053,   1.8, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      72588,   1.4, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimMetalHost.xpc/Contents/MacOS/SimMetalHost ]
+    - [      64036,   1.3, /usr/libexec/opendirectoryd ]
+    - [      56552,   1.1, /System/Library/CoreServices/launchservicesd ]
+    - [      56536,   1.1, /usr/libexec/runningboardd ]
+    - [      52624,   1.0, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      52392,   1.0, /usr/libexec/symptomsd ]
+    - [      48908,   1.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      48576,   1.0, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      21352,   0.4, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/simulator-trampoline ]
+    - [      20032,   0.4, /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:37:07+0200
+total : 5079361
+procs :
+    - [    2221152,  43.7, /usr/bin/kextutil ]
+    - [     848840,  16.7, /usr/libexec/trustd ]
+    - [     527722,  10.4, /usr/libexec/hidd ]
+    - [     503777,   9.9, /usr/libexec/syspolicyd ]
+    - [     121950,   2.4, /System/Library/Frameworks/Security.framework/Versions/A/MachServices/SecurityAgent.bundle/Contents/MacOS/SecurityAgent ]
+    - [     104039,   2.0, /usr/libexec/locationd ]
+    - [      72064,   1.4, /usr/libexec/runningboardd ]
+    - [      68782,   1.4, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      48990,   1.0, /System/Library/Frameworks/Security.framework/Versions/A/MachServices/authorizationhost.bundle/Contents/MacOS/authorizationhost ]
+    - [      47381,   0.9, /usr/libexec/opendirectoryd ]
+    - [      44728,   0.9, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      40626,   0.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      32528,   0.6, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      31605,   0.6, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      30902,   0.6, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      28600,   0.6, /usr/sbin/ocspd ]
+    - [      28512,   0.6, /usr/libexec/TouchBarServer ]
+    - [      27900,   0.5, /usr/libexec/taskgated ]
+    - [      24264,   0.5, /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd ]
+    - [      20440,   0.4, /usr/libexec/symptomsd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:38:37+0200
+total : 5039834
+procs :
+    - [    1687956,  33.5, /usr/bin/kextutil ]
+    - [    1599404,  31.7, /usr/libexec/hidd ]
+    - [     642944,  12.8, /usr/libexec/trustd ]
+    - [     395117,   7.8, /usr/libexec/syspolicyd ]
+    - [     105712,   2.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     101131,   2.0, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      56584,   1.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      48560,   1.0, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      44663,   0.9, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      44528,   0.9, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      40888,   0.8, /usr/sbin/ocspd ]
+    - [      40550,   0.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      32088,   0.6, /usr/libexec/runningboardd ]
+    - [      28010,   0.6, /usr/libexec/opendirectoryd ]
+    - [      24485,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20480,   0.4, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      20240,   0.4, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      12124,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12072,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:40:32+0200
+total : 5049311
+procs :
+    - [    2040948,  40.4, /usr/bin/kextutil ]
+    - [    1058684,  21.0, /usr/libexec/hidd ]
+    - [     768960,  15.2, /usr/libexec/trustd ]
+    - [     539872,  10.7, /usr/libexec/syspolicyd ]
+    - [      76975,   1.5, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      75278,   1.5, /System/Library/PrivateFrameworks/HelpData.framework/Versions/A/Resources/helpd ]
+    - [      56928,   1.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      56539,   1.1, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      44892,   0.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      36792,   0.7, /usr/sbin/ocspd ]
+    - [      32336,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28672,   0.6, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      24441,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24308,   0.5, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      16272,   0.3, /usr/sbin/securityd ]
+    - [      16192,   0.3, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      16056,   0.3, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      12264,   0.2, /usr/libexec/corebrightnessd ]
+    - [      12208,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12200,   0.2, /usr/libexec/TouchBarServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:41:38+0200
+total : 5011430
+procs :
+    - [    2378096,  47.5, /usr/libexec/hidd ]
+    - [    1198004,  23.9, /usr/bin/kextutil ]
+    - [     449512,   9.0, /usr/libexec/trustd ]
+    - [     269936,   5.4, /usr/libexec/syspolicyd ]
+    - [     134176,   2.7, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     101192,   2.0, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      93064,   1.9, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      44020,   0.9, /usr/libexec/locationd ]
+    - [      36088,   0.7, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      32394,   0.6, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      32384,   0.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      32384,   0.6, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      24486,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      23862,   0.5, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [      20307,   0.4, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      16384,   0.3, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      16328,   0.3, /usr/sbin/ocspd ]
+    - [      16048,   0.3, /usr/libexec/runningboardd ]
+    - [      12212,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       8088,   0.2, /usr/libexec/TouchBarServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:43:03+0200
+total : 5030903
+procs :
+    - [    1669986,  33.2, /usr/libexec/hidd ]
+    - [    1635356,  32.5, /usr/bin/kextutil ]
+    - [     626768,  12.5, /usr/libexec/trustd ]
+    - [     402663,   8.0, /usr/libexec/syspolicyd ]
+    - [     130272,   2.6, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     125440,   2.5, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      93096,   1.9, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      44528,   0.9, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      40480,   0.8, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [      32752,   0.7, /usr/sbin/ocspd ]
+    - [      32622,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      28672,   0.6, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      20304,   0.4, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      16277,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16192,   0.3, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      15584,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12168,   0.2, /usr/libexec/runningboardd ]
+    - [      11924,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [       8060,   0.2, /usr/libexec/watchdogd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:44:20+0200
+total : 5006955
+procs :
+    - [    2152415,  43.0, /usr/libexec/hidd ]
+    - [    1416680,  28.3, /usr/bin/kextutil ]
+    - [     528176,  10.5, /usr/libexec/trustd ]
+    - [     338465,   6.8, /usr/libexec/syspolicyd ]
+    - [     109808,   2.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      89033,   1.8, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      64319,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      52624,   1.1, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      52538,   1.0, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      32586,   0.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      24520,   0.5, /usr/sbin/ocspd ]
+    - [      16285,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      16184,   0.3, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      12216,   0.2, /usr/sbin/securityd ]
+    - [      12200,   0.2, /usr/libexec/runningboardd ]
+    - [      12192,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12016,   0.2, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       8136,   0.2, /usr/libexec/TouchBarServer ]
+    - [       8123,   0.2, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [       8108,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:45:13+0200
+total : 5016716
+procs :
+    - [    2350032,  46.8, /usr/libexec/hidd ]
+    - [    1133344,  22.6, /usr/bin/kextutil ]
+    - [     430388,   8.6, /usr/libexec/trustd ]
+    - [     306632,   6.1, /usr/libexec/syspolicyd ]
+    - [     194064,   3.9, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [     178912,   3.6, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     113344,   2.3, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      44528,   0.9, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      36480,   0.7, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      36432,   0.7, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      24560,   0.5, /usr/sbin/ocspd ]
+    - [      20334,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      16211,   0.3, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      16192,   0.3, /usr/libexec/runningboardd ]
+    - [      12024,   0.2, /usr/libexec/configd ]
+    - [       8151,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       8096,   0.2, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [       7960,   0.2, /usr/libexec/opendirectoryd ]
+    - [       7881,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       7566,   0.2, /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:46:05+0200
+total : 5072136
+procs :
+    - [    1010544,  19.9, /usr/libexec/hidd ]
+    - [     850008,  16.8, /usr/bin/kextutil ]
+    - [     721541,  14.2, /usr/libexec/routined ]
+    - [     472840,   9.3, /usr/libexec/trustd ]
+    - [     373852,   7.4, /usr/sbin/securityd ]
+    - [     348208,   6.9, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [     225990,   4.5, /usr/libexec/syspolicyd ]
+    - [     196322,   3.9, /System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd ]
+    - [     140386,   2.8, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      73152,   1.4, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      68878,   1.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      67984,   1.3, /usr/libexec/runningboardd ]
+    - [      48470,   1.0, /usr/libexec/taskgated ]
+    - [      44776,   0.9, /usr/libexec/TouchBarServer ]
+    - [      39664,   0.8, /System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookManager.app/Contents/MacOS/AddressBookManager ]
+    - [      36616,   0.7, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      32528,   0.6, /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent ]
+    - [      28490,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      27963,   0.6, /System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookSourceSync.app/Contents/MacOS/AddressBookSourceSync ]
+    - [      24229,   0.5, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:47:55+0200
+total : 5091573
+procs :
+    - [    2193032,  43.1, /usr/bin/kextutil ]
+    - [     824720,  16.2, /usr/libexec/trustd ]
+    - [     637975,  12.5, /usr/libexec/hidd ]
+    - [     471567,   9.3, /usr/libexec/syspolicyd ]
+    - [     109952,   2.2, /usr/libexec/TouchBarServer ]
+    - [     108227,   2.1, /usr/libexec/locationd ]
+    - [     105240,   2.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      85400,   1.7, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      52504,   1.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      48584,   1.0, /usr/libexec/runningboardd ]
+    - [      46418,   0.9, /System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd ]
+    - [      44826,   0.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44688,   0.9, /usr/libexec/symptomsd ]
+    - [      35310,   0.7, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      24504,   0.5, /usr/sbin/ocspd ]
+    - [      24358,   0.5, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      20480,   0.4, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      20368,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20232,   0.4, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      15419,   0.3, /usr/libexec/routined ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:50:26+0200
+total : 5112998
+procs :
+    - [    2829312,  55.3, /usr/bin/kextutil ]
+    - [    1060688,  20.7, /usr/libexec/trustd ]
+    - [     676721,  13.2, /usr/libexec/syspolicyd ]
+    - [     108971,   2.1, /usr/libexec/nsurlsessiond ]
+    - [      60986,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      49104,   1.0, /usr/sbin/ocspd ]
+    - [      44528,   0.9, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      40480,   0.8, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      34966,   0.7, /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd ]
+    - [      32069,   0.6, /usr/libexec/opendirectoryd ]
+    - [      28511,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      22487,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      16096,   0.3, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12232,   0.2, /usr/libexec/symptomsd ]
+    - [      12192,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12168,   0.2, /usr/sbin/securityd ]
+    - [      12056,   0.2, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      12024,   0.2, /usr/libexec/watchdogd ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4088,   0.1, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:51:12+0200
+total : 5024595
+procs :
+    - [    1431397,  28.5, /usr/libexec/hidd ]
+    - [    1047176,  20.8, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     866072,  17.2, /usr/bin/kextutil ]
+    - [     335544,   6.7, /usr/libexec/trustd ]
+    - [     238507,   4.7, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService ]
+    - [     201407,   4.0, /usr/libexec/syspolicyd ]
+    - [     180531,   3.6, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/bin/simctl ]
+    - [      97592,   1.9, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      76488,   1.5, /usr/libexec/runningboardd ]
+    - [      73440,   1.5, /usr/libexec/TouchBarServer ]
+    - [      68634,   1.4, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56552,   1.1, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      44594,   0.9, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      36404,   0.7, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      32244,   0.6, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      28330,   0.6, /usr/libexec/taskgated ]
+    - [      24288,   0.5, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      22159,   0.4, /usr/bin/open ]
+    - [      20400,   0.4, /usr/sbin/ocspd ]
+    - [      20102,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:52:03+0200
+total : 5004107
+procs :
+    - [    2420855,  48.4, /usr/libexec/hidd ]
+    - [     911648,  18.2, /usr/bin/kextutil ]
+    - [     350680,   7.0, /usr/libexec/trustd ]
+    - [     269936,   5.4, /usr/libexec/syspolicyd ]
+    - [     126048,   2.5, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     116150,   2.3, /Applications/Xcode.app/Contents/SharedFrameworks/XCBuild.framework/Versions/A/PlugIns/XCBBuildService.bundle/Contents/MacOS/XCBBuildService ]
+    - [      97125,   1.9, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      73312,   1.5, /usr/libexec/TouchBarServer ]
+    - [      68604,   1.4, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      68407,   1.4, /usr/libexec/locationd ]
+    - [      64208,   1.3, /usr/libexec/runningboardd ]
+    - [      61307,   1.2, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [      48618,   1.0, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      44520,   0.9, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      39787,   0.8, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      39486,   0.8, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      32393,   0.6, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      24432,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      16328,   0.3, /usr/sbin/ocspd ]
+    - [      16244,   0.3, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:53:12+0200
+total : 5027404
+procs :
+    - [    2186503,  43.5, /usr/libexec/hidd ]
+    - [    1387272,  27.6, /usr/bin/kextutil ]
+    - [     524312,  10.4, /usr/libexec/trustd ]
+    - [     326275,   6.5, /usr/libexec/syspolicyd ]
+    - [     113888,   2.3, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      81536,   1.6, /usr/libexec/TouchBarServer ]
+    - [      68889,   1.4, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      52600,   1.0, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      52352,   1.0, /usr/libexec/runningboardd ]
+    - [      24520,   0.5, /usr/sbin/ocspd ]
+    - [      24336,   0.5, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      24288,   0.5, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      24248,   0.5, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      20290,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      14133,   0.3, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [      12230,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      11574,   0.2, /usr/libexec/routined ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8144,   0.2, /System/Library/CoreServices/launchservicesd ]
+    - [       8052,   0.2, /usr/libexec/watchdogd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:54:57+0200
+total : 5038469
+procs :
+    - [    1943152,  38.6, /usr/bin/kextutil ]
+    - [    1366908,  27.1, /usr/libexec/hidd ]
+    - [     713744,  14.2, /usr/libexec/trustd ]
+    - [     415213,   8.2, /usr/libexec/syspolicyd ]
+    - [      77248,   1.5, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      52644,   1.0, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      44888,   0.9, /usr/libexec/TouchBarServer ]
+    - [      44790,   0.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40416,   0.8, /usr/libexec/runningboardd ]
+    - [      40372,   0.8, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      32408,   0.6, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      32368,   0.6, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      24576,   0.5, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      24496,   0.5, /usr/sbin/ocspd ]
+    - [      20227,   0.4, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      20224,   0.4, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      20200,   0.4, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      16233,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      12213,   0.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [      12064,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:55:51+0200
+total : 4985183
+procs :
+    - [    2718975,  54.5, /usr/libexec/hidd ]
+    - [     919616,  18.4, /usr/bin/kextutil ]
+    - [     351024,   7.0, /usr/libexec/trustd ]
+    - [     269936,   5.4, /usr/libexec/syspolicyd ]
+    - [     142368,   2.9, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      81552,   1.6, /usr/libexec/TouchBarServer ]
+    - [      81032,   1.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      68848,   1.4, /usr/libexec/runningboardd ]
+    - [      48624,   1.0, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      44313,   0.9, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      40440,   0.8, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      32195,   0.6, /usr/libexec/taskgated ]
+    - [      24444,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      20254,   0.4, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      20248,   0.4, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      12288,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      12256,   0.2, /usr/sbin/ocspd ]
+    - [      12250,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      12199,   0.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [      12040,   0.2, /System/Library/CoreServices/launchservicesd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:56:25+0200
+total : 5012864
+procs :
+    - [    1455104,  29.0, /usr/libexec/hidd ]
+    - [    1069236,  21.3, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     566672,  11.3, /usr/bin/kextutil ]
+    - [     222754,   4.4, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService ]
+    - [     220480,   4.4, /usr/libexec/trustd ]
+    - [     175662,   3.5, /usr/libexec/opendirectoryd ]
+    - [     146463,   2.9, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/bin/simctl ]
+    - [     136849,   2.7, /usr/libexec/syspolicyd ]
+    - [     134160,   2.7, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     116150,   2.3, /Applications/Xcode.app/Contents/SharedFrameworks/XCBuild.framework/Versions/A/PlugIns/XCBBuildService.bundle/Contents/MacOS/XCBBuildService ]
+    - [     100011,   2.0, /usr/libexec/locationd ]
+    - [      77040,   1.5, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      77022,   1.5, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      64845,   1.3, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      55624,   1.1, /usr/libexec/runningboardd ]
+    - [      36712,   0.7, /usr/libexec/TouchBarServer ]
+    - [      36432,   0.7, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      32024,   0.6, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      31650,   0.6, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      24326,   0.5, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:57:42+0200
+total : 5054131
+procs :
+    - [    1465316,  29.0, /usr/bin/kextutil ]
+    - [    1247159,  24.7, /usr/libexec/hidd ]
+    - [     544192,  10.8, /usr/libexec/trustd ]
+    - [     374616,   7.4, /usr/libexec/syspolicyd ]
+    - [     320664,   6.3, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     294400,   5.8, /usr/libexec/runningboardd ]
+    - [     101752,   2.0, /usr/libexec/TouchBarServer ]
+    - [      76452,   1.5, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      64568,   1.3, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      60728,   1.2, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      40495,   0.8, /usr/libexec/taskgated ]
+    - [      39712,   0.8, /System/Library/CoreServices/launchservicesd ]
+    - [      36434,   0.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      36223,   0.7, /usr/libexec/opendirectoryd ]
+    - [      35914,   0.7, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      32925,   0.7, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [      27714,   0.5, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      24504,   0.5, /usr/sbin/ocspd ]
+    - [      24134,   0.5, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      20067,   0.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 17:59:58+0200
+total : 5086496
+procs :
+    - [    2585960,  50.8, /usr/bin/kextutil ]
+    - [     958368,  18.8, /usr/libexec/trustd ]
+    - [     604252,  11.9, /usr/libexec/syspolicyd ]
+    - [     478628,   9.4, /usr/libexec/hidd ]
+    - [      60513,   1.2, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      52986,   1.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      44488,   0.9, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      36536,   0.7, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      28600,   0.6, /usr/sbin/ocspd ]
+    - [      28480,   0.6, /usr/libexec/TouchBarServer ]
+    - [      24487,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20168,   0.4, /usr/libexec/runningboardd ]
+    - [      20136,   0.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      16186,   0.3, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      16016,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12192,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      12128,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12128,   0.2, /usr/libexec/corebrightnessd ]
+    - [       8184,   0.2, /usr/libexec/watchdogd ]
+    - [       8080,   0.2, /usr/sbin/securityd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:02:28+0200
+total : 5109089
+procs :
+    - [    2748788,  53.8, /usr/bin/kextutil ]
+    - [    1031408,  20.2, /usr/libexec/trustd ]
+    - [     681039,  13.3, /usr/libexec/syspolicyd ]
+    - [      60389,   1.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56932,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      52663,   1.0, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      52576,   1.0, /usr/local/Cellar/git/2.19.2/libexec/git-core/git-credential-osxkeychain ]
+    - [      44984,   0.9, /usr/sbin/ocspd ]
+    - [      44528,   0.9, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      42221,   0.8, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      36299,   0.7, /usr/libexec/locationd ]
+    - [      32568,   0.6, /usr/libexec/TouchBarServer ]
+    - [      31452,   0.6, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      24305,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20336,   0.4, /usr/sbin/securityd ]
+    - [      16272,   0.3, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      16112,   0.3, /usr/libexec/watchdogd ]
+    - [      15254,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12232,   0.2, /usr/libexec/symptomsd ]
+    - [      12221,   0.2, /usr/libexec/taskgated ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:04:15+0200
+total : 5066059
+procs :
+    - [    2221152,  43.8, /usr/bin/kextutil ]
+    - [     827864,  16.3, /usr/libexec/trustd ]
+    - [     773465,  15.3, /usr/libexec/hidd ]
+    - [     507746,  10.0, /usr/libexec/syspolicyd ]
+    - [      97104,   1.9, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      85608,   1.7, /usr/libexec/TouchBarServer ]
+    - [      81352,   1.6, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      75886,   1.5, /usr/local/Cellar/git/2.19.2/libexec/git-core/git-credential-osxkeychain ]
+    - [      68399,   1.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40544,   0.8, /usr/sbin/securityd ]
+    - [      40480,   0.8, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      36528,   0.7, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      28600,   0.6, /usr/sbin/ocspd ]
+    - [      28158,   0.6, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      24394,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      15966,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12200,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12182,   0.2, /usr/libexec/taskgated ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [       8128,   0.2, /usr/libexec/corebrightnessd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:06:15+0200
+total : 5055441
+procs :
+    - [    2041040,  40.4, /usr/bin/kextutil ]
+    - [    1206757,  23.9, /usr/libexec/hidd ]
+    - [     765012,  15.1, /usr/libexec/trustd ]
+    - [     503800,  10.0, /usr/libexec/syspolicyd ]
+    - [      60984,   1.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      56776,   1.1, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      52890,   1.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      40432,   0.8, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      36808,   0.7, /usr/sbin/ocspd ]
+    - [      36448,   0.7, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      35968,   0.7, /usr/libexec/runningboardd ]
+    - [      28270,   0.6, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      24415,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20440,   0.4, /usr/libexec/TouchBarServer ]
+    - [      19609,   0.4, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      12152,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12127,   0.2, /usr/libexec/watchdogd ]
+    - [      12078,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       8160,   0.2, /usr/sbin/securityd ]
+    - [       8160,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:06:53+0200
+total : 4980362
+procs :
+    - [    2752680,  55.3, /usr/libexec/hidd ]
+    - [     837856,  16.8, /usr/bin/kextutil ]
+    - [     315392,   6.3, /usr/libexec/trustd ]
+    - [     201616,   4.0, /usr/libexec/syspolicyd ]
+    - [     170664,   3.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [     134192,   2.7, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     103985,   2.1, /usr/libexec/locationd ]
+    - [      60901,   1.2, /usr/local/Cellar/node/13.5.0/bin/node ]
+    - [      56467,   1.1, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      44442,   0.9, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      35424,   0.7, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      32680,   0.7, /usr/libexec/TouchBarServer ]
+    - [      32296,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28350,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      24264,   0.5, /usr/libexec/runningboardd ]
+    - [      20288,   0.4, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      16352,   0.3, /usr/sbin/ocspd ]
+    - [      12195,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       8192,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       8152,   0.2, /usr/sbin/securityd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:07:04+0200
+total : 5095713
+procs :
+    - [    3240301,  63.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     326911,   6.4, /usr/libexec/hidd ]
+    - [     284445,   5.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     142422,   2.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [     141272,   2.8, /usr/libexec/runningboardd ]
+    - [     132101,   2.6, /usr/libexec/syspolicyd ]
+    - [     114448,   2.2, /usr/libexec/trustd ]
+    - [      56968,   1.1, /usr/libexec/TouchBarServer ]
+    - [      56336,   1.1, /usr/libexec/opendirectoryd ]
+    - [      52328,   1.0, /usr/libexec/taskgated ]
+    - [      44194,   0.9, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      40688,   0.8, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      36440,   0.7, /System/Library/CoreServices/launchservicesd ]
+    - [      28440,   0.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      28336,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      25798,   0.5, /usr/local/Cellar/node/13.5.0/bin/node ]
+    - [      12121,   0.2, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [       8192,   0.2, /usr/sbin/ocspd ]
+    - [       8096,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:07:06+0200
+total : 5077597
+procs :
+    - [    3135031,  61.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1541163,  30.4, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     271075,   5.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      32212,   0.6, /usr/libexec/opendirectoryd ]
+    - [      31896,   0.6, /usr/libexec/runningboardd ]
+    - [      20392,   0.4, /usr/libexec/TouchBarServer ]
+    - [      16192,   0.3, /System/Library/CoreServices/launchservicesd ]
+    - [      12034,   0.2, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       8128,   0.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [       4096,   0.1, /usr/libexec/taskgated ]
+    - [       4024,   0.1, /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter ]
+    - [       1354,   0.0, /usr/local/Cellar/node/13.5.0/bin/node ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:07:11+0200
+total : 5066782
+procs :
+    - [    4094622,  80.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     585627,  11.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     177276,   3.5, /usr/libexec/opendirectoryd ]
+    - [      93024,   1.8, /usr/libexec/runningboardd ]
+    - [      28560,   0.6, /usr/libexec/TouchBarServer ]
+    - [      24052,   0.5, /usr/libexec/taskgated ]
+    - [      20370,   0.4, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       8128,   0.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [       8128,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8008,   0.2, /System/Library/CoreServices/launchservicesd ]
+    - [       7964,   0.2, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       3968,   0.1, /usr/libexec/sandboxd ]
+    - [       3007,   0.1, /usr/local/Cellar/node/13.5.0/bin/node ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:07:19+0200
+total : 5099918
+procs :
+    - [    2764811,  54.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     770574,  15.1, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     601840,  11.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     164998,   3.2, /usr/libexec/opendirectoryd ]
+    - [     130022,   2.5, /usr/local/Cellar/git/2.19.2/libexec/git-core/git-credential-osxkeychain ]
+    - [     114816,   2.3, /usr/libexec/trustd ]
+    - [      68432,   1.3, /usr/libexec/syspolicyd ]
+    - [      43180,   0.8, /System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent ]
+    - [      36536,   0.7, /usr/sbin/securityd ]
+    - [      32182,   0.6, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      16275,   0.3, /usr/libexec/taskgated ]
+    - [      12208,   0.2, /usr/libexec/runningboardd ]
+    - [      12003,   0.2, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       8118,   0.2, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [       7760,   0.2, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4096,   0.1, /usr/sbin/ocspd ]
+    - [       4096,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4080,   0.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [       4079,   0.1, /usr/libexec/TouchBarServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:08:44+0200
+total : 5079980
+procs :
+    - [    1416680,  27.9, /usr/bin/kextutil ]
+    - [     768374,  15.1, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     746215,  14.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     524248,  10.3, /usr/libexec/trustd ]
+    - [     339104,   6.7, /usr/libexec/syspolicyd ]
+    - [     331453,   6.5, /usr/libexec/hidd ]
+    - [     129357,   2.5, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [     121545,   2.4, /usr/local/Cellar/node/13.5.0/bin/node ]
+    - [      99525,   2.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      97152,   1.9, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      89698,   1.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      89680,   1.8, /usr/libexec/TouchBarServer ]
+    - [      76894,   1.5, /usr/libexec/opendirectoryd ]
+    - [      69184,   1.4, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      24248,   0.5, /usr/libexec/runningboardd ]
+    - [      20408,   0.4, /usr/sbin/ocspd ]
+    - [      20312,   0.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      16184,   0.3, /kernel ]
+    - [      16114,   0.3, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:08:50+0200
+total : 5105310
+procs :
+    - [    3423856,  67.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     805846,  15.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [     283336,   5.5, /usr/bin/kextutil ]
+    - [     280071,   5.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     118396,   2.3, /usr/libexec/trustd ]
+    - [      68680,   1.3, /usr/libexec/syspolicyd ]
+    - [      52414,   1.0, /usr/libexec/opendirectoryd ]
+    - [      36359,   0.7, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      12144,   0.2, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       8096,   0.2, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       4096,   0.1, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       4096,   0.1, /usr/sbin/ocspd ]
+    - [       4048,   0.1, /usr/libexec/symptomsd ]
+    - [       3872,   0.1, /usr/libexec/sandboxd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:08:53+0200
+total : 5085472
+procs :
+    - [    3905221,  76.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     764711,  15.0, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     268132,   5.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      36380,   0.7, /usr/libexec/opendirectoryd ]
+    - [      32528,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      20198,   0.4, /usr/libexec/taskgated ]
+    - [      20144,   0.4, /usr/libexec/runningboardd ]
+    - [      12144,   0.2, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       8120,   0.2, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [       8080,   0.2, /System/Library/CoreServices/launchservicesd ]
+    - [       4096,   0.1, /usr/libexec/symptomsd ]
+    - [       3998,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       1656,   0.0, /usr/bin/sw_vers ]
+    - [         64,   0.0, /usr/local/Cellar/node/13.5.0/bin/node ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:00+0200
+total : 5065987
+procs :
+    - [    3922562,  77.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     833304,  16.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     129520,   2.6, /usr/libexec/opendirectoryd ]
+    - [      60984,   1.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      31952,   0.6, /usr/libexec/runningboardd ]
+    - [      24139,   0.5, /usr/libexec/syspolicyd ]
+    - [      12116,   0.2, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      12113,   0.2, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      12058,   0.2, /usr/libexec/taskgated ]
+    - [       5866,   0.1, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [       4080,   0.1, /usr/libexec/configd ]
+    - [       4056,   0.1, /System/Applications/App Store.app/Contents/MacOS/App Store ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4040,   0.1, /usr/libexec/TouchBarServer ]
+    - [       3944,   0.1, /usr/libexec/trustd ]
+    - [       1205,   0.0, /usr/local/Cellar/node/13.5.0/bin/node ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:03+0200
+total : 5068004
+procs :
+    - [    2790270,  55.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     901864,  17.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     768385,  15.2, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     124779,   2.5, /usr/libexec/syspolicyd ]
+    - [     110504,   2.2, /usr/libexec/trustd ]
+    - [      40224,   0.8, /usr/libexec/opendirectoryd ]
+    - [      11948,   0.2, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [       8192,   0.2, /usr/sbin/ocspd ]
+    - [       8152,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8110,   0.2, /usr/libexec/taskgated ]
+    - [       4096,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       4096,   0.1, /usr/sbin/securityd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:07+0200
+total : 5103439
+procs :
+    - [    4505265,  88.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     432821,   8.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     117318,   2.3, /usr/libexec/opendirectoryd ]
+    - [      24144,   0.5, /usr/libexec/runningboardd ]
+    - [       4081,   0.1, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [       4072,   0.1, /System/Library/CoreServices/launchservicesd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4021,   0.1, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [       4016,   0.1, /usr/libexec/thermald ]
+    - [       3653,   0.1, /usr/local/Cellar/node/13.5.0/bin/node ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:13+0200
+total : 5083697
+procs :
+    - [    3993555,  78.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     936504,  18.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     141524,   2.8, /usr/libexec/opendirectoryd ]
+    - [       8142,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       3972,   0.1, /usr/libexec/watchdogd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:14+0200
+total : 5089164
+procs :
+    - [    4969930,  97.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     115146,   2.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [       4088,   0.1, /usr/libexec/opendirectoryd ]
+
+--- !logd statistics record
+type  : File Rotate
+file  : Special/0000000000000099.tracev3
+time  : 2019-12-25 18:09:15+0200
+total : 19027126
+procs :
+    - [   17750586,  93.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     814127,   4.3, /usr/libexec/routined ]
+    - [     215471,   1.1, /usr/libexec/dasd ]
+    - [      71178,   0.4, /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow ]
+    - [      44480,   0.2, /System/Applications/App Store.app/Contents/MacOS/App Store ]
+    - [      20110,   0.1, /usr/libexec/pkd ]
+    - [      17384,   0.1, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      12177,   0.1, /usr/libexec/lsd ]
+    - [      12168,   0.1, /usr/libexec/sharingd ]
+    - [      12144,   0.1, /usr/sbin/bluetoothd ]
+    - [      12096,   0.1, /usr/libexec/UserEventAgent ]
+    - [       8080,   0.0, /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd ]
+    - [       4088,   0.0, /System/Library/CoreServices/launchservicesd ]
+    - [       4072,   0.0, /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd ]
+    - [       4021,   0.0, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [       4016,   0.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       3912,   0.0, /System/Library/CoreServices/diagnostics_agent ]
+    - [       3880,   0.0, /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter ]
+    - [       3808,   0.0, /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder ]
+    - [       3392,   0.0, /System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/Support/followupd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:16+0200
+total : 5113074
+procs :
+    - [    4264694,  83.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     439347,   8.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     253928,   5.0, /usr/bin/kextutil ]
+    - [      98624,   1.9, /usr/libexec/trustd ]
+    - [      52385,   1.0, /usr/libexec/syspolicyd ]
+    - [       4096,   0.1, /usr/sbin/ocspd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:19+0200
+total : 5126996
+procs :
+    - [    4762079,  92.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     303192,   5.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      29408,   0.6, /usr/bin/kextutil ]
+    - [      16295,   0.3, /usr/libexec/syspolicyd ]
+    - [       7888,   0.2, /usr/libexec/trustd ]
+    - [       4086,   0.1, /usr/libexec/opendirectoryd ]
+    - [       4048,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:25+0200
+total : 5084385
+procs :
+    - [    3517548,  69.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1425627,  28.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     117246,   2.3, /usr/libexec/opendirectoryd ]
+    - [       8142,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4079,   0.1, /usr/libexec/hidd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       3927,   0.1, /usr/libexec/PerfPowerServices ]
+    - [       3768,   0.1, /usr/libexec/corebrightnessd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:30+0200
+total : 5092374
+procs :
+    - [    4084819,  80.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     923115,  18.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      72276,   1.4, /usr/libexec/opendirectoryd ]
+    - [       8092,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       4072,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:35+0200
+total : 5094489
+procs :
+    - [    3667214,  72.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     819920,  16.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     120476,   2.4, /usr/libexec/opendirectoryd ]
+    - [     106536,   2.1, /usr/libexec/trustd ]
+    - [      68623,   1.3, /usr/libexec/syspolicyd ]
+    - [       4078,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4064,   0.1, /usr/libexec/symptomsd ]
+    - [       4058,   0.1, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [       4056,   0.1, /usr/sbin/ocspd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4048,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       4032,   0.1, /usr/libexec/TouchBarServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:39+0200
+total : 5092134
+procs :
+    - [    3807706,  74.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1236110,  24.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      40246,   0.8, /usr/libexec/opendirectoryd ]
+    - [       4056,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4016,   0.1, /usr/libexec/thermald ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:45+0200
+total : 5088425
+procs :
+    - [    3307865,  65.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1691952,  33.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      80506,   1.6, /usr/libexec/opendirectoryd ]
+    - [       4086,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4016,   0.1, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:51+0200
+total : 5087946
+procs :
+    - [    3044639,  59.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1444040,  28.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     116646,   2.3, /usr/libexec/opendirectoryd ]
+    - [     102344,   2.0, /usr/libexec/trustd ]
+    - [      68439,   1.3, /usr/libexec/syspolicyd ]
+    - [       8137,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4096,   0.1, /usr/sbin/ocspd ]
+    - [       4088,   0.1, /usr/libexec/watchdogd ]
+    - [       4085,   0.1, /usr/sbin/mDNSResponder ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4048,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:09:56+0200
+total : 5075346
+procs :
+    - [    2913385,  57.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    2089599,  41.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      64236,   1.3, /usr/libexec/opendirectoryd ]
+    - [       8126,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:03+0200
+total : 5080597
+procs :
+    - [    2893348,  56.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1611635,  31.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     106512,   2.1, /usr/libexec/trustd ]
+    - [     100898,   2.0, /usr/libexec/opendirectoryd ]
+    - [      68582,   1.3, /usr/libexec/syspolicyd ]
+    - [       4096,   0.1, /usr/sbin/ocspd ]
+    - [       4086,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4056,   0.1, /usr/sbin/securityd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:09+0200
+total : 5071585
+procs :
+    - [    3712268,  73.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1133319,  22.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     209766,   4.1, /usr/libexec/opendirectoryd ]
+    - [       8168,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4048,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       4016,   0.1, /usr/libexec/thermald ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:14+0200
+total : 5087974
+procs :
+    - [    3878552,  76.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1003712,  19.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     197552,   3.9, /usr/libexec/opendirectoryd ]
+    - [       8158,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:18+0200
+total : 5095342
+procs :
+    - [    2992978,  58.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1575117,  30.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     106536,   2.1, /usr/libexec/trustd ]
+    - [      64719,   1.3, /usr/libexec/syspolicyd ]
+    - [      60440,   1.2, /usr/libexec/opendirectoryd ]
+    - [       4088,   0.1, /usr/sbin/ocspd ]
+    - [       4080,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:23+0200
+total : 5090126
+procs :
+    - [    3139662,  61.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1809474,  35.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     116952,   2.3, /usr/libexec/opendirectoryd ]
+    - [       7966,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4088,   0.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [       4080,   0.1, /usr/libexec/UserEventAgent ]
+    - [       4048,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [       3856,   0.1, /usr/libexec/trustd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:31+0200
+total : 5082085
+procs :
+    - [    3296475,  64.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1532582,  30.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     196630,   3.9, /usr/libexec/opendirectoryd ]
+    - [      24324,   0.5, /usr/bin/kextutil ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4080,   0.1, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       4056,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4044,   0.1, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       4040,   0.1, /usr/libexec/symptomsd ]
+    - [       3934,   0.1, /usr/sbin/systemstats ]
+    - [       3776,   0.1, /usr/libexec/trustd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:39+0200
+total : 5093977
+procs :
+    - [    2360263,  46.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [    2230602,  43.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     259012,   5.1, /usr/bin/kextutil ]
+    - [      98568,   1.9, /usr/libexec/trustd ]
+    - [      68678,   1.3, /usr/libexec/syspolicyd ]
+    - [      60574,   1.2, /usr/libexec/opendirectoryd ]
+    - [       8136,   0.2, /usr/sbin/ocspd ]
+    - [       4096,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4048,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+
+--- !logd statistics record
+type  : File Rotate
+file  : Special/000000000000009a.tracev3
+time  : 2019-12-25 18:10:39+0200
+total : 22105108
+procs :
+    - [   22105108, 100.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:46+0200
+total : 5098255
+procs :
+    - [    2974949,  58.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1709106,  33.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     177480,   3.5, /usr/bin/kextutil ]
+    - [     153112,   3.0, /usr/libexec/opendirectoryd ]
+    - [      63272,   1.2, /usr/libexec/trustd ]
+    - [       8176,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4096,   0.1, /usr/libexec/watchdogd ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       4016,   0.1, /usr/libexec/thermald ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:51+0200
+total : 5087959
+procs :
+    - [    3427535,  67.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1349468,  26.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     105856,   2.1, /usr/bin/kextutil ]
+    - [      84814,   1.7, /usr/libexec/opendirectoryd ]
+    - [      68880,   1.4, /usr/libexec/syspolicyd ]
+    - [      43240,   0.8, /usr/libexec/trustd ]
+    - [       4096,   0.1, /usr/sbin/ocspd ]
+    - [       4070,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:10:55+0200
+total : 5085275
+procs :
+    - [    4260057,  83.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     711900,  14.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     105192,   2.1, /usr/libexec/opendirectoryd ]
+    - [       4078,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4048,   0.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:11:00+0200
+total : 5069387
+procs :
+    - [    3508507,  69.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1435910,  28.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     116842,   2.3, /usr/libexec/opendirectoryd ]
+    - [       4080,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4048,   0.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:11:02+0200
+total : 5068509
+procs :
+    - [    4247495,  83.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     346705,   6.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     106536,   2.1, /usr/libexec/trustd ]
+    - [      64407,   1.3, /usr/libexec/syspolicyd ]
+    - [      15950,   0.3, /usr/libexec/opendirectoryd ]
+    - [       4080,   0.1, /usr/sbin/securityd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:11:06+0200
+total : 5068741
+procs :
+    - [    4536502,  89.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     467733,   9.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      56396,   1.1, /usr/libexec/opendirectoryd ]
+    - [       8110,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:12:47+0200
+total : 5102194
+procs :
+    - [    1776628,  34.8, /usr/bin/kextutil ]
+    - [    1270976,  24.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     683112,  13.4, /usr/libexec/trustd ]
+    - [     406424,   8.0, /usr/libexec/syspolicyd ]
+    - [     301445,   5.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      96894,   1.9, /usr/libexec/opendirectoryd ]
+    - [      63668,   1.2, /usr/libexec/amfid ]
+    - [      60324,   1.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      52970,   1.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      39992,   0.8, /usr/libexec/locationd ]
+    - [      39905,   0.8, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      36008,   0.7, /usr/libexec/runningboardd ]
+    - [      32728,   0.6, /usr/sbin/ocspd ]
+    - [      32384,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28379,   0.6, /Users/bar/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Helpers/GoogleSoftwareUpdateAgent.app/Contents/MacOS/GoogleSoftwareUpdateAgent ]
+    - [      28336,   0.6, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      23614,   0.5, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      12224,   0.2, /usr/sbin/securityd ]
+    - [      12208,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12144,   0.2, /System/Library/CoreServices/launchservicesd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:14:47+0200
+total : 5105081
+procs :
+    - [    2218480,  43.5, /usr/bin/kextutil ]
+    - [     834800,  16.4, /usr/libexec/trustd ]
+    - [     626365,  12.3, /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent ]
+    - [     556275,  10.9, /usr/libexec/syspolicyd ]
+    - [     258717,   5.1, /usr/sbin/system_profiler ]
+    - [      60426,   1.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/ContextStoreAgent ]
+    - [      57112,   1.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      50664,   1.0, /System/Library/PrivateFrameworks/VideoProcessing.framework/Versions/A/mediaanalysisd ]
+    - [      44611,   0.9, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      36730,   0.7, /usr/libexec/TouchBarServer ]
+    - [      36432,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      32664,   0.6, /usr/sbin/ocspd ]
+    - [      24459,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24440,   0.5, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      23873,   0.5, /usr/libexec/secinitd ]
+    - [      19900,   0.4, /usr/libexec/amfid ]
+    - [      15620,   0.3, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [      15550,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12156,   0.2, /usr/libexec/watchdogd ]
+    - [      12144,   0.2, /usr/sbin/securityd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:15:48+0200
+total : 5015087
+procs :
+    - [    1898005,  37.8, /usr/libexec/hidd ]
+    - [    1322580,  26.4, /usr/bin/kextutil ]
+    - [     499496,  10.0, /usr/libexec/trustd ]
+    - [     339088,   6.8, /usr/libexec/syspolicyd ]
+    - [     201096,   4.0, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [     166608,   3.3, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     154872,   3.1, /usr/libexec/TouchBarServer ]
+    - [      60848,   1.2, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      48685,   1.0, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      48618,   1.0, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      40802,   0.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      36352,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      36293,   0.7, /usr/libexec/taskgated ]
+    - [      32125,   0.6, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      24184,   0.5, /usr/libexec/runningboardd ]
+    - [      16360,   0.3, /usr/sbin/ocspd ]
+    - [      15675,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12265,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      12216,   0.2, /usr/libexec/configd ]
+    - [       8144,   0.2, /System/Library/CoreServices/launchservicesd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:16:16+0200
+total : 4988661
+procs :
+    - [    2896233,  58.1, /usr/libexec/hidd ]
+    - [     745536,  14.9, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [     349032,   7.0, /usr/bin/kextutil ]
+    - [     174880,   3.5, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     142232,   2.9, /usr/libexec/trustd ]
+    - [     137558,   2.8, /usr/libexec/syspolicyd ]
+    - [     111538,   2.2, /System/Library/CoreServices/iconservicesagent ]
+    - [     109608,   2.2, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      61168,   1.2, /usr/libexec/TouchBarServer ]
+    - [      60720,   1.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      36347,   0.7, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      35992,   0.7, /usr/libexec/runningboardd ]
+    - [      20216,   0.4, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      19557,   0.4, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      15668,   0.3, /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent ]
+    - [      12178,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8192,   0.2, /usr/sbin/ocspd ]
+    - [       7982,   0.2, /usr/libexec/opendirectoryd ]
+    - [       4074,   0.1, /usr/libexec/sharingd ]
+    - [       4067,   0.1, /usr/libexec/watchdogd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:16:40+0200
+total : 4976992
+procs :
+    - [    2998112,  60.2, /usr/libexec/hidd ]
+    - [     566672,  11.4, /usr/bin/kextutil ]
+    - [     328672,   6.6, /usr/libexec/locationd ]
+    - [     221384,   4.4, /usr/libexec/trustd ]
+    - [     207238,   4.2, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [     138192,   2.8, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     132727,   2.7, /usr/libexec/syspolicyd ]
+    - [      68800,   1.4, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      60762,   1.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      48912,   1.0, /usr/libexec/TouchBarServer ]
+    - [      28392,   0.6, /usr/libexec/taskgated ]
+    - [      28242,   0.6, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      24009,   0.5, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      19774,   0.4, /System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/Versions/A/com.apple.Safari.SafeBrowsing.Service ]
+    - [      12046,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8148,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8144,   0.2, /usr/sbin/ocspd ]
+    - [       8128,   0.2, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [       8100,   0.2, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [       7952,   0.2, /usr/libexec/UserEventAgent ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:16:57+0200
+total : 5064547
+procs :
+    - [    1108503,  21.9, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [     539584,  10.7, /usr/libexec/hidd ]
+    - [     487185,   9.6, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService ]
+    - [     395877,   7.8, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [     322800,   6.4, /Applications/Xcode.app/Contents/Developer/usr/bin/instruments ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     260747,   5.1, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [     176322,   3.5, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/bin/simctl ]
+    - [     173444,   3.4, /usr/libexec/trustd ]
+    - [     157016,   3.1, /usr/libexec/runningboardd ]
+    - [     133333,   2.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     116150,   2.3, /Applications/Xcode.app/Contents/SharedFrameworks/XCBuild.framework/Versions/A/PlugIns/XCBBuildService.bundle/Contents/MacOS/XCBBuildService ]
+    - [      91740,   1.8, /System/Library/CoreServices/launchservicesd ]
+    - [      76469,   1.5, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      72865,   1.4, /usr/libexec/opendirectoryd ]
+    - [      72588,   1.4, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimMetalHost.xpc/Contents/MacOS/SimMetalHost ]
+    - [      68529,   1.4, /usr/libexec/syspolicyd ]
+    - [      64517,   1.3, /usr/sbin/mDNSResponder ]
+    - [      56461,   1.1, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      56384,   1.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:18:34+0200
+total : 5052152
+procs :
+    - [    1937816,  38.4, /usr/bin/kextutil ]
+    - [    1253728,  24.8, /usr/libexec/hidd ]
+    - [     748320,  14.8, /usr/libexec/trustd ]
+    - [     447090,   8.8, /usr/libexec/syspolicyd ]
+    - [     108391,   2.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      69136,   1.4, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      64980,   1.3, /usr/libexec/symptomsd ]
+    - [      48432,   1.0, /usr/libexec/taskgated ]
+    - [      44546,   0.9, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      40592,   0.8, /usr/libexec/opendirectoryd ]
+    - [      40590,   0.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24504,   0.5, /usr/sbin/ocspd ]
+    - [      24272,   0.5, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      24199,   0.5, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [      24074,   0.5, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      16216,   0.3, /usr/libexec/PerfPowerServices ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      12224,   0.2, /usr/libexec/TouchBarServer ]
+    - [      12192,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      12116,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:21:19+0200
+total : 5104257
+procs :
+    - [    2955508,  57.9, /usr/bin/kextutil ]
+    - [    1096288,  21.5, /usr/libexec/trustd ]
+    - [     701334,  13.7, /usr/libexec/syspolicyd ]
+    - [      73216,   1.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      46882,   0.9, /usr/libexec/corebrightnessd ]
+    - [      40888,   0.8, /usr/sbin/ocspd ]
+    - [      32494,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      20212,   0.4, /usr/libexec/hidd ]
+    - [      16144,   0.3, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [      15936,   0.3, /usr/libexec/opendirectoryd ]
+    - [      12288,   0.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [      12224,   0.2, /usr/sbin/securityd ]
+    - [      12136,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12130,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12024,   0.2, /usr/libexec/watchdogd ]
+    - [       8104,   0.2, /usr/libexec/symptomsd ]
+    - [       8047,   0.2, /usr/libexec/PerfPowerServices ]
+    - [       4096,   0.1, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [       4088,   0.1, /System/Applications/App Store.app/Contents/MacOS/App Store ]
+    - [       4056,   0.1, /usr/libexec/UserEventAgent ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:23:51+0200
+total : 5106655
+procs :
+    - [    2841320,  55.6, /usr/bin/kextutil ]
+    - [    1068452,  20.9, /usr/libexec/trustd ]
+    - [     709000,  13.9, /usr/libexec/syspolicyd ]
+    - [      65258,   1.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      60685,   1.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      53152,   1.0, /usr/sbin/ocspd ]
+    - [      43694,   0.9, /usr/libexec/locationd ]
+    - [      28436,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      27579,   0.5, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      20320,   0.4, /usr/libexec/corebrightnessd ]
+    - [      16240,   0.3, /usr/sbin/securityd ]
+    - [      16236,   0.3, /usr/libexec/watchdogd ]
+    - [      16180,   0.3, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [      12140,   0.2, /usr/libexec/hidd ]
+    - [      12032,   0.2, /usr/libexec/symptomsd ]
+    - [      11709,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      11550,   0.2, /usr/libexec/routined ]
+    - [       8128,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8032,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8012,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:24:21+0200
+total : 4966621
+procs :
+    - [    2991440,  60.2, /usr/libexec/hidd ]
+    - [     719900,  14.5, /usr/bin/kextutil ]
+    - [     274465,   5.5, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [     263328,   5.3, /usr/libexec/trustd ]
+    - [     154484,   3.1, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [     150424,   3.0, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     149231,   3.0, /usr/libexec/syspolicyd ]
+    - [      76942,   1.5, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      56520,   1.1, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/ContextStoreAgent ]
+    - [      49016,   1.0, /usr/libexec/TouchBarServer ]
+    - [      16112,   0.3, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      12178,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8176,   0.2, /usr/sbin/ocspd ]
+    - [       7854,   0.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4088,   0.1, /System/Library/Input Methods/EmojiFunctionRowIM.app/Contents/PlugIns/EmojiFunctionRowIM_Extension.appex/Contents/MacOS/EmojiFunctionRowIM_Extension ]
+    - [       4080,   0.1, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       4061,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       4058,   0.1, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [       4056,   0.1, /usr/sbin/securityd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:25:19+0200
+total : 4984766
+procs :
+    - [    2584994,  51.9, /usr/libexec/hidd ]
+    - [     895544,  18.0, /usr/bin/kextutil ]
+    - [     424466,   8.5, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [     339456,   6.8, /usr/libexec/trustd ]
+    - [     253792,   5.1, /usr/libexec/syspolicyd ]
+    - [     126024,   2.5, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     113438,   2.3, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      48504,   1.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      44442,   0.9, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      28526,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      28440,   0.6, /usr/libexec/TouchBarServer ]
+    - [      24331,   0.5, /usr/libexec/taskgated ]
+    - [      12256,   0.2, /usr/sbin/ocspd ]
+    - [      11996,   0.2, /usr/libexec/opendirectoryd ]
+    - [       8153,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       8112,   0.2, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+    - [       8060,   0.2, /usr/libexec/watchdogd ]
+    - [       4096,   0.1, /usr/libexec/corebrightnessd ]
+    - [       4080,   0.1, /usr/sbin/securityd ]
+    - [       4076,   0.1, /usr/sbin/mDNSResponder ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:25:45+0200
+total : 4957416
+procs :
+    - [    3740448,  75.5, /usr/libexec/hidd ]
+    - [     566672,  11.4, /usr/bin/kextutil ]
+    - [     208856,   4.2, /usr/libexec/trustd ]
+    - [     136849,   2.8, /usr/libexec/syspolicyd ]
+    - [     121960,   2.5, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      72864,   1.5, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      36800,   0.7, /usr/libexec/TouchBarServer ]
+    - [      36432,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      12210,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      12144,   0.2, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [       4081,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       4072,   0.1, /usr/sbin/ocspd ]
+    - [       4028,   0.1, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:26:16+0200
+total : 4961743
+procs :
+    - [    3566360,  71.9, /usr/libexec/hidd ]
+    - [     566672,  11.4, /usr/bin/kextutil ]
+    - [     212836,   4.3, /usr/libexec/trustd ]
+    - [     142336,   2.9, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     133087,   2.7, /usr/libexec/syspolicyd ]
+    - [      80952,   1.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      64844,   1.3, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      40352,   0.8, /usr/libexec/runningboardd ]
+    - [      36392,   0.7, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28648,   0.6, /usr/libexec/TouchBarServer ]
+    - [      20286,   0.4, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      12288,   0.2, /usr/sbin/ocspd ]
+    - [      12226,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8112,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       4096,   0.1, /usr/libexec/watchdogd ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4088,   0.1, /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd ]
+    - [       4080,   0.1, /usr/sbin/securityd ]
+    - [       4061,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       4024,   0.1, /usr/sbin/WirelessRadioManagerd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:26:39+0200
+total : 5003929
+procs :
+    - [    2754088,  55.0, /usr/libexec/hidd ]
+    - [     566672,  11.3, /usr/bin/kextutil ]
+    - [     411761,   8.2, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [     216960,   4.3, /usr/libexec/trustd ]
+    - [     146336,   2.9, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     144964,   2.9, /usr/libexec/syspolicyd ]
+    - [     133542,   2.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     109410,   2.2, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [     103856,   2.1, /usr/libexec/locationd ]
+    - [      56672,   1.1, /Applications/GitKraken.app/Contents/MacOS/GitKraken ]
+    - [      56384,   1.1, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      44881,   0.9, /usr/local/Cellar/node/13.5.0/bin/node ]
+    - [      40786,   0.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      36336,   0.7, /usr/libexec/runningboardd ]
+    - [      32419,   0.6, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      28036,   0.6, /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer ]
+    - [      24416,   0.5, /usr/libexec/TouchBarServer ]
+    - [      20130,   0.4, /usr/libexec/taskgated ]
+    - [      12109,   0.2, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      11494,   0.2, /usr/libexec/opendirectoryd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:26:43+0200
+total : 5089140
+procs :
+    - [    3596192,  70.7, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     630375,  12.4, /usr/libexec/hidd ]
+    - [     311158,   6.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     145544,   2.9, /usr/libexec/runningboardd ]
+    - [     113483,   2.2, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [      69199,   1.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      64222,   1.3, /usr/libexec/opendirectoryd ]
+    - [      48176,   0.9, /usr/libexec/taskgated ]
+    - [      32424,   0.6, /System/Library/CoreServices/launchservicesd ]
+    - [      28464,   0.6, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      16230,   0.3, /usr/libexec/syspolicyd ]
+    - [      16192,   0.3, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [       4088,   0.1, /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd ]
+    - [       4024,   0.1, /usr/libexec/symptomsd ]
+    - [       4021,   0.1, /usr/sbin/mDNSResponder ]
+    - [       3866,   0.1, /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter ]
+    - [       1482,   0.0, /usr/local/Cellar/node/13.5.0/bin/node ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:26:50+0200
+total : 5042015
+procs :
+    - [    1708140,  33.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1541157,  30.6, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [    1071396,  21.2, /usr/libexec/hidd ]
+    - [     173742,   3.4, /System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService ]
+    - [     145576,   2.9, /usr/libexec/runningboardd ]
+    - [     142931,   2.8, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      64380,   1.3, /usr/libexec/opendirectoryd ]
+    - [      60944,   1.2, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      48666,   1.0, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      28144,   0.6, /System/Library/CoreServices/launchservicesd ]
+    - [      20098,   0.4, /usr/libexec/taskgated ]
+    - [      12144,   0.2, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [       8184,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8136,   0.2, /usr/libexec/TouchBarServer ]
+    - [       4297,   0.1, /usr/local/Cellar/node/13.5.0/bin/node ]
+    - [       4080,   0.1, /usr/libexec/configd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:26:58+0200
+total : 5048727
+procs :
+    - [    1879050,  37.2, /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild ]
+    - [    1322977,  26.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [     286408,   5.7, /usr/libexec/hidd ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     239005,   4.7, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService ]
+    - [     208652,   4.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     180563,   3.6, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/bin/simctl ]
+    - [     116150,   2.3, /Applications/Xcode.app/Contents/SharedFrameworks/XCBuild.framework/Versions/A/PlugIns/XCBBuildService.bundle/Contents/MacOS/XCBBuildService ]
+    - [     115120,   2.3, /usr/libexec/trustd ]
+    - [      76480,   1.5, /usr/libexec/opendirectoryd ]
+    - [      68376,   1.4, /usr/libexec/runningboardd ]
+    - [      64417,   1.3, /usr/libexec/syspolicyd ]
+    - [      32079,   0.6, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      28365,   0.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      28222,   0.6, /usr/libexec/taskgated ]
+    - [      22159,   0.4, /usr/bin/open ]
+    - [      20368,   0.4, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      15741,   0.3, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [      12208,   0.2, /usr/libexec/TouchBarServer ]
+    - [       8136,   0.2, /System/Library/CoreServices/launchservicesd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:27:06+0200
+total : 5076255
+procs :
+    - [    3216789,  63.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1159376,  22.8, /usr/libexec/hidd ]
+    - [     454283,   8.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     124800,   2.5, /usr/libexec/opendirectoryd ]
+    - [      32512,   0.6, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      28496,   0.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      12248,   0.2, /usr/libexec/TouchBarServer ]
+    - [      12144,   0.2, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      12112,   0.2, /usr/libexec/runningboardd ]
+    - [       7159,   0.1, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       4096,   0.1, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+    - [       4088,   0.1, /System/Library/Input Methods/EmojiFunctionRowIM.app/Contents/PlugIns/EmojiFunctionRowIM_Extension.appex/Contents/MacOS/EmojiFunctionRowIM_Extension ]
+    - [       4056,   0.1, /System/Applications/App Store.app/Contents/MacOS/App Store ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:27:17+0200
+total : 5057534
+procs :
+    - [    1922092,  38.0, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [    1802080,  35.6, /usr/libexec/hidd ]
+    - [     470346,   9.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [     283336,   5.6, /usr/bin/kextutil ]
+    - [     106412,   2.1, /usr/libexec/trustd ]
+    - [      88098,   1.7, /usr/libexec/opendirectoryd ]
+    - [      85384,   1.7, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      69088,   1.4, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      68320,   1.4, /usr/libexec/syspolicyd ]
+    - [      60859,   1.2, /System/Library/PrivateFrameworks/ApplePushService.framework/apsd ]
+    - [      32352,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      16384,   0.3, /usr/libexec/TouchBarServer ]
+    - [      12206,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      12144,   0.2, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [       8192,   0.2, /usr/sbin/ocspd ]
+    - [       8128,   0.2, /usr/sbin/securityd ]
+    - [       4056,   0.1, /usr/libexec/symptomsd ]
+    - [       4041,   0.1, /usr/sbin/mDNSResponder ]
+    - [       4016,   0.1, /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:27:37+0200
+total : 5008073
+procs :
+    - [    2837794,  56.7, /usr/libexec/hidd ]
+    - [     521136,  10.4, /usr/bin/kextutil ]
+    - [     315757,   6.3, /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent ]
+    - [     251618,   5.0, /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder ]
+    - [     197012,   3.9, /usr/libexec/trustd ]
+    - [     178896,   3.6, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     136728,   2.7, /usr/libexec/runningboardd ]
+    - [     104851,   2.1, /usr/libexec/syspolicyd ]
+    - [      81320,   1.6, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      44619,   0.9, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      44476,   0.9, /System/Library/Frameworks/QuickLook.framework/Versions/A/XPCServices/QuickLookSatellite.xpc/Contents/MacOS/QuickLookSatellite ]
+    - [      43294,   0.9, /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator ]
+    - [      40240,   0.8, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      36656,   0.7, /usr/libexec/TouchBarServer ]
+    - [      16184,   0.3, /System/Library/CoreServices/launchservicesd ]
+    - [      16126,   0.3, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      14942,   0.3, /usr/libexec/routined ]
+    - [      14041,   0.3, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [      12174,   0.2, /usr/libexec/opendirectoryd ]
+    - [      10432,   0.2, /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:27:52+0200
+total : 5062768
+procs :
+    - [    1730301,  34.2, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [     497387,   9.8, /Applications/Xcode.app/Contents/Developer/usr/bin/ibtoold ]
+    - [     365318,   7.2, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService ]
+    - [     331214,   6.5, /usr/libexec/hidd ]
+    - [     267812,   5.3, /usr/libexec/trustd ]
+    - [     243199,   4.8, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [     198948,   3.9, /usr/bin/kextutil ]
+    - [     181021,   3.6, /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder ]
+    - [     170495,   3.4, /usr/libexec/lsd ]
+    - [     115258,   2.3, /Applications/Xcode.app/Contents/SharedFrameworks/XCBuild.framework/Versions/A/PlugIns/XCBBuildService.bundle/Contents/MacOS/XCBBuildService ]
+    - [     104787,   2.1, /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent ]
+    - [      84480,   1.7, /usr/libexec/runningboardd ]
+    - [      84416,   1.7, /usr/libexec/opendirectoryd ]
+    - [      59220,   1.2, /System/Library/CoreServices/UserNotificationCenter.app/Contents/MacOS/UserNotificationCenter ]
+    - [      44444,   0.9, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      44263,   0.9, /usr/libexec/swcd ]
+    - [      40097,   0.8, /Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework/Versions/A/XPCServices/com.apple.dt.Xcode.KeychainService.xpc/Contents/MacOS/com.apple.dt.Xcode.KeychainService ]
+    - [      36076,   0.7, /usr/sbin/usernoted ]
+    - [      33773,   0.7, /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework/Versions/A/Resources/QuickLookUIHelper.app/Contents/MacOS/QuickLookUIHelper ]
+    - [      32358,   0.6, /usr/libexec/syspolicyd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:28:14+0200
+total : 5121719
+procs :
+    - [    3595987,  70.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker ]
+    - [     413260,   8.1, /usr/bin/kextutil ]
+    - [     275776,   5.4, /usr/libexec/trustd ]
+    - [     229135,   4.5, /usr/libexec/hidd ]
+    - [     132803,   2.6, /usr/libexec/syspolicyd ]
+    - [      91354,   1.8, /usr/libexec/swcd ]
+    - [      88478,   1.7, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      73010,   1.4, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24233,   0.5, /usr/libexec/opendirectoryd ]
+    - [      20088,   0.4, /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd ]
+    - [      16288,   0.3, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      16214,   0.3, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      16044,   0.3, /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent ]
+    - [      12220,   0.2, /System/Library/CoreServices/UserNotificationCenter.app/Contents/MacOS/UserNotificationCenter ]
+    - [      12135,   0.2, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      12040,   0.2, /usr/libexec/runningboardd ]
+    - [       8192,   0.2, /usr/sbin/ocspd ]
+    - [       8168,   0.2, /usr/sbin/securityd ]
+    - [       8124,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       4096,   0.1, /Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:28:40+0200
+total : 4987161
+procs :
+    - [    3121615,  62.6, /usr/libexec/hidd ]
+    - [     566672,  11.4, /usr/bin/kextutil ]
+    - [     260120,   5.2, /usr/libexec/trustd ]
+    - [     208059,   4.2, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [     199152,   4.0, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     157203,   3.2, /usr/libexec/syspolicyd ]
+    - [     104879,   2.1, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      89136,   1.8, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      52748,   1.1, /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal ]
+    - [      44776,   0.9, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      24368,   0.5, /usr/libexec/TouchBarServer ]
+    - [      24288,   0.5, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      23656,   0.5, /usr/libexec/runningboardd ]
+    - [      12176,   0.2, /usr/libexec/sandboxd ]
+    - [      12174,   0.2, /usr/libexec/opendirectoryd ]
+    - [      12170,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [       8184,   0.2, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [       8113,   0.2, /usr/libexec/taskgated ]
+    - [       8106,   0.2, /System/Library/PrivateFrameworks/CoreDuetContext.framework/Versions/A/Resources/contextstored ]
+    - [       8048,   0.2, /usr/sbin/ocspd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:29:07+0200
+total : 4962021
+procs :
+    - [    3560896,  71.8, /usr/libexec/hidd ]
+    - [     444700,   9.0, /usr/bin/kextutil ]
+    - [     187024,   3.8, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [     166352,   3.4, /usr/libexec/trustd ]
+    - [     117094,   2.4, /Applications/Xcode.app/Contents/MacOS/Xcode ]
+    - [      68869,   1.4, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      68540,   1.4, /usr/libexec/syspolicyd ]
+    - [      60256,   1.2, /usr/libexec/runningboardd ]
+    - [      52612,   1.1, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [      31704,   0.6, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      28545,   0.6, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [      28156,   0.6, /usr/libexec/opendirectoryd ]
+    - [      23992,   0.5, /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder ]
+    - [      16264,   0.3, /usr/libexec/TouchBarServer ]
+    - [      12288,   0.2, /usr/sbin/ocspd ]
+    - [      12207,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      12195,   0.2, /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock ]
+    - [      12105,   0.2, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [       8430,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker ]
+    - [       8170,   0.2, /usr/sbin/filecoordinationd ]
+
+--- !logd statistics record
+type  : Memory Rollover
+time  : 2019-12-25 18:30:07+0200
+total : 5012410
+procs :
+    - [    2261064,  45.1, /usr/libexec/hidd ]
+    - [    1145540,  22.9, /usr/bin/kextutil ]
+    - [     603548,  12.0, /usr/libexec/trustd ]
+    - [     270597,   5.4, /usr/libexec/syspolicyd ]
+    - [     137698,   2.7, /Applications/Google Chrome.app/Contents/MacOS/Google Chrome ]
+    - [     117936,   2.4, /System/Library/CoreServices/powerd.bundle/powerd ]
+    - [      88727,   1.8, /System/Library/PrivateFrameworks/TCC.framework/Versions/A/Resources/tccd ]
+    - [      61360,   1.2, /usr/sbin/ocspd ]
+    - [      52576,   1.0, /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer ]
+    - [      40480,   0.8, /Applications/WebStorm.app/Contents/MacOS/webstorm ]
+    - [      36078,   0.7, /usr/libexec/opendirectoryd ]
+    - [      24446,   0.5, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores ]
+    - [      20240,   0.4, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU) ]
+    - [      20152,   0.4, /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd ]
+    - [      19888,   0.4, /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/79.0.3945.88/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper ]
+    - [      15920,   0.3, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared ]
+    - [      12256,   0.2, /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds ]
+    - [       8144,   0.2, /usr/sbin/securityd ]
+    - [       8136,   0.2, /Applications/GitKraken.app/Contents/Frameworks/GitKraken Helper.app/Contents/MacOS/GitKraken Helper ]
+    - [       8128,   0.2, /usr/libexec/TouchBarServer ]
+

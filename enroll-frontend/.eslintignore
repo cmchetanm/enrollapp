@@ -1,0 +1,5 @@
+babel.config.js
+config/webpack/**
+metro.config.js
+node_modules/**
+src/theme/**

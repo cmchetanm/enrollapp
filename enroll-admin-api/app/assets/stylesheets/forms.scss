@@ -1,0 +1,76 @@
+@import 'settings';
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  legend {
+    font-weight: bold;
+  }
+}
+
+label {
+  &.required {
+    &::after {
+      color: get-color(alert);
+      content: '\2022';
+      font-size: 2rem;
+      font-weight: bold;
+      left: .25rem;
+      line-height: 1rem;
+      position: relative;
+    }
+  }
+}
+
+.error-explanation {
+  border: 1px solid get-color(alert);
+  border-radius: $global-radius;
+  margin-bottom: $global-margin;
+
+  h2 {
+    background: get-color(alert);
+    color: $white;
+    font-size: $small-font-size;
+    font-weight: bold;
+    margin: 0;
+    padding: .5 * $global-padding;
+  }
+
+  ul {
+    margin: .5 * $global-margin 2 * $global-margin;
+  }
+}
+
+.field-with-errors {
+  label {
+    color: darken(get-color(alert), 10%);
+    font-weight: bold;
+
+    &.message {
+      font-size: $small-font-size;
+      margin: -$global-margin 0 $global-margin;
+    }
+  }
+
+  [type='color'],
+  [type='date'],
+  [type='datetime'],
+  [type='datetime-local'],
+  [type='email'],
+  [type='month'],
+  [type='number'],
+  [type='password'],
+  [type='search'],
+  [type='tel'],
+  [type='text'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
+  select,
+  textarea {
+    border-bottom: 1px solid get-color(alert);
+    box-shadow: 2px 1px 1px get-color(alert);
+  }
+}

@@ -1,0 +1,30 @@
+.top-menu
+  .grid-container
+    .top-bar
+      .top-bar-left
+        %ul.menu
+          %li.menu-text
+            = APP[:website_name]
+          - if admin_signed_in?
+            %li{class: active?(sponsors_path)}
+              = link_to 'Sponsors', sponsors_path
+            %li{class: active?(sites_path)}
+              = link_to 'Sites', sites_path
+            %li{class: active?(studies_path)}
+              = link_to 'Studies', studies_path
+            %li{class: active?(users_path)}
+              = link_to 'Users', users_path
+      .top-bar-right
+        %ul.menu
+          - if admin_signed_in?
+            %li{class: active?(admins_path)}
+              = link_to 'Admins', admins_path
+            %li{class: active?(edit_admin_registration_path)}
+              = link_to 'Edit Profile', edit_admin_registration_path
+            %li
+              = link_to 'Sign Out', destroy_admin_session_path, method: :delete
+          - elsif defined?(resource) && !resource.respond_to?(:tokens?)
+            %li{class: active?(new_admin_session_path)}
+              = link_to 'Sign In', new_admin_session_path
+
+%br

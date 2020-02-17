@@ -1,0 +1,24 @@
+= csp_meta_tag
+= csrf_meta_tag unless response.cache_control[:public]
+
+%meta{charset: 'utf-8'}
+%meta{content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type'}
+%meta{content: 'width=device-width, initial-scale=1.0', name: 'viewport'}
+
+%title= content_for?(:title) ? yield(:title) : raise(t('no_title'))
+%meta{content: yield(:title), property: 'og:title'}
+
+%meta{content: yield(:description), name: 'description'}
+%meta{content: yield(:description), property: 'og:description'}
+
+%meta{content: request.original_url, property: 'og:url'}
+
+%meta{content: content_for?(:og_type) ? yield(:og_type) : 'website', property: 'og:type'}
+%meta{content: content_for?(:og_image) ? yield(:og_image) : image_url('logo.png'), property: 'og:image'}
+
+= render 'layouts/favicon', cached: true
+
+= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+%link{href: '//fonts.googleapis.com/css?family=Roboto|Montserrat', rel: 'stylesheet', media: 'all'}
+
+= javascript_pack_tag 'application', defer: true

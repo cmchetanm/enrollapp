@@ -1,0 +1,59 @@
+{
+  "name": "enroll",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "jetify": "jetify",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "jetifier": "^1.6.4",
+    "lodash": "^4.17.15",
+    "memoize-one": "^5.1.1",
+    "native-base": "^2.13.7",
+    "prop-types": "^15.7.2",
+    "react": "16.9.0",
+    "react-native": "0.60.4",
+    "react-native-communications": "^2.2.1",
+    "react-native-firebase": "^5.5.6",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-native-keyboard-aware-scrollview": "^2.0.0",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-popup-dialog": "^0.18.3",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-splash-screen": "^3.2.0",
+    "react-native-swipeout": "^2.3.6",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^4.0.1",
+    "react-navigation-stack": "^1.5.3",
+    "react-navigation-tabs": "^2.6.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-axios-middleware": "^4.0.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "snakecase-keys": "^3.1.0",
+    "styled-components": "^4.4.1",
+    "watchman": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.3.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.9.0",
+    "redux-devtools-extension": "^2.13.8"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

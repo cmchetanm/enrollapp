@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+echo 'Deleting node_modules'
+rm -rf node_modules
+
+echo 'Removing Pods'
+rm -rf ios/Pods
+
+echo 'Cleaning iOS cache'
+rm -rf ./ios/build/*
+
+echo 'Cleaning XCode cache'
+rm -rf Library/Developer/Xcode/DerivedData/*
+
+echo 'Deleting all simulators'
+xcrun simctl erase all
+
+echo 'Clearing watchman watches'
+watchman watch-del-all
+watchman watch-del-all
+
+echo 'Clearing yarn cache'
+yarn cache clean
+
+echo 'Clearing haste cache'
+rm -rf /tmp/haste-map-react-native-packager-*

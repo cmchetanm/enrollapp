@@ -1,0 +1,15 @@
+%p The following study has just been updated by #{@updater.full_name}:
+
+%spacer{size: 16}
+
+%h3= @study.name
+
+%spacer{size: 16}
+
+%p You may want to review the study details and criteria before continuing to enroll patients.
+
+%spacer{size: 16}
+
+%p If you are not the intended recipient of this message, you can safely disregard this email.
+
+%spacer{size: 32}
