@@ -52,7 +52,7 @@ module Api
           @studies.push(study)
           @roles.push(share["role"])
         end
-      else
+      elsif params[:shares].present?
         @study = StudyAuthenticator.new(current_api_user).find_one(params[:study_id])
         @studies.push(@study)
         share = JSON.parse(params[:shares])
