@@ -43,11 +43,7 @@ class User < ApplicationRecord
       user.save!
       BarsMailer.welcome_email(user, generated_password, study, :admin, name).deliver_now
     else
-      generated_password = rand.to_s[2..7]
-      user.password = generated_password
-      user.skip_confirmation!
-      user.save!
-      BarsMailer.welcome_email(user, generated_password, study, :admin, name).deliver_now
+      BarsMailer.welcome_email(user, nil, study, :admin, name).deliver_now
     end
     user
   end
