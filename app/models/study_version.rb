@@ -13,6 +13,9 @@ class StudyVersion < ApplicationRecord
     self.study.committed
   end
 
+  def site_study
+    SitesStudy.find_by(study_id: study.id, site_id: site.id)
+  end
   private
 
   def format_criteria

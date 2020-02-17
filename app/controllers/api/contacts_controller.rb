@@ -23,7 +23,13 @@ module Api
       generated_password = rand.to_s[2..7]
       puts 'generated_password'
       puts generated_password
-      user = User.new(:first_name => params["first_name"], :last_name => params["last_name"], :email => params["email"], :password => generated_password, :phone_number => params["phone_number"])
+      user = User.new({
+        :first_name => params["first_name"],
+        :last_name => params["last_name"],
+        :email => params["email"],
+        :password => generated_password,
+        :phone_number => params["phone_number"]
+      }.reject {|p| p.present?})
       user.skip_confirmation!
       user.save!
       BarsMailer.welcome_email(user, generated_password).deliver_now
