@@ -76,4 +76,8 @@
     = f.text_area :comments, rows: 2
   .button-group
     = link_to 'Cancel', study.new_record? ? study.sponsor || studies_path : study, class: 'secondary button'
-    = f.submit class: 'button'
+    - if study.new_record?
+      = f.submit class: 'button' 
+    - else
+      = f.submit data: { confirm: "Are you sure? This will override any changes the PIs made to the study." }, class: 'button'
+
