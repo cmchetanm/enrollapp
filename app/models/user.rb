@@ -32,6 +32,7 @@ class User < ApplicationRecord
   def self.get_or_invite(first_name, last_name, email, phone_number, study_id = nil, name=nil)
     user = User.find_by(email: email)
     study = Study.find_by(id: study_id)
+    name = study&.sponsor&.name
     if user.nil?
       user = User.new(
         first_name: first_name.presence, last_name: last_name.presence,

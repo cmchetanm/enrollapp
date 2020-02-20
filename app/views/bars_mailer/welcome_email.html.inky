@@ -3,7 +3,7 @@
 
   %spacer{size: 16}
 
-  %h3= "#{@user.first_name} #{@user.last_name}"
+  %h3 #{@user.first_name} #{@user.last_name}
 
   %spacer{size: 16}
 
@@ -23,7 +23,7 @@
 
   %spacer{size: 16}
 
-  %h3= "#{@user.first_name} #{@user.last_name}"
+  %h3 #{@user.first_name} #{@user.last_name}
 
   %spacer{size: 16}
 
