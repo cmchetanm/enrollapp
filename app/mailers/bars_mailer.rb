@@ -1,5 +1,6 @@
 class BarsMailer < ActionMailer::Base
   default :from => "info@refuahsolutions.com"
+  layout 'mailer'
   def welcome_email(user, password=nil, study=nil, source=:app, name=nil)
     @user = user
     @password = password

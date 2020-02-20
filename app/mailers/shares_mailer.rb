@@ -1,4 +1,5 @@
 class SharesMailer < ApplicationMailer
+  layout 'mailer'
   def notify(share)
     @share = share
 
