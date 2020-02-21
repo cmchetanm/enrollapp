@@ -1,3 +1,7 @@
+%p Hello #{@share.user.first_name} #{@share.user.last_name},
+
+%spacer{size: 16}
+
 %p You have been given access to the following study:
 
 %spacer{size: 16}
@@ -6,7 +10,7 @@
 
 %spacer{size: 16}
 
-%p Login to Enroll using the email address #{mail_to @share.user.email, @share.user.email} to review the study.
+%p Login to PI-Enroll using the email address #{mail_to @share.user.email, @share.user.email} to review the study.
 
 %spacer{size: 16}
 

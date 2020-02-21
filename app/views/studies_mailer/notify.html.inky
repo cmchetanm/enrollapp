@@ -1,3 +1,7 @@
+%p Hello #{@user.first_name} #{@user.last_name},
+
+%spacer{size: 16}
+
 %p The following study has just been updated by #{@updater.full_name}:
 
 %spacer{size: 16}

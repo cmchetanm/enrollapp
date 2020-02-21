@@ -1,15 +1,14 @@
 - if @source == :admin
-  %p Hello
-
-  %spacer{size: 16}
-
-  %h3 #{@user.first_name} #{@user.last_name}
+  %p Hello #{@user.first_name} #{@user.last_name},
 
   %spacer{size: 16}
 
   %p #{@name} has selected and formatted specific information from the #{@study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
   - if @password
-    %p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
+    %p Login to PI-Enroll using the following credentials:
+    %b Email: #{@user.email}
+    %br
+    %b Password: #{@password} 
 
   %spacer{size: 16}
 
@@ -19,17 +18,16 @@
 
   %spacer{size: 32}
 - else
-  %p Hello
-
-  %spacer{size: 16}
-
-  %h3 #{@user.first_name} #{@user.last_name}
+  %p Hello #{@user.first_name} #{@user.last_name},
 
   %spacer{size: 16}
 
   %p #{@name} would like to share with you selected information about the #{@study&.name} which will be helpful if/when your patients ask about the trial. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
   - if @password
-    %p Login to Enroll using the email address #{@user.email} and the password  #{@password}.
+    %p Login to PI-Enroll using the following credentials:
+    %b Email: #{@user.email}
+    %br
+    %b Password: #{@password}
 
   %spacer{size: 16}
 
