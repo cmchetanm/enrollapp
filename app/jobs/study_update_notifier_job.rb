@@ -4,10 +4,10 @@ class StudyUpdateNotifierJob < ApplicationJob
   def perform(updater, study_version)
     users = User.where(id: Share.where(site_id: study_version.site_id).where.not(user_id: updater.id).pluck(:user_id))
     users.each do |user|
-      if user.invitation_accepted?
+      #if user.invitation_accepted?
         send_email_notification(updater, study_version, user)
         # send_push_notification(study_version, user)
-      end
+      #end
     end
   end
 
