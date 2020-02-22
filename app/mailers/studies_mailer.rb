@@ -5,9 +5,9 @@ class StudiesMailer < ApplicationMailer
     @study = study_version
     @user = user
     
-    if user.invitation_accepted?
+    #if user.invitation_accepted?
       mail to: user.email,
            subject: "#{@study.name} Updated"
-    end
+    #end
   end
 end
