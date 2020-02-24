@@ -22,7 +22,7 @@ module Api
       if @study_version.save
         site_study = @study_version.site_study
         site_study&.update_attributes(enrolled: (params[:enrolled] || site_study.enrolled), committed: (params[:committed] || site_study.committed))
-        StudyUpdateNotifierJob.perform_now(current_api_user, @study_version)
+        StudyUpdateNotifierJob.perform_later(current_api_user, @study_version)
         render :show, status: :ok, location: @study
       else
         render json: {errors: @study_version.errors.full_messages}, status: :unprocessable_entity
