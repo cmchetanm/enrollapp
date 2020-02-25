@@ -18,7 +18,7 @@
 
   %spacer{size: 32}
 - else
-  %p Hello #{@user.first_name} #{@user.last_name},
+  %p Hello #{@user_name},
 
   %spacer{size: 16}
 

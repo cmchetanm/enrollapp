@@ -3,6 +3,7 @@ class BarsMailer < ActionMailer::Base
   layout 'mailer'
   def welcome_email(user, password=nil, study=nil, source=:app, name=nil)
     @user = user
+    @user_name = @user.last_name.present? ? "#{@user.first_name} #{@user.last_name}" : "#{@user.first_name}" 
     @password = password
     @source = source
     @study = study
