@@ -1,9 +1,9 @@
 - if @source == :admin
-  %p Hello #{@user.first_name} #{@user.last_name},
+  %p Dear Dr. #{@user.last_name},
 
   %spacer{size: 16}
 
-  %p #{@name} has selected and formatted specific information from the #{@study&.name} study to assist your study team with patient enrolment and study awareness. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
+  %p #{@name} has selected specific information from the #{@study&.name} study to assist your study team with patient enrolment. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
   - if @password
     %p Login to PI-Enroll using the following credentials:
     %b Email: #{@user.email}
@@ -22,7 +22,7 @@
 
   %spacer{size: 16}
 
-  %p #{@name} would like to share with you selected information about the #{@study&.name} which will be helpful if/when your patients ask about the trial. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
+  %p #{@name} would like to share with you selected information from the #{@study&.name} study which will be helpful when your patients ask about the study. To obtain the information, please download 'PI-Enroll' from the App Store or Google Play.
   - if @password
     %p Login to PI-Enroll using the following credentials:
     %b Email: #{@user.email}
