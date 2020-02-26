@@ -29,7 +29,7 @@ class Study < ApplicationRecord
   end
   
   def api_enrolled(site_id)
-    self.sites_studies.where(site_id: site_id)&.enrolled
+    self.sites_studies.where(site_id: site_id).sum(:enrolled)
   end
 
   def committed
@@ -37,7 +37,7 @@ class Study < ApplicationRecord
   end
 
   def api_committed(site_id)
-    self.sites_studies.where(site_id: site_id)&.committed
+    self.sites_studies.where(site_id: site_id).sum(:committed)
   end
 
   private
