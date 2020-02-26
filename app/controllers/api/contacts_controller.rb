@@ -50,7 +50,7 @@ module Api
         end
       else
         if study.users.pluck(:id).include?(user.id) 
-          render json: {errors: "User with email address already invited for study"}, status: :unprocessable_entity
+          render json: {errors: "A user with this email address has already been invited for this study"}, status: :unprocessable_entity
         else
           create_share(site_id,study,user,role)
           SharesMailer.notify(@share).deliver_later
