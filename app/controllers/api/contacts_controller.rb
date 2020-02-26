@@ -22,11 +22,11 @@ module Api
 
     def create
       user = User.find_by_email(params["email"])
+      study = Study.find_by(id: params[:study_id]) || StudyVersion.find_by(id: params[:study_id])
+      site_id = study.site_for(current_api_user)
+      role = params["role"]
       unless user
         @contact = Contact.new(contact_params.merge(creator: current_api_user))
-        study = Study.find_by(id: params[:study_id]) || StudyVersion.find_by(id: params[:study_id])
-        site_id = study.site_for(current_api_user)
-        role = params["role"]
         puts 'in create'
         puts params
         generated_password = rand.to_s[2..7]
@@ -42,7 +42,6 @@ module Api
         user.skip_confirmation!
         user.save!
         BarsMailer.welcome_email(user, generated_password, study, :app, current_api_user&.full_name).deliver_now
-
         if @contact.save
           create_share(site_id,study,user,role)
           render :show, status: :created
@@ -50,7 +49,13 @@ module Api
           render json: {errors: @contact.errors.full_messages}, status: :unprocessable_entity
         end
       else
-        render json: {errors: "User with email address already exists"}, status: :unprocessable_entity
+        if study.users.pluck(:id).include?(user.id) 
+          render json: {errors: "User with email address already invited for study"}, status: :unprocessable_entity
+        else
+          create_share(site_id,study,user,role)
+          SharesMailer.notify(@share).deliver_later
+          render json: {success: true, message: "Share created"}, status: 200
+        end
       end
     end
 
@@ -73,7 +78,7 @@ module Api
     private
 
     def create_share(site_id,study,user,role)
-      share = Share.create!(site_id: site_id, study_id: study.id, user_id: user.id, role: role)
+      @share = Share.create!(site_id: site_id, study_id: study.id, user_id: user.id, role: role)
     end
 
     def set_contact
