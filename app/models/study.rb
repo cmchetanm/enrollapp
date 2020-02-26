@@ -27,10 +27,19 @@ class Study < ApplicationRecord
   def enrolled
     self.sites_studies.sum(:enrolled)
   end
+  
+  def api_enrolled(site_id)
+    self.sites_studies.where(site_id: site_id).sum(:enrolled)
+  end
 
   def committed
     self.sites_studies.sum(:committed)
   end
+
+  def api_committed(site_id)
+    self.sites_studies.where(site_id: site_id).sum(:committed)
+  end
+
   private
 
   def my_share(user)
