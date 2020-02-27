@@ -39,8 +39,8 @@ json.study do
     json.role this_user_share.role
     json.study_icon study_sponsor.avatar
     json.topic study_topic
-    json.enrolled study.api_enrolled(site_id)
-    json.committed study.api_committed(site_id)
+    json.enrolled study_version.enrolled
+    json.committed study_version.committed
 
     json.sponsor_contact_email study_version ? study_version.sponsor_contact_email : study.sponsor_contact_email
     json.sponsor_contact_phone study_version ? study_version.sponsor_contact_phone : study.sponsor_contact_phone
