@@ -39,10 +39,17 @@ class Share < ApplicationRecord
   def create_shares_from_csv(users_csv, name=nil)
     users_csv.lines.each do |user_str|
       first_name, last_name, email, phone_number = user_str.split(',')
-      user = User.get_or_invite(first_name, last_name, email, phone_number, study_id, name)
-      share = Share.find_or_initialize_by(study_id: study_id, user: user)
-      share.assign_attributes(site_id: site_id, role: role)
-      SharesMailer.notify(share).deliver_later if share.save
+      user = User.find_by_email(email)
+      if user.present?
+        share = Share.find_or_initialize_by(study_id: study_id, user: user)
+        share.assign_attributes(site_id: site_id, role: role)
+        SharesMailer.notify(share).deliver_now if share.save
+      else
+        user = User.get_or_invite(first_name, last_name, email, phone_number, study_id, name)
+        share = Share.find_or_initialize_by(study_id: study_id, user: user)
+        share.assign_attributes(site_id: site_id, role: role)
+        share.save
+      end
     end
   end
 end
