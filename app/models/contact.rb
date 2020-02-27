@@ -10,7 +10,7 @@ class Contact < ApplicationRecord
   before_create :link_to_user
 
   def full_name
-    "#{last_name}, #{first_name}"
+    last_name.present? ? "#{last_name}, #{first_name}" : "#{first_name}" 
   end
 
   private
