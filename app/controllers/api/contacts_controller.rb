@@ -3,6 +3,7 @@ module Api
     before_action :set_contact, only: %i[show edit update destroy]
 
     def index
+      byebug
       @contacts = Contact.where(creator: current_api_user).order(:last_name, :first_name)
       if params[:study_id]
         @study = Study.find(params[:study_id])  
@@ -42,6 +43,7 @@ module Api
         user.skip_confirmation!
         user.save!
         BarsMailer.welcome_email(user, generated_password, study, :app, current_api_user&.full_name).deliver_now
+        @contact.user = user
         if @contact.save
           create_share(site_id,study,user,role)
           render :show, status: :created
