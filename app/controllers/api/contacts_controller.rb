@@ -3,7 +3,6 @@ module Api
     before_action :set_contact, only: %i[show edit update destroy]
 
     def index
-      byebug
       @contacts = Contact.where(creator: current_api_user).order(:last_name, :first_name)
       if params[:study_id]
         @study = Study.find(params[:study_id])  
