@@ -13,7 +13,7 @@
     "axios": "^0.19.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "jetifier": "^1.6.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "memoize-one": "^5.1.1",
     "native-base": "^2.13.7",
     "prop-types": "^15.7.2",
